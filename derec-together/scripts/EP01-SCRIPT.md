@@ -10,7 +10,7 @@
 |---|---|
 | **The question** | *If your phone vanished tonight, what would you actually lose, and who could help you get it back?* Bruce says it word for word at 0:09. |
 | **Premiere** | Wednesday 11 November 2026, 11:00 America/New_York. That's 16:00 UTC, because New York is back on standard time from 1 November. A YouTube Premiere, with Bruce in the live chat from 10:45. **[VERIFY]** that the contributors call is still on its fortnightly Monday rhythm. That puts a call on Monday 2 November and makes this the show week after it (R8). |
-| **Recording** (recommended) | Tuesday 20 October 2026, the day after the 19 October call. Episode 02 then records on Tuesday 3 November, so the show launches with two episodes finished (FORMAT §3). **[VERIFY]** both call dates. |
+| **Recording** (recommended) | Tuesday 20 October 2026, the day after the 19 October call. Episode 02 then records on Tuesday 27 October, off the call grid once, so the show launches with two episodes finished (FORMAT §3, R8, PLAYBOOK §9). **[VERIFY]** the 19 October call date. |
 | **The date** | 11 November is Veterans Day in the US and Remembrance Day across the Commonwealth. No jokes about "11/11 at 11", in the episode or in the chat. |
 | **Pillar and feature** | *What if…*, which opens every season (FORMAT §2). Hands On, as a tabletop model, because 01 is an odd episode. |
 | **Cold open** | THE FLOAT. The carry-over is the maple leaf on Tuck's head. The tomorrow detail is a small air taxi above the white terraces. |
@@ -100,10 +100,10 @@ Bar two is the locked ritual (R3). Its frames, hit points and title page belong 
 
 | Time | Picture | Margin |
 |---|---|---|
-| **0.00s–2.25s**<br>bar one, new | The first frame is already mid-float. A sunlit autumn cove, calm painted water, the white terraces soft on the far shore. Tuck floats on her back, paddling lazily with her hind flippers. A red maple leaf spins down and lands on her chest. She lifts it in both paws, inspects it with her head tilted, and sets it on her head like a hat. Two lazy flipper kicks: the double beat that pat-pat pays off. Her eyeline ends frame left. A small air taxi glides across the far sky above the terraces. | **M01** from its first sample. **A01** on f30 (1.25s): the dry leaf landing on her chest fur. A real recording, unpitched, 0.50s at most. The leaf and the ripples are 2D cards on twos (R4). The leaf is on her head by f45. Keep blue off Tuck herself (R9). The cove stays as lush as the references (R4). |
-| **2.25s–5.00s**<br>bar two, locked | The hush. The pocket pat. Her stone. Gran's paw from frame left and the Harbourmaster's from frame right: *plink… plink…*, the held breath, the home chord, three stones lit amber for 12 frames. The release into the title page. Pat-pat, one slow blink, the melt. **The maple leaf rides the crown anchor through all of it and never moves.** | The locked master and its `RIT` stem. The carry-over layer is the leaf, `#C8502A` with veins `#8E3A20`. The plate behind her is the cove, defocused and warmed 300 K. |
-| **Title page** | DeRec Alliance · *Many Hands* · the rule the two threads draw · THE COMMUNITY PODCAST. The plain shield top right, from the Alliance master only. | BRAND-KIT §3, §5–6. The shield **[HOST GATE]** (R9). |
-| **5.00s** | Hard cut to the hosts. | The **M01** button. Its tail has gone by 6.50s. |
+| **0.00s–2.25s**<br>f0–f53, new | The first frame is already mid-float. A sunlit autumn cove, calm painted water, the white terraces soft on the far shore. Tuck floats on her back, paddling lazily with her hind flippers. A red maple leaf spins down and lands on her chest. She lifts it in both paws, inspects it with her head tilted, and sets it on her head like a hat. Two lazy flipper kicks: the double beat that pat-pat pays off. Her eyeline ends frame left. A small air taxi glides across the far sky above the terraces. | **M01** from its first sample. **A01** on f30 (1.25s): the dry leaf landing on her chest fur. A real recording, unpitched, 0.50s at most. The leaf and the ripples are 2D cards on twos (R4). The leaf is on her head by f45. Keep blue off Tuck herself (R9). The cove stays as lush as the references (R4). |
+| **2.25s–5.00s**<br>f54–f119, locked | The hush. The pocket pat. Her stone. Gran's paw from frame left and the Harbourmaster's from frame right: *plink… plink…*, the held breath, the home chord on f90, three stones lit amber for 12 frames (f90–f101). The release: two gold threads rise and draw the rule under the title, meeting at f113. Pat-pat, one slow blink, the melt. **The maple leaf rides the crown anchor through all of it and never moves.** | The locked master and its `RIT` stem. The carry-over layer is the leaf, `#C8502A` with veins `#8E3A20`. The plate behind her is the cove, defocused and warmed 300 K. |
+| **Title page**<br>2.50s–3.25s, f60–f77 | It settles into the sky above Tuck from the clap on f60 and is fully set by f77: DeRec Alliance · *Many Hands* · the rule the two threads draw (it doesn't exist until they meet at f113) · THE COMMUNITY PODCAST. The plain shield top right from f54, from the Alliance master only. | BRAND-KIT §3, §5–6. Storyboard §3. The shield **[HOST GATE]** (R9). |
+| **5.00s**<br>f120 | Hard cut to the hosts. | The **M01** button. Its tail has gone by 6.50s. |
 
 **Disclosure.** If the bar-one plate is AI-assisted **[HOST GATE]** (R9), the upload carries YouTube's altered or synthetic content label and a plain line in the description. The ritual master is always animated by hand.
 
@@ -313,7 +313,7 @@ Bruce's own words are the whole point. If the audience's stand-in can say it, Gr
 | Time | Words | Margin |
 |---|---|---|
 | 14:10 | *M03.*<br>[BRUCE] Next time. | **M03**, **TAB** "Next Time". **A** |
-| 14:12 | [BRUCE] In two weeks: [Episode 02's exact title]. | **A**. **[HOST GATE]** The title comes from the season plan. If the plan hasn't set it, the recommendation is *Who should you trust to help you get back in?* |
+| 14:12 | [BRUCE] In two weeks: *Who should you trust to help you get back in?* | **A**. Episode 02's exact title, as set in `season/SEASON-ONE.md`. |
 | 14:15 | [BRUCE] And our question for you. If your phone vanished tonight, who's the first person you'd want helping you get back in? Don't tell us who. Tell us why. It's pinned below, and we may read your answer on the show, first name only. | **CARD** Our Question for You on the **LEAF**: kicker OUR QUESTION FOR YOU, the question in T3 italic, then "Answer under this video · first names only". The Leaf goes out on "first name only". **[HOST GATE]** on the consent wording (FORMAT §6). |
 | 14:32 | [BRUCE] Light Work's on Friday. | **A** |
 | 14:34 | [BRUCE] Many hands—<br>[FACUNDO] —light work.<br>*On "—light work.", each pats his left jacket pocket twice.* | **A**. The pat-pat echo **[HOST GATE]** (CHARACTER-BIBLE). Nothing under the sign-off. |
@@ -341,11 +341,12 @@ Bruce's own words are the whole point. If the audience's stand-in can say it, Gr
 >
 > Bruce
 
-"Don't tell us who" is deliberate. FORMAT's sample question asks people to name their helpers in public. That would publish part of someone's helper list, which is the one thing DeRec keeps private. Asking why still seeds Episode 02, and it teaches the principle inside the call to action.
+"Don't tell us who" is deliberate. FORMAT's sample question asks people to name their helpers in public. That would publish part of someone's helper list, which is the one thing DeRec keeps private. Asking why still seeds Episode 03 and LW002, and it teaches the principle inside the call to action.
 
 **Where the answers go**
-- **The Premiere chat.** Bruce answers there and carries the best replies into the 3 November recording.
-- **Episode 02.** Its Raised Hands reads one answer, and its opening "person" at 0:22 comes from the same thread (FORMAT §8).
+- **The Premiere chat.** Bruce answers there and carries the best replies into Episode 03's recording on 17 November.
+- **Episode 03, recorded Tuesday 17 November.** Its Raised Hands reads one answer, and its opening "person" comes from the same thread (FORMAT §8). Not Episode 02: it records on 27 October, before this episode airs.
+- **LW002, Friday 20 November.** Answers one reply in under a minute, credits the asker by first name, and teases Episode 02.
 - **Light Work, Friday 13 November.** The best 45–60 seconds of this episode (FORMAT §3): the objection and the Curve, 8:09 to 8:49, ending on the Where It Stops key line (10:14–10:21). A Light Work clip that shows what DeRec can do must carry its limit. It opens on Bruce saying "Two out of three is most of the way there", with *Two out of three: most of the way?* on screen in the first second.
 
 **What carries over to Episode 02**
@@ -380,7 +381,7 @@ After that come the chapters, the asker's first name, the theme credit, the invi
 | # | Where | What to check |
 |---|---|---|
 | 1 | Premiere | That the contributors call still meets fortnightly on Mondays, which puts a call on 2 November 2026 (R8). |
-| 2 | Recording | The call dates of 19 October and 2 November 2026, which set the recording days. |
+| 2 | Recording | The 19 October 2026 call date, which sets Episode 01's recording day. Episode 02's 27 October session is off the call grid (PLAYBOOK §9). |
 | 3 | Title | YouTube's 100-character limit on titles. |
 | 4 | 1:00–1:43 | Facundo's wording of the first answer, and of "convincing a company you're you… sometimes that fails". |
 | 5 | 3:25 | The Percent Right line: "Forty percent. Half a key still gives something away. A share on its own gives away nothing." |
@@ -416,7 +417,8 @@ After that come the chapters, the asker's first name, the theme credit, the invi
 | 12 | 7:10 | No real-software Hands On until Facundo has a build he's happy to show. |
 | 13 | 9:03 | The Jargon Jar, which needs Facundo's genuine yes. |
 | 14 | 10:55 | The Raised Hands pick, from real questions only. |
-| 15 | 14:12 | Episode 02's title, from the season plan. |
-| 16 | 14:15 | The consent wording, on air and in the pinned comment. |
-| 17 | 14:34 | The split sign-off, and the pat-pat pocket echo on "—light work." |
-| 18 | Description | The invitation to suggest Tuck's next activity (FORMAT sign-off 9). |
+| 15 | 14:15 | The consent wording, on air and in the pinned comment. |
+| 16 | 14:34 | The split sign-off, and the pat-pat pocket echo on "—light work." |
+| 17 | Description | The invitation to suggest Tuck's next activity (FORMAT sign-off 9). |
+
+*Changed 24 Sep 2026, per `season/SEASON-ONE.md` and the storyboard: Episode 02's title set at 14:12 and its host gate removed; Episode 02 records 27 October, not 3 November; the loop feeds Episode 03 (recorded 17 November) and LW002, not Episode 02; the bumper table marks the lock at f54 and anchors the title page (f60–f77), the home chord (f90), the rule (f113) and the button (f120).*

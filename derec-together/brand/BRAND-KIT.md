@@ -28,7 +28,9 @@ The working rule for everyone: **classic structure, modern light, fun in the det
 - **No red.** No colour ever signals danger or success.
 - **Type:** **Fraunces** for display, **Atkinson Hyperlegible Next** for text, and **Atkinson Hyperlegible Mono** for version strings. All three are SIL Open Font License.
 - **The lockup is a title page:** the imprint "DeRec Alliance", the title "Many Hands", a gold rule, then "THE COMMUNITY PODCAST". The shield sits top right and comes only from the Alliance's master file.
-- **The thread:** at most seven nodes. It's never a diagram and never carries moving light. The mascot never touches it, and it never appears while the show is teaching.
+- **The thread:** at most seven nodes. It's never a diagram and never carries moving light, and it never appears while the show is teaching. It meets the mascot in one place only: the ritual's release, where it lifts off the three lit stones and draws the title's rule. Tuck never touches it (§4).
+- **The Curve:** teaching gets its own picture, an Ink line on Paper that wobbles until the threshold and then settles. It's furniture, never gold and never the thread (§6).
+- **The characters:** Tuck, a sea otter, and her friend Pip, a porcelain café robot. Their palettes borrow this kit's tokens unchanged and add no brand colours (§1).
 - **Motion:** five named curves and no bounce. The house transition is called **the Leaf**. The shield, the letters of the title and the Where It Stops band never move.
 - **Furniture is paper.** Every graphic is a paper slip with a jade spine, and it sits above the **caption line** at 78% of H. Segment names sit at the top of the frame, where a book puts its running heads.
 - **Grade:** paper highlights, ink shadows, warm people, cool sky.
@@ -50,7 +52,7 @@ The working rule for everyone: **classic structure, modern light, fun in the det
 
 | Token | Hex | Where it comes from | Its job | Never |
 |---|---|---|---|---|
-| **Gilt** | `#F2C96E` | Sampled from the cover's "DeRec" lettering (core `#F0CA6F`–`#F3D47F`) and the shield's arrow (`#EDCA73`) | **Light.** Lit threads and nodes, "DeRec" in the imprint on sky or dark grounds, and the edge of the Leaf | Text on Paper (1.42:1). More than 5% of any frame. Objects: no gold coins, bars or trophies. |
+| **Gilt** | `#F2C96E` | Sampled from the cover's "DeRec" lettering (core `#F0CA6F`–`#F3D47F`) and the shield's arrow (`#EDCA73`) | **Light.** Lit threads and nodes, "DeRec" in the imprint on sky or dark grounds, the edge of the Leaf, and the halo of a lit stone in the ritual | Text on Paper (1.42:1). More than 5% of any frame. Objects: no gold coins, bars or trophies. |
 | **Sky** | `#4185CB` | The cover's sky behind the lettering (`#4084CA`) | **The ground of tomorrow:** title card, key-art skies, channel banner | A flat fill, because flat blue reads as fintech. A text ground at this value (Paper on Sky is only 3.48:1). |
 | Zenith | `#1B5699` | The cover's sky, deepened | The top of every sky gradient, and the **only** sky value that type may sit on | – |
 | Horizon | `#CFE6F6` | The haze on the cover's skyline | The bottom of every sky gradient | A ground for Paper or Gilt type |
@@ -68,9 +70,9 @@ The working rule for everyone: **classic structure, modern light, fun in the det
 
 | Token | Hex | Where it comes from | Its job | Never |
 |---|---|---|---|---|
-| **Glass** | `#7BE1DA` | The cover's glass cards (`#7BE1DA`) and its white-and-cyan robots | **Machines and glass:** glass-card edges in key art, a robot's indicator light, highlights in dark mode | A thread (see §4). A paper ground (1.39:1). Any frame where a limit is being stated. |
-| Filament | `#FCEBB4` | The hot centre of the cover's nodes (`#FEF6C1`) | The 1 px core of a lit thread, and the core of a node | Anything else |
-| Amber | `#E39A35` | The café gems (`#EA9727`–`#EFB54B`) | **Props:** the tabletop tokens and Facundo's jar tokens, plus their icon in the Jargon Jar tally | Any other graphic. Text. |
+| **Glass** | `#7BE1DA` | The cover's glass cards (`#7BE1DA`) and its white-and-cyan robots | **Machines and glass:** glass-card edges in key art, a robot's indicator light, highlights in dark mode, and Pip's face-line and hover glow | A thread (see §4). A paper ground (1.39:1). Any frame where a limit is being stated. |
+| Filament | `#FCEBB4` | The hot centre of the cover's nodes (`#FEF6C1`) | The 1 px core of a lit thread, the core of a node, the core of a lit stone, and Tuck's catchlight | Anything else |
+| Amber | `#E39A35` | The café gems (`#EA9727`–`#EFB54B`) | **Props:** the tabletop tokens and Facundo's jar tokens, plus their icon in the Jargon Jar tally. **The lit stones:** the body of each stone at the ritual's threshold, always with its Filament core and Gilt halo. | Any other graphic. Text. |
 
 **Lamplight: the dark set**
 
@@ -166,6 +168,23 @@ Our house standard is stricter than WCAG's size bands, because a phone held side
   - `#B18C44`, which fails contrast (see above);
   - Mint `#DCF4E9`, which cooled the page (Glass now does the fresh job, and only on glass);
   - Muted `#516A60`, whose job Jade now does.
+
+### The characters: Tuck and Pip
+
+The mascot is **Tuck**, a grown sea otter. Her friend is **Pip**, a mug-sized porcelain café robot (DECISIONS R1). Wherever this kit says "the mascot", it means Tuck. Pip appears only where the bible's "Where Pip appears" list allows. The full palettes, materials, measured contrasts and rules are in `mascot/CHARACTER-BIBLE.md`. The bible takes its tokens from this kit, so a token change here is a change there.
+
+| | Their own colours | Tokens borrowed from this kit, unchanged |
+|---|---|---|
+| **Tuck** | Fur cocoa `#5A3D2B` (shadow `#3A281D`, rim fuzz `#E3BE8F`). Mask and bib cream `#EFE2C8`. Eyes and nose `#1C2B25`. Kelp float bulb olive `#6E8B3D`. Stone slate `#8E948F` at rest. | Jade kelp scarf with Ink folds. Ink contour line, 50% on Tuck and 70% on the stone. Filament catchlight. The lit stone: Amber body, Filament core, Gilt halo. |
+| **Pip** | Glaze `#FBF8EF`, satin, with iron speckle `#8C7B66` | Brass seam and mitt cuffs with a Gilt highlight. Ink visor. **Glass face-line and hover glow.** |
+
+**How they sit in the system:**
+- **They add no brand colours.** Their own colours never appear in type, furniture, the grade or the web tokens.
+- **The animal is warm and the machine is cool.** Glass belongs to machines, so Pip's face-line and hover glow are Glass, set on the Ink visor at 7.74:1. On the white glaze Glass would drop to 1.45:1, which is why the line lives on the visor. Tuck never wears Glass. Pip never shows amber, because amber on a robot reads as a robot holding a share (R1).
+- **Gold on Tuck is light, and only in the ritual:** the lit stones and the threads. Amber on slate is only 1.32:1, so a lit stone reads by its Filament core and Gilt halo and never ships without them. Pip's Brass seam is a glaze detail rendered in 3D. The rule "gold on dark glows, gold on paper is printed" governs graphics, not a character's materials.
+- **No blue on Tuck,** including Sky, Zenith and Horizon. The house sky sits above her in the pocket shot, never on her body, props or carry-over. Otter.ai uses an otter identity (R9).
+- **"No red" still holds.** Episode 01's maple leaf (`#C8502A`) is scenery on her head. It's not a brand colour and it never signals anything.
+- **One robot per frame.** When Pip is placed in key art or the banner, it replaces §7's background robot. Pip never shares a frame with the shield, a stone or a thread, and neither character is ever labelled with a spec word (R7).
 
 ### Tokens for web and HTML graphics
 
@@ -275,7 +294,7 @@ Seven sizes, no others. "px" means the em size at 1080p.
 | **T4** | 56 | 5.2% | Fraunces 600, 500 italic or 500 roman; Atkinson 600 for the imprint | −5 (imprint +10) | 1.18 | Slip headlines: names, the episode question, the Where It Stops line |
 | **T5** | 48 | 4.4% | Fraunces 600 | −5 | 1.0 | Running heads (segment tabs) |
 | **S1** | 40 | 3.7% | Atkinson Next 500 | 0 | 1.25 | Role lines, attributions, the tally. **The floor for lowercase.** |
-| **S2** | 32 | 3.0% | Atkinson Next 600 caps (500 for the descriptor) | +160 (descriptor +220) | – | Kickers, labels, the descriptor. **The floor for capitals.** |
+| **S2** | 32 | 3.0% | Atkinson Next 600 caps | +160 (descriptor +220) | – | Kickers, labels, the descriptor. **The floor for capitals.** |
 | **M** | 32 | 3.0% | Atkinson Mono 500 | 0 | – | Version strings |
 
 **Why these floors.**
@@ -285,17 +304,19 @@ Seven sizes, no others. "px" means the em size at 1080p.
 
 ### Specifications by use
 
-**The title card** (the bumper's final frame; the ground is the sky gradient in §6; centred on x = 960)
+**The title card** (the title page in the sky above Tuck for the whole ritual, f54–f119, and the bumper's final frame once she melts away; the ground is the sky gradient in §6; centred on x = 960; positions as in `intro/COLD-OPEN-STORYBOARD.md` §3)
 
 | Element | Face and settings | Size | Tracking | Colour | Position |
 |---|---|---|---|---|---|
 | Imprint "DeRec Alliance" | Atkinson Next 600 | T4, 56 px (5.2% H) | +10 | "DeRec" Gilt, "Alliance" Paper | Baseline y 252 |
 | Title "Many Hands" | Fraunces, opsz 144, wght 600, SOFT 50, WONK 0 | T1, 176 px (16.3% H), sets about 876 px wide | −15 | Paper | Baseline y 456 |
-| Rule (a thread at rest) | Lit thread, 3 px (§4) | 38% of the title's width, about 333 px | – | Gilt, lit | Centred on y 528 |
-| Descriptor "THE COMMUNITY PODCAST" | Atkinson Next 500, capitals | S2, 32 px (3.0% H) | +220 | Paper | Baseline y 592 |
+| Rule (a thread at rest) | Lit thread, 3 px (§4). It doesn't exist until the release threads draw it, meeting at f113. | 38% of the title's width, about 333 px | – | Gilt, lit | Centred on y 528 |
+| Descriptor "THE COMMUNITY PODCAST" | Atkinson Next 600, capitals | S2, 32 px (3.0% H) | +220 | Paper | Baseline y 592 |
 | Shield | The Alliance's master file only (§3) | 180 px tall (16.7% H) | – | As supplied | Right edge x 1824, top y 72 |
 
-The lockup runs from y 215 (the imprint's cap top) to y 592, so its optical centre sits at 37% of H. That leaves the lower 45% of the frame for the mascot's final pose.
+The lockup runs from y 215 (the imprint's cap top) to y 592, so its optical centre sits at 37% of H. That leaves the lower 45% of the frame (y 594–1008) for Tuck through the ritual. She melts away over f114–f119, so the bumper's last frame is sky and type alone.
+
+The descriptor is set at 600, as in the storyboard and the animatic. It's the lowest type on the gradient and the smallest, and at 32 px the heavier weight keeps its strokes through YouTube's compression.
 
 **Lower thirds**
 
@@ -351,7 +372,7 @@ Proportions, where **T** is the title's size:
 | Rule | 3 px at T = 176, 38% of the title's width | Title baseline to rule: 0.41 T (this clears the descender of the "y") |
 | Descriptor | 0.18 T | Rule to descriptor baseline: 0.36 T |
 
-**Why the rule is there:** title pages traditionally carry a rule. Ours is the light thread at rest: straight, calm and gold. When the title card animates, the rule is drawn by two threads meeting in the middle (§5).
+**Why the rule is there:** title pages traditionally carry a rule. Ours is the light thread at rest: straight, calm and gold. In the bumper, it's drawn by the two threads that lift off the ritual's lit stones and meet in the middle (§4 and §5).
 
 ### Variants
 
@@ -381,10 +402,10 @@ Podcast apps show cover art as small as about 55 px. At that size only the title
 ### The shield [HOST GATE]
 
 - **Only the Alliance's master artwork may be used.** Never trace it from the cover, redraw it, vectorise a screenshot of it, or have an image generator produce it. The prior package pointed to a file called `derec-shield-official.svg`, but that file isn't in this workspace. Ask the Alliance for the master and for any usage rules. **If the Alliance has its own guidelines, they override this section.** [VERIFY]
-- **Recommendation: use the plain mark, without "PROTECTED BY DeRec".**
+- **Use the plain mark, without "PROTECTED BY DeRec" (DECISIONS R9).**
   - On the cover of an education show, "PROTECTED BY" reads as a product seal promising protection. FORMAT flagged this against non-negotiable 2.
   - The line is also unreadable below about 200 px tall, and a claim nobody can read is the worst kind of claim.
-  - If only the "PROTECTED BY" version exists, use it only at 200 px or taller.
+  - If the Alliance can't supply a plain master, or declines its use in motion, the shield position stays empty. Nobody redraws the mark to remove the line. The title page works without it (storyboard §9).
 - **Where the shield appears:** the title card, the podcast cover, the channel banner and key art.
 - **Where it never appears:**
   - episode furniture;
@@ -400,7 +421,7 @@ Podcast apps show cover art as small as about 55 px. At that size only the title
 - Keep **1 X** clear on every side of the lockup's bounding box, measured from the imprint's cap top to the descriptor's baseline and across its widest line.
 - On the square cover alone, the edge of the frame may come as close as 0.5 X.
 - Keep **0.25 × the shield's height** clear around the shield, and never less than 1 X between the shield and the lockup.
-- The mascot may share the title card with the lockup, but always outside the clear space. It never touches the lockup, sits on the rule or leans on a letter.
+- **Tuck shares the title page with the lockup for the whole ritual,** and there the storyboard's clearance replaces 1 X. She and her carry-over stay below y 606, at least 14 px under the descriptor's baseline (storyboard §3). A full 1 X would push her stones down to about y 1000, into the band YouTube's controls cover. She never touches the lockup, sits on the rule or leans on a letter. Only the release threads enter the lockup, to draw its rule (§4).
 
 ### Minimum sizes
 
@@ -411,7 +432,7 @@ Podcast apps show cover art as small as about 55 px. At that size only the title
 | Title only (video) | 56 px | T4: below this, the title stops reading as a title |
 | Title only (print and web) | Cap height of 6 mm in print, or 24 px on screen | – |
 | Square cover | Title at 11.5% of S | Readable down to about 55 px app thumbnails |
-| Shield | 72 px tall on video. The "PROTECTED BY" version 200 px or taller. | The inner line and the rim fill in below these sizes [VERIFY against the Alliance's rules] |
+| Shield | 72 px tall on video, plain mark only (R9) | The inner line and the rim fill in below this size [VERIFY against the Alliance's rules] |
 
 ### Forbidden treatments
 
@@ -450,7 +471,7 @@ A thread can pass from printed to lit as it leaves a page. On thumbnails it does
 
 ### Forms
 
-- **Constellation.** Taken from the café image: a loose, sparse figure of three to seven nodes, laid on a surface between two people's hands. It's the main form in key art and in the bumper world.
+- **Constellation.** Taken from the café image: a loose, sparse figure of three to seven nodes, laid on a surface between two people's hands. It's the main form in key art. It never appears in Tuck's world: in the bumper the thread appears only in the release (below), and loose glowing nodes near her would read as extra stones, which the bible bans.
 - **Orbit.** Taken from the cover:
   - an ellipse tilted no more than 12° from horizontal;
   - it passes in front of both hosts' bodies at chest height, and behind their hands;
@@ -495,6 +516,27 @@ A thread can pass from printed to lit as it leaves a page. On thumbnails it does
   - a change of colour.
 - **Hands and faces.** Threads pass behind hands, because hands hold the light, and in front of bodies. **A thread never crosses a face,** or comes within 10% of a face's height of one.
 
+### The release: the one place the thread meets the mascot
+
+DECISIONS R3 and the storyboard (§2 beat 9, §3) sanction exactly one meeting between the thread and a character. At f90 Tuck's stone and two friends' stones light amber together. At f102 the light lifts off the three lit stones as two gold threads. They loop wide around Tuck, rise past the ends of the descriptor and draw the title's rule from both ends, meeting in its middle at f113. **Tuck never touches a thread after it forms,** and never looks at one. Nowhere else does a thread touch, leave or circle Tuck or Pip.
+
+**The routed path** (storyboard §3, in 1920×1080 screen coordinates). Each thread is one continuous curve.
+- **Left thread:** from the left stone's rim (about x 845, y 885), out and up at a 40° lean to x 640, y 760. It rises to x 660, y 560, clear of the descriptor's left end, then curves in to the rule's left end at x 794, y 528 and runs along the rule to the centre, x 960.
+- **Right thread:** the mirror image about x 960. It starts at about x 1075, y 885, passes x 1280, y 760 and x 1260, y 560, and meets the rule's right end at x 1126, y 528.
+- **Clearance:** neither thread comes closer to Tuck's face than 10% of its height, and neither crosses the descriptor.
+- **State:** lit Gilt all the way. The defocused plate and the Zenith sky are both lit grounds, so the threads never print into Brass here.
+- **Medium:** hand-drawn 2D on twos, as the bible specifies. The shape may wobble by 1 px or less between drawings, and the brightness never changes.
+
+**Where the release departs from the rules above, and why:**
+
+| Rule elsewhere | In the release | Why |
+|---|---|---|
+| Each thread draws over 18 frames, 5 frames after the one before | Both draw together over f102–f113 (12 frames) on `draw`, as mirror images | The music is the clock (R5) and the ritual is 66 frames forever. Two lines setting off from opposite sides at once is the point of the move. |
+| A tip travels 48 px a frame at most | The path is about 760 px, so the tip averages 69 px a frame and peaks near 230 px a frame around f105 | The storyboard fixes the frames and never lengthens the ritual (§9). The slow start of `draw` (about 8 px, then 34 px, in the first two frames) shows the light leaving the stones before it travels, and the threads are silent. The limit stays in force everywhere else. |
+| A gentle arc that sags 4–10% | The routed loop above | It has to clear her face and the descriptor, and a sagging arc can't do both. |
+| A node lights over 6 frames, then breathes | One node at x 960, y 528. It lights at f113, is full by f115 and fades over f116–f119. It never breathes. | It has seven frames to live before the cut. |
+| All threads leave together over 12 frames | The two loop arms fade with the melt over f114–f119. The rule stays, at rest, to the cut. | The last frame has to be the clean title card (§5). |
+
 ### Limits
 
 - **No more than 7 nodes in a frame, and no more than 8 threads.**
@@ -507,8 +549,8 @@ A thread can pass from printed to lit as it leaves a page. On thumbnails it does
 ### Where it appears
 
 - Key art and the podcast cover (orbit or constellation).
-- The title card (the rest rule, drawn by two threads meeting in the middle).
-- The bumper's final frame.
+- The bumper's ritual: the release (f102–f119), and the rest rule it leaves on the title card, which is the bumper's final frame.
+- The Light Work end stamp, a crop of the ritual in which the threads have only begun to rise (storyboard §7).
 - The edge of the Leaf as it crosses footage.
 - Thumbnails (printed, then lit).
 - The end card (the colophon's printed rule).
@@ -516,9 +558,9 @@ A thread can pass from printed to lit as it leaves a page. On thumbnails it does
 
 ### Where it never appears
 
-- **During the teaching:** The Short Answer, The Table, Hands On, Where It Stops, Raised Hands answers and Say It Back.
+- **During the teaching:** The Short Answer, The Table, Hands On, Where It Stops, Raised Hands answers and Say It Back. Teaching uses the Curve instead (§6).
 - **Over the tabletop tokens or any screen recording.** A graphic laid on the demo would turn decoration into a diagram (see below).
-- **On the mascot, or coming from it.** The mascot never touches, spins, holds or cuts a thread (FORMAT §7: it never plays the protocol).
+- **On the mascot, or coming from it, except in the release** (above). There the light comes off the three lit stones together, never from Tuck's body, and she never touches it once it forms. She never spins, holds or cuts a thread (FORMAT §7: she never plays the protocol). Pip is never in a frame with a thread.
 - **Next to money, prices, charts or member logos.**
 - **As a physical object on set.** No LED strings or fairy lights. Real light threads on a real table would make the metaphor literal.
 
@@ -531,7 +573,7 @@ A thread can pass from printed to lit as it leaves a page. On thumbnails it does
 3. **It is not protection.** The orbit never closes into a sphere, dome, force field or bubble around anything, because absolute safety is never promised (non-negotiable 2).
 4. **It is not a blockchain.** No chain links, blocks, hexagons or ledgers.
 5. **It is not money.** Nothing flows toward a coin, a wallet or a price.
-6. **It is not machine agency.** Robots and the mascot never make, hold or break threads, because people choose their helpers.
+6. **It is not machine agency.** Robots never make, hold or break threads, and neither does Tuck: in the release the light comes from three stones together, at the threshold, not from her. People choose their helpers.
 7. **It is never fragile on screen.** A thread that snaps is fear-selling.
 
 ---
@@ -567,21 +609,27 @@ A thread can pass from printed to lit as it leaves a page. On thumbnails it does
 | Node breath | 72 | 3.00 | Breath, looping |
 | Threads leave | 12 | 0.50 | Breath |
 | Tally ticks up (end card) | 6 | 0.25 | Settle |
-| Title-card lockup | 36 | 1.50 | See below |
+| Title-page type settles (imprint, title, descriptor) | 18 (f60–f77) | 0.75 | Settle, 3-frame stagger. See below. |
+| The release draws the rule | 12 (f102–f113) | 0.50 | Draw. See §4. |
 
 **Minimum hold for any text:** 24 frames, plus 10 frames per word (about 2.4 words a second). Everything on screen is also said aloud (FORMAT §3), so holds usually follow the speech. This number is the floor.
 
 ### The title-card sequence
 
-This is the bumper's final 1.50 s: `3.50s–5.00s` in a five-second bumper. The times below are measured from the lockup's first frame.
+The title page is never a separate card and never a cut. It lives in the top 55% of the ritual's locked pocket shot, in the sky above Tuck, from the f54 cut to the f120 cut (storyboard §3). Frames are the storyboard's: 0-indexed, 24 fps.
 
-- **`0.00s–0.50s`:** the imprint, title and descriptor settle in, fading up and rising 12 px on `settle`. They stagger by 3 frames: imprint at frame 0, title at frame 3, descriptor at frame 6.
-- **`0.25s–1.00s`:** the rule is drawn by **two threads, one from each end,** meeting at the centre (`draw`, 18 frames).
-- **`1.00s–1.25s`:** where they meet, a single node lights.
-- **`1.25s–1.50s`:** the node fades away and leaves a clean, straight rule. The whole lockup has been fully readable since `0.50s`, a full second of reading.
-- **Then a hard cut** to the two-shot on the downbeat (FORMAT §5).
+| Frames | Time | What happens | Curve |
+|---|---|---|---|
+| f54 | `2.25s` | Hard cut into the pocket shot. The house sky is already painted above y 594, with the shield in its corner. No type yet. | – |
+| f60–f71 | `2.50s–2.96s` | On the downbeat of bar two, with the clap and the pocket pat, the imprint fades up and rises 12 px. | Settle |
+| f63–f74 | `2.63s–3.08s` | The title makes the same move, 3 frames later. | Settle |
+| f66–f77 | `2.75s–3.21s` | The descriptor makes the same move, 3 frames after the title. All type is set by f77 and reads for 42 frames (1.75 s) before the cut. | Settle |
+| f102–f113 | `4.25s–4.71s` | **The release** (§4). Two threads lift off the three lit stones, loop wide around Tuck and draw the rule from both ends. They meet at x 960 on f113. | Draw |
+| f113–f119 | `4.71s–4.96s` | A single node lights where they meet, full by f115, and fades over f116–f119, leaving a clean rule. | Settle, then Breath |
+| f114–f119 | `4.75s–4.96s` | **The melt.** The cove plate goes first and Tuck last, and the threads' loop arms fade with them. It ends on this kit's own title card on sky (§6): imprint, title, lit rule, descriptor and shield. | Breath |
+| f120 | `5.00s` | Hard cut to the two-shot on the button (FORMAT §5). | – |
 
-**Why this is the detail:** two lines set off from opposite sides and meet in the middle. It's two friends, and it's the show's name, stated once, in 18 frames, without a word.
+**Why this is the detail:** two lines set off from opposite sides and meet in the middle. It's two friends, and it's the show's name, stated once, in 12 frames, without a word. The rule is drawn with the three stones' own light, so the show's name is written by enough hands.
 
 ### The house transition: the Leaf
 
@@ -629,19 +677,19 @@ Every piece of furniture is made of the same material:
 
 There's no texture, because paper grain costs bitrate and turns to mush on YouTube.
 
-### Title card (the bumper's final frame)
+### Title card (the ritual's sky, and the bumper's final frame)
 
-The type positions are in §2, the lockup rules in §3 and the animation in §5. This is the ground the lockup sits on.
+The type positions are in §2, the lockup rules in §3 and the animation in §5. This is the ground the lockup sits on. It's the top 55% of the ritual's pocket shot from f54, and the whole frame at f119, once Tuck has melted away.
 
 | Part | Spec |
 |---|---|
-| Day sky (default) | A vertical gradient: Zenith `#1B5699` from 0% to **52% of H**, easing (cosine) into Sky `#4185CB` at 80%, then Horizon `#CFE6F6` at 100%. Add 1.5% monochrome dither. |
+| Day sky (default) | A vertical gradient: Zenith `#1B5699` from 0% to **52% of H**, easing (cosine) into Sky `#4185CB` at 80%, then Horizon `#CFE6F6` at 100%. Add 1.5% monochrome dither. In the ritual it's painted onto the pocket-shot plate above y 594, and it isn't warmed with the rest of the plate, so Paper keeps 6.67:1 and Gilt 4.71:1. |
 | Dusk sky (night bumpers only) | Night Sky `#1D3D73` from 0% to 52%, easing into Zenith `#1B5699` at 100%: the last light on the horizon. Lamplight colourway: Paper 9.62:1, Gilt 6.79:1 and the Lichen descriptor 5.83:1 at their positions. |
-| If the bumper ends in its own world | The world's sky may replace the house sky only if every pixel behind the lockup is as dark as Zenith or darker. Otherwise the camera tilts up into the house sky, or the house sky dissolves in behind the lockup over 12 frames. |
+| The world's own sky | Never replaces the house sky. The camera never tilts and nothing dissolves in: the house sky is on the pocket-shot plate from the f54 cut. Every bar-one plate paints its upper sky deep, in the Zenith family (Night Sky for night episodes), so the cut doesn't jump in brightness (storyboard §5). |
 | Lockup | Centred, occupying y 215–592 (§2) |
-| Shield | Top-right, right edge x 1824, top y 72, 180 px tall |
-| Mascot's final pose | The lower 45% of the frame (y 594–1008), outside the lockup's clear space. It never overlaps the lockup or the shield. |
-| Hold | The complete lockup is readable for at least 1.00 s before the hard cut (§5) |
+| Shield | Top-right, right edge x 1824, top y 72, 180 px tall. Present from f54 and never animated. Plain mark only; if there is none, the position stays empty (§3). |
+| Tuck | In the lower 45% of the frame (y 594–1008) from f54, with her carry-over below y 606 (§3). She melts away over f114–f119, plate first and Tuck last, so f119 is the title card alone on sky. She never overlaps the lockup or the shield. |
+| Hold | Imprint, title and descriptor are fully set by f77 and read for 1.75 s before the hard cut. The rule completes at f113 (§5). |
 
 ### Lower thirds
 
@@ -663,7 +711,7 @@ The type positions are in §2, the lockup rules in §3 and the animation in §5.
 | Kicker | "MANY HANDS 07". S2 Atkinson 600 caps, 32 px, +160, Jade, baseline at the slip's top + 52 |
 | Question | The title's exact words. T4 Fraunces Italic 500, 56 px, Ink. First baseline at the kicker + 72, then every 66 px. At most 2 lines within 1104 px. |
 
-**Hands On label** (on screen for the whole demo, FORMAT §6)
+**Hands On label** (on screen for the whole demo, FORMAT §6, except while the Curve page is up; its kicker does the labelling there)
 
 | Part | Spec |
 |---|---|
@@ -683,7 +731,7 @@ There's **no full-screen chapter card inside an episode**. FORMAT §4 rules it o
 | Timing | 48 frames: 10 in (Settle, dropping 16 px), 28 hold, 10 out (Tuck). It arrives on the first note of the sting and stays silent for Where It Stops (FORMAT §4). |
 | Where It Stops | **The same tab, with no ornament.** The limit is a chapter like any other, not an alert. |
 
-**Note for the mascot team:** deliver a one-colour line-engraving version of the mascot for these ornaments, drawn to survive at 60 px tall.
+**Note for the mascot team:** deliver Tuck in the home float pose as a one-colour line engraving for these ornaments, drawn to survive at 60 px tall (bible, Part four, rung 3). Pip is never an ornament.
 
 ### Question card
 
@@ -699,6 +747,37 @@ This full-frame paper page is used for Raised Hands (the community question, rea
 | Attribution | "— Maria, from the comments", "— from the contributors call" or "— a common one online". S1 Atkinson 500, 40 px, Jade, baseline 72 px below the last line. Next Time uses "Answer under this video · first names only". |
 | Vertical placement | Centre the block, from the kicker to the attribution, between y 144 and y 840, then raise it 24 px to the optical centre. |
 | Hold | For as long as Bruce is reading, plus 24 frames. Then the Leaf takes us back to the two-shot for the answer. |
+
+### The Curve (teaching diagram)
+
+This is the show's one picture for teaching the threshold (DECISIONS R6). It takes the retired Loop concept's best idea and makes it an honest diagram. It's an Ink line on Paper that sways through every curve its dots allow while there are fewer dots than the threshold, and settles into exactly one curve when the threshold dot lands. Facundo can defend it line by line. It first runs in Episode 01's Hands On (`scripts/EP01-SCRIPT.md` §5). It may return in The Short Answer, The Table or Hands On whenever the threshold is the point.
+
+**It's furniture, not light.** It's the thread's opposite in every property that could confuse the two:
+
+| | The light thread (§4) | The Curve |
+|---|---|---|
+| Means | People connected by care | How a threshold works |
+| Colour and ground | Gilt, lit, on sky and footage; Brass, printed, on Paper | Ink on Paper, only |
+| Light | A Filament core and a glow | None |
+| Shape | Fixed once drawn | Sways through real curves until the threshold, then holds |
+| Points | Up to seven nodes that breathe | 14 px Ink dots that don't |
+| Where | The ritual, key art, the title card, thumbnails, the banner | Teaching segments only |
+
+| Part | Spec |
+|---|---|
+| Ground | Paper, full-frame. In and out on a 12-frame cross-dissolve on `breath`, because the Leaf belongs to the full-frame cards. In Hands On it's framed to match camera D's board, so the dissolve reads as the same page. |
+| Kicker | "THE CLASSROOM PICTURE". S2 Atkinson 600 caps, +160, Jade, x 240, baseline y 216. It labels the drawing honestly, the way the Hands On label labels the table, and it states R6's third limit. |
+| Edge scale | The only axis: a 2 px Ink line at x 240 from y 264 to y 720, with 12 px ticks every 10. Labels at 0, 50 and 100 in S1 Atkinson 500, Ink, hang in the left margin. No other axis and no grid. The secret is where the curve meets this edge. |
+| Drawing area | x 240–1680, y 264–720. It stops at y 720 so the caption has its own band above the caption line. Frame camera D's board to this area at rehearsal. |
+| Curve | 3 px Ink, round caps, clipped to the drawing area. The settled curve is a gentle arch, never a rising line, so it can't read as a growth chart. |
+| Dots | 14 px Ink discs. Each fades in over 6 frames on `settle`, with no scale change and no glow. They're values on a graph, never people: no faces, names, avatars, amber or tokens. |
+| The wobble | **Every frame is a real curve through every dot on screen.** It's computed from the numbers, never keyed by hand. Below the threshold the curve sways through the curves its dots allow, and its crossing sweeps the whole edge scale once every 48 frames (2 s) on `breath`. That's slow enough to read as freedom, not as a glitch. There's one curve at a time and no ghost trails, because a fan of curves reads as a mesh. |
+| The settle | When the threshold dot lands, the curve settles into the one curve through all the dots over 6 frames on `settle`, with no bounce or overshoot, and holds. The recovered value then sets beside the edge in T4 Fraunces 600, Ink ("47" in Episode 01). |
+| Caption | On the page from the first frame of the dissolve: "The secret is one number, not the whole curve." / "Real shares live in modular arithmetic, so there's no smooth line to look at." S1 Atkinson 500, 40 px, Ink, roman, flush left at x 240, measure 1440 px. Two lines, broken after "curve.", with baselines at y 790 and y 840. The longer line sets at about 1,360 px. [VERIFY] |
+| Sound | S01 as each dot lands, identical every time and panned to the dot. S03 in the hold after the settle (THEME §4). Both sit in gaps in the talk, never under a word. |
+| Never | Gold, amber, Glass, a glow or a Filament core. The light thread, a node, or straight lines joining the dots. Tuck, Pip or a stone. Laid over the tabletop tokens or a screen recording. A tick, a cross or a colour change at the settle. Any frame of Where It Stops. |
+
+**Why the caption lives on the page.** R6 has Facundo state these limits on camera, and he does. The caption makes the page carry them as well, so a screenshot or a clip never travels without them. Episode 01's Light Work clip (8:09–8:49) includes the Curve but ends before he speaks the limits. The kicker carries the third limit, "the smooth curve is the classroom picture". In a vertical Short the page is re-set for 9:16 with the caption kept, never cropped from the horizontal page.
 
 ### Where It Stops band (the "what this doesn't do" card)
 
@@ -751,7 +830,7 @@ The formula: **the two hosts, and the question on a page.** FORMAT §7 says the 
   - the action in T3 **Fraunces roman 600**, 72 px, Ink, measure 1200 px, at most 3 lines;
   - "Free · under ten minutes · tonight" in S1 Jade, 48 px below the action;
   - a credit line, "Many Hands 07 · DeRec Alliance", in S2 Jade, baseline y 792, so a screenshot carries its own credit;
-  - the mascot may point at the action from an area at x 1440–1824, y 360–840. This is the one card where it may encourage (FORMAT §7).
+  - Tuck may gesture toward the action with both paws together from an area at x 1440–1824, y 360–840. She never points with one digit (bible). This is the one card where she may encourage (FORMAT §7).
 - **Verdict stamp** (Heard It Somewhere):
   - "True." / "Not true." / "True, but…" in T3 Fraunces 700, 72 px, Ink;
   - on a Paper slip on **Facundo's side** (outer edge x 1824, y 684–840), framed by a 3 px Ink double rule inset 8 px, like a library stamp;
@@ -765,7 +844,7 @@ The formula: **the two hosts, and the question on a page.** FORMAT §7 says the 
   - sizes stay on the kit's scale, measured against the Short's 1080 px width;
   - the first-second question is T3 Fraunces Italic, 72 px, on a Paper slip at the top of the safe area;
   - burned-in captions are Atkinson Next 700 at 56 px (the T4 size), Ink on Paper slips (6 px radius, 16/24 px padding), at most 2 lines of 22 characters, with baselines at y 1280–1440;
-  - the mascot appears only as a one-second still at the loop point (FORMAT §3).
+  - the mascot appears only as the one-second end stamp at the loop point: 24 frames of the ritual master, f88–f111, cropped to 9:16 around x 960 (storyboard §7). The stamp shows no title page; the Light Work wordmark sits in the top safe zone as a still.
 
 ---
 
@@ -831,7 +910,7 @@ The formula: **the two hosts, and the question on a page.** FORMAT §7 says the 
 **Light, lens and grade**
 - **Light:** late-morning sun about 30° above the horizon, behind camera-left. A warm rim on hair and shoulders, a soft warm key bounced off white terraces, and cool fill from the open sky.
 - **Lens:** 50 mm for the two-shot, 35 mm for wide environments, at eye level. An f/2.8 look: the city stays readable but soft.
-- **Grade:** the live-set grade, with saturation 10–15% *below* the reference images, and with their HDR look removed (halos, crunchy leaves, plastic skin). **The references show the right world at the wrong volume.** Aim for a painted plate in a book, not a game trailer.
+- **Grade:** the live-set grade, with saturation 10–15% *below* the reference images, and with their HDR look removed (halos, crunchy leaves, plastic skin). **The references show the right world at the wrong volume.** Aim for a painted plate in a book, not a game trailer. This is for key art only. The bumper's plates stay as lush and saturated as the references, with only their HDR faults removed (DECISIONS R4).
 
 **Composition**
 - The top third is kept calm for the title.
@@ -947,7 +1026,7 @@ This extends the brief's rule on clichés (non-negotiable 6). If it's on this li
 
 ### [HOST GATE]
 
-1. **The shield master:** the Alliance supplies the only artwork, and the show uses the plain mark without "PROTECTED BY DeRec".
+1. **The shield master:** the Alliance supplies the only artwork, and the show uses the plain mark without "PROTECTED BY DeRec". If no plain master exists, the shield position stays empty.
 2. **The imprint set in Atkinson,** replacing the cover's AI-rendered lettering, unless the Alliance has an official wordmark.
 3. **The title set in Fraunces** and the imprint in Atkinson, a departure from FORMAT's "same typeface" note.
 4. **The square cover lockup:** imprint, title, descriptor and shield placement (FORMAT's sign-off item 10).
@@ -961,3 +1040,19 @@ This extends the brief's rule on clichés (non-negotiable 6). If it's on this li
 2. **The areas of YouTube's end-screen elements** in the Studio editor, before the end-card template is locked.
 3. **The areas the Shorts app overlays,** before the Light Work template is locked.
 4. **The `lib-derec` version** shown on the Hands On label at every recording.
+5. **The Curve's caption,** with Facundo, before Episode 01 records. Check how `derec-cryptography` actually splits a secret (as one number, byte by byte, or as a shared key for an encrypted secret), and that "the secret is one number" stays true for it. If it doesn't, Facundo rewords the first line; the two-line layout holds either way. Check the wording together with the script's phrasing of R6's three limits (`scripts/EP01-SCRIPT.md`, [VERIFY] item 11).
+
+---
+
+## Changes after the concept phase
+
+Edited in the build phase to agree with `DECISIONS.md`, `intro/COLD-OPEN-STORYBOARD.md` and `mascot/CHARACTER-BIBLE.md`. Sections that already agreed were left alone.
+
+1. **The characters (§1).** Added Tuck's and Pip's palettes and how they sit in the system. Gilt, Glass, Filament and Amber now list their character jobs: the lit stone, Tuck's catchlight and Pip's Glass face-line.
+2. **The release (§4 and the one-page summary).** The thread now meets the mascot in one sanctioned place, R3's release, on the storyboard's routed path. The kit states the release's exceptions to the draw, speed, curvature, node and leaving rules. The constellation no longer appears in the bumper world.
+3. **The title page (§2, §5, §6).** It sits in the sky above Tuck for the whole ritual. The §5 sequence now runs on the storyboard's frames: the type settles over f60–f77, the release draws the rule over f102–f113, the node fades over f116–f119, and the melt (f114–f119) ends on this kit's title card on sky. The world's own sky no longer stands in for the house sky, and the camera never tilts. The positions already matched. The descriptor moves from weight 500 to 600, as in the storyboard.
+4. **Clear space (§3).** On the title page Tuck works to the storyboard's clearance (below y 606), not 1 X.
+5. **The shield (§3, §6).** Plain mark only (R9). With no plain master the position stays empty, and the "PROTECTED BY" fallback is gone.
+6. **The Curve (§6).** Added as ink-on-paper teaching furniture with its honest-limits caption (R6), built on the Episode 01 script's Curve page. The Hands On label steps off while it's up.
+7. **The Light Work stamp (§6).** Now the storyboard's 24-frame crop of the ritual (f88–f111), not a still.
+8. **Smaller agreements.** Tuck gestures with both paws on the One Small Thing card. The tab engraving is Tuck, never Pip. Key art's "10–15% below the references" grade doesn't apply to the bumper's plates (R4).

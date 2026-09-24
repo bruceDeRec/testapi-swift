@@ -131,16 +131,16 @@ The title page lives in the top 55% of the pocket shot, on the plate's own sky. 
 | Imprint, "DeRec Alliance" | Atkinson Hyperlegible Next 600, tracking +10 | 56 px (5.2% of H) | "DeRec" Gilt `#F2C96E`, "Alliance" Paper `#F7F3E6` | Baseline y 252 | f60–f71: fades up and rises 12 px on `settle` |
 | Title, "Many Hands" | Fraunces 600, opsz 144, SOFT 50, WONK 0, tracking −15 | 176 px (16.3% of H), about 876 px wide | Paper `#F7F3E6` | Baseline y 456 | f63–f74, the same move 3 frames later |
 | Rule | The light thread at rest: 3 px Gilt with a 1 px Filament core and the kit's set glow | 333 px wide (38% of the title's width) | Gilt `#F2C96E` / Filament `#FCEBB4` | Centred on y 528 | **It doesn't exist until the threads draw it**, meeting at f113. A node lights at f113 and fades by f119. |
-| Descriptor, "THE COMMUNITY PODCAST" | Atkinson Hyperlegible Next 600 capitals, tracking +220 | 32 px (3.0% of H) | Paper `#F7F3E6` | Baseline y 592 | f66–f77, 3 frames after the title |
+| Descriptor, "THE COMMUNITY PODCAST" | Atkinson Hyperlegible Next 500 capitals, tracking +220 | 32 px (3.0% of H) | Paper `#F7F3E6` | Baseline y 592 | f66–f77, 3 frames after the title |
 | The shield | **Plain mark without "PROTECTED BY"**, from the Alliance's master file only [HOST GATE] | 180 px tall | As supplied | Right edge x 1824, top y 72 | Present from f54, unanimated. The shield never moves. |
 
 - **Readability:** all type is fully set by f77 and readable for 42 frames (1.75s) before the cut. That's well past the ritual's requirement of "fully set by f101".
 - **Wear:** the title page appears in every episode, so regulars read it hundreds of times. It has to feel like a book's title page, not an advert.
 
-**Carry-over clearance.** Tuck's crown carry-over must stay below **y 606**, which keeps at least 14 px clear of the descriptor's baseline. The Episode 01 leaf tops out at about y 600 in the animatic, and the final model must match or sit lower. This supersedes the bible's 0.35H crown cap wherever the two disagree.
+**Carry-over clearance.** Every carry-over item must stay below the line **y 606**: its topmost pixel sits at y 606 or greater, which keeps at least 14 px clear of the descriptor's baseline. To make room, Tuck's crown sits at **y 670** in the pocket shot (head centre y 788 at 1080p), so a crown item may rise 64 px at most. The Episode 01 leaf tops out at y 618 in the animatic (measured). This supersedes the bible's 0.35H crown cap and its head position (y 610–860) wherever they disagree. `production/PROMPT-PACK.md` checks it automatically (`qc_carryover.py`).
 
 **Threads' path** (screen coordinates, 1920×1080). Each thread follows one continuous curve, drawn on the brand kit's `draw` curve over f102–f113:
-- **Left thread:** from the left stone's rim (about x 845, y 885), out and up at a 40° lean to x 640, y 760, then rising to x 660, y 560, clear of the descriptor's left end. It then curves in to the rule's left end at x 794, y 528, and runs along the rule to the centre, x 960.
+- **Left thread:** from the left stone's rim (about x 848, y 912), out and up to x 604, y 788, then rising to x 578, y 660 and x 596, y 572, clear of the descriptor's left end. It then curves in to the rule's left end at x 794, y 528, and runs along the rule to the centre, x 960.
 - **Right thread:** the mirror image.
 - **Clearance:** neither thread comes within 10% of Tuck's face height, and neither crosses the descriptor.
 
@@ -196,7 +196,7 @@ The hook, the key, the tempo, the instrumentation and the delivery specs are unc
 | Spec | Value |
 |---|---|
 | Duration | 54 frames exactly, with 12-frame handles at the head for editing. There's no handle at the tail: f53 is a hard cut. |
-| Format | 1920×1080 at 24 fps, ProRes 4444 or an EXR sequence, in the house grade (brand kit LUT). |
+| Format | Masters render at **3840×2160** (UHD) at 24 fps, ProRes 4444 or an EXR sequence, in the house grade (brand kit LUT). The playbook uploads UHD, and the 9:16 cuts need the extra pixels. Every position in this document is written at 1080p and doubles at UHD. |
 | Cuts inside bar one | Allowed only on the hook's whole-frame notes (f15, f45) or at f30. Never more than two cuts. |
 | The join into f54 | Tuck's last pose points her eyeline to frame left (bible rule 7), her paws are free by f53, and the carry-over item is on screen and on its anchor by f45. The key light comes from camera left in every plate, so the cut doesn't flip the light. |
 | Sky | Every bar-one plate paints its upper sky deep (Zenith family) so the f54 cut into the title-page sky doesn't jump in brightness. Night episodes use the brand kit's Night Sky variant for both. |
@@ -227,7 +227,11 @@ These are Tuck's Year for season one, from the character bible, with air dates e
 
 - The full action for each episode, its cost tier and its end-card reprise are in `mascot/CHARACTER-BIBLE.md`, Part three.
 - Season two, from 28 April to 29 September 2027, is there too. It includes the one-time **New Stones** variant in Episode 13.
-- **Crown carry-overs against the §3 clearance:** Episode 01's leaf, 03's snow and 06's bobble hat must all stay below y 606. The bobble hat is the one to check: it sits proud, so the animator either flattens it or sits it back on the crown.
+- **Carry-overs against the §3 clearance and the bible's forbidden zones:**
+  - Episode 01's leaf and Episode 03's snow fit under y 606.
+  - Episode 06's bobble hat can't, so it needs the fix or the named swap (ice spray on her brow) in `production/PROMPT-PACK.md`.
+  - Episode 02's eyepiece ring sits next to the eye zone, so it needs the pack's fix or its swap (a cypress sprig behind her right ear).
+  - All three choices are [HOST GATE].
 
 ---
 
@@ -265,8 +269,9 @@ FORMAT §7 allows the mascot in Shorts only as a one-second stamp at the loop po
 | 5–6 | f240–f359 | The ritual master, f54–f119, re-timed so its f60 lands on bar 5's downbeat. Then the title page holds 54 frames with a line under the descriptor: **"Premieres Wednesday 11 November"** (Atkinson Next 600, 40 px, Paper). | M07 bars 5–6, ending on the button |
 
 - **Why it's built this way:** each activity gets exactly one bar, so the trailer is the cold open's promise shown four times, "different every time, the same every time", before the ritual pays it off once.
+- **When it runs:** from late November, once Episodes 04 and 07 are delivered. It can't be ready for the 11 November launch, so launch uses the channel trailer in `production/CHANNEL-KIT.md`, and this cut's end line changes to the next premiere date [HOST GATE].
 - **Timing dependency:** M07's bar structure is specified in THEME §4. **[VERIFY]** the composer delivers M07 with a clean bar-5 downbeat for the ritual to land on.
-- **Pip's episodes:** Episodes 04 and 07's bar-one animation is needed early, so bring those two into the first animation batch.
+- **Pip's episodes:** the trailer needs Episodes 04 and 07's bar-one animation, which arrives with the studio's second batch (`production/PROMPT-PACK.md`).
 
 ---
 

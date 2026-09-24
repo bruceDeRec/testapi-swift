@@ -10,9 +10,9 @@
   ];
 
   // Tuck's stone and the friends' stones meet just under her chin (storyboard §2, beat 7)
-  const TUCK = { x: 960, y: 772, s: 1.2 };
+  const TUCK = { x: 960, y: 788, s: 1.2 };
   const STONE_REST = [0, 105];                         // local, held at the lens
-  const THREAD_L = [[848, 896], [700, 866], [604, 772], [578, 644], [596, 556], [672, 530], [794, 528], [960, 528]];
+  const THREAD_L = [[848, 912], [700, 882], [604, 788], [578, 660], [596, 572], [672, 532], [794, 528], [960, 528]];
   const THREAD_R = THREAD_L.map(([x, y]) => [1920 - x, y]);
 
   function render(ctx, f, fonts) {
@@ -68,8 +68,8 @@
 
       // the friends: palms up, offering; from frame left low and frame right low; never touching each other
       const aIn = s(f, 68, 75, E.settle), bIn = s(f, 74, 82, E.settle), away = s(f, 102, 109, E.tuck);
-      const gran = [lerp(560, 874, aIn), lerp(1200, 906, aIn) + away * 380];
-      const harb = [lerp(1360, 1046, bIn), lerp(1200, 906, bIn) + away * 380];
+      const gran = [lerp(560, 874, aIn), lerp(1200, 922, aIn) + away * 380];
+      const harb = [lerp(1360, 1046, bIn), lerp(1200, 922, bIn) + away * 380];
 
       ctx.save(); ctx.globalAlpha = tuckAlpha;
       D.tuckFront(ctx, { x: TUCK.x, y: TUCK.y, s: TUCK.s, leaf: true, turn: turn, pawL: pawL, pawR: pawR, stone: stone, stoneOut: stone != null && down < 1, glow: glow, blink: blink });

@@ -435,7 +435,7 @@
     ctx.fillStyle = C.gilt; ctx.fillText('DeRec', x0, y1); ctx.fillStyle = C.paper; ctx.fillText('Alliance', x0 + w1, y1);
     a = k(3); ctx.globalAlpha = a * A; ctx.textAlign = 'center'; ctx.fillStyle = C.paper; ctx.font = `600 176px ${opts.display}`;
     ctx.fillText('Many Hands', 960, 456 + (1 - a) * 12);
-    a = k(6); ctx.globalAlpha = a * A; ctx.font = `600 32px ${opts.text}`;
+    a = k(6); ctx.globalAlpha = a * A; ctx.font = `500 32px ${opts.text}`;
     if (ctx.letterSpacing !== undefined) ctx.letterSpacing = '7px';
     ctx.fillText('THE COMMUNITY PODCAST', 963, 592 + (1 - a) * 12);
     if (ctx.letterSpacing !== undefined) ctx.letterSpacing = '0px';
