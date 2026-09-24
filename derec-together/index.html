@@ -1,0 +1,1272 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Many Hands</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Atkinson+Hyperlegible+Mono:wght@400;600&display=swap">
+<style>
+
+:root{
+  --zenith:#1B5699;--sky:#4185CB;--horizon:#CFE6F6;--gilt:#F2C96E;--filament:#FCEBB4;--amber:#E39A35;--glass:#7BE1DA;
+  --paper:#F7F3E6;--ink:#123E32;--jade:#1B7466;--brass:#A8843D;
+  --ground:#F7F3E6;--surface:#FFFCF3;--text:#123E32;--muted:#44645A;--spine:#1B7466;--rule:rgb(18 62 50 / .16);--link:#1B7466;--gold-on-ground:#A8843D;--chip:#E9EEDF;
+  --display:"Fraunces","Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --text-face:"Atkinson Hyperlegible Next","Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --mono:"Atkinson Hyperlegible Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --settle:cubic-bezier(.16,1,.3,1);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ground:#0B231D;--surface:#123E32;--text:#F7F3E6;--muted:#A9C6B9;--spine:#5FC0A9;--rule:rgb(169 198 185 / .22);--link:#5FC0A9;--gold-on-ground:#F2C96E;--chip:#17493B;color-scheme:dark}}
+:root[data-theme="dark"]{--ground:#0B231D;--surface:#123E32;--text:#F7F3E6;--muted:#A9C6B9;--spine:#5FC0A9;--rule:rgb(169 198 185 / .22);--link:#5FC0A9;--gold-on-ground:#F2C96E;--chip:#17493B;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ground);color:var(--text);font:17px/1.6 var(--text-face);-webkit-font-smoothing:antialiased}
+a{color:var(--link);text-underline-offset:3px}
+h1,h2,h3{text-wrap:balance}
+:focus-visible{outline:3px solid var(--gilt);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.kicker{font:600 12px/1.2 var(--text-face);letter-spacing:.14em;text-transform:uppercase;color:var(--spine)}
+
+/* ---------- the title page ---------- */
+.titlepage{background:linear-gradient(180deg,var(--zenith) 0%,var(--sky) 58%,#8DB9E2 88%,var(--horizon) 100%);color:var(--paper);padding-block:56px 64px;position:relative;overflow:hidden}
+.titlepage .wrap{display:grid;justify-items:center;text-align:center;gap:0}
+.imprint{font:600 clamp(18px,2.4vw,26px)/1 var(--text-face);letter-spacing:-.01em}
+.imprint b{color:var(--gilt);font-weight:600}
+.showtitle{font:600 clamp(58px,10vw,128px)/1 var(--display);letter-spacing:-.03em;margin:.22em 0 .12em;font-variation-settings:"SOFT" 50,"WONK" 0,"opsz" 144}
+.titlerule{display:block;width:clamp(120px,16vw,210px);height:3px;border-radius:2px;background:var(--gilt);box-shadow:0 0 12px rgb(242 201 110 / .8);margin:.4em auto .9em;position:relative}
+.titlerule::after{content:"";position:absolute;left:0;right:0;top:1px;height:1px;background:var(--filament)}
+.descriptor{font:600 clamp(12px,1.4vw,15px)/1 var(--text-face);letter-spacing:.32em;text-transform:uppercase;margin-right:-.32em}
+.promise{max-width:640px;margin:26px auto 0;font-size:clamp(17px,1.8vw,20px);line-height:1.55;color:#EAF2FA}
+.seal{position:absolute;top:28px;right:clamp(16px,4vw,40px);width:46px;height:54px}
+
+/* ---------- the player ---------- */
+.player{width:100%;max-width:1040px;margin:34px auto 0;background:#0E2A45;border-radius:14px;box-shadow:0 22px 60px rgb(8 30 60 / .45);overflow:hidden;text-align:left}
+.screen{position:relative;aspect-ratio:16/9;background:#12345A;max-width:100%}
+.screen canvas{display:block;width:100%;height:100%}
+.bigplay{position:absolute;inset:auto auto 18px 18px;display:inline-flex;align-items:center;gap:12px;border:0;border-radius:999px;padding:12px 20px 12px 14px;background:var(--paper);color:var(--ink);font:600 16px/1 var(--text-face);cursor:pointer;box-shadow:0 8px 24px rgb(0 0 0 / .3);transition:transform .2s var(--settle)}
+.bigplay:hover{transform:translateY(-1px)}
+.bigplay .tri{width:30px;height:30px;border-radius:50%;background:var(--ink);display:grid;place-items:center}
+.bigplay .tri::before{content:"";border-left:10px solid var(--gilt);border-top:6px solid transparent;border-bottom:6px solid transparent;margin-left:3px}
+.transport{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:14px 18px 8px;color:#DCE8F4}
+.tbtn{border:1px solid rgb(255 255 255 / .28);background:transparent;color:inherit;border-radius:8px;padding:7px 11px;font:600 13px/1 var(--text-face);cursor:pointer}
+.tbtn[aria-pressed="true"]{background:rgb(242 201 110 / .16);border-color:var(--gilt);color:var(--gilt)}
+.scrub{position:relative;height:34px}
+.scrub input{width:100%;margin:0;position:absolute;top:8px;accent-color:var(--gilt)}
+.ticks{position:absolute;left:0;right:0;top:0;height:10px;pointer-events:none}
+.ticks i{position:absolute;top:0;width:2px;height:8px;background:var(--gilt);border-radius:1px;transform:translateX(-1px);opacity:.85}
+.ticks i.bar{background:#fff;opacity:.55;height:10px}
+.readout{font:400 13px/1.3 var(--mono);white-space:nowrap;color:#BFD3E6}
+.nowline{padding:0 18px 16px;color:#EAF2FA;font-size:15px;min-height:1.6em}
+.nowline b{color:var(--gilt);font-weight:600}
+.caption{max-width:1040px;margin:14px auto 0;font-size:13px;line-height:1.5;color:#E3EEF8;text-align:left}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:22px}
+.chips span{font:600 13px/1 var(--text-face);padding:9px 13px;border-radius:999px;background:rgb(255 255 255 / .14);border:1px solid rgb(255 255 255 / .22)}
+
+/* ---------- sections: paper slips with a jade spine ---------- */
+section.slip{padding-block:64px 12px}
+.slip-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px 48px;align-items:end;margin-bottom:28px;border-left:4px solid var(--spine);padding-left:20px}
+.slip-head h2{font:600 clamp(32px,4.2vw,48px)/1.08 var(--display);letter-spacing:-.02em;margin:6px 0 0}
+.slip-head p{margin:0;color:var(--muted);max-width:52ch}
+.prose{max-width:66ch}
+
+/* beats */
+.beats{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+.beat{background:var(--surface);border:1px solid var(--rule);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;text-align:left;padding:0;font:inherit;color:inherit;cursor:pointer}
+.beat:hover{border-color:var(--spine)}
+.beat canvas{display:block;width:100%;aspect-ratio:16/9;background:#12345A}
+.beat .b{padding:12px 14px 14px;display:grid;gap:4px}
+.beat .t{font:400 12px/1.2 var(--mono);color:var(--spine)}
+.beat h3{font:600 17px/1.25 var(--text-face);margin:0}
+.beat p{margin:0;font-size:14px;line-height:1.45;color:var(--muted)}
+.beat .m{font-size:13px;color:var(--gold-on-ground);font-weight:600}
+.beat.locked .t::after{content:"  ·  locked";color:var(--muted)}
+
+/* Tuck */
+.meet{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px;align-items:start}
+.portrait{background:var(--surface);border:1px solid var(--rule);border-radius:16px;overflow:hidden}
+.portrait canvas{display:block;width:100%;aspect-ratio:4/5}
+.portrait figcaption{padding:12px 16px;font-size:13px;color:var(--muted)}
+.statement{font:500 clamp(22px,2.4vw,28px)/1.3 var(--display);margin:0 0 18px;font-style:italic}
+.adjs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;padding:0;list-style:none}
+.adjs li{background:var(--chip);border-radius:999px;padding:6px 12px;font-size:14px}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--rule)}
+th{font:600 12px/1.2 var(--text-face);letter-spacing:.1em;text-transform:uppercase;color:var(--spine)}
+.tablewrap{overflow-x:auto}
+.pullquote{margin:22px 0 0;padding:16px 18px;border-left:3px solid var(--gold-on-ground);background:var(--surface);border-radius:0 10px 10px 0}
+
+/* year */
+.year{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.act{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:14px 16px;display:grid;gap:6px}
+.act .d{display:flex;justify-content:space-between;gap:8px;font:400 12px/1.2 var(--mono);color:var(--spine)}
+.act h3{margin:0;font:600 17px/1.25 var(--text-face)}
+.act p{margin:0;font-size:14px;line-height:1.45;color:var(--muted)}
+.tag{font:600 11px/1 var(--text-face);letter-spacing:.06em;text-transform:uppercase;padding:4px 7px;border-radius:5px;background:var(--chip);color:var(--text)}
+
+/* run of show */
+.ros{display:flex;width:100%;height:58px;border-radius:10px;overflow:hidden;border:1px solid var(--rule);margin-bottom:12px}
+.ros div{position:relative;min-width:0;border-right:1px solid var(--ground);display:flex;align-items:flex-end;padding:6px}
+.ros div:last-child{border-right:0}
+.ros span{font:600 11px/1.1 var(--text-face);color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.roslist{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:4px 28px;margin:18px 0 0;padding:0;list-style:none}
+.roslist li{display:grid;grid-template-columns:92px 1fr;gap:10px;padding:7px 0;border-bottom:1px solid var(--rule);font-size:15px}
+.roslist .mono{color:var(--spine);font-size:13px;padding-top:2px}
+.ladder{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:28px}
+.tier{background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:20px 22px}
+.tier h3{font:600 26px/1.1 var(--display);margin:4px 0 8px}
+.tier p{margin:0 0 6px;color:var(--muted);font-size:15px}
+.signoff{margin-top:18px;font:500 20px/1.4 var(--display);font-style:italic}
+
+/* season */
+.eps{display:grid;gap:10px;counter-reset:ep}
+.ep{display:grid;grid-template-columns:88px minmax(0,1fr) minmax(0,.9fr);gap:18px;align-items:start;background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:14px 18px}
+.ep .n{font:600 30px/1 var(--display);color:var(--gold-on-ground)}
+.ep .n small{display:block;font:400 12px/1.4 var(--mono);color:var(--muted);margin-top:6px}
+.ep h3{margin:0 0 4px;font:600 18px/1.3 var(--text-face)}
+.ep p{margin:0;font-size:14px;color:var(--muted)}
+.ep .side{font-size:14px;color:var(--muted);display:grid;gap:6px}
+.ep .side b{color:var(--text);font-weight:600}
+
+/* sound */
+.sound{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:36px;align-items:start}
+.hook{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));border:1px solid var(--rule);border-radius:12px;overflow:hidden;background:var(--surface)}
+.hook div{padding:10px 6px;text-align:center;border-right:1px solid var(--rule)}
+.hook div:last-child{border-right:0}
+.hook .syl{font:600 13px/1.2 var(--text-face);color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.hook .note{font:600 22px/1.2 var(--display);margin:6px 0 2px}
+.hook .deg{font:400 12px/1 var(--mono);color:var(--spine)}
+.hook .rest .note{color:var(--muted)}
+.plays{display:grid;gap:10px}
+.play{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:center;text-align:left;background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:12px 14px;font:inherit;color:inherit;cursor:pointer}
+.play:hover{border-color:var(--spine)}
+.play .dot{width:44px;height:44px;border-radius:50%;background:var(--ink);display:grid;place-items:center}
+.play .dot::before{content:"";border-left:12px solid var(--gilt);border-top:7px solid transparent;border-bottom:7px solid transparent;margin-left:4px}
+.play b{display:block;font-weight:600}
+.play span{font-size:14px;color:var(--muted)}
+
+/* look */
+.swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.sw{border:1px solid var(--rule);border-radius:12px;overflow:hidden;background:var(--surface)}
+.sw i{display:block;height:74px}
+.sw div{padding:10px 12px;font-size:13px;line-height:1.4}
+.sw b{display:block;font-size:15px}
+.sw .mono{color:var(--muted)}
+.specimen{margin-top:26px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.spec{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:18px 20px}
+.spec .big{font:600 56px/1 var(--display);letter-spacing:-.02em;margin:8px 0}
+.spec .bigsans{font:600 34px/1.1 var(--text-face);margin:8px 0}
+
+/* gates */
+.gates{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.gcol{background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:18px 20px}
+.gcol h3{margin:0 0 10px;font:600 20px/1.2 var(--display)}
+.gcol ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.gcol li{display:grid;grid-template-columns:18px 1fr;gap:10px;font-size:15px;line-height:1.45}
+.gcol li::before{content:"";width:14px;height:14px;border:2px solid var(--spine);border-radius:4px;margin-top:4px}
+
+/* origin */
+.origin{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:16px;align-items:start}
+.origin figure{margin:0}
+.origin img{display:block;width:100%;height:auto;border-radius:12px;max-width:100%}
+.stills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.origin figcaption{font-size:13px;color:var(--muted);margin-top:6px}
+
+/* package */
+.docs{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:0 32px;margin:0;padding:0;list-style:none}
+.docs li{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid var(--rule);padding:12px 0}
+.docs a{font-weight:600;text-decoration:none}
+.docs a:hover{text-decoration:underline}
+.docs span{color:var(--muted);font-size:14px;text-align:right}
+footer{padding-block:48px 56px;color:var(--muted);font-size:13px}
+footer p{max-width:90ch}
+
+@media (max-width:860px){
+  .slip-head{grid-template-columns:1fr}
+  .meet,.sound,.origin{grid-template-columns:1fr}
+  .ladder,.gates,.specimen{grid-template-columns:1fr}
+  .ep{grid-template-columns:64px 1fr}
+  .ep .side{grid-column:2}
+}
+@media (max-width:560px){
+  .transport{grid-template-columns:auto 1fr;row-gap:6px}
+  .readout{grid-column:1 / -1}
+  .hook .note{font-size:17px}
+  .hook .syl{font-size:10px}
+  .bigplay{inset:auto auto 10px 10px;padding:9px 14px 9px 10px;font-size:14px}
+  .ros span{display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bigplay{transition:none}}
+</style>
+
+</head>
+<body>
+<header class="titlepage">
+  <svg class="seal" viewBox="0 0 46 54" role="img" aria-label="Place for the DeRec shield master file"><path d="M3 3h40c1 17-4 34-20 48C7 37 2 20 3 3z" fill="#10151A" stroke="#F2C96E" stroke-width="2.5"/><text x="23" y="25" text-anchor="middle" font-size="6.5" font-family="Atkinson Hyperlegible Next, sans-serif" font-weight="600" fill="#F2C96E">SHIELD</text><text x="23" y="33" text-anchor="middle" font-size="6.5" font-family="Atkinson Hyperlegible Next, sans-serif" font-weight="600" fill="#F2C96E">MASTER</text></svg>
+  <div class="wrap">
+    <div class="imprint"><b>DeRec</b> Alliance</div>
+    <h1 class="showtitle">Many Hands</h1>
+    <span class="titlerule" aria-hidden="true"></span>
+    <div class="descriptor">The community podcast</div>
+    <p class="promise">Every other week, Bruce and Facundo take one real question about losing, and getting back, the digital things that matter. They answer it in words anyone can follow, including where recovery stops.</p>
+
+    <div class="player" id="player">
+      <div class="screen">
+        <canvas id="stage" width="1920" height="1080" aria-label="Animatic of the Episode 01 cold open: Tuck the sea otter floats on her back, a maple leaf lands on her and she wears it as a hat, then she holds up a plain grey stone; two friends' paws bring stones, all three light amber, and two gold threads rise to become the rule under the title Many Hands."></canvas>
+        <button class="bigplay" id="bigplay" type="button"><span class="tri" aria-hidden="true"></span><span id="bigplay-label">Play the cold open, sound on</span></button>
+      </div>
+      <div class="transport">
+        <button class="tbtn" id="sound" type="button" aria-pressed="true">Sound on</button>
+        <div class="scrub"><div class="ticks" id="ticks" aria-hidden="true"></div><input id="scrub" type="range" min="0" max="155" value="100" step="1" aria-label="Frame"></div>
+        <span class="readout" id="readout">f 100 · 4.17s · bar 2.3</span>
+      </div>
+      <div class="nowline" id="nowline" aria-live="polite"></div>
+    </div>
+    <p class="caption">An animatic: every frame and every note is drawn and synthesized in code, so the timing can be judged now. It is not the final art. The ritual is hand-animated, and the theme is a commissioned recording for real players. Gold ticks on the scrubber mark the hit points, and white ticks mark the bar lines.</p>
+    <div class="chips"><span>Every other Wednesday</span><span>12–18 minutes</span><span>A 5-second cold open</span><span><i>Light Work</i> Shorts on Fridays</span><span>Premieres 11 Nov 2026</span></div>
+  </div>
+</header>
+
+<main>
+<section class="slip wrap" id="five-seconds">
+  <div class="slip-head"><div><div class="kicker">The first introduction</div><h2>Five seconds, frame by frame</h2></div><p>Bar one is the activity, and it changes every episode. Bar two is the ritual, animated once and locked forever. Select any beat to jump the animatic to it.</p></div>
+  <div class="beats" id="beats"></div>
+</section>
+
+<section class="slip wrap" id="tuck">
+  <div class="slip-head"><div><div class="kicker">The mascot</div><h2>Meet Tuck</h2></div><p>A sea otter who keeps one plain stone in the loose skin pocket under her left forearm, where real sea otters keep a rock. Her friend Pip is a porcelain café robot who never holds one.</p></div>
+  <div class="meet">
+    <figure class="portrait"><canvas id="portrait" width="1200" height="1500" aria-label="Tuck, a sea otter with a cream face and a jade kelp scarf, holding a plain grey stone, beside Pip, a small white porcelain robot shaped like a shield."></canvas><figcaption>Tuck and Pip, drawn in code as a sketch of the look. The character bible sets the final model.</figcaption></figure>
+    <div>
+      <p class="statement" id="statement"></p>
+      <ul class="adjs" id="adjs"></ul>
+      <div class="tablewrap"><table><thead><tr><th>What the ritual shows</th><th>What it stands for</th><th>Where the picture stops</th></tr></thead><tbody id="mapping"></tbody></table></div>
+      <p class="pullquote">Bruce says once, in Episode 01: <em>“Tuck’s a cartoon. Your helpers are real people you choose.”</em></p>
+    </div>
+  </div>
+</section>
+
+<section class="slip wrap" id="year">
+  <div class="slip-head"><div><div class="kicker">Different every time</div><h2>Tuck’s year</h2></div><p>Each episode’s activity follows the month it airs, so the regulars’ season matches hers. Every plate carries one small sign of tomorrow, and every activity is something a person could do on a good day off.</p></div>
+  <div class="year" id="acts"></div>
+</section>
+
+<section class="slip wrap" id="show">
+  <div class="slip-head"><div><div class="kicker">The format</div><h2>Fifteen minutes, one question</h2></div><p>The standard episode runs 15:00. A narrow question gets 10 minutes and a clinic gets 20. Shorter episodes lose talk, never segments.</p></div>
+  <div class="ros" id="ros" role="img" aria-label="Run of show bar from 0:00 to 15:00"></div>
+  <ul class="roslist" id="roslist"></ul>
+  <div class="ladder">
+    <div class="tier"><div class="kicker">Flagship · every other Wednesday</div><h3>Many Hands</h3><p>16:9, 12–18 minutes, premiered at 11:00 New York time with Bruce in the live chat. The week after each fortnightly contributors call.</p><p>Builds the library: evergreen answers that keep finding viewers for years.</p></div>
+    <div class="tier"><div class="kicker">Weekly · every Friday</div><h3>Light Work</h3><p>A 9:16 Short, 30–60 seconds, captions burned in. The question is on screen and spoken in the first second.</p><p>Keeps the channel alive between flagships, and any clip that shows what DeRec can do carries its limit line.</p></div>
+  </div>
+  <p class="signoff">Bruce: “Many hands…” &nbsp; Facundo: “…make light work.”</p>
+</section>
+
+<section class="slip wrap" id="season">
+  <div class="slip-head"><div><div class="kicker">Season one</div><h2>Twelve questions</h2></div><p id="season-note">Proposed dates for host review, America/New_York. Holidays are flagged, and every date moves if the contributors call moves.</p></div>
+  <div class="eps" id="eps"></div>
+</section>
+
+<section class="slip wrap" id="sound">
+  <div class="slip-head"><div><div class="kicker">The theme</div><h2>A tune in the rhythm of a proverb</h2></div><p>D major at 96 BPM, two bars, and the cut to the hosts lands on the final chord at exactly 5.00 seconds. The hook is sung by nobody: a vibraphone asks, a nylon guitar answers, and one real group clap lands on “work”.</p></div>
+  <div class="sound">
+    <div>
+      <div class="hook" id="hook"></div>
+      <p class="prose" style="margin-top:18px">The one surprising note is the G♯ on “light”. Over an E chord on a held D it sounds bright, not wrong, and it carries the slightly futuristic lift on its own. The chords go I, II over I, IV, borrowed iv, and home. There is no dominant, so the arrival feels calm rather than pushed.</p>
+    </div>
+    <div class="plays">
+      <button class="play" type="button" data-play="theme"><i class="dot" aria-hidden="true"></i><div><b>The theme alone</b><span>5 seconds plus the ring-out</span></div></button>
+      <button class="play" type="button" data-play="setdown"><i class="dot" aria-hidden="true"></i><div><b>A share handed over</b><span>Glass on stone and a faint A5. Every share sounds identical.</span></div></button>
+      <button class="play" type="button" data-play="checkin"><i class="dot" aria-hidden="true"></i><div><b>The daily check-in</b><span>Two knocks, and each helper answers “here”</span></div></button>
+      <button class="play" type="button" data-play="home"><i class="dot" aria-hidden="true"></i><div><b>Recovery completes</b><span>Silence for a breath, then the whole home chord at once</span></div></button>
+      <p style="font-size:13px;color:var(--muted);margin:4px 0 0">Synthesized sketches of the specs in the sound brief. The released theme will be played by people.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slip wrap" id="look">
+  <div class="slip-head"><div><div class="kicker">The look</div><h2>A beautifully printed book about tomorrow</h2></div><p>The restraint of the first package meets the light of the cover. Jade, ink and paper come from the earlier work unchanged. Gilt and sky come from the cover, sampled from its lettering and its sky.</p></div>
+  <div class="swatches" id="swatches"></div>
+  <div class="specimen">
+    <div class="spec"><div class="kicker">Display · Fraunces 600</div><div class="big">Many Hands</div><p style="margin:0;color:var(--muted);font-size:14px">A soft old-style face for the title and for every question, set in italic.</p></div>
+    <div class="spec"><div class="kicker">Text · Atkinson Hyperlegible Next</div><div class="bigsans">Who would you ask?</div><p style="margin:0;color:var(--muted);font-size:14px">Designed for low-vision readers, so every lower third passes the Grandma test.</p></div>
+  </div>
+</section>
+
+<section class="slip wrap" id="gates">
+  <div class="slip-head"><div><div class="kicker">Before anything ships</div><h2>Decisions that belong to the hosts</h2></div><p>Nothing here is scheduled, uploaded or published. These are the calls that need a yes from Bruce, from Facundo, or from both.</p></div>
+  <div class="gates" id="gatecols"></div>
+</section>
+
+<section class="slip wrap" id="origin">
+  <div class="slip-head"><div><div class="kicker">Where it started</div><h2>The cover, and the world around it</h2></div><p>The square cover set the direction: the Alliance at the top, two friends side by side, and a line of light carrying the things worth keeping, most of which are not money.</p></div>
+  <div class="origin">
+    <figure><img src="assets/reference/00-cover-derec-alliance.jpg" alt="Bruce and Facundo under the words DeRec Alliance, The community podcast, reaching toward a glowing line of light that carries glass cards for finances, a painting, a family photo and a health record, in a sunlit garden city." width="1024" height="1024" loading="lazy"><figcaption>The cover. Fictional generated artwork.</figcaption></figure>
+    <div class="stills">
+      <figure><img src="assets/reference/04-cafe-constellation.jpg" alt="The hosts at a café table placing amber gems joined by threads of light." width="1280" height="720" loading="lazy"><figcaption>The café: secret-sharing done with hands.</figcaption></figure>
+      <figure><img src="assets/reference/01-observatory-night.jpg" alt="The hosts at a telescope on a terrace at dusk." width="1280" height="720" loading="lazy"><figcaption>The observatory.</figcaption></figure>
+      <figure><img src="assets/reference/02-kayak-lake.jpg" alt="The hosts kayaking on an alpine lake." width="1280" height="720" loading="lazy"><figcaption>The lake.</figcaption></figure>
+      <figure><img src="assets/reference/03-vineyard-bikes.jpg" alt="The hosts with gravel bikes in a vineyard." width="1280" height="720" loading="lazy"><figcaption>The vineyard.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="slip wrap" id="package">
+  <div class="slip-head"><div><div class="kicker">The package</div><h2>Every document</h2></div><p>All of it lives on the branch <span class="mono">claude/drex-alliance-youtube-series-09gepb</span> in <span class="mono">derec-together/</span>.</p></div>
+  <ul class="docs" id="docs"></ul>
+</section>
+</main>
+
+<footer class="wrap">
+  <p>A proposal for host review. The scene artwork is fictional and generated, and it implies no product capability, protocol guarantee or endorsement. The DeRec protocol was invented by Dr. Leemon Baird. The shield shown is a placeholder for the Alliance’s master file. Recovery does not undo a hack, reverse a transaction you approved, or stop a scam.</p>
+  <p>Many Hands · the DeRec Alliance community podcast</p>
+</footer>
+
+<script>
+/* Many Hands — animatic sound engine.
+   A synthesized SKETCH of the theme in music/THEME-AND-SOUND.md, for timing review only.
+   The real theme is a commissioned human recording (DECISIONS R9). */
+(function (root) {
+  const N = { D2: 73.42, G2: 98.0, E3: 164.81, Fs3: 185.0, Gs3: 207.65, A3: 220.0, Bb3: 233.08, B3: 246.94,
+    D3: 146.83, D4: 293.66, E4: 329.63, Fs4: 369.99, Gs4: 415.3, A4: 440.0, B4: 493.88, D5: 587.33, Fs5: 739.99, A5: 880.0, A6: 1760.0 };
+
+  function noiseBuffer(ac, secs) {
+    const b = ac.createBuffer(1, Math.ceil(ac.sampleRate * secs), ac.sampleRate);
+    const d = b.getChannelData(0);
+    let s = 1234567;
+    for (let i = 0; i < d.length; i++) { s = (s * 1103515245 + 12345) & 0x7fffffff; d[i] = (s / 0x3fffffff) - 1; }
+    return b;
+  }
+
+  function impulse(ac, secs, decay) {
+    const len = Math.ceil(ac.sampleRate * secs), b = ac.createBuffer(2, len, ac.sampleRate);
+    for (let c = 0; c < 2; c++) {
+      const d = b.getChannelData(c); let s = 99 + c * 7;
+      for (let i = 0; i < len; i++) { s = (s * 1103515245 + 12345) & 0x7fffffff; d[i] = ((s / 0x3fffffff) - 1) * Math.pow(1 - i / len, decay); }
+    }
+    return b;
+  }
+
+  // Karplus–Strong pluck rendered into a buffer (nylon guitar, upright bass)
+  function pluckBuffer(ac, freq, secs, bright, damp) {
+    const sr = ac.sampleRate, len = Math.ceil(sr * secs), b = ac.createBuffer(1, len, sr), out = b.getChannelData(0);
+    const period = Math.max(2, Math.round(sr / freq)), line = new Float32Array(period);
+    let s = Math.round(freq * 1000);
+    for (let i = 0; i < period; i++) { s = (s * 1103515245 + 12345) & 0x7fffffff; line[i] = ((s / 0x3fffffff) - 1) * 0.5; }
+    // soften the initial burst (finger, not pick)
+    for (let k = 0; k < (bright ? 1 : 3); k++) for (let i = 1; i < period; i++) line[i] = 0.5 * (line[i] + line[i - 1]);
+    let idx = 0;
+    for (let i = 0; i < len; i++) {
+      const cur = line[idx], nxt = line[(idx + 1) % period];
+      out[i] = cur;
+      line[idx] = damp * 0.5 * (cur + nxt);
+      idx = (idx + 1) % period;
+    }
+    return b;
+  }
+
+  function Engine(ac, destination) {
+    this.ac = ac;
+    const master = ac.createGain(); master.gain.value = 0.9;
+    const comp = ac.createDynamicsCompressor();
+    comp.threshold.value = -14; comp.knee.value = 8; comp.ratio.value = 3; comp.attack.value = 0.004; comp.release.value = 0.25;
+    master.connect(comp); comp.connect(destination || ac.destination);
+    const verb = ac.createConvolver(); verb.buffer = impulse(ac, 2.2, 3.2);
+    const wet = ac.createGain(); wet.gain.value = 0.22; verb.connect(wet); wet.connect(master);
+    this.dry = master; this.verb = verb;
+    this.noise = noiseBuffer(ac, 2);
+    this.cache = {};
+  }
+  Engine.prototype.bus = function (gain, pan, send) {
+    const ac = this.ac, g = ac.createGain(); g.gain.value = gain;
+    let node = g;
+    if (pan && ac.createStereoPanner) { const p = ac.createStereoPanner(); p.pan.value = pan; g.connect(p); node = p; }
+    node.connect(this.dry);
+    if (send) { const s = ac.createGain(); s.gain.value = send; node.connect(s); s.connect(this.verb); }
+    return g;
+  };
+  Engine.prototype.env = function (param, t, a, peak, d, floor) {
+    param.setValueAtTime(0.0001, t);
+    param.linearRampToValueAtTime(peak, t + a);
+    param.exponentialRampToValueAtTime(Math.max(floor || 0.0001, 0.0001), t + a + d);
+  };
+
+  // Vibraphone: strong fundamental + 4th partial, slow motor tremolo
+  Engine.prototype.vibes = function (f, t, dur, vel, motor, pan) {
+    const ac = this.ac, out = this.bus(0.34 * (vel || 1), pan || -0.15, 0.55);
+    const trem = ac.createGain(); trem.gain.value = 1; trem.connect(out);
+    if (motor !== false) {
+      const lfo = ac.createOscillator(), depth = ac.createGain();
+      lfo.frequency.value = 3.4; depth.gain.value = 0.22; lfo.connect(depth); depth.connect(trem.gain);
+      lfo.start(t); lfo.stop(t + dur + 0.1);
+    }
+    [[1, 1, dur], [4, 0.18, dur * 0.35], [10.2, 0.05, 0.25]].forEach(([m, g, d]) => {
+      const o = ac.createOscillator(), e = ac.createGain();
+      o.type = 'sine'; o.frequency.value = f * m; o.connect(e); e.connect(trem);
+      this.env(e.gain, t, 0.004, g, d);
+      o.start(t); o.stop(t + d + 0.05);
+    });
+  };
+
+  Engine.prototype.pluck = function (f, t, vel, pan, secs, lp, damp) {
+    const ac = this.ac, key = f + ':' + (secs || 2.5) + ':' + (damp || 0.996);
+    if (!this.cache[key]) this.cache[key] = pluckBuffer(ac, f, secs || 2.5, false, damp || 0.996);
+    const src = ac.createBufferSource(); src.buffer = this.cache[key];
+    const filt = ac.createBiquadFilter(); filt.type = 'lowpass'; filt.frequency.value = lp || 3200;
+    const out = this.bus(0.5 * (vel || 1), pan || 0.2, 0.35);
+    src.connect(filt); filt.connect(out); src.start(t);
+  };
+  Engine.prototype.guitar = function (f, t, vel) { this.pluck(f, t, vel, 0.22, 2.6, 3000, 0.9965); };
+  Engine.prototype.bass = function (f, t, vel) {
+    const ac = this.ac, out = this.bus(0.55 * (vel || 1), 0, 0.08);
+    const o = ac.createOscillator(), o2 = ac.createOscillator(), e = ac.createGain(), lp = ac.createBiquadFilter();
+    o.type = 'triangle'; o.frequency.value = f; o2.type = 'sine'; o2.frequency.value = f * 2;
+    const g2 = ac.createGain(); g2.gain.value = 0.35;
+    lp.type = 'lowpass'; lp.frequency.value = 900;
+    o.connect(e); o2.connect(g2); g2.connect(e); e.connect(lp); lp.connect(out);
+    this.env(e.gain, t, 0.008, 0.9, 1.4);
+    o.start(t); o2.start(t); o.stop(t + 1.6); o2.stop(t + 1.6);
+  };
+
+  // Rhodes: sine tine with a fast bell partial, stereo tremolo
+  Engine.prototype.rhodes = function (freqs, t, dur, vel, fadeIn) {
+    const ac = this.ac, out = this.bus(0.16 * (vel || 1), 0, 0.4);
+    const trem = ac.createGain(); trem.gain.value = 1; trem.connect(out);
+    const lfo = ac.createOscillator(), depth = ac.createGain();
+    lfo.frequency.value = 4.2; depth.gain.value = 0.12; lfo.connect(depth); depth.connect(trem.gain);
+    lfo.start(t); lfo.stop(t + dur + 1.6);
+    freqs.forEach((f, i) => {
+      const o = ac.createOscillator(), bell = ac.createOscillator(), e = ac.createGain(), eb = ac.createGain();
+      o.type = 'sine'; o.frequency.value = f; bell.type = 'sine'; bell.frequency.value = f * 7.1;
+      o.connect(e); bell.connect(eb); e.connect(trem); eb.connect(trem);
+      const tt = t + i * 0.006;
+      e.gain.setValueAtTime(0.0001, tt);
+      e.gain.linearRampToValueAtTime(0.8, tt + (fadeIn || 0.006));
+      e.gain.setTargetAtTime(0.5, tt + 0.05, 0.4);
+      e.gain.setTargetAtTime(0.0001, tt + dur, 0.35);
+      this.env(eb.gain, tt, 0.002, fadeIn ? 0.02 : 0.08, 0.18);
+      o.start(tt); bell.start(tt); o.stop(tt + dur + 1.6); bell.stop(tt + 0.3);
+    });
+  };
+
+  // Juno-style pad: two detuned saws per note through an opening low-pass
+  Engine.prototype.pad = function (freqs, t, dur, filterFrom, filterTo, openBy, vel) {
+    const ac = this.ac, out = this.bus(0.03 * (vel || 1), 0, 0.6);
+    const lp = ac.createBiquadFilter(); lp.type = 'lowpass'; lp.Q.value = 0.7;
+    lp.frequency.setValueAtTime(filterFrom, t);
+    lp.frequency.exponentialRampToValueAtTime(filterTo, t + openBy);
+    const e = ac.createGain(); lp.connect(e); e.connect(out);
+    e.gain.setValueAtTime(0.0001, t); e.gain.linearRampToValueAtTime(1, t + 0.35);
+    e.gain.setValueAtTime(1, t + dur); e.gain.linearRampToValueAtTime(0.0001, t + dur + 0.8);
+    freqs.forEach(f => [-7, 7].forEach(c => {
+      const o = ac.createOscillator(); o.type = 'sawtooth'; o.frequency.value = f; o.detune.value = c;
+      o.connect(lp); o.start(t); o.stop(t + dur + 0.9);
+    }));
+  };
+
+  Engine.prototype.noiseHit = function (t, dur, type, freq, q, gain, pan, send) {
+    const ac = this.ac, src = ac.createBufferSource(); src.buffer = this.noise;
+    const f = ac.createBiquadFilter(); f.type = type; f.frequency.value = freq; f.Q.value = q || 1;
+    const e = ac.createGain(); src.connect(f); f.connect(e); e.connect(this.bus(1, pan || 0, send || 0.2));
+    this.env(e.gain, t, 0.002, gain, dur);
+    src.start(t, Math.random() * 1.5, dur + 0.05);
+  };
+  Engine.prototype.snap = function (t) { this.noiseHit(t, 0.05, 'bandpass', 2600, 1.4, 0.35, 0.1, 0.3); this.noiseHit(t, 0.012, 'highpass', 5000, 0.7, 0.2, 0.1, 0.1); };
+  Engine.prototype.shaker = function (t0, t1) {
+    const beat = 0.625, sixteenth = beat / 4;
+    for (let b = t0; b < t1 - 0.01; b += beat / 2) {
+      // swung 56%: the off-sixteenth lands late
+      [0, sixteenth * 2 * 0.56].forEach((o, i) => { const tt = b + o; if (tt < t1) this.noiseHit(tt, 0.045, 'highpass', 6500, 0.8, i ? 0.05 : 0.07, 0.3, 0.1); });
+    }
+  };
+  // one group clap: 9 people, a few ms apart
+  Engine.prototype.clap = function (t) {
+    const offs = [0, 0.004, 0.007, 0.011, 0.013, 0.017, 0.02, 0.024, 0.027];
+    offs.forEach((o, i) => this.noiseHit(t + o, 0.06 + (i % 3) * 0.01, 'bandpass', 1100 + (i * 173) % 700, 1.1, 0.16, ((i % 5) - 2) * 0.18, 0.55));
+  };
+  // Crotale A6: long bell with inharmonic partials; optional reversed swell before it
+  Engine.prototype.crotale = function (t, vel, swell) {
+    const ac = this.ac, out = this.bus(0.12 * (vel || 1), 0.1, 0.7);
+    [[1, 1, 3.2], [2.76, 0.35, 1.4], [5.4, 0.12, 0.6], [8.93, 0.05, 0.3]].forEach(([m, g, d]) => {
+      const o = ac.createOscillator(), e = ac.createGain(); o.type = 'sine'; o.frequency.value = N.A6 * m;
+      o.connect(e); e.connect(out); this.env(e.gain, t, 0.002, g, d); o.start(t); o.stop(t + d + 0.1);
+    });
+    if (swell) {
+      const len = 0.3125, s = t - len;
+      const o = ac.createOscillator(), e = ac.createGain(); o.type = 'sine'; o.frequency.value = N.A6;
+      const o2 = ac.createOscillator(); o2.type = 'sine'; o2.frequency.value = N.A6 * 2.76; const e2 = ac.createGain();
+      o.connect(e); o2.connect(e2); e.connect(out); e2.connect(out);
+      e.gain.setValueAtTime(0.0001, s); e.gain.exponentialRampToValueAtTime(0.5, t - 0.005); e.gain.linearRampToValueAtTime(0.0001, t);
+      e2.gain.setValueAtTime(0.0001, s); e2.gain.exponentialRampToValueAtTime(0.18, t - 0.005); e2.gain.linearRampToValueAtTime(0.0001, t);
+      o.start(s); o2.start(s); o.stop(t + 0.01); o2.stop(t + 0.01);
+    }
+  };
+  // S01 "set down": glass meets stone, then a faint vibraphone A5 — identical every time; only pan changes
+  Engine.prototype.setDown = function (t, pan) {
+    this.noiseHit(t - 0.1, 0.1, 'highpass', 2400, 0.6, 0.025, pan, 0.1);       // slide
+    this.noiseHit(t, 0.018, 'bandpass', 3800, 2.5, 0.22, pan, 0.25);           // "tk"
+    const ac = this.ac, o = ac.createOscillator(), e = ac.createGain(), out = this.bus(0.09, pan, 0.5);
+    o.type = 'sine'; o.frequency.value = N.A5; o.connect(e); e.connect(out);
+    e.gain.setValueAtTime(0.0001, t); e.gain.linearRampToValueAtTime(1, t + 0.004);
+    e.gain.setTargetAtTime(0.35, t + 0.02, 0.12); e.gain.setTargetAtTime(0.0001, t + 0.28, 0.03);
+    o.start(t); o.stop(t + 0.45);
+  };
+  // S03 "home": the whole home chord at once, faded in, plus the crotale glint
+  Engine.prototype.bloom = function (t) {
+    this.rhodes([N.E3, N.A3, N.D4, N.Fs4], t, 1.6, 1.15, 0.15);
+    this.vibes(N.Fs5, t + 0.02, 2.2, 0.55, true, 0);
+    this.pad([N.D3, N.A3, N.Fs4], t, 1.4, 2400, 5200, 0.2, 1.1);
+    this.crotale(t + 0.03, 0.9, false);
+  };
+  // friendly foley for Episode 01's activity: a leaf landing on fur, and a gentle water lap
+  Engine.prototype.leaf = function (t) { this.noiseHit(t, 0.12, 'bandpass', 1800, 0.8, 0.08, -0.1, 0.2); this.noiseHit(t + 0.03, 0.08, 'bandpass', 3200, 1, 0.04, -0.1, 0.1); };
+  Engine.prototype.lap = function (t, g) { this.noiseHit(t, 0.5, 'lowpass', 700, 0.5, 0.05 * (g || 1), -0.3, 0.3); };
+  Engine.prototype.pat = function (t) { this.noiseHit(t, 0.07, 'lowpass', 420, 0.7, 0.35, 0.05, 0.05); this.noiseHit(t, 0.03, 'bandpass', 1400, 1, 0.05, 0.05, 0.05); };
+
+  // S02 "knock, and 'here'": two soft knocks, then one identical Rhodes D5 reply per helper, each a little farther away
+  Engine.prototype.checkIn = function (t, helpers) {
+    this.noiseHit(t, 0.06, 'lowpass', 380, 0.8, 0.4, 0, 0.1); this.noiseHit(t + 0.14, 0.06, 'lowpass', 380, 0.8, 0.34, 0, 0.1);
+    const pans = [-0.5, 0.45, -0.15, 0.3, 0];
+    for (let i = 0; i < (helpers || 3); i++) {
+      const ac = this.ac, tt = t + 0.4 + i * 0.12, o = ac.createOscillator(), e = ac.createGain(), out = this.bus(0.1 * Math.pow(0.89, i), pans[i], 0.35 + i * 0.1);
+      o.type = 'sine'; o.frequency.value = 587.33; o.connect(e); e.connect(out); this.env(e.gain, tt, 0.006, 1, 0.5); o.start(tt); o.stop(tt + 0.6);
+    }
+  };
+
+  root.MHAudio = { Engine: Engine, N: N };
+})(typeof window !== 'undefined' ? window : globalThis);
+
+</script>
+<script>
+/* Many Hands — animatic drawing kit. Canvas 2D, logical frame 1920x1080.
+   Storybook flat shapes with an ink contour: a sketch of the look, not final art. */
+(function (root) {
+  const C = {
+    zenith: '#1B5699', sky: '#4185CB', horizon: '#CFE6F6', paper: '#F7F3E6', ink: '#123E32', jade: '#1B7466',
+    gilt: '#F2C96E', filament: '#FCEBB4', amber: '#E39A35', glass: '#7BE1DA', brass: '#A8843D',
+    fur: '#5A3D2B', furCore: '#3A281D', furLight: '#6E4C37', cream: '#EFE2C8', whisker: '#F7EEDC', eye: '#1C2B25',
+    kelp: '#1B7466', kelpHi: '#2F8F7D', kelpFold: '#123E32', stone: '#8E948F', stoneDark: '#6F7571', stoneHi: '#A9AEA9',
+    leaf: '#D9772B', leafHi: '#F2B25C', leafVein: '#F6C98A', gran: '#8C8278', granHi: '#B9B0A6', choc: '#3F2A1F', chocHi: '#58402F',
+  };
+  const INK = 'rgba(18,62,50,0.55)';
+  const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+  const lerp = (a, b, t) => a + (b - a) * t;
+  // brand motion curves (cubic-bezier approximations evaluated numerically)
+  function bez(x1, y1, x2, y2) {
+    return function (x) {
+      if (x <= 0) return 0; if (x >= 1) return 1;
+      let t = x;
+      for (let i = 0; i < 8; i++) {
+        const cx = 3 * (1 - t) * (1 - t) * t * x1 + 3 * (1 - t) * t * t * x2 + t * t * t - x;
+        const dx = 3 * (1 - t) * (1 - t) * x1 + 6 * (1 - t) * t * (x2 - x1) + 3 * t * t * (1 - x2);
+        if (Math.abs(dx) < 1e-6) break; t -= cx / dx; t = clamp(t, 0, 1);
+      }
+      return 3 * (1 - t) * (1 - t) * t * y1 + 3 * (1 - t) * t * t * y2 + t * t * t;
+    };
+  }
+  const E = { settle: bez(0.16, 1, 0.3, 1), tuck: bez(0.32, 0, 0.67, 0), leaf: bez(0.65, 0, 0.35, 1), draw: bez(0.55, 0, 0.1, 1), breath: bez(0.37, 0, 0.63, 1) };
+  const seg = (f, a, b, ease) => { const t = clamp((f - a) / (b - a), 0, 1); return ease ? ease(t) : t; };
+
+  function outline(ctx, w) { ctx.lineWidth = w || 3; ctx.strokeStyle = INK; ctx.lineJoin = 'round'; ctx.lineCap = 'round'; ctx.stroke(); }
+  function ell(ctx, x, y, rx, ry, rot) { ctx.beginPath(); ctx.ellipse(x, y, rx, ry, rot || 0, 0, Math.PI * 2); }
+
+  // ---------- props ----------
+  function stone(ctx, x, y, s, glow, rot) {
+    ctx.save(); ctx.translate(x, y); ctx.rotate(rot == null ? -0.18 : rot); ctx.scale(s, s);
+    if (glow > 0) {
+      const g = ctx.createRadialGradient(0, 0, 4, 0, 0, 90);
+      g.addColorStop(0, `rgba(255,214,138,${0.85 * glow})`); g.addColorStop(0.35, `rgba(242,162,58,${0.45 * glow})`); g.addColorStop(1, 'rgba(242,162,58,0)');
+      ctx.fillStyle = g; ell(ctx, 0, 0, 90, 90); ctx.fill();
+    }
+    ell(ctx, 0, 0, 34, 24);
+    const base = ctx.createLinearGradient(0, -24, 0, 24);
+    if (glow > 0) {
+      base.addColorStop(0, mix(C.stoneHi, '#FFE3A6', glow)); base.addColorStop(1, mix(C.stoneDark, '#E39A35', glow));
+    } else { base.addColorStop(0, C.stoneHi); base.addColorStop(0.55, C.stone); base.addColorStop(1, C.stoneDark); }
+    ctx.fillStyle = base; ctx.fill(); outline(ctx, 2.4 / s);
+    // the chip (Tuck's stone only uses rot default; friends' stones pass rot)
+    ctx.fillStyle = glow > 0 ? `rgba(160,90,20,${0.5})` : C.stoneDark;
+    ctx.beginPath(); ctx.moveTo(28, -12); ctx.lineTo(33, -6); ctx.lineTo(25, -7); ctx.closePath(); ctx.fill();
+    // speckles
+    ctx.fillStyle = glow > 0 ? 'rgba(255,245,220,0.5)' : 'rgba(230,232,228,0.55)';
+    [[-14, -6], [-4, 8], [9, -10], [16, 6], [-20, 6], [2, -2]].forEach(([a, b]) => { ell(ctx, a, b, 1.6, 1.3); ctx.fill(); });
+    ctx.restore();
+  }
+  function mix(a, b, t) {
+    const pa = [1, 3, 5].map(i => parseInt(a.slice(i, i + 2), 16)), pb = [1, 3, 5].map(i => parseInt(b.slice(i, i + 2), 16));
+    return 'rgb(' + pa.map((v, i) => Math.round(lerp(v, pb[i], t))).join(',') + ')';
+  }
+  function mapleLeaf(ctx, x, y, s, rot) {
+    ctx.save(); ctx.translate(x, y); ctx.rotate(rot || 0); ctx.scale(s, s);
+    ctx.beginPath();
+    const pts = [];
+    for (let i = 0; i <= 180; i++) {
+      const a = -Math.PI / 2 + (i / 180) * Math.PI * 2;
+      const k = Math.cos(a + Math.PI / 2);
+      // five lobes, top lobe tallest, with small secondary points
+      let r = 30 + 14 * Math.pow(Math.abs(Math.cos(2.5 * (a + Math.PI / 2))), 3) + 4 * Math.abs(Math.cos(7.5 * (a + Math.PI / 2)));
+      r *= 0.78 + 0.22 * (0.5 + 0.5 * k);
+      if (Math.abs(a - Math.PI / 2) < 0.28) r *= 0.5; // notch for the stem
+      pts.push([Math.cos(a) * r, Math.sin(a) * r * 0.95]);
+    }
+    pts.forEach(([a, b], i) => (i ? ctx.lineTo(a, b) : ctx.moveTo(a, b))); ctx.closePath();
+    ctx.fillStyle = C.leaf; ctx.fill(); outline(ctx, 2 / s);
+    ctx.strokeStyle = C.leafVein; ctx.lineWidth = 1.6 / s;
+    [[0, -38], [-30, -16], [30, -16], [-22, 18], [22, 18]].forEach(([a, b]) => { ctx.beginPath(); ctx.moveTo(0, 10); ctx.lineTo(a * 0.8, b * 0.8); ctx.stroke(); });
+    ctx.strokeStyle = INK; ctx.lineWidth = 2.2 / s; ctx.beginPath(); ctx.moveTo(0, 12); ctx.quadraticCurveTo(2, 26, -3, 34); ctx.stroke();
+    ctx.restore();
+  }
+  function airTaxi(ctx, x, y, s, f) {
+    ctx.save(); ctx.translate(x, y); ctx.scale(s, s);
+    ctx.fillStyle = '#FFFFFF'; ell(ctx, 0, 0, 34, 11); ctx.fill(); outline(ctx, 1.4 / s);
+    ctx.fillStyle = C.glass; ell(ctx, 10, -3, 12, 5); ctx.fill();
+    ctx.strokeStyle = 'rgba(18,62,50,0.6)'; ctx.lineWidth = 1.2 / s;
+    [-22, 22].forEach(px => { ctx.beginPath(); ctx.moveTo(px, -10); ctx.lineTo(px, -15); ctx.stroke();
+      const w = 12 * Math.abs(Math.sin(f * 1.7 + px)); ctx.beginPath(); ctx.moveTo(px - w, -16); ctx.lineTo(px + w, -16); ctx.stroke(); });
+    ctx.restore();
+  }
+
+  // ---------- paws ----------
+  function arm(ctx, x0, y0, x1, y1, w, fill) {
+    ctx.save(); ctx.lineCap = 'round';
+    ctx.strokeStyle = INK; ctx.lineWidth = w + 5; ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x1, y1); ctx.stroke();
+    ctx.strokeStyle = fill; ctx.lineWidth = w; ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x1, y1); ctx.stroke();
+    ctx.restore();
+  }
+  function mitten(ctx, x, y, r, rot, fill, hi) {
+    ctx.save(); ctx.translate(x, y); ctx.rotate(rot || 0);
+    ell(ctx, 0, 0, r * 1.15, r); ctx.fillStyle = fill; ctx.fill(); outline(ctx, 3);
+    ctx.fillStyle = hi || 'rgba(255,255,255,0.12)'; ell(ctx, -r * 0.25, -r * 0.35, r * 0.55, r * 0.35); ctx.fill();
+    // toe creases
+    ctx.strokeStyle = 'rgba(18,62,50,0.35)'; ctx.lineWidth = 2;
+    [-0.4, 0, 0.4].forEach(k => { ctx.beginPath(); ctx.moveTo(r * 0.75, k * r * 0.8); ctx.lineTo(r * 1.05, k * r * 0.85); ctx.stroke(); });
+    ctx.restore();
+  }
+  // a friend's paw arriving from off-frame with a stone; faces are never shown
+  function forearm(ctx, x0, y0, x1, y1, w0, w1, fill, grizzle) {
+    const a = Math.atan2(y1 - y0, x1 - x0), nx = -Math.sin(a), ny = Math.cos(a);
+    ctx.beginPath();
+    ctx.moveTo(x0 + nx * w0 / 2, y0 + ny * w0 / 2);
+    ctx.quadraticCurveTo((x0 + x1) / 2 + nx * (w0 + w1) / 3.4, (y0 + y1) / 2 + ny * (w0 + w1) / 3.4, x1 + nx * w1 / 2, y1 + ny * w1 / 2);
+    ctx.lineTo(x1 - nx * w1 / 2, y1 - ny * w1 / 2);
+    ctx.quadraticCurveTo((x0 + x1) / 2 - nx * (w0 + w1) / 4.2, (y0 + y1) / 2 - ny * (w0 + w1) / 4.2, x0 - nx * w0 / 2, y0 - ny * w0 / 2);
+    ctx.closePath(); ctx.fillStyle = fill; ctx.fill(); outline(ctx, 3);
+    // underside shade
+    ctx.save(); ctx.clip(); ctx.strokeStyle = 'rgba(18,20,16,0.22)'; ctx.lineWidth = w0 * 0.35;
+    ctx.beginPath(); ctx.moveTo(x0 - nx * w0 * 0.42, y0 - ny * w0 * 0.42); ctx.lineTo(x1 - nx * w1 * 0.42, y1 - ny * w1 * 0.42); ctx.stroke();
+    ctx.strokeStyle = 'rgba(255,255,255,0.10)'; ctx.lineWidth = 2;
+    for (let i = 0; i < 14; i++) { const t = 0.08 + i * 0.065, off = ((i % 3) - 1) * lerp(w0, w1, t) * 0.22, px = lerp(x0, x1, t) + nx * off, py = lerp(y0, y1, t) + ny * off; ctx.beginPath(); ctx.moveTo(px, py); ctx.lineTo(px + Math.cos(a) * 16, py + Math.sin(a) * 16); ctx.stroke(); }
+    if (grizzle) { ctx.fillStyle = 'rgba(240,236,228,0.5)'; for (let i = 0; i < 40; i++) { const t = (i * 0.618) % 1, off = (((i * 37) % 17) / 17 - 0.5) * lerp(w0, w1, t) * 0.8; ell(ctx, lerp(x0, x1, t) + nx * off, lerp(y0, y1, t) + ny * off, 3.2, 1.4, a); ctx.fill(); } }
+    ctx.restore();
+  }
+  // a friend's paw arriving from off-frame with a stone; faces are never shown
+  function friendPaw(ctx, fromX, fromY, x, y, fill, hi, glow, grizzle, scale) {
+    // (x, y) is where the friend's STONE sits; the paw cradles it from below
+    const k = scale || 1, a = Math.atan2(y - fromY, x - fromX);
+    const px = x - Math.cos(a) * 34 * k, py = y - Math.sin(a) * 34 * k + 10 * k;
+    forearm(ctx, fromX, fromY, px - Math.cos(a) * 18 * k, py - Math.sin(a) * 18 * k, 112 * k, 66 * k, fill, grizzle);
+    mitten(ctx, px, py, 36 * k, a, fill, hi);
+    stone(ctx, x, y, 1.1 * k, glow, a * 0.2 + 0.3);
+    ctx.save(); ctx.translate(x - Math.cos(a) * 8 * k, y + 20 * k); ell(ctx, 0, 0, 17 * k, 10 * k, 0.2); ctx.fillStyle = fill; ctx.fill(); outline(ctx, 2.4); ctx.restore();
+  }
+
+  // ---------- Tuck, front (the pocket shot) ----------
+  // st: {x,y,s, blink, pawL:[x,y], pawR:[x,y], stone:[x,y]|null, glow, leaf:bool, tilt, eyesToLens}
+  function tuckFront(ctx, st) {
+    ctx.save(); ctx.translate(st.x, st.y); ctx.scale(st.s, st.s); ctx.rotate(st.tilt || 0);
+    // body, chest-up
+    ctx.beginPath(); ctx.moveTo(-78, 70);
+    ctx.bezierCurveTo(-170, 110, -220, 200, -236, 460); ctx.lineTo(236, 460);
+    ctx.bezierCurveTo(220, 200, 170, 110, 78, 70); ctx.closePath();
+    ctx.fillStyle = C.fur; ctx.fill(); outline(ctx);
+    // bib
+    ell(ctx, 0, 190, 108, 128); ctx.fillStyle = C.cream; ctx.fill();
+    // pocket fold under her left forearm (viewer's right)
+    ctx.strokeStyle = C.furCore; ctx.lineWidth = 5; ctx.beginPath(); ctx.moveTo(128, 250); ctx.quadraticCurveTo(175, 268, 196, 238); ctx.stroke();
+    if (!st.stoneOut) { ctx.fillStyle = C.furLight; ell(ctx, 168, 272, 20, 12, 0.2); ctx.fill(); outline(ctx, 2); }
+    // kelp scarf, tied once on her left, with the float bulb
+    ctx.lineCap = 'round';
+    ctx.strokeStyle = INK; ctx.lineWidth = 34; ctx.beginPath(); ctx.moveTo(-96, 74); ctx.quadraticCurveTo(0, 128, 96, 74); ctx.stroke();
+    ctx.strokeStyle = C.kelp; ctx.lineWidth = 28; ctx.beginPath(); ctx.moveTo(-96, 74); ctx.quadraticCurveTo(0, 128, 96, 74); ctx.stroke();
+    ctx.strokeStyle = C.kelpHi; ctx.lineWidth = 6; ctx.beginPath(); ctx.moveTo(-80, 70); ctx.quadraticCurveTo(0, 114, 80, 70); ctx.stroke();
+    ctx.strokeStyle = INK; ctx.lineWidth = 20; ctx.beginPath(); ctx.moveTo(74, 94); ctx.quadraticCurveTo(104, 140, 96, 186); ctx.stroke();
+    ctx.strokeStyle = C.kelp; ctx.lineWidth = 15; ctx.beginPath(); ctx.moveTo(74, 94); ctx.quadraticCurveTo(104, 140, 96, 186); ctx.stroke();
+    ell(ctx, 74, 96, 17, 14); ctx.fillStyle = C.kelp; ctx.fill(); outline(ctx, 2.5);
+    ell(ctx, 96, 198, 14, 15); ctx.fillStyle = C.kelpHi; ctx.fill(); outline(ctx, 2.5);
+    ctx.fillStyle = 'rgba(255,255,255,0.35)'; ell(ctx, 91, 192, 4, 5); ctx.fill();
+    // head
+    ell(ctx, -100, -52, 17, 14); ctx.fillStyle = C.fur; ctx.fill(); outline(ctx, 2.5);
+    ell(ctx, 100, -52, 17, 14); ctx.fill(); outline(ctx, 2.5);
+    ell(ctx, 0, 0, 114, 98); ctx.fillStyle = C.fur; ctx.fill(); outline(ctx);
+    ell(ctx, 0, 16, 92, 80); ctx.fillStyle = C.cream; ctx.fill();
+    // eyes (button eyes, gold catchlight), blink squashes
+    const bl = 1 - (st.blink || 0);
+    [-42, 42].forEach(ex => {
+      ctx.save(); ctx.translate(ex, -4); ctx.scale(1, Math.max(0.08, bl));
+      ell(ctx, 0, 0, 10.5, 11.5); ctx.fillStyle = C.eye; ctx.fill();
+      if (bl > 0.4) { ctx.fillStyle = C.gilt; ell(ctx, 3.5, -4, 3, 3); ctx.fill(); }
+      ctx.restore();
+      if (bl < 0.4) { ctx.strokeStyle = C.eye; ctx.lineWidth = 3.5; ctx.beginPath(); ctx.moveTo(ex - 11, -3); ctx.quadraticCurveTo(ex, 3, ex + 11, -3); ctx.stroke(); }
+    });
+    // whisker pads, nose, mouth
+    ell(ctx, -20, 46, 24, 17); ctx.fillStyle = C.whisker; ctx.fill();
+    ell(ctx, 20, 46, 24, 17); ctx.fill();
+    ctx.fillStyle = 'rgba(18,62,50,0.28)'; [[-30, 44], [-22, 50], [-14, 42], [30, 44], [22, 50], [14, 42]].forEach(([a, b]) => { ell(ctx, a, b, 1.6, 1.6); ctx.fill(); });
+    ctx.beginPath(); ctx.moveTo(-19, 20); ctx.quadraticCurveTo(0, 14, 19, 20); ctx.quadraticCurveTo(12, 36, 0, 38); ctx.quadraticCurveTo(-12, 36, -19, 20); ctx.closePath();
+    ctx.fillStyle = C.eye; ctx.fill(); ctx.fillStyle = 'rgba(255,255,255,0.25)'; ell(ctx, -6, 22, 5, 2.5); ctx.fill();
+    ctx.strokeStyle = C.eye; ctx.lineWidth = 2.6; ctx.beginPath(); ctx.moveTo(0, 38); ctx.lineTo(0, 50); ctx.moveTo(-12, 58); ctx.quadraticCurveTo(0, 64, 12, 58); ctx.stroke();
+    // whiskers, seven a side
+    for (let i = 0; i < 7; i++) {
+      const a = -0.35 + i * 0.12;
+      [-1, 1].forEach(side => {
+        ctx.strokeStyle = 'rgba(18,62,50,0.35)'; ctx.lineWidth = 3.2;
+        const x0 = side * 30, y0 = 44 + (i - 3) * 2.5, x1 = side * (150 + i * 3), y1 = y0 + Math.sin(a) * 60 + 8;
+        ctx.beginPath(); ctx.moveTo(x0, y0); ctx.quadraticCurveTo(side * 95, y0 + (i - 3) * 3, x1, y1); ctx.stroke();
+        ctx.strokeStyle = C.whisker; ctx.lineWidth = 1.8; ctx.stroke();
+      });
+    }
+    // the carry-over layer: maple leaf worn like a hat
+    if (st.leaf) mapleLeaf(ctx, 22, -96, 1.05, 0.22);
+    // arms and paws (both mitten paws; the stone is held in both)
+    const shoulderL = [-150, 170], shoulderR = [150, 170];
+    const pL = st.pawL || [-40, 250], pR = st.pawR || [40, 250];
+    arm(ctx, shoulderL[0], shoulderL[1], pL[0], pL[1], 62, C.fur);
+    arm(ctx, shoulderR[0], shoulderR[1], pR[0], pR[1], 62, C.fur);
+    mitten(ctx, pL[0], pL[1], 32, Math.atan2(pL[1] - shoulderL[1], pL[0] - shoulderL[0]), C.fur);
+    mitten(ctx, pR[0], pR[1], 32, Math.atan2(pR[1] - shoulderR[1], pR[0] - shoulderR[0]), C.fur);
+    if (st.stone) {
+      const ss = st.stoneScale || 1.25;
+      stone(ctx, st.stone[0], st.stone[1], ss, st.glow || 0);
+      if (st.held !== false) [[-1, pL], [1, pR]].forEach(([sd, p]) => { if (Math.hypot(p[0] - st.stone[0], p[1] - st.stone[1]) < 80) { ell(ctx, st.stone[0] + sd * 34 * ss, st.stone[1] + 6, 13, 10, sd * 0.5); ctx.fillStyle = C.fur; ctx.fill(); outline(ctx, 2.4); } });
+    }
+    ctx.restore();
+  }
+
+  // ---------- Tuck, floating on her back (side view) ----------
+  // st: {x,y,s, bob, pawLift, leafOnHead, blink, flipper}
+  function tuckFloat(ctx, st) {
+    ctx.save(); ctx.translate(st.x, st.y + (st.bob || 0)); ctx.scale(st.s, st.s);
+    const fl = st.flipper || 0;
+    // hind flippers up at the right end
+    ctx.save(); ctx.translate(150, -30); ctx.rotate(-0.5 + fl * 0.25);
+    ctx.beginPath(); ctx.moveTo(0, 0); ctx.bezierCurveTo(20, -60, 70, -80, 82, -58); ctx.bezierCurveTo(90, -40, 60, -10, 20, 14); ctx.closePath();
+    ctx.fillStyle = C.furCore; ctx.fill(); outline(ctx); ctx.restore();
+    ctx.save(); ctx.translate(128, -34); ctx.rotate(-0.85 - fl * 0.2);
+    ctx.beginPath(); ctx.moveTo(0, 0); ctx.bezierCurveTo(16, -56, 62, -74, 74, -52); ctx.bezierCurveTo(80, -34, 54, -8, 18, 12); ctx.closePath();
+    ctx.fillStyle = '#4A3222'; ctx.fill(); outline(ctx); ctx.restore();
+    // tail paddle
+    ctx.beginPath(); ctx.moveTo(170, 4); ctx.quadraticCurveTo(240, -4, 262, 14); ctx.quadraticCurveTo(236, 26, 168, 24); ctx.closePath();
+    ctx.fillStyle = C.furCore; ctx.fill(); outline(ctx);
+    // body (belly up)
+    ctx.beginPath(); ctx.moveTo(-120, -30); ctx.bezierCurveTo(-60, -78, 110, -74, 178, -18); ctx.bezierCurveTo(196, 10, 170, 40, 120, 44);
+    ctx.lineTo(-110, 44); ctx.bezierCurveTo(-150, 30, -150, -10, -120, -30); ctx.closePath();
+    ctx.fillStyle = C.fur; ctx.fill(); outline(ctx);
+    // pale chest and throat
+    ctx.beginPath(); ctx.moveTo(-118, -26); ctx.bezierCurveTo(-70, -66, 10, -70, 40, -58); ctx.bezierCurveTo(10, -30, -60, -12, -118, -26); ctx.closePath();
+    ctx.fillStyle = C.cream; ctx.fill();
+    // kelp scarf: a short collar under the chin, float bulb resting on the chest
+    ctx.strokeStyle = INK; ctx.lineWidth = 20; ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(-150, -34); ctx.quadraticCurveTo(-122, -16, -96, -30); ctx.stroke();
+    ctx.strokeStyle = C.kelp; ctx.lineWidth = 15; ctx.stroke();
+    ell(ctx, -92, -36, 10, 10); ctx.fillStyle = C.kelpHi; ctx.fill(); outline(ctx, 2);
+    // head, raised, turned three-quarters to camera
+    ctx.save(); ctx.translate(-170, -70); ctx.rotate(-0.12);
+    ell(ctx, -30, -46, 12, 10); ctx.fillStyle = C.fur; ctx.fill(); outline(ctx, 2.2);
+    ell(ctx, 0, 0, 70, 62); ctx.fillStyle = C.fur; ctx.fill(); outline(ctx);
+    ell(ctx, -8, 10, 58, 50); ctx.fillStyle = C.cream; ctx.fill();
+    const bl = 1 - (st.blink || 0);
+    [[-34, -4], [16, -6]].forEach(([ex, ey]) => { ctx.save(); ctx.translate(ex, ey); ctx.scale(1, Math.max(0.1, bl)); ell(ctx, 0, 0, 7.5, 8.5); ctx.fillStyle = C.eye; ctx.fill(); ctx.fillStyle = C.gilt; ell(ctx, 2.5, -3, 2.2, 2.2); ctx.fill(); ctx.restore(); });
+    ell(ctx, -20, 30, 16, 11); ctx.fillStyle = C.whisker; ctx.fill(); ell(ctx, 4, 30, 16, 11); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(-22, 14); ctx.quadraticCurveTo(-9, 9, 4, 14); ctx.quadraticCurveTo(-2, 25, -9, 26); ctx.quadraticCurveTo(-16, 25, -22, 14); ctx.fillStyle = C.eye; ctx.fill();
+    for (let i = 0; i < 5; i++) { ctx.strokeStyle = C.whisker; ctx.lineWidth = 1.4; ctx.beginPath(); ctx.moveTo(-30, 30 + i * 2); ctx.quadraticCurveTo(-70, 26 + i * 4, -104, 22 + i * 7); ctx.stroke(); ctx.beginPath(); ctx.moveTo(14, 30 + i * 2); ctx.quadraticCurveTo(48, 26 + i * 4, 76, 20 + i * 7); ctx.stroke(); }
+    if (st.leafOnHead) mapleLeaf(ctx, 6, -64, 0.78, 0.3);
+    ctx.restore();
+    // paws on the chest (they lift the leaf)
+    const lift = st.pawLift || 0;
+    const p1 = [lerp(-58, -150, lift), lerp(-66, -150, lift)], p2 = [lerp(-26, -120, lift), lerp(-70, -152, lift)];
+    arm(ctx, -70, -30, p1[0], p1[1], 30, C.fur); arm(ctx, -34, -34, p2[0], p2[1], 30, C.fur);
+    mitten(ctx, p1[0], p1[1], 17, -1.2, C.fur); mitten(ctx, p2[0], p2[1], 17, -1.3, C.fur);
+    if (st.leafInPaws) mapleLeaf(ctx, lerp(p1[0], p2[0], 0.5), lerp(p1[1], p2[1], 0.5) - 22, 0.78, 0.3 + lift * 0.2);
+    ctx.restore();
+  }
+
+  // ---------- scenes ----------
+  function skyGrad(ctx, W, H, warm) {
+    const g = ctx.createLinearGradient(0, 0, 0, H);
+    g.addColorStop(0, C.zenith); g.addColorStop(0.45, C.sky); g.addColorStop(1, warm ? '#F4E3C3' : C.horizon);
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+  }
+  function cove(ctx, f) {
+    const W = 1920, H = 1080, HZ = 560;
+    skyGrad(ctx, W, HZ + 40, true);
+    // sun and haze
+    const sun = ctx.createRadialGradient(360, 210, 10, 360, 210, 420);
+    sun.addColorStop(0, 'rgba(252,235,180,0.95)'); sun.addColorStop(0.18, 'rgba(252,235,180,0.45)'); sun.addColorStop(1, 'rgba(252,235,180,0)');
+    ctx.fillStyle = sun; ctx.fillRect(0, 0, W, HZ);
+    // soft clouds
+    ctx.fillStyle = 'rgba(255,255,255,0.55)';
+    [[1250, 160, 1], [1500, 120, 0.8], [880, 110, 0.7]].forEach(([x, y, s]) => { const dx = (f * 0.25) % 40; [[0, 0, 70], [60, 10, 55], [-60, 12, 50], [20, -22, 48]].forEach(([a, b, r]) => { ell(ctx, x + a * s + dx, y + b * s, r * s * 1.5, r * s * 0.7); ctx.fill(); }); });
+    // distant mountains
+    ctx.fillStyle = '#9DB9D6'; ctx.beginPath(); ctx.moveTo(0, HZ - 60);
+    [[160, HZ - 170], [330, HZ - 110], [520, HZ - 230], [700, HZ - 120], [900, HZ - 200], [1100, HZ - 140], [1320, HZ - 250], [1520, HZ - 150], [1720, HZ - 210], [1920, HZ - 120]].forEach(([x, y]) => ctx.lineTo(x, y));
+    ctx.lineTo(1920, HZ); ctx.lineTo(0, HZ); ctx.fill();
+    ctx.fillStyle = 'rgba(255,255,255,0.7)'; [[520, HZ - 230], [1320, HZ - 250]].forEach(([x, y]) => { ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x - 40, y + 36); ctx.lineTo(x + 38, y + 34); ctx.fill(); });
+    // far shore: white terraces, greenery, autumn trees, a waterfall
+    ctx.fillStyle = '#6E9A6A'; ctx.beginPath(); ctx.moveTo(0, HZ - 20); ctx.quadraticCurveTo(700, HZ - 70, 1920, HZ - 30); ctx.lineTo(1920, HZ + 4); ctx.lineTo(0, HZ + 4); ctx.fill();
+    ctx.fillStyle = '#6A9565'; ctx.beginPath(); ctx.moveTo(980, HZ); ctx.bezierCurveTo(1150, HZ - 120, 1500, HZ - 190, 1920, HZ - 170); ctx.lineTo(1920, HZ); ctx.closePath(); ctx.fill();
+    for (let row = 0; row < 3; row++) for (let i = 0; i < 6 - row; i++) {
+      const x = 1140 + row * 90 + i * 128, w = 108, h = 30, y = HZ - 18 - row * 42 - i * (6 + row * 4);
+      ctx.fillStyle = '#FBF8EF'; ctx.beginPath(); ctx.roundRect ? ctx.roundRect(x, y - h, w, h, 9) : ctx.rect(x, y - h, w, h); ctx.fill();
+      ctx.fillStyle = 'rgba(123,225,218,0.6)'; ctx.fillRect(x + 10, y - h + 9, w - 20, 5);
+      ctx.fillStyle = '#5E8F55'; ell(ctx, x + 16, y - h, 22, 9); ctx.fill(); ell(ctx, x + w - 12, y - h - 1, 16, 8); ctx.fill();
+      ctx.fillStyle = '#E3A33A'; ell(ctx, x + w * 0.55, y - h - 3, 8, 6); ctx.fill();
+    }
+    [[140, '#D98A2B'], [240, '#E3A33A'], [360, '#C8742A'], [470, '#E0B04A'], [620, '#D98A2B'], [760, '#8FAE5A'], [900, '#E3A33A']].forEach(([x, c], i) => { ctx.fillStyle = c; ell(ctx, x, HZ - 36 - (i % 2) * 10, 42, 34); ctx.fill(); ctx.fillStyle = 'rgba(58,40,29,0.6)'; ctx.fillRect(x - 3, HZ - 14 - (i % 2) * 10, 6, 14); });
+    const wf = 1100; ctx.fillStyle = 'rgba(255,255,255,0.85)'; ctx.fillRect(wf, HZ - 96, 14, 80);
+    ctx.fillStyle = 'rgba(207,230,246,0.9)'; for (let k = 0; k < 4; k++) ctx.fillRect(wf + 2, HZ - 96 + ((f * 6 + k * 20) % 80), 10, 8);
+    // water: saturated turquoise, lighter at the horizon
+    const wg = ctx.createLinearGradient(0, HZ, 0, H);
+    wg.addColorStop(0, '#8FD3D1'); wg.addColorStop(0.35, '#3FA9B3'); wg.addColorStop(1, '#17707F');
+    ctx.fillStyle = wg; ctx.fillRect(0, HZ, W, H - HZ);
+    // sun path glints
+    for (let i = 0; i < 38; i++) {
+      const y = HZ + 10 + i * i * 0.32, x = 360 + Math.sin(i * 12.9 + f * 0.18) * (20 + i * 5), w = 12 + i * 1.6;
+      ctx.fillStyle = `rgba(252,235,180,${0.55 - i * 0.012})`; ell(ctx, x, y, w, 2 + i * 0.06); ctx.fill();
+    }
+    // calm ripple lines
+    ctx.strokeStyle = 'rgba(255,255,255,0.35)'; ctx.lineWidth = 2.5;
+    for (let r = 0; r < 14; r++) { const y = HZ + 40 + r * 34 + r * r * 1.6, x = ((r * 311 + f * 1.4) % 2200) - 140; ctx.beginPath(); ctx.moveTo(x, y); ctx.quadraticCurveTo(x + 40, y - 5, x + 90 + r * 4, y); ctx.stroke(); }
+  }
+  function ripplesAround(ctx, x, y, s, f) {
+    ctx.save(); ctx.strokeStyle = 'rgba(255,255,255,0.55)'; ctx.lineWidth = 3;
+    for (let k = 0; k < 3; k++) { const p = ((f / 36 + k / 3) % 1), rx = (220 + p * 160) * s, ry = (28 + p * 20) * s; ctx.globalAlpha = 1 - p; ell(ctx, x + 20 * s, y + 30 * s, rx, ry); ctx.stroke(); }
+    ctx.restore();
+  }
+  function waterOver(ctx, x, y, s) {
+    // translucent water across the lower body so she sits IN the water; soft at the ends
+    ctx.save(); ctx.translate(x + 20 * s, y + 52 * s); ctx.scale(1, 0.16);
+    const g = ctx.createRadialGradient(0, 0, 0, 0, 0, 360 * s);
+    g.addColorStop(0, 'rgba(52,158,170,0.96)'); g.addColorStop(0.72, 'rgba(58,164,176,0.9)'); g.addColorStop(1, 'rgba(63,169,179,0)');
+    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(0, 0, 360 * s, 0, Math.PI * 2); ctx.fill(); ctx.restore();
+    ctx.save(); ctx.strokeStyle = 'rgba(255,255,255,0.75)'; ctx.lineWidth = 3; ctx.lineCap = 'round';
+    ctx.beginPath(); for (let i = 0; i <= 24; i++) { const px = x - 250 * s + i * 22 * s, py = y + 30 * s + Math.sin(i * 0.9) * 3; i ? ctx.lineTo(px, py) : ctx.moveTo(px, py); } ctx.stroke();
+    ctx.restore();
+  }
+  // the pocket shot: the cove, defocused into warm bokeh (graded warmer)
+  function bokeh(ctx, f, warmth) {
+    const W = 1920, H = 1080;
+    const g = ctx.createLinearGradient(0, 0, 0, H);
+    g.addColorStop(0, mix('#4F86C0', '#7FA4C6', warmth)); g.addColorStop(0.5, mix('#8FC7D0', '#E8D3A8', warmth)); g.addColorStop(1, mix('#2C8F9A', '#8E9F86', warmth));
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+    const dots = [[260, 300, 120, '252,235,180'], [520, 180, 80, '255,255,255'], [1480, 260, 140, '242,201,110'], [1700, 520, 100, '123,225,218'], [300, 760, 150, '63,169,179'], [1320, 820, 130, '217,138,43'], [880, 140, 60, '255,255,255'], [1120, 380, 90, '252,235,180'], [140, 520, 70, '227,163,58'], [1800, 160, 60, '255,255,255']];
+    dots.forEach(([x, y, r, c], i) => { const dx = Math.sin(f * 0.03 + i) * 8; const rg = ctx.createRadialGradient(x + dx, y, r * 0.2, x + dx, y, r); rg.addColorStop(0, `rgba(${c},0.34)`); rg.addColorStop(0.8, `rgba(${c},0.22)`); rg.addColorStop(1, `rgba(${c},0)`); ctx.fillStyle = rg; ell(ctx, x + dx, y, r, r); ctx.fill(); });
+  }
+  // the gold thread (brand: 3px Gilt, 1px Filament core, a set glow)
+  function thread(ctx, pts, prog, alpha) {
+    if (prog <= 0) return; ctx.save(); ctx.globalAlpha = alpha == null ? 1 : alpha; ctx.lineCap = 'round';
+    const draw = () => { ctx.beginPath(); ctx.moveTo(pts[0][0], pts[0][1]);
+      if (pts.length === 4) { const bez = (t) => { const u = 1 - t; return [u*u*u*pts[0][0] + 3*u*u*t*pts[1][0] + 3*u*t*t*pts[2][0] + t*t*t*pts[3][0], u*u*u*pts[0][1] + 3*u*u*t*pts[1][1] + 3*u*t*t*pts[2][1] + t*t*t*pts[3][1]]; };
+        for (let i = 1; i <= 40; i++) { const p = bez((i / 40) * prog); ctx.lineTo(p[0], p[1]); } }
+      else { ctx.lineTo(lerp(pts[0][0], pts[1][0], prog), lerp(pts[0][1], pts[1][1], prog)); } };
+    ctx.shadowColor = 'rgba(242,201,110,0.9)'; ctx.shadowBlur = 14; ctx.strokeStyle = C.gilt; ctx.lineWidth = 4; draw(); ctx.stroke();
+    ctx.shadowBlur = 0; ctx.strokeStyle = C.filament; ctx.lineWidth = 1.4; draw(); ctx.stroke(); ctx.restore();
+  }
+  function node(ctx, x, y, a) { if (a <= 0) return; ctx.save(); const g = ctx.createRadialGradient(x, y, 0, x, y, 26); g.addColorStop(0, `rgba(252,235,180,${a})`); g.addColorStop(0.4, `rgba(242,201,110,${a * 0.6})`); g.addColorStop(1, 'rgba(242,201,110,0)'); ctx.fillStyle = g; ell(ctx, x, y, 26, 26); ctx.fill(); ctx.restore(); }
+
+  // title page on the sky ground (primary colourway): imprint, title, rule, descriptor; shield apart top-right
+  function titlePage(ctx, f0, f, opts) {
+    const W = 1920, H = 1080, T = 176, cx = 960;
+    const k = (d) => E.settle(clamp((f - f0 - d) / 12, 0, 1));
+    const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, C.zenith); g.addColorStop(0.62, C.sky); g.addColorStop(1, C.horizon);
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+    const top = 360;
+    ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic';
+    // imprint: "DeRec" Gilt + "Alliance" Paper
+    let a = k(0); ctx.globalAlpha = a; const iy = top + (1 - a) * 12;
+    ctx.font = `600 ${Math.round(T * 0.32)}px ${opts.text}`;
+    const w1 = ctx.measureText('DeRec ').width, w2 = ctx.measureText('Alliance').width, x0 = cx - (w1 + w2) / 2;
+    ctx.textAlign = 'left'; ctx.fillStyle = C.gilt; ctx.fillText('DeRec', x0, iy); ctx.fillStyle = C.paper; ctx.fillText('Alliance', x0 + w1, iy);
+    // title
+    a = k(3); ctx.globalAlpha = a; ctx.textAlign = 'center'; ctx.fillStyle = C.paper;
+    ctx.font = `600 ${T}px ${opts.display}`; const ty = top + T * 0.46 + T * 0.72 + (1 - a) * 12; ctx.fillText('Many Hands', cx, ty);
+    const tw = ctx.measureText('Many Hands').width;
+    // descriptor
+    a = k(6); ctx.globalAlpha = a; ctx.fillStyle = C.paper; ctx.font = `600 ${Math.round(T * 0.18)}px ${opts.text}`;
+    const ry = ty + T * 0.41, dy = ry + T * 0.36 + (1 - a) * 12;
+    if (ctx.letterSpacing !== undefined) ctx.letterSpacing = '6px';
+    ctx.fillText('THE COMMUNITY PODCAST', cx, dy);
+    if (ctx.letterSpacing !== undefined) ctx.letterSpacing = '0px';
+    ctx.globalAlpha = 1;
+    // the rule: two threads from each end meeting in the middle, then a node lights and fades
+    const rw = tw * 0.38, p = E.draw(clamp((f - f0 - 6) / 18, 0, 1));
+    thread(ctx, [[cx - rw / 2, ry], [cx, ry]], p); thread(ctx, [[cx + rw / 2, ry], [cx, ry]], p);
+    const n = f - f0 - 24; node(ctx, cx, ry, n < 0 ? 0 : n < 6 ? n / 6 : Math.max(0, 1 - (n - 6) / 6));
+    // shield placeholder (the Alliance master file goes here; never redrawn by AI)
+    ctx.save(); ctx.globalAlpha = k(0); ctx.translate(1760, 150);
+    ctx.beginPath(); ctx.moveTo(-54, -62); ctx.lineTo(54, -62); ctx.quadraticCurveTo(58, 20, 0, 70); ctx.quadraticCurveTo(-58, 20, -54, -62); ctx.closePath();
+    ctx.fillStyle = '#10151A'; ctx.fill(); ctx.lineWidth = 5; ctx.strokeStyle = C.gilt; ctx.stroke();
+    ctx.fillStyle = 'rgba(242,201,110,0.8)'; ctx.font = `600 13px ${opts.text}`; ctx.textAlign = 'center'; ctx.fillText('SHIELD', 0, -4); ctx.fillText('MASTER', 0, 14);
+    ctx.restore();
+  }
+
+
+  // ---------- Pip, Tuck's friend: a mug-sized porcelain café robot ----------
+  // st: {x,y,s, bob, face:'-'|'.'|'~'|'^', tilt, mitts:[[x,y],[x,y]]}
+  function pip(ctx, st) {
+    ctx.save(); ctx.translate(st.x, st.y + (st.bob || 0)); ctx.scale(st.s, st.s); ctx.rotate(st.tilt || 0);
+    // hover glow
+    const hg = ctx.createRadialGradient(0, 128, 2, 0, 128, 70); hg.addColorStop(0, 'rgba(123,225,218,0.55)'); hg.addColorStop(1, 'rgba(123,225,218,0)');
+    ctx.fillStyle = hg; ell(ctx, 0, 128, 70, 16); ctx.fill();
+    // softened shield body: flat top (a tray), rounded shoulders, blunt point
+    ctx.beginPath(); ctx.moveTo(-50, -86); ctx.lineTo(50, -86); ctx.quadraticCurveTo(76, -86, 77, -58);
+    ctx.bezierCurveTo(78, 10, 40, 72, 0, 96); ctx.bezierCurveTo(-40, 72, -78, 10, -77, -58); ctx.quadraticCurveTo(-76, -86, -50, -86); ctx.closePath();
+    const g = ctx.createLinearGradient(-60, -90, 60, 96); g.addColorStop(0, '#FFFDF6'); g.addColorStop(1, '#EDE6D6');
+    ctx.fillStyle = g; ctx.fill(); ctx.lineWidth = 4; ctx.strokeStyle = C.brass; ctx.stroke();
+    // iron speckle
+    ctx.fillStyle = 'rgba(140,123,102,0.55)'; [[-40,-50],[22,-64],[-14,10],[36,20],[-30,40],[8,60],[50,-30],[-56,-10]].forEach(([a,b]) => { ell(ctx, a, b, 1.6, 1.3); ctx.fill(); });
+    // visor with the single face-line
+    ctx.beginPath(); ctx.roundRect ? ctx.roundRect(-40, -72, 80, 30, 15) : ctx.rect(-40, -72, 80, 30); ctx.fillStyle = '#12332B'; ctx.fill();
+    ctx.strokeStyle = '#46E0D2'; ctx.lineWidth = 4; ctx.lineCap = 'round'; ctx.shadowColor = 'rgba(70,224,210,0.8)'; ctx.shadowBlur = 8; ctx.beginPath();
+    const f = st.face || '-';
+    if (f === '^') { ctx.moveTo(-14, -52); ctx.lineTo(0, -62); ctx.lineTo(14, -52); }
+    else if (f === '.') { ctx.arc(0, -57, 2.5, 0, Math.PI * 2); }
+    else if (f === '~') { ctx.moveTo(-14, -56); ctx.quadraticCurveTo(-7, -63, 0, -57); ctx.quadraticCurveTo(7, -51, 14, -58); }
+    else { ctx.moveTo(-14, -57); ctx.lineTo(14, -57); }
+    ctx.stroke(); ctx.shadowBlur = 0;
+    // chest window: dark glass, empty (Pip never holds a stone)
+    ell(ctx, 0, -6, 13, 13); ctx.fillStyle = '#12332B'; ctx.fill(); ctx.strokeStyle = C.brass; ctx.lineWidth = 2.5; ctx.stroke();
+    ctx.fillStyle = 'rgba(255,255,255,0.25)'; ell(ctx, -4, -10, 4, 3); ctx.fill();
+    // two floating mitts with gold cuffs
+    (st.mitts || [[-104, 6], [104, 6]]).forEach(([mx, my]) => {
+      ell(ctx, mx, my, 17, 14); ctx.fillStyle = '#FBF8EF'; ctx.fill(); outline(ctx, 2.5);
+      ctx.strokeStyle = C.brass; ctx.lineWidth = 4; ctx.beginPath(); ctx.arc(mx, my, 15, mx < 0 ? -0.6 : Math.PI - 0.6, mx < 0 ? 0.6 : Math.PI + 0.6); ctx.stroke();
+    });
+    ctx.restore();
+  }
+
+  root.MHDraw = { C, E, seg, lerp, clamp, mix, stone, mapleLeaf, airTaxi, friendPaw, tuckFront, tuckFloat, cove, ripplesAround, waterOver, bokeh, thread, node, titlePage, ell, pip };
+})(typeof window !== 'undefined' ? window : globalThis);
+
+</script>
+<script>
+/* Many Hands — Episode 01 cold open, "The Float". Frame-accurate at 24 fps; 120 frames = 5.00 s.
+   Every beat reads from K (keyframes), so the storyboard's hit-point table maps onto it one to one. */
+(function (root) {
+  const FPS = 24, END = 120, TAIL = 36;
+  const K = {
+    leafIn: 0, leafLand: 45, popOnHead: 60,              // bar one: the activity, hit on f60 ("WORK" + clap)
+    hushStart: 60, pocketIn: 66,                          // match into the pocket shot
+    pat: 69, stoneUp: [70, 78],                           // pat once; stone up to the lens
+    paw1: [76, 84], plink1: 84, paw2: [82, 90], plink2: 90, // two friends arrive; identical share sounds
+    breath: [90, 93], bloom: 93, glowHold: [93, 108],     // held breath, then all three light (15 frames)
+    release: [99, 111], tilt: [101, 113],                 // threads lift off the stones; camera rises to the sky
+    title: 104, button: 120,                               // title page settles; the rule is drawn by the threads
+  };
+  const HITS = [
+    [0, 'Downbeat. Already mid-float'], [15, '"HANDS": the leaf turns'], [45, '"LIGHT": the leaf lands'],
+    [60, '"WORK": clap. The leaf becomes a hat'], [69, 'Pat'], [84, 'Plink: a friend’s stone'], [90, 'Plink: another'],
+    [93, 'Home chord: all three light'], [104, 'Title page'], [120, 'Button: cut to the hosts'],
+  ];
+
+  function render(ctx, f, fonts) {
+    const D = root.MHDraw, s = D.seg, E = D.E, lerp = D.lerp;
+    ctx.save(); ctx.clearRect(0, 0, 1920, 1080);
+    const tiltT = s(f, K.tilt[0], K.tilt[1], E.leaf);
+    if (f < K.pocketIn) {
+      // ---- bar one: the float ----
+      const push = s(f, K.hushStart, K.pocketIn, E.tuck); // slow push that becomes the match
+      ctx.save(); ctx.translate(960, 700); ctx.scale(1 + push * 0.5, 1 + push * 0.5); ctx.translate(-960 + push * 120, -700 + push * 60);
+      D.cove(ctx, f);
+      D.airTaxi(ctx, lerp(1080, 1560, f / 66), 150 - f * 0.3, 1.5, f);
+      const bob = Math.sin(f / 7) * 5, fl = Math.sin(f / 5);
+      D.ripplesAround(ctx, 960, 700 + bob, 1.3, f);
+      const onHead = f >= K.popOnHead, lift = s(f, K.leafLand + 3, K.popOnHead, E.settle);
+      const blink = (f > 30 && f < 34) ? Math.sin((f - 30) / 4 * Math.PI) : 0;
+      D.tuckFloat(ctx, { x: 960, y: 700, s: 1.3, bob: bob, flipper: fl, pawLift: onHead ? 0 : lift, leafInPaws: f >= K.leafLand && !onHead, leafOnHead: onHead, blink: blink });
+      D.waterOver(ctx, 960, 700 + bob, 1.3);
+      if (f < K.leafLand) {
+        // the leaf spins down along a lazy S toward her chest
+        const t = f / K.leafLand, x = lerp(1180, 900, t) + Math.sin(t * 7) * 60, y = lerp(-60, 610, E.breath(t));
+        D.mapleLeaf(ctx, x, y + bob * t, 1.05, t * 9);
+      }
+      ctx.restore();
+      // the match: warm light closes in over the last frames of bar one
+      const m = s(f, K.hushStart + 2, K.pocketIn, null); if (m > 0) { ctx.fillStyle = `rgba(247,243,230,${m * 0.9})`; ctx.fillRect(0, 0, 1920, 1080); }
+    } else {
+      // ---- bar two: the ritual (locked master) ----
+      const lift = tiltT * 1080;
+      ctx.save(); ctx.translate(0, lift);
+      D.bokeh(ctx, f, 0.55);
+      const inT = s(f, K.pocketIn, K.pocketIn + 6, E.settle);
+      const glow = f >= K.bloom ? Math.min(1, (f - K.bloom) / 3) : 0;
+      const up = s(f, K.stoneUp[0], K.stoneUp[1], E.settle);
+      const patT = f >= K.pat && f < K.pat + 4 ? Math.sin((f - K.pat) / 4 * Math.PI) : 0;
+      const blink = (f >= 112 && f < 118) ? Math.sin((f - 112) / 6 * Math.PI) : 0;
+      const stoneOut = f >= K.stoneUp[0];
+      const pawR = stoneOut ? [lerp(160, 70, up), lerp(250, 132, up)] : [lerp(92, 150, patT), lerp(230, 262, patT)];
+      const pawL = stoneOut ? [lerp(-40, -70, up), lerp(250, 132, up)] : [-40, 250];
+      D.tuckFront(ctx, { x: 960, y: 500 + (1 - inT) * 30, s: 1.5, leaf: true, pawL: pawL, pawR: pawR,
+        stone: stoneOut ? [lerp(168, 0, up), lerp(272, 124, up)] : null, stoneOut: stoneOut, glow: glow, blink: blink });
+      // friends: paws rise in from the lower edges; never a face, never touching each other
+      const p1 = s(f, K.paw1[0], K.paw1[1], E.settle), p2 = s(f, K.paw2[0], K.paw2[1], E.settle);
+      const out = s(f, 106, 114, E.tuck);
+      if (p1 > 0) D.friendPaw(ctx, 470, 1160 + out * 400, lerp(640, 838, p1), lerp(1240, 712, p1) + out * 400, D.C.gran, 'rgba(255,255,255,0.18)', glow, true, 1.15);
+      if (p2 > 0) D.friendPaw(ctx, 1450, 1160 + out * 400, lerp(1280, 1082, p2), lerp(1240, 712, p2) + out * 400, D.C.choc, 'rgba(255,255,255,0.1)', glow, false, 1.15);
+      ctx.restore();
+      // the release: two threads lift off the lit stones and rise into the sky, where they become the rule
+      if (f >= K.release[0]) {
+        const r = s(f, K.release[0], K.title + 8, E.draw);
+        const ry = 870 - 1080 + lift; // rule height on the title page, moving with the camera
+        const a = [[838, 712 + lift], [800, 400 + lift], [700, ry + 120], [854, 875]];
+        const b = [[1082, 712 + lift], [1120, 400 + lift], [1220, ry + 120], [1066, 875]];
+        if (f < K.title + 8) { D.thread(ctx, a, r); D.thread(ctx, b, r); }
+      }
+      if (f >= K.title - 4) {
+        ctx.save(); ctx.translate(0, lift - 1080);
+        ctx.globalAlpha = s(f, K.title - 4, K.title + 2, null);
+        D.titlePage(ctx, K.title, f, fonts);
+        ctx.restore();
+      } else if (tiltT > 0) {
+        ctx.save(); ctx.translate(0, lift - 1080); const g = ctx.createLinearGradient(0, 0, 0, 1080); g.addColorStop(0, D.C.zenith); g.addColorStop(0.62, D.C.sky); g.addColorStop(1, D.C.horizon); ctx.fillStyle = g; ctx.fillRect(0, 0, 1920, 1080); ctx.restore();
+      }
+    }
+    // after the button: the cut to the hosts (animatic slate)
+    if (f >= END) {
+      ctx.fillStyle = '#123E32'; ctx.fillRect(0, 0, 1920, 1080);
+      ctx.fillStyle = '#F7F3E6'; ctx.textAlign = 'center'; ctx.font = `600 64px ${fonts.display}`;
+      ctx.fillText('Cut to: the wide two-shot', 960, 520);
+      ctx.font = `400 34px ${fonts.text}`; ctx.fillStyle = '#A9C6B9'; ctx.fillText('Bruce and Facundo, mid-smile, on the button chord', 960, 590);
+    }
+    ctx.restore();
+  }
+
+  function schedule(eng, t0, opt) {
+    const sfx = !opt || opt.sfx !== false;
+    const N = root.MHAudio.N, b = 0.625, at = (fr) => t0 + fr / FPS;
+    // bar one: hook, chords, bass, snaps, shaker
+    eng.vibes(N.A4, at(0), 0.4); eng.vibes(N.B4, at(7.5), 0.4); eng.vibes(N.D5, at(15), 0.9);
+    eng.guitar(N.B4, at(37.5), 0.8); eng.guitar(N.Gs4, at(45), 0.9);
+    eng.vibes(N.A4, at(60), 2.6, 0.9); eng.guitar(N.A4, at(60), 0.9);
+    eng.rhodes([N.Fs3, N.A3, N.E4], at(0), 1.2); eng.rhodes([N.Gs3, N.B3, N.E4], at(30), 1.2);
+    eng.rhodes([N.Fs3, N.B3, N.D4], at(60), 1.2, 0.9); eng.rhodes([N.E3, N.Bb3, N.D4], at(90), 1.1, 0.8);
+    eng.pad([N.D3, N.A3, N.Fs4], at(0), 4.9, 500, 5000, 3.13);
+    eng.bass(N.D2, at(0)); eng.bass(N.D2, at(30), 0.8); eng.bass(N.G2, at(60)); eng.bass(N.G2, at(90), 0.6);
+    eng.snap(at(15)); eng.snap(at(45));
+    eng.shaker(at(0), at(105));
+    eng.clap(at(60)); if (sfx) { eng.leaf(at(45)); eng.leaf(at(60)); eng.lap(at(8), 0.8); eng.lap(at(38), 0.6); }
+    // bar two: the ritual's own sounds, sitting on the theme
+    if (sfx) {
+    eng.pat(at(K.pat)); eng.setDown(at(K.plink1), -0.35); eng.setDown(at(K.plink2), 0.35);
+    eng.crotale(at(K.bloom), 0.7, true);
+    eng.rhodes([N.E3, N.A3, N.D4, N.Fs4], at(K.bloom), 0.9, 0.55, 0.15);
+    eng.pat(at(113)); eng.pat(at(116));
+    }
+    // the button: home
+    eng.vibes(N.Fs5, at(120), 1.8, 0.9); [N.D3, N.A3, N.D4, N.Fs4].forEach((n, i) => eng.guitar(n, at(120) + i * 0.02, 0.8));
+    eng.rhodes([N.E3, N.A3, N.D4, N.Fs4], at(120), 1.3, 1.0); eng.bass(N.D2, at(120));
+  }
+
+  root.MHTimeline = { FPS, END, TAIL, K, HITS, render, schedule };
+})(typeof window !== 'undefined' ? window : globalThis);
+
+</script>
+<script>
+window.MHData = {
+  restFrame: 100,
+  beats: [
+    { f0: 0, f1: 15, thumb: 8, title: 'Already floating', what: 'Hard in on the downbeat. Tuck drifts on her back in a sunlit autumn cove, flippers up.', music: 'A4 B4 D5 on vibes: "Ma-ny HANDS"' },
+    { f0: 15, f1: 45, thumb: 36, title: 'A leaf comes down', what: 'A maple leaf spins down on a lazy S and lands on her chest.', music: 'Guitar answers, B4 then G♯4: "make LIGHT"' },
+    { f0: 45, f1: 60, thumb: 56, title: 'A new hat', what: 'She lifts the leaf in both paws and sets it on her head.', music: 'Clap on "WORK", frame 60' },
+    { f0: 60, f1: 70, thumb: 68, title: 'The pocket pat', what: 'Into the pocket shot. One pat on the pocket under her left forearm.', music: 'The hush, then a felted pat', locked: true },
+    { f0: 70, f1: 84, thumb: 80, title: 'Her plain stone', what: 'She holds her stone up to you. Grey and matte. Nothing glows.', music: 'Plink: a friend’s stone touches', locked: true },
+    { f0: 84, f1: 93, thumb: 90, title: 'Two more friends', what: 'Two paws bring their own plain stones from below. No faces, never touching each other.', music: 'Plink, the same note. A held breath.', locked: true },
+    { f0: 93, f1: 104, thumb: 100, title: 'Enough hands', what: 'At the third stone, all three light amber at once. One never glows. Two never glow.', music: 'The home chord, faded in', locked: true },
+    { f0: 104, f1: 120, thumb: 118, title: 'The title page', what: 'Two threads rise off the stones into the sky and meet in the middle as the rule under Many Hands.', music: 'The breath, then the button at 5.00s', locked: true },
+  ],
+  tuck: {
+    statement: 'The friend who holds on to something for you and never asks what it is.',
+    adjectives: ['Unflappable', 'Competent', 'Quietly delighted', 'Discreet', 'Game for anything'],
+  },
+  mapping: [
+    ['One plain grey stone, never glowing on its own', 'A share: alone it reveals nothing', 'A real share is a number, not an object, and not a piece of the secret'],
+    ['Two stones touching, still dark', 'Fewer than the threshold learn nothing, even together', 'The picture always shows three. Real thresholds vary.'],
+    ['The third stone: all three light at once', 'Enough helpers restore the secret, whole', 'Recovery also has a human step: helpers confirm it is really you'],
+    ['Paws from different edges, no faces', 'Helpers don’t know who the others are, or how many', 'Real helpers are people and organizations you choose'],
+    ['The pocket pat', 'The quiet daily check-in', 'In DeRec the helper does nothing. The owner’s device checks automatically.'],
+  ],
+  acts: [
+    { n: 1, date: '11 Nov 2026', season: 'Autumn', title: 'The float', action: 'On her back in a sunlit cove. A maple leaf lands on her chest and becomes a hat.', carry: 'the leaf on her head', pip: false },
+  ],
+  ros: [
+    { t: '0:00', len: 5, name: 'The Bumper', job: 'music and mascot, five seconds', color: '#F2C96E' },
+    { t: '0:05', len: 55, name: 'The Question', job: 'Bruce asks it in the title’s words', color: '#4185CB' },
+    { t: '1:00', len: 90, name: 'The Short Answer', job: 'Facundo answers first, then builds the picture', color: '#1B5699' },
+    { t: '2:30', len: 280, name: 'The Table', job: 'three follow-ups; the banter lives here', color: '#1B7466' },
+    { t: '7:10', len: 180, name: 'Feature', job: 'Hands On or Heard It Somewhere, alternating', color: '#2F8F7D' },
+    { t: '10:10', len: 45, name: 'Where It Stops', job: 'the limit, stated with confidence, no music', color: '#123E32' },
+    { t: '10:55', len: 135, name: 'Raised Hands', job: 'one real community question', color: '#4185CB' },
+    { t: '13:10', len: 30, name: 'Say It Back', job: 'Bruce sums up; Facundo scores it', color: '#1B5699' },
+    { t: '13:40', len: 30, name: 'One Small Thing', job: 'free, under ten minutes, no product', color: '#1B7466' },
+    { t: '14:10', len: 30, name: 'Next Time', job: 'next question and the split sign-off', color: '#2F8F7D' },
+    { t: '14:40', len: 20, name: 'End Card', job: 'a real outtake and Tuck’s reprise', color: '#A8843D' },
+  ],
+  eps: [],
+  hook: [
+    { syl: 'Ma-', note: 'A4', deg: '5' }, { syl: 'ny', note: 'B4', deg: '6' }, { syl: 'hands', note: 'D5', deg: '1' }, { syl: 'rest', note: '·', deg: '–', rest: true },
+    { syl: 'make', note: 'B4', deg: '6' }, { syl: 'light', note: 'G♯4', deg: '♯4' }, { syl: 'work', note: 'A4', deg: '5' }, { syl: 'button', note: 'F♯5', deg: '3' },
+  ],
+  swatches: [
+    { name: 'Gilt', hex: '#F2C96E', job: 'Light: threads, nodes, “DeRec” on sky' },
+    { name: 'Sky', hex: '#4185CB', job: 'The ground of tomorrow, always a gradient' },
+    { name: 'Zenith', hex: '#1B5699', job: 'The only sky value type may sit on' },
+    { name: 'Paper', hex: '#F7F3E6', job: 'Every card and slip; the white point' },
+    { name: 'Ink', hex: '#123E32', job: 'All text on paper; the black point' },
+    { name: 'Jade', hex: '#1B7466', job: 'The binding: the spine on every slip' },
+    { name: 'Brass', hex: '#A8843D', job: 'Gold printed on paper, 56 px and up' },
+    { name: 'Glass', hex: '#7BE1DA', job: 'Machines and glass, never a thread' },
+  ],
+  gates: { bruce: [], facundo: [], both: [] },
+  docs: [
+    { path: 'BRIEF.md', label: 'The brief', desc: 'what we are making and the rules' },
+    { path: 'DECISIONS.md', label: 'Creative rulings', desc: 'the calls that close the concept phase' },
+    { path: 'mascot/CONCEPT-PANEL.md', label: 'The mascot panel', desc: 'four concepts, four judges' },
+    { path: 'season/FORMAT.md', label: 'Series format', desc: 'name, ladder, run of show, segments' },
+    { path: 'brand/BRAND-KIT.md', label: 'Brand kit', desc: 'palette, type, lockups, motion' },
+    { path: 'music/THEME-AND-SOUND.md', label: 'Theme and sound', desc: 'the theme, cues, delivery' },
+  ],
+};
+
+</script>
+<script>
+(function () {
+  const FONTS = { display: "'Fraunces', 'Iowan Old Style', Georgia, serif", text: "'Atkinson Hyperlegible Next', system-ui, sans-serif" };
+  const T = window.MHTimeline, D = window.MHDraw, DATA = window.MHData, A = window.MHAudio;
+  const $ = (id) => document.getElementById(id);
+  const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+  const TOTAL = T.END + T.TAIL, REST = DATA.restFrame || 100;
+
+  // ---------- the player ----------
+  const stage = $('stage'), sctx = stage.getContext('2d'), scrub = $('scrub'), readout = $('readout'), nowline = $('nowline'), big = $('bigplay'), bigLabel = $('bigplay-label'), soundBtn = $('sound');
+  scrub.max = TOTAL - 1;
+  let frame = REST, playing = false, soundOn = true, ac = null, out = null, startAt = 0, startPerf = 0, raf = 0;
+  const fmt = (f) => { const beat = Math.floor(Math.min(f, T.END) / 15), bar = Math.floor(beat / 4) + 1, b = (beat % 4) + 1; return 'f ' + String(f).padStart(3, '0') + ' · ' + (f / T.FPS).toFixed(2) + 's · ' + (f >= T.END ? 'button' : 'bar ' + bar + '.' + b); };
+  const hitAt = (f) => { let h = null; T.HITS.forEach((x) => { if (x[0] <= f) h = x; }); return h; };
+  function draw(f) {
+    frame = f; T.render(sctx, f, FONTS); scrub.value = f; readout.textContent = fmt(f);
+    const h = hitAt(f); nowline.textContent = '';
+    if (h) { const b = el('b', null, 'f ' + h[0]); nowline.append(b, document.createTextNode(' · ' + h[1])); }
+  }
+  // ticks: bar lines and hit points
+  const ticks = $('ticks');
+  [0, 60, 120].forEach((f) => { const i = el('i', 'bar'); i.style.left = (f / (TOTAL - 1) * 100) + '%'; ticks.append(i); });
+  T.HITS.forEach(([f]) => { const i = el('i'); i.style.left = (f / (TOTAL - 1) * 100) + '%'; ticks.append(i); });
+
+  function audio() {
+    if (!ac) { const C = window.AudioContext || window.webkitAudioContext; if (!C) return null; ac = new C(); }
+    return ac;
+  }
+  function newOut() {
+    if (out) { const o = out; try { o.gain.setTargetAtTime(0, ac.currentTime, 0.03); } catch (e) {} setTimeout(() => { try { o.disconnect(); } catch (e) {} }, 400); }
+    out = ac.createGain(); out.gain.value = 0.85; out.connect(ac.destination); return new A.Engine(ac, out);
+  }
+  function stop() {
+    playing = false; cancelAnimationFrame(raf); bigLabel.textContent = 'Play the cold open, sound on'; big.setAttribute('aria-label', 'Play the cold open');
+    if (out && ac) { const o = out; out = null; try { o.gain.setTargetAtTime(0, ac.currentTime, 0.05); } catch (e) {} setTimeout(() => { try { o.disconnect(); } catch (e) {} }, 500); }
+  }
+  function tick() {
+    const t = (soundOn && ac && out) ? ac.currentTime - startAt : (performance.now() - startPerf) / 1000;
+    const f = Math.floor(t * T.FPS);
+    if (f >= TOTAL) { draw(TOTAL - 1); stop(); return; }
+    if (f >= 0 && f !== frame) draw(f);
+    raf = requestAnimationFrame(tick);
+  }
+  async function play() {
+    if (playing) { stop(); return; }
+    playing = true; bigLabel.textContent = 'Stop'; big.setAttribute('aria-label', 'Stop the cold open');
+    draw(0);
+    if (soundOn && audio()) {
+      try { await ac.resume(); } catch (e) {}
+      const eng = newOut(); startAt = ac.currentTime + 0.12; T.schedule(eng, startAt);
+    } else { startPerf = performance.now() + 120; }
+    raf = requestAnimationFrame(tick);
+  }
+  big.addEventListener('click', play);
+  soundBtn.addEventListener('click', () => { soundOn = !soundOn; soundBtn.setAttribute('aria-pressed', String(soundOn)); soundBtn.textContent = soundOn ? 'Sound on' : 'Sound off'; bigLabel.textContent = playing ? 'Stop' : (soundOn ? 'Play the cold open, sound on' : 'Play the cold open, muted'); });
+  scrub.addEventListener('input', () => { if (playing) stop(); draw(+scrub.value); });
+
+  // ---------- sound buttons ----------
+  document.querySelectorAll('[data-play]').forEach((b) => b.addEventListener('click', async () => {
+    if (playing) stop(); if (!audio()) return; try { await ac.resume(); } catch (e) {}
+    const eng = newOut(), t = ac.currentTime + 0.08, k = b.dataset.play;
+    if (k === 'theme') T.schedule(eng, t, { sfx: false });
+    else if (k === 'setdown') eng.setDown(t + 0.1, 0);
+    else if (k === 'checkin') eng.checkIn(t, 3);
+    else if (k === 'home') { eng.setDown(t + 0.1, -0.45); eng.setDown(t + 0.32, 0.45); eng.setDown(t + 0.54, 0); eng.bloom(t + 0.54 + 0.12); }
+  }));
+
+  // ---------- beats ----------
+  const off = document.createElement('canvas'); off.width = 1920; off.height = 1080; const octx = off.getContext('2d');
+  function thumb(canvas, f, render) {
+    const c = canvas.getContext('2d'); render(octx, f); c.drawImage(off, 0, 0, canvas.width, canvas.height);
+  }
+  const beats = $('beats'), beatCanvases = [];
+  DATA.beats.forEach((bt) => {
+    const card = el('button', 'beat' + (bt.locked ? ' locked' : '')); card.type = 'button';
+    card.setAttribute('aria-label', 'Jump the animatic to ' + bt.title + ', frame ' + bt.thumb);
+    const cv = el('canvas'); cv.width = 480; cv.height = 270; beatCanvases.push([cv, bt.thumb]);
+    const b = el('div', 'b');
+    b.append(el('div', 't mono', (bt.f0 / 24).toFixed(2) + '–' + (bt.f1 / 24).toFixed(2) + 's · f' + bt.f0 + '–' + bt.f1));
+    b.append(el('h3', null, bt.title), el('p', null, bt.what), el('div', 'm', bt.music));
+    card.append(cv, b); beats.append(card);
+    card.addEventListener('click', () => { if (playing) stop(); draw(bt.thumb); $('player').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' }); });
+  });
+
+  // ---------- Tuck ----------
+  $('statement').textContent = DATA.tuck.statement;
+  DATA.tuck.adjectives.forEach((a) => $('adjs').append(el('li', null, a)));
+  DATA.mapping.forEach((r) => { const tr = el('tr'); r.forEach((c) => tr.append(el('td', null, c))); $('mapping').append(tr); });
+  function portrait() {
+    const cv = $('portrait'), c = cv.getContext('2d'), k = 1500 / 1080;
+    c.save(); c.scale(k, k); c.translate(-(1920 - 1200 / k) / 2, 0); D.bokeh(c, 12, 0.35); c.restore();
+    D.tuckFront(c, { x: 540, y: 620, s: 1.75, pawL: [-66, 170], pawR: [66, 170], stone: [0, 162], stoneOut: true, glow: 0 });
+    D.pip(c, { x: 1005, y: 1190, s: 0.95, face: '^', mitts: [[-100, -10], [100, 20]] });
+  }
+
+  // ---------- lists ----------
+  DATA.acts.forEach((a) => {
+    const d = el('article', 'act'), top = el('div', 'd');
+    top.append(el('span', null, 'Ep ' + String(a.n).padStart(2, '0') + ' · ' + a.date), el('span', null, a.season));
+    d.append(top, el('h3', null, a.title), el('p', null, a.action));
+    const meta = el('p'); meta.append(el('span', 'tag', a.pip ? 'With Pip' : 'Solo'), document.createTextNode('  Carries over: ' + a.carry)); d.append(meta);
+    $('acts').append(d);
+  });
+  const total = DATA.ros.reduce((s, r) => s + r.len, 0);
+  DATA.ros.forEach((r) => { const d = el('div'); d.style.flex = String(r.len); d.style.background = r.color; d.title = r.t + ' ' + r.name; d.append(el('span', null, r.name)); $('ros').append(d);
+    const li = el('li'); li.append(el('span', 'mono', r.t), el('span', null, r.name + ' — ' + r.job)); $('roslist').append(li); });
+  $('ros').setAttribute('aria-label', 'Run of show, ' + Math.round(total / 60) + ' minutes: ' + DATA.ros.map((r) => r.name).join(', '));
+  DATA.eps.forEach((e) => {
+    const d = el('article', 'ep'), n = el('div', 'n', String(e.n).padStart(2, '0')); n.append(el('small', null, e.date));
+    const mid = el('div'); mid.append(el('h3', null, e.title), el('p', null, e.question));
+    const side = el('div', 'side');
+    [['Pillar', e.pillar], ['Feature', e.feature], ['Cold open', e.activity], ['Where it stops', e.stop]].forEach(([k, v]) => { if (!v) return; const p = el('div'); p.append(el('b', null, k + ': '), document.createTextNode(v)); side.append(p); });
+    if (e.flag) { const p = el('div'); p.append(el('span', 'tag', e.flag)); side.append(p); }
+    d.append(n, mid, side); $('eps').append(d);
+  });
+  DATA.hook.forEach((h) => { const d = el('div', h.rest ? 'rest' : ''); d.append(el('div', 'syl', h.syl), el('div', 'note', h.note), el('div', 'deg', h.deg)); $('hook').append(d); });
+  DATA.swatches.forEach((s) => { const d = el('div', 'sw'), i = el('i'); i.style.background = s.hex; const t = el('div'); t.append(el('b', null, s.name), el('span', 'mono', s.hex), el('div', null, s.job)); d.append(i, t); $('swatches').append(d); });
+  [['Bruce', DATA.gates.bruce], ['Facundo', DATA.gates.facundo], ['Both hosts', DATA.gates.both]].forEach(([who, list]) => { const c = el('div', 'gcol'); c.append(el('h3', null, who)); const ul = el('ul'); list.forEach((g) => ul.append(el('li', null, g))); c.append(ul); $('gatecols').append(c); });
+  const base = 'https://github.com/bruceDeRec/testapi-swift/blob/claude/drex-alliance-youtube-series-09gepb/derec-together/';
+  DATA.docs.forEach((d) => { const li = el('li'), a = el('a', null, d.label); a.href = base + d.path; a.target = '_blank'; a.rel = 'noopener'; li.append(a, el('span', null, d.desc)); $('docs').append(li); });
+
+  // ---------- first paint, then again once the fonts arrive ----------
+  function paintAll() { draw(frame); beatCanvases.forEach(([cv, f]) => thumb(cv, f, (c, fr) => T.render(c, fr, FONTS))); portrait(); }
+  paintAll();
+  if (document.fonts && document.fonts.load) Promise.all([document.fonts.load("600 176px 'Fraunces'"), document.fonts.load("600 56px 'Atkinson Hyperlegible Next'")]).then(paintAll, () => {});
+})();
+
+</script>
+
+</body>
+</html>
