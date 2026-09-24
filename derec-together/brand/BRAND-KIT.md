@@ -521,18 +521,18 @@ A thread can pass from printed to lit as it leaves a page. On thumbnails it does
 DECISIONS R3 and the storyboard (§2 beat 9, §3) sanction exactly one meeting between the thread and a character. At f90 Tuck's stone and two friends' stones light amber together. At f102 the light lifts off the three lit stones as two gold threads. They loop wide around Tuck, rise past the ends of the descriptor and draw the title's rule from both ends, meeting in its middle at f113. **Tuck never touches a thread after it forms,** and never looks at one. Nowhere else does a thread touch, leave or circle Tuck or Pip.
 
 **The routed path** (storyboard §3, in 1920×1080 screen coordinates). Each thread is one continuous curve.
-- **Left thread:** from the left stone's rim (about x 845, y 885), out and up at a 40° lean to x 640, y 760. It rises to x 660, y 560, clear of the descriptor's left end, then curves in to the rule's left end at x 794, y 528 and runs along the rule to the centre, x 960.
-- **Right thread:** the mirror image about x 960. It starts at about x 1075, y 885, passes x 1280, y 760 and x 1260, y 560, and meets the rule's right end at x 1126, y 528.
+- **Left thread:** from the left stone's rim (about x 848, y 912), out and up to x 604, y 788, then rising to x 578, y 660 and x 596, y 572, clear of the descriptor's left end. It curves in to the rule's left end at x 794, y 528 and runs along the rule to x 960.
+- **Right thread:** the mirror image about x 960: from about x 1072, y 912, through x 1316, y 788, x 1342, y 660 and x 1324, y 572, to the rule's right end at x 1126, y 528.
 - **Clearance:** neither thread comes closer to Tuck's face than 10% of its height, and neither crosses the descriptor.
 - **State:** lit Gilt all the way. The defocused plate and the Zenith sky are both lit grounds, so the threads never print into Brass here.
-- **Medium:** hand-drawn 2D on twos, as the bible specifies. The shape may wobble by 1 px or less between drawings, and the brightness never changes.
+- **Medium:** hand-drawn 2D on ones: 12 drawings, one per frame, f102–f113. On twos the tip would jump up to about 470 px between drawings at its peak and read as a pop, not a hand drawing a line. Effects cards stay on twos (R4); only the threads go on ones. The shape may wobble by 1 px or less between drawings, and the brightness never changes.
 
 **Where the release departs from the rules above, and why:**
 
 | Rule elsewhere | In the release | Why |
 |---|---|---|
 | Each thread draws over 18 frames, 5 frames after the one before | Both draw together over f102–f113 (12 frames) on `draw`, as mirror images | The music is the clock (R5) and the ritual is 66 frames forever. Two lines setting off from opposite sides at once is the point of the move. |
-| A tip travels 48 px a frame at most | The path is about 760 px, so the tip averages 69 px a frame and peaks near 230 px a frame around f105 | The storyboard fixes the frames and never lengthens the ritual (§9). The slow start of `draw` (about 8 px, then 34 px, in the first two frames) shows the light leaving the stones before it travels, and the threads are silent. The limit stays in force everywhere else. |
+| A tip travels 48 px a frame at most | The path is about 870 px measured along the drawn curve, so the tip averages about 79 px a frame over the 11 steps from f102 to f113 and peaks near 260 px a frame around f105 | The storyboard fixes the frames and never lengthens the ritual (§9). The slow start of `draw` (about 10 px, then 39 px, in the first two frames) shows the light leaving the stones before it travels, and the threads are silent. The limit stays in force everywhere else. |
 | A gentle arc that sags 4–10% | The routed loop above | It has to clear her face and the descriptor, and a sagging arc can't do both. |
 | A node lights over 6 frames, then breathes | One node at x 960, y 528. It lights at f113, is full by f115 and fades over f116–f119. It never breathes. | It has seven frames to live before the cut. |
 | All threads leave together over 12 frames | The two loop arms fade with the melt over f114–f119. The rule stays, at rest, to the cut. | The last frame has to be the clean title card (§5). |

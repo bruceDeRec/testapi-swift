@@ -18,16 +18,15 @@
 - **QC is partly scripted.** Four short scripts check what a tired eye misses: frame count, the stones staying grey until f90, the carry-over staying below y 606, and the brightness step at the join.
 - **Assembly:** Adobe After Effects for the bumper and Adobe Premiere Pro for the episode (the playbook's editor). Free fallback: Blender for all 3D, DaVinci Resolve for comp, edit and delivery.
 - **Money, estimated, to confirm with three quotes:** about $46,000 for the initial build including Episode 01 (range $24,000–73,000), plus 25% to hit the playbook's 28 October delivery. About $3,900 for a medium-tier episode after that. About $41,000 for Episodes 02–12.
-- **Schedule:** the studio must be signed by Friday 2 October to deliver the ritual master and Episode 01 by Wednesday 28 October. The go/no-go checkpoint is Friday 16 October. If it's missed, move the Premiere two weeks rather than launch without Tuck [HOST GATE].
+- **Schedule:** the studio must be signed by Friday 2 October to deliver the ritual master and Episode 01 by Wednesday 28 October. The go/no-go checkpoint is Friday 9 October. If it's missed, move the Premiere two weeks rather than launch without Tuck [HOST GATE].
 
 ### Where this pack departs, and why
 
 1. **Masters render at 3840×2160, not the storyboard's 1920×1080 (§5).** The playbook uploads UHD, and the 9:16 cuts crop a 608 px-wide window from the master. From a 1080p master that window is upscaled 1.8×; from UHD it's 1,216 px wide and downscaled. The ritual is rendered once and used for years, so it should be rendered at the larger size. Stylised renders are cheap, so the cost is small. All positions stay written at 1080 and double at UHD.
-2. **The pocket shot frames Tuck lower than the bible says.** The bible puts her head at "roughly y 610–860". The storyboard's rule that a crown carry-over stays below y 606 then leaves 4 px for a hat. That can't hold a maple leaf. This pack sets her crown at y 650 or lower (§A4). The storyboard's own note that the Episode 01 leaf "tops out at about y 600" is 6 px over its own line, so the leaf comes down too.
-3. **The descriptor is Atkinson Hyperlegible Next 500, not the storyboard's 600.** The storyboard says its title page uses "the brand kit's §2 values", and §2 sets the descriptor at 500. The 600 is a slip, and the brand kit owns type.
-4. **The threads' curved legs fade over f114–f119, with the melt.** The storyboard ends on "a clean rule" but doesn't say when the legs go. Animatic frame 11 shows the rule alone. The legs fade on the brand kit's `breath` curve with the melt; only the rule stays.
-5. **Two carry-overs need a fix before they're animated.** Episode 02's eyepiece ring sits next to the bible's forbidden eye zone, and Episode 06's bobble hat can't clear y 606 as written (§A6).
-6. **The 15-second trailer (storyboard §7) can't announce the 11 November premiere.** It needs Episodes 02, 04 and 07, and on this schedule those exist by 20 November. Launch with the playbook's channel trailer, and run the 15-second cut from late November with its end line changed to "New episodes every other Wednesday" [HOST GATE].
+2. **The descriptor is Atkinson Hyperlegible Next 500, not the storyboard's 600.** The storyboard says its title page uses "the brand kit's §2 values", and §2 sets the descriptor at 500. The 600 is a slip, and the brand kit owns type.
+3. **The threads' curved legs fade over f114–f119, with the melt.** The storyboard ends on "a clean rule" but doesn't say when the legs go. Animatic frame 11 shows the rule alone. The legs fade on the brand kit's `breath` curve with the melt; only the rule stays.
+4. **Two carry-overs need a fix before they're animated.** Episode 02's eyepiece ring sits next to the bible's forbidden eye zone, and Episode 06's bobble hat can't clear y 606 as written (§A6).
+5. **The 15-second trailer (storyboard §7) runs from Wednesday 10 February 2027 as the head of TR03 (CHANNEL-KIT §1), with no date line** [HOST GATE]. By then Episodes 01, 02, 04 and 07 have all aired, so it previews no activity (FORMAT §7).
 
 ---
 
@@ -143,17 +142,9 @@ Drawn by the studio's character designer, by hand, from the bible's construction
 
 **The threads** are Grease Pencil drawings on twos, in the master scene. Their shape may wobble by 1 px or less between drawings (2 px at UHD). Their brightness never changes.
 
-## A4. The pocket-shot framing: one fix before layout
+## A4. The pocket-shot framing
 
-The storyboard's carry-over rule (the crown item stays below y 606, 14 px clear of the descriptor's baseline at y 592) supersedes the bible's 0.35H crown cap. But the bible puts Tuck's head at roughly y 610–860, which leaves a crown item 4 px of room. The animatic, which the hosts have seen, actually frames her lower: her crown is near y 676.
-
-**The ruling for the master layout:**
-- **Tuck's crown sits at y 650 or lower** (y 1300 at UHD). That gives a crown item at least 44 px (0.19H) of room under the y 606 line.
-- **Her head spans about y 650–880** (H ≈ 230 px at 1080). The stones meet just under her chin, near y 905, instead of the storyboard's "about y 885". The threads' start points move down by the same 20 px. The rest of the threads' path is unchanged.
-- **Everything else holds:** Tuck in the lower 45% of the frame, centred on x 960, inside the centre 9:16 area, and threads at least 10% of her face height from her face.
-- **The Episode 01 leaf** sits proud of the crown and tipped back, as written, but its top must be at y 606 or lower. The animatic's leaf, at about y 600, comes down by at least 6 px.
-
-The storyboard's owner confirms this ruling before layout starts. It's listed in the open questions.
+Per storyboard §3, which owns it: Tuck's crown sits at y 670 (y 1340 UHD) and her head centre at y 788 (y 1576 UHD). A crown item may rise at most 64 px, to y 606. The Episode 01 leaf tops out at y 618 and passes. The stones meet at about y 912 (left stone rim x 848, y 912), and the threads follow storyboard §3's path unchanged.
 
 ## A5. The locked ritual master: what is rendered, once
 
@@ -242,7 +233,7 @@ The swap system (storyboard §5): bar one (f0–f53) changes every episode; the 
 - **Episode 02's eyepiece ring** sits beside the eyes, which the bible forbids as a zone. Keep it only as a faint ring on the fur that stays clear of the lids, on the brow anchor, and check it against the master's blink (f112–f119). If it touches a lid, swap it for a sprig of cypress from the terrace planter behind her right ear.
 - **Episode 06's bobble hat** can't clear y 606 with a bobble on top. Make it a flat oatmeal knitted beanie with one jade stripe and no bobble, sat back on the crown. If it still fails the carry-over script (§C2), swap it for a dusting of ice spray on her brow.
 
-**Batches.** Batch 1: the ritual master, Episode 01 (28 October) and Episode 02 (4 November). Batch 2: Episodes 03, 04 and 07, bringing Pip's first two episodes forward for the trailer (storyboard §7). Batch 3: 05, 06, 08. Batch 4: 09 to 12. Batching lets the studio paint plates and set up scenes together, which is where most of the saving comes from. The Alliance's sign-off on Pip's outline is needed by **Friday 30 October**, before batch 2 starts [HOST GATE].
+**Batches.** Batch 1: the ritual master, Episode 01 (28 October) and Episode 02 (4 November). Batch 2: Episodes 03, 04 and 07, so Episode 04 is delivered before its 14 December lock. Batch 3: 05, 06, 08. Batch 4: 09 to 12. Batching lets the studio paint plates and set up scenes together, which is where most of the saving comes from. The Alliance's sign-off on Pip's outline is needed by **Friday 30 October**, before batch 2 starts [HOST GATE].
 
 ## A7. The f53/f54 join checklist
 
@@ -325,17 +316,17 @@ The animation days are the bible's own tiers (bible Part three).
 |---|---|
 | **Fri 25 Sep** | This brief goes to five studios, with the bible, storyboard, animatic and brand kit |
 | **Mon 28 Sep–Wed 30 Sep** | Paid tests from three of them (§A10) |
-| **Thu 1 Oct** | Hosts choose the studio [HOST GATE] |
+| **Thu 1 Oct** | Hosts choose the studio, and 3D or 2D (§A10) [HOST GATE] |
 | **Fri 2 Oct** | **Studio signed.** Contract, warranty and rights assignment in place [VERIFY the signing entity] |
-| **Fri 9 Oct** | Tuck's turnaround, pocket-shot sheet and expression sheet signed by both hosts [HOST GATE]. Modelling has started in parallel from the construction sheet. |
+| **Fri 9 Oct** | **Go/no-go.** Tuck's turnaround, pocket-shot sheet and expression sheet signed by both hosts [HOST GATE]. Modelling has started in parallel from the construction sheet. |
 | **Wed 14 Oct** | Tuck's model and turntable approved. Rigging under way. The ritual is blocked on a proxy rig. |
-| **Fri 16 Oct** | **Go/no-go.** Tuck rigged and posed from the library; the ritual blocked f54–f119 against the animatic's timing; Episode 01's bar one laid out. |
+| **Fri 16 Oct** | Tuck rigged and posed from the library; the ritual blocked f54–f119 against the animatic's timing; Episode 01's bar one laid out. |
 | **Mon 26 Oct** | M01 arrives from the composer (playbook §9). The studio re-checks every hit against the real music. |
 | **Wed 28 Oct** | **The ritual master, Episode 01's bumper and reprise delivered,** QC passed |
 | **Fri 30 Oct** | The Alliance's sign-off on Pip [HOST GATE] |
 | **Wed 4 Nov** | Episode 02 delivered |
 
-**If the 16 October checkpoint is missed** [HOST GATE]: move Episode 01's Premiere two weeks to **Wednesday 25 November**, keep THE FLOAT as its cold open (late November is still autumn, and R8 wants the float first), and give every later episode the activity for its own air date from Tuck's Year. Stargazing moves to the season-two reserve. **Don't launch without Tuck.** Episode 01 has Bruce and Facundo talking about "the otter at the top of the show" at 5:15, and it carries the one R7 line. That conversation needs the ritual on screen first. The decision is made on 16 October, before anything public is announced on 4 November.
+**If the 9 October checkpoint is missed** [HOST GATE]: move Episode 01's Premiere two weeks to **Wednesday 25 November**, keep THE FLOAT as its cold open (late November is still autumn, and R8 wants the float first), and give every later episode the activity for its own air date from Tuck's Year. Stargazing moves to the season-two reserve. **Don't launch without Tuck.** Episode 01 has Bruce and Facundo talking about "the otter at the top of the show" at 5:15, and it carries the one R7 line. That conversation needs the ritual on screen first. The decision is made on 9 October, before anything public is announced on 4 November.
 
 ## A10. Finding and vetting the studio
 
@@ -351,6 +342,8 @@ The animation days are the bible's own tiers (bible Part three).
 **The paid test.** Shortlist five from reels and rates; pay three of them for a two-day test, about $600–1,000 each [VERIFY]. The test is:
 1. A front and three-quarter sketch of Tuck, drawn by hand from the bible's construction sheet alone, with the H grid.
 2. A 14-frame blocking of f54–f67 (the hush, the turn to the lens, the pocket pat on f60, the stone drawn out) on any proxy otter, timed to the animatic.
+
+Every studio quotes Route A twice, in stylised 3D as written and in hand-drawn 2D matching the animatic, with the same deliverables and schedule. Choosing 2D would also amend the bible's stylised 3D and R4's sculpted fur [HOST GATE].
 
 **How to judge it:**
 - Does the sketch hit the numbers (head wider than tall, eyes 0.5H apart, mittens with no digits, scarf on her left)?
@@ -715,10 +708,10 @@ Run on every bar one, every plate, every bumper and every Route B output that an
 21. The title page is the locked layer, unaltered. The shield is the master or absent.
 
 **Legibility**
-22. **The 48 px squint test.** Shrink the frame until Tuck's head is 48 px tall and view it in greyscale. The pocket shot must still show four shapes: a cream disc, two dark dots and a nose, a jade band, a grey oval at the chin. A bar-one frame must still read as an otter doing one thing, with the carry-over visible. In the UHD pocket shot her head is about 460 px, so the shrink is about 10%:
+22. **The 48 px squint test.** Shrink the frame until Tuck's head is 48 px tall and view it in greyscale. The pocket shot must still show four shapes: a cream disc, two dark dots and a nose, a jade band, a grey oval at the chin. A bar-one frame must still read as an otter doing one thing, with the carry-over visible. In the UHD pocket shot her head is about 472 px tall (2 × 236, from storyboard §3's crown at y 670 and head centre at y 788), so the shrink is about 10%:
 
 ```sh
-magick qc/MH_E01_BUMPER_v01.0070.png -resize 10.4% -colorspace Gray qc/squint_0070.png
+magick qc/MH_E01_BUMPER_v01.0070.png -resize 10.2% -colorspace Gray qc/squint_0070.png
 ```
 
 For any other frame, the percentage is 48 ÷ (Tuck's head height in pixels) × 100.
@@ -936,25 +929,24 @@ YouTube doesn't require the label for clearly unrealistic content such as animat
 
 ## Open questions
 
-1. **The pocket-shot framing (§A4).** Confirm with the storyboard's owner that Tuck's crown sits at y 650 or lower, and that the stones and threads move down about 20 px to match.
-2. **Episode 02's eyepiece ring and Episode 06's hat (§A6).** Confirm the fixes, or pick the swaps, before batch 1 and batch 3 are laid out.
-3. **The descriptor weight.** Confirm Atkinson Next 500, the brand kit's value, in the storyboard's title-page table.
-4. **The studio's budget and region.** The difference between a $300 and a $650 day rate is about $30,000 in season one.
-5. **Whether Route B is used at all,** and if so, only for look development or also for plates.
+1. **Episode 02's eyepiece ring and Episode 06's hat (§A6).** Confirm the fixes, or pick the swaps, before batch 1 and batch 3 are laid out.
+2. **The descriptor weight.** Confirm Atkinson Next 500, the brand kit's value, in the storyboard's title-page table.
+3. **The studio's budget and region.** The difference between a $300 and a $650 day rate is about $30,000 in season one.
+4. **Whether Route B is used at all,** and if so, only for look development or also for plates.
 
 ## Sign-off list
 
 ### [HOST GATE]
 
 1. Route A for everything that ships; Route B, if at all, for look development and, per episode, for plates.
-2. The studio chosen on 1 October, and the budget: about $57,500 for the build with the rush premium, and about $41,000 for Episodes 02–12.
+2. The studio, and 3D or 2D, chosen on 1 October, and the budget: about $57,500 for the build with the rush premium, and about $41,000 for Episodes 02–12.
 3. Tuck's turnaround, pocket-shot sheet and expression sheet, by 9 October.
 4. Pip's shield-echo outline, signed by the Alliance by 30 October.
-5. The fallback if the 16 October checkpoint is missed: move Episode 01 to 25 November with THE FLOAT, rather than launch without Tuck.
+5. The fallback if the 9 October checkpoint is missed: move Episode 01 to 25 November with THE FLOAT, rather than launch without Tuck.
 6. Any AI-assisted plate, episode by episode, with disclosure.
 7. The disclosure wording for all three cases and the channel's standing line.
 8. The plain shield without "PROTECTED BY", from the Alliance master only, or an empty corner.
-9. The 15-second trailer running from late November with "New episodes every other Wednesday".
+9. The 15-second trailer held until 10 February 2027 (TR03).
 
 ### [VERIFY]
 

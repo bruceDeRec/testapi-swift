@@ -23,16 +23,15 @@
 
 1. **The launch trailer shows only The Float.** The storyboard's 15-second cut was written as a pre-launch piece ("Premieres Wednesday 11 November"). Three facts rule that out:
    - FORMAT §7 says an activity is never previewed before its episode.
-   - Pip's first appearance is 23 December, and the Alliance's sign-off on his shield-echo outline isn't due until 20 November (SEASON-ONE's edits list).
+   - Pip's first appearance is 23 December, and that appearance is his reveal (§2).
    - The playbook's studio schedule delivers only E01 by 28 October and E02 by 4 November. Episodes 04 and 07's bar ones can't exist by 4 November without pulling the whole studio schedule forward.
 
    The storyboard's frames don't change, only its publish date. **[HOST GATE]**
-2. **The Light Work stamp moves**, following the storyboard's §7 (24 frames, f88–f111). FORMAT §3 and §7, the bible's rung 3, the brand kit's §6 and the playbook's §7 all still call it "a one-second still". The storyboard owns the frame, so it wins, and those documents need the edit (see the end of this kit).
-3. **The stamp needs a native vertical render.** The storyboard's crop (a full-height 9:16 window of the pocket shot) puts the stones at about 82% of frame height. That is inside the band the Shorts app covers with the title and channel name; the brand kit's safe area ends at 75%. §7 below gives the fix.
-4. **Thumbnail line length is measured.** I set the brand kit's thumbnail instance (Fraunces opsz 144, wght 720, SOFT 100, WONK 0, −20 tracking) and measured it. The page's text measure is 408 px, and at 112 px wide words overflow at about 8 characters. The brand kit's own example, "the lake?", measures 414 px. §4 replaces the character count with a width test.
-5. **The pinned comment merges three sources:** Episode 01's question, word for word, from the script; the playbook's consent wording; and the playbook's scam line.
-6. **Episode 01's Raised Hands can't come from the trailer's comments,** as the Episode 01 script suggests. The trailer publishes on 4 November, and E01 records on 20 October. The trailer's thread feeds the clinic and the Light Work bank instead.
-7. **Moderation costs about 2 more editor hours a fortnight** than the playbook's §9 budget. The playbook's blocked-words list is kept and extended (§10).
+2. **The Light Work stamp needs a native vertical render.** The stamp is the storyboard's 24 frames of the ritual master, f88–f111 (§7 there). The storyboard's crop (a full-height 9:16 window of the pocket shot) puts the stones at about 82% of frame height. That is inside the band the Shorts app covers with the title and channel name; the brand kit's safe area ends at 75%. §7 below gives the fix.
+3. **Thumbnail line length is measured.** I set the brand kit's thumbnail instance (Fraunces opsz 144, wght 720, SOFT 100, WONK 0, −20 tracking) and measured it. The page's text measure is 408 px, and at 112 px wide words overflow at about 8 characters. The brand kit's own example, "the lake?", measures 414 px. §4 replaces the character count with a width test.
+4. **The pinned comment merges three sources:** Episode 01's question, word for word, from the script; the playbook's consent wording; and the playbook's scam line.
+5. **Episode 01's Raised Hands can't come from the trailer's comments,** as the Episode 01 script suggests. The trailer publishes on 4 November, and E01 records on 20 October. The trailer's thread feeds the clinic and the Light Work bank instead.
+6. **Moderation costs about 2 more editor hours a fortnight** than the playbook's §9 budget. The playbook's blocked-words list is kept and extended (§10).
 
 ---
 
@@ -559,11 +558,9 @@ Light Work runs every Friday at 11:00 ET, at 30–60 seconds, vertical, with bur
 | **The render** | **A native 1080 × 1920 pass of those 24 frames,** from the locked animation, rendered once in the initial build, **textless** (no title page), with the carry-over anchor exported for vertical. The framing: Tuck's face centred near y 960 (50%); the stones no lower than y 1380 (72%), clear of the Shorts overlay; the house sky filling the top. Per-episode work stays one carry-over comp, as R4 requires. **[VERIFY]** the one-time cost with the studio (my estimate: about one animator-day plus render). **[VERIFY]** the framing against the Shorts app's overlay before it's locked (brand kit's [VERIFY] 3). |
 | **Why not the storyboard's crop** | A full-height 9:16 window of the pocket shot puts Tuck's face at about 65–70% of frame height and the stones near 82%, under the Shorts title and channel name. The storyboard's own note that her face sits "in the upper third" can't be true of that crop. From the 4K master the crop would at least be a downscale (1216 × 2160 to 1080 × 1920), but it doesn't move the stones. |
 | **Wordmark** | *Light Work*, Fraunces 600 (the `MH Display Card` instance), 104 px, −10 tracking, Paper, centred on x 540, baseline y 400 (measured at 469 px wide). A still, present for all 24 frames, on the render's Zenith sky (6.67:1). No rule under it: the stones' own threads are rising in the same second. |
-| **Sound** | M06, 1.00s, silent on the last frame, so the loop back into the spoken question is clean (THEME §4). Dialogue ends at least 0.5s before it. |
+| **Sound** | M06: S01's A5 ring into the home-chord bloom, 1.00s, silent on the last frame, so the loop back into the spoken question is clean (THEME §4, storyboard §7). Dialogue ends at least 0.5s before it. |
 | **Never** | The title page, the shield, Pip, or a limit line in the words just before it. |
 | **Files** | `MH_RIT_StampVertical_v01_BEAUTY.0088.exr` to `.0111.exr` in `03_ANIMATION/RIT_MasterS1/`, read-only. Per episode: `MH_E07_CARRYOVER-VERT_v01.mov`. |
-
-**[VERIFY]** which M06 the composer delivers. The storyboard describes it as "the plink's A5 ring into the home chord's bloom". THEME §4 describes it as M03's notes with the A4 left to ring. They need to be the same cue.
 
 ### Worked example: LW001, Friday 13 November
 
@@ -930,23 +927,5 @@ If any of those changes, the line changes the same day, with a pinned note sayin
 15. "Designed" and "20+" / "more than twenty" (SEASON-ONE #16, #17).
 16. The fraud-reporting links, and the bank-fraud-line advice (SEASON-ONE #26).
 17. The native vertical stamp render: its cost with the studio, and its framing against the Shorts overlay.
-18. Which M06 the composer delivers (the storyboard's and THEME's descriptions differ), and which M07 bar carries the hook for TR03.
+18. Which M07 bar carries the hook for TR03.
 19. That frequency isn't a long-form ranking factor (FORMAT §3).
-
----
-
-## Edits other documents need
-
-1. **FORMAT §3 and §7, the brand kit's §6 (Light Work), the bible's Part four rung 3, and the playbook's §7 Light Work "Loop" row:** replace "a one-second still" with "the storyboard's 1.0s stamp: ritual frames f88–f111, rendered once as a native 1080 × 1920 textless pass" (§7 here).
-2. **The storyboard's §7:**
-   - In the stamp: replace "a 608 px-wide window… Tuck's face is in the upper third" with the native vertical render and its framing (face near 50%, stones no lower than 72%).
-   - In the 15-second trailer: publish no earlier than Wed 10 February 2027, as the head of TR03. The "Premieres Wednesday 11 November" line is dropped.
-3. **The brand kit's §2 and §6 (thumbnails):** replace "at most 10 characters per line" with "the longest line fits the 408 px text box at 112 px, or at 104 px at the smallest; about 8 lowercase characters". Its own example "Phone in the lake?" overflows at 112 px ("the lake?" is 414 px) and fits at 104.
-4. **The brand kit's §3, variants:** the Light Work end frame is the *Light Work* wordmark (Fraunces 600, 104 px, Paper, on sky), per the storyboard, not "Many Hands" title-only.
-5. **The Episode 01 script, "The loop":** the pinned comment takes §6's full wording, with the consent paragraph and the scam line. And "the pinned comment under the channel trailer" can't feed Episode 01's Raised Hands, because the trailer publishes on 4 November, after the 20 October recording.
-6. **The playbook:**
-   - §7, "Protecting the comments": point to this kit's blocked-words list and handling steps.
-   - §9: add 2 editor hours a flagship for moderation (33 to 35).
-   - §9's ramp, "Channel trailer (M07, from E00 and E01 footage)": TR01 uses M01, M07 and M02, and E01 footage, with E00 only as a fallback for wordless shots.
-7. **SEASON-ONE's Light Work table:** every working title takes " | Many Hands" at upload. LW001 starts at ~8:17 and adds the "Still your job" close (§7).
-8. **The bible's Part four, rung 1:** the Tuck avatar is used inside community posts and on stickers, never as the channel's picture.

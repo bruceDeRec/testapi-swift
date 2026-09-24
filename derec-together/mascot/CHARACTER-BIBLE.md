@@ -286,9 +286,9 @@ A quick smooth of the right cheek with the right paw, over 8 frames. It means bo
 
 - **One locked-off shot: the pocket shot.** Chest-up, with the lens at her eye height. She faces the lens. No camera move: the ritual is still, and the only motion is Tuck, the paws, the light and the threads. A still camera also keeps the carry-over tracking trivial.
 - **Framed at mid-chest,** so it works whether she was afloat or on land in bar one. Nothing in the frame says which.
-- **She sits in the lower 45% of the frame** (y 594–1008 at 1080p), below the title page, as the brand kit's title card reserves. Her head spans roughly y 610–860 and the stones meet just under her chin, centred on x 960, inside the 9:16 safe area.
+- **She sits in the lower 45% of the frame** (y 594–1008 at 1080p), below the title page, as the brand kit's title card reserves. Her crown sits at y 670 and her head centre at y 788 (storyboard §3). The stones meet at about y 912, centred on x 960, inside the 9:16 safe area.
 - **The plate** behind her is a defocused derivative of that episode's bar-one plate, warmed 300 K. Every ritual plate must accept the master's warm key: night episodes use a lamplit or lantern-lit plate, never a cold moonlit one.
-- **The two friends' paws enter from two fixed edges: frame left, low, and frame right, low.** Not the top right, where the concept panel put one: the title page and the shield live in the top of the frame, and a paw there would cross them.
+- **The two friends' paws enter from two fixed points on the bottom edge, at x 700 (left) and x 1220 (right), rising about 170 px to the stones.** A forearm plus paw of 0.8H (about 190 px) spans that with the friends' bodies out of frame below; from the side edges, about 850 px from the stones, no otter paw could reach. Both entry points sit inside the centre 9:16 area (x 656–1264). Not the top right, where the concept panel put one: the title page and the shield live in the top of the frame, and a paw there would cross them.
 
 ### The breakdown
 
@@ -299,18 +299,18 @@ The master runs **f54–f119 (2.25s–5.00s, 66 frames).** R3 puts the hush befo
 | **f54–f59** | 2.25s–2.50s | **1. The hush.** Hard cut into the pocket shot on f54. Her head is three-quarters to frame left, continuing bar one's eyeline. She turns her face to the lens over f54–f57, whiskers trailing 2 frames, and holds perfectly still for f58–f59. Paws rest together on her chest. | None | The snaps, shaker and bass drop out on f54 ("drums and bass"; the theme has no drum kit). The held guitar and the pad ring on. No foley. |
 | **f60** | 2.50s | **2. The pocket pat.** Her right paw crosses her body and pats the fold under her left forearm once. Contact on f60; the pocket bump compresses 10%. The paw lifts over f61–f62. | None | **The pat,** on the downbeat, with the hook's held A4 ("work") and the group clap. |
 | **f61–f67** | 2.54s–2.79s | **3. The stone.** Her right paw slips under the left forearm (f61–f63) and draws the stone out (f64–f65). Both paws lift it to the lens (f65–f67), chip at two o'clock. It is matte, grey and plain. Nothing about it glows. | Tuck's stone only | Silent. Her stone touches nothing, so it makes no sound. |
-| **f68–f74** | 2.83s–3.08s | Holds the stone at the lens. Eyes on the lens. | **One stone, alone, dull,** for 7 frames: *one stone never glows*, shown rather than told. Paw A begins to enter from frame left at f68. | Pad and held A4 only |
+| **f68–f74** | 2.83s–3.08s | Holds the stone at the lens. Eyes on the lens. | **One stone, alone, dull,** for 7 frames: *one stone never glows*, shown rather than told. Paw A begins to rise from the bottom edge, left (x 700), at f68. | Pad and held A4 only |
 | **f75** | 3.13s | Still | **4. Two more stones.** Paw A's stone touches the left side of Tuck's stone. | ***Plink*** (beat 2) |
-| **f75–f81** | 3.13s–3.38s | Still | **Two stones, touching, dull,** for 7 frames: *two never glow*. Paw B enters from frame right from f74. The paws never touch each other. | |
+| **f75–f81** | 3.13s–3.38s | Still | **Two stones, touching, dull,** for 7 frames: *two never glow*. Paw B rises from the bottom edge, right (x 1220), from f74. The paws never touch each other. | |
 | **f82** | 3.42s | Still | Paw B's stone touches the right side of Tuck's stone. | ***Plink*** (the "and" of beat 2). Identical to the first. |
 | **f83–f89** | 3.46s–3.71s | Utterly still | Three stones touching, still dull. Nothing moves. | **The held breath.** No new sound for 7 frames. |
 | **f90** | 3.75s | Eyes stay on the lens. The glow lights her chin and cheeks warmly from below (rendered in the master). | **5. The threshold.** All three stones light amber **at once**: Filament core, Amber body, Gilt halo. No stone lights before another. | **The home chord** (beat 3), bloomed rather than struck, as in THEME's S03 |
 | **f90–f101** | 3.75s–4.21s | Holds. Does not move. | **The threshold holds for 12 frames (0.50s),** R3's floor for a phone viewer. The glow settles; nothing pulses. | The chord rings |
-| **f102–f113** | 4.25s–4.71s | Her paws stay low, at the pocket. She never touches a thread. | **6. The release.** The amber light lifts off the three stones as **two gold threads.** Each thread's tail clears the stones by f103. The threads part left and right around her head, never crossing her face or coming within 10% of its height, and rise out of her world into the title page. They arrive at the two ends of the title page's rule and draw inward, **meeting in its middle at f113**, where a single node lights (f113–f118). If the title page is on paper at that moment, the threads print into Brass as they cross onto it: lit in her world, printed on the page. | The chord rings on. The threads are silent: no whoosh. |
+| **f102–f113** | 4.25s–4.71s | Her paws stay low, at the pocket. She never touches a thread. | **6. The release.** The amber light lifts off the three stones as **two gold threads.** Each thread's tail clears the stones by f103. The threads part left and right around her head, never crossing her face or coming within 10% of its height, and rise out of her world into the title page. They arrive at the two ends of the title page's rule and draw inward, **meeting in its middle at f113**, where a single node lights (lights at f113, full by f115, fades over f116–f119). The title page sits on the house sky, a lit ground, so the threads stay lit Gilt all the way (brand kit §4). | The chord rings on. The threads are silent: no whoosh. |
 | **f102–f109** | 4.25s–4.54s | | **7. The tuck.** The paws withdraw the way they came, along the same paths. Their stones fade to slate as the light leaves them (f102–f105). | |
 | **f103–f106** | 4.29s–4.42s | She carries her stone down (it is dull again now) and tucks it under her left forearm. The pocket bump returns. | | |
 | **f107, f112** | 4.46s, 4.67s | ***Pat-pat.*** Right paw on the pocket, twice, 5 frames apart, so it reads as two pats and not one blur. | | **Pat,** **pat** (f112 is the "and" of beat 4) |
-| **f112–f119** | 4.67s–4.96s | **One slow, content blink** (expression 8): lids close f112–f114, hold f115–f116, open f117–f119. | **The scene melts to paper** over f114–f119: the plate first, Tuck last. | The chord rings to the cut |
+| **f112–f119** | 4.67s–4.96s | **One slow, content blink** (expression 8): lids close f112–f114, hold f115–f116, open f117–f119. | **The scene melts away** over f114–f119, plate first and Tuck last, leaving the brand kit's title card on the house sky (storyboard §3). | The chord rings to the cut |
 | **f120** | 5.00s | | Hard cut to the hosts (FORMAT §5). Not part of the master. | THEME's button |
 
 **The title page.** The storyboard owns the title page's type, shield and timing. The ritual needs one thing from it: the imprint, title and descriptor must be fully set by f101, because the threads need the rule's position to draw to. The rule itself does not exist until the threads draw it.
@@ -342,7 +342,7 @@ Everything below is rendered in the initial build, so nothing in the ritual is e
 | Tuck beauty (f54–f119) | One |
 | Tuck's stone: slate and lit states | Two stones: season one (chip at two o'clock) and season two (chip at ten o'clock, see New Stones) |
 | Glow interaction (the stones' light on Tuck) | One per stone set |
-| Friend paws, each with its stone, per edge | Season one: 4 friends × 2 edges = 8. Season two: 4 friends × 2 edges = 8. |
+| Friend paws, each with its stone, per side (bottom edge, left and right) | Season one: 4 friends × 2 sides = 8. Season two: 4 friends × 2 sides = 8. |
 | Holdout mattes | Tuck's paws, the stone, the forelimbs |
 | **Anchor locators** for the carry-over layer (exported 3D nulls, per frame) | Crown, forehead, left ear, right ear, brow, left cheek, right cheek, nose, scarf knot |
 | The New Stones head (f48–f53) | One |
@@ -354,7 +354,7 @@ Everything below is rendered in the initial build, so nothing in the ritual is e
 
 The paws that join Tuck in the ritual belong to **your** other friends. She has never met them, which is why she never looks at them and they never touch. The team calls them by name in production. **Their names are never used on screen, in descriptions or in merchandise,** and their faces and bodies are never shown anywhere, including key art. They exist only as paws, only in the ritual.
 
-**Shared design.** A sea-otter forepaw and the lower forearm, entering from a fixed edge. One paw each, held palm up with the stone resting on the pads: an offering, not a grip. Same sculpt, same rig, same entry animation per edge. Only the fur texture, one accessory and the stone change. That makes rotation a texture swap, not an animation job.
+**Shared design.** A sea-otter forepaw and the lower forearm, rising from a fixed point on the bottom edge (see "Staging"). One paw each, held palm up with the stone resting on the pads: an offering, not a grip. Same sculpt, same rig, same entry animation per side. Only the fur texture, one accessory and the stone change. That makes rotation a texture swap, not an animation job.
 
 | Friend (team name) | Paw | Season-one stone | Season-two stone |
 |---|---|---|---|
@@ -380,7 +380,7 @@ One detail from the activity rides into the ritual on top of the locked master, 
 2. **The viewer sees it arrive in bar one,** by f45, so the joke in the ritual is that it's still there.
 3. **It sits on one anchor:** crown, forehead, left or right ear, brow, left or right cheek, nose, or scarf knot.
 4. **Forbidden zones:** the chest and bib (the stone travels across them), the left underarm (the pocket), the forepaws (they hold the stone), the eyes, and the whiskers (they move in the master, so anything on them would need re-rendering).
-5. **Size.** A crown item rises no more than 0.35H above the crown and spans no more than 0.8H, so the threads clear her head with room to spare. Every other item stays inside its zone.
+5. **Size.** A crown item's topmost pixel stays at or below y 606 in the pocket shot (at most 64 px above the crown, storyboard §3), and it spans no more than 0.8H. Every other item stays inside its zone.
 6. **It never moves relative to its anchor.** No flutter, no slip, no wobble. It is rendered through the master camera and lit by the master's lights on the exported anchor locators, so it needs no rotoscoping. That is what makes it one layer and not a re-render.
 7. **It reads.** Against its zone it measures at least 2:1 in greyscale, or it breaks her silhouette so it reads against the background. (The Episode 01 maple leaf is only about 2:1 against cocoa fur, so it sits proud of the crown, where its outline reads against the plate.)
 8. **Never:** blue or Glass cyan; anything that glows; gold except a fleck; text, numbers or logos; coins or money; stones, pebbles, beads, marbles or gems (anything that could be read as a share); chains; a full costume that changes her outline.
@@ -478,7 +478,7 @@ Only two things on Pip glow: the face-line and the soft hover glow beneath it. N
 
 **Rendering.** Same pipeline and light as Tuck. Pip is rigid and never deforms: the rig is the body, two mitts, one bendable face-line curve and one glow. That is why Pip stays on-model in every episode, whoever animates it.
 
-**The shield echo [HOST GATE].** Pip's outline echoes the Alliance's shield, as R1 directs. To keep it a character and not a copy of the mark: Pip never carries the return-arrow "D", is never black, never has a rim band (only a hairline seam), never appears in the same frame as the shield, and is never described as "the shield" or as protecting anything. The Alliance signs off on the echo before Pip's first appearance on 23 December 2026.
+**The shield echo [HOST GATE].** Pip's outline echoes the Alliance's shield, as R1 directs. To keep it a character and not a copy of the mark: Pip never carries the return-arrow "D", is never black, never has a rim band (only a hairline seam), never appears in the same frame as the shield, and is never described as "the shield" or as protecting anything. The Alliance signs off on the echo by Friday 30 October 2026, before the studio starts batch 2 (PROMPT-PACK §A6), which animates Pip's first appearance.
 
 **The look-alike test.** Show Pip blind to five people. If anyone says "EVE" or "Baymax", change the outline, not the colours. The guards are already built in: a flat top where EVE is domed, speckled stoneware instead of gloss, no separate head, one line instead of two eyes, a Brass seam, and mug scale.
 
@@ -717,7 +717,7 @@ In this order. Each step has an owner.
 
 1. The name Tuck, before any trademark filing or merchandise.
 2. The recommended off-screen echo: both hosts pat their left jacket pocket twice at the sign-off.
-3. Pip's shield-echo outline (the Alliance signs off before 23 December 2026).
+3. Pip's shield-echo outline (the Alliance signs off by Friday 30 October 2026, before the studio starts batch 2).
 4. Viewer suggestions for activities, locked two episodes ahead and credited.
 5. The New Stones variant on Episode 13, and the permanent change of paws and stones it brings.
 6. The Tuck avatar and emoji set, and keeping the Alliance channel's own avatar unchanged.

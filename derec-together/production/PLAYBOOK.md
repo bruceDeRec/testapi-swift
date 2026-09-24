@@ -33,8 +33,9 @@
 
 ### The recommendation
 
-**Buy two host kits first. Treat remote as the setup every episode can use, and the table as the upgrade whenever both hosts are in one city.** [HOST GATE]
+**Buy two host kits first. Treat remote as the setup every episode from 03 on can use, and the table as the upgrade whenever both hosts are in one city.** [HOST GATE]
 
+- **The exception is the launch pair.** Episode 01 depends on one table. Facundo pockets Bruce's phone at the landing (0:05) and slides it back across the table at 14:04, and Hands On needs four crew hands, one from each edge of camera D. Neither has a remote version. Episodes 01 and 02 record in person, and so does E00, which rehearses E01's setup (§9).
 - **Why:** the brief doesn't say the hosts live near each other. A fortnightly show can't depend on travel. A kit that is also half of the in-person set means no money goes on gear only one setup uses.
 - **The standard:** a viewer should not be able to tell which setup was used from the light, the colour or the sound. They will see the composition change, and that's fine.
 - **The in-person location:** a room with soft furnishings, a window you can black out, and space for a table 140 × 80 cm with 2.5 m in front of it. A host's home or a neutral rented room works. **Never a member company's office or branded space,** because that suggests the show belongs to that member (non-negotiable 3).
@@ -641,9 +642,9 @@ MH_ManyHands/
 │   ├── A_Activity/                    # MH_A01_…, MH_A02_…
 │   └── session-archive/               # MIDI and DAW sessions from the composer
 ├── 03_ANIMATION/
-│   ├── RIT_MasterS1/                  # locked forever, read-only
+│   ├── RIT_MasterS1/                  # locked forever, read-only; includes the Light Work vertical stamp pass
 │   ├── RIT_MasterS2/                  # New Stones, read-only
-│   ├── engraving/                     # segment-tab ornament, Light Work stamp
+│   ├── engraving/                     # segment-tab ornament
 │   └── E07/                           # bumper, reprise, plate, carry-over per episode
 ├── 10_EPISODES/
 │   └── MH_E07_LostPhone/
@@ -775,7 +776,7 @@ The same episode as audio: `MH_E07_MASTER-POD_v02.wav` at −16 LUFS (THEME §6)
 | Loudness | −14 LUFS integrated, −1.0 dBTP |
 | Captions | Burned in per the brand kit §6, from the corrected SRT |
 | Crop | A vertical window from a single host's UHD frame, scaled down, never up |
-| Loop | M06 at the end, silent by the last frame; Tuck's one-second still (FORMAT §7) |
+| Loop | Tuck's 1.0s end stamp (ritual f88–f111, storyboard §7) with M06, silent by the last frame. At least 0.5s of room tone before it, and never straight after a limit line (CHANNEL-KIT §7). |
 | Related video | The newest flagship |
 | Rule | A clip that shows off what DeRec can do includes its limit line, or it doesn't run (FORMAT §3) |
 
@@ -848,13 +849,13 @@ Today is Thursday 24 September 2026. Episode 01 premieres Wednesday 11 November 
 
 | Date | Milestone | What must be true |
 |---|---|---|
-| **Wed 30 Sep** | Kit ordered, editor hired, accounts open | Tier 1 kit ordered. Adobe, Riverside, Dropbox, B2 and OffShoot set up. Folder tree built. Composer signed (THEME's four weeks). Releases with counsel. |
+| **Wed 30 Sep** | Kit ordered, editor hired, accounts open | Tier 1 kit ordered. Adobe, Riverside, Dropbox, B2 and OffShoot set up. Folder tree built. Composer signed (THEME's four weeks). Releases with counsel. The room, the on-set assistant and the A-camera rental booked for Tue 6, 20 and 27 Oct (E00, E01 and E02, all in person). |
 | **Sat 3 Oct** | Setup day | The editor, on a video call, sets up each host's room from the setup card. First camera, sound and Riverside test. |
-| **Tue 6 Oct** | **E00, dress rehearsal** | A full run of show on a real question, recorded in the setup E01 will use. Never published. Every file named, every gate run for real. |
+| **Tue 6 Oct** | **E00, dress rehearsal** | A full run of show on a real question, recorded in person, in the setup E01 will use. Never published. Every file named, every gate run for real. |
 | **Fri 16 Oct** | E00 proven | The colorist has built the look. The MOGRTs are delivered. One three-minute stretch (The Question and The Short Answer) finished through grade, mix and corrected captions, uploaded privately and checked on three screens. The rest of E00 cut to a rough cut, to time the pipeline. |
-| **Tue 20 Oct** | **E01 recorded** | Hands On (odd). Name captions on. The line "Tuck's a cartoon. Your helpers are real people you choose." (R7). Raised Hands comes from the contributors call or a community channel, since no episode comments exist yet [VERIFY which channels, FORMAT]. Standalone Light Works recorded before launch go into the bank. |
+| **Tue 20 Oct** | **E01 recorded, in person** | It has no remote version (§1). Hands On (odd). Name captions on. The line "Tuck's a cartoon. Your helpers are real people you choose." (R7). Raised Hands comes from the contributors call or a community channel, since no episode comments exist yet [VERIFY which channels, FORMAT]. Standalone Light Works recorded before launch go into the bank. |
 | **Mon 26 Oct** | Music delivered | M01–M07 and S01–S03, per THEME |
-| **Tue 27 Oct** | **E02 recorded** | Off the call grid, once, so two episodes are finished by launch. Heard It Somewhere (even). |
+| **Tue 27 Oct** | **E02 recorded, in person** | Off the call grid, once, so two episodes are finished by launch. Heard It Somewhere (even). |
 | **Wed 28 Oct** | Studio delivery | The ritual master and E01's bumper and reprise. E02's by Wed 4 Nov. |
 | **Mon 2 Nov** | **E01 locked** | All five gates |
 | **Wed 4 Nov** | E01 uploaded, Premiere scheduled | Watch page and countdown live. Channel trailer (M07, from E00 and E01 footage) published. |
@@ -936,7 +937,7 @@ The show is about trust, and the protocol's inventor is wary of AI (brief §6). 
 
 ### [HOST GATE]
 
-1. Remote as the everyday setup and the table as the upgrade, with two host kits bought first (FORMAT sign-off item 11).
+1. Remote as the everyday setup and the table as the upgrade, with two host kits bought first (FORMAT sign-off item 11). E00, E01 and E02 record in person, because Episode 01 has no remote version (§1).
 2. The spread as the remote two-shot, and the remote twins of the jar, tokens and IOU card. The brand team adds the spread to the brand kit.
 3. Recording episode N+2 each call week and keeping one finished episode in the can, a change to FORMAT's grid. The loop runs one episode behind.
 4. Hiring the editor-producer, who is named in every description.

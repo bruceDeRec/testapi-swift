@@ -419,7 +419,7 @@ Every Friday at 11:00 ET, 30–60 seconds, vertical, with burned-in captions. Th
 
 | LW | Friday | Kind | Working title | Source and limit line |
 |---|---|---|---|---|
-| 001 | 13 Nov | Clip, 01 | Two out of three is most of the way there, right? | 8:09–8:49 of 01, ending on the Where It Stops key line (EP01 script) |
+| 001 | 13 Nov | Clip, 01 | Two out of three is most of the way there, right? | E01 ~8:17–8:49, then the Where It Stops key line (10:14–10:21), then the "So the front door's still my job" / "Still your job" close (10:50–10:53), 0.5s of room tone, then the stamp (CHANNEL-KIT §7) |
 | 002 | 20 Nov | Answer | Who would you call first if your phone vanished? You told us why | 01's thread. Teases 02. |
 | 003 | 27 Nov | Clip, 02 | Could your helpers team up and take it? | The "True, but…" verdict, with its "but" |
 | 004 | 4 Dec | Answer | The password you'd be most stuck without, and why | 02's thread. Teases 03. |

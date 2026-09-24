@@ -13,7 +13,7 @@
 - **Run of show:** Bumper, The Question, The Short Answer, The Table, a feature (Hands On or Heard It Somewhere, alternating), Where It Stops, Raised Hands, Say It Back, One Small Thing, Next Time, End Card.
 - **The limit is stated straight after the episode's most impressive moment,** and never at the end, where it would sound like a disclaimer.
 - **No music under talk. Ever.**
-- **Mascot:** **Tuck**, a grown sea otter, with her friend **Pip**, a mug-sized porcelain café robot (R1). Tuck is always in the bumper and the end card, and may appear as a small still ornament on four segment tabs. Pip joins only the ensemble activities and is never in the ritual. Neither appears on screen while a limit or risk is being stated, in a demo or on a thumbnail. Neither talks, and neither is ever called a helper or plays one (§7).
+- **Mascot:** **Tuck**, a grown sea otter, with her friend **Pip**, a mug-sized porcelain café robot (R1). Tuck is always in the bumper and the end card, and may appear as a small still ornament on four segment tabs. Pip joins only the ensemble activities and is never in the ritual. Neither appears on screen while a limit or risk is being stated, in a demo or on a thumbnail. Neither talks, and neither is ever called a helper. Pip never plays one; Tuck plays one only in the wordless ritual (§7).
 - **The loop:** every episode asks the audience one specific question. The answers feed the next Light Work and the next Raised Hands. What the hosts can't answer goes on the IOU card, and they pay it back on camera.
 
 ---
@@ -31,13 +31,13 @@ In order of importance:
 
 It also has one veto: **it must not promise safety or teach the wrong idea of how DeRec works.** The title is the first thing the show teaches.
 
-**Searchability, realistically.** Nobody searches for a show they haven't heard of. New viewers find a small educational channel through episode titles (the questions people actually type, like "what happens if I lose my phone") and through suggested videos. So the show name's search job is narrower: someone who watched once can find it again. That means the name has to be unambiguous next to the channel name "DeRec Alliance". It doesn't have to be unique worldwide. "DeRec" is the unique word the Alliance owns: search it, and the only results are the Alliance's. It already appears on every video through the channel name and the title suffix. That leaves the show name free to be a real English phrase.
+**Searchability, realistically.** Nobody searches for a show they haven't heard of. New viewers find a small educational channel through episode titles (the questions people actually type, like "what happens if I lose my phone") and through suggested videos. So the show name's search job is narrower: someone who watched once can find it again. That means the name has to be unambiguous next to the channel name "DeRec Alliance". It doesn't have to be unique worldwide. "DeRec" is a rare word. It is shared with a few unrelated names (the OECD's DEReC database and a Swiss dental app, derec®), and paired with "Alliance" it finds only the Alliance. [VERIFY on YouTube search before launch.] It already appears on every video through the channel name and the title suffix. That leaves the show name free to be a real English phrase.
 
 ### The candidates
 
 | # | Name | Searchable | Grandma | Cover | Said aloud by Bruce | Honest | Verdict |
 |---|---|---|---|---|---|---|---|
-| 1 | **DeRec, Together** (prior package) | Yes, "DeRec" is unique. But the comma breaks hashtags, filenames and titles. | Weak. "DeRec" means nothing to her, and "Together" means nothing in particular. | Fits the gold-and-white lockup. | Weak. You can't say a comma, so "Welcome to DeRec Together" comes out like a campaign slogan. | Yes | Tasteful and sleepy, which was the prior package's problem. "Together" is the most overused word in institutional branding. |
+| 1 | **DeRec, Together** (prior package) | Yes, "DeRec" is rare. But the comma breaks hashtags, filenames and titles. | Weak. "DeRec" means nothing to her, and "Together" means nothing in particular. | Fits the gold-and-white lockup. | Weak. You can't say a comma, so "Welcome to DeRec Together" comes out like a campaign slogan. | Yes | Tasteful and sleepy, which was the prior package's problem. "Together" is the most overused word in institutional branding. |
 | 2 | **DeRec Alliance — The community podcast** (cover) | Yes | Fails. Two unfamiliar words that sound like a trade body. | It *is* the cover. | Fails. Twelve syllables that sound like a recording of a members' call. | Mostly. A show named after the Alliance sounds as if it speaks for all 20+ members, which non-negotiable 3 rules out. | The right publisher and the wrong title. **Keep it as the imprint.** |
 | 3 | **Many Hands** | Not on its own: a few small, unrelated podcasts use it (a civic forum in Richmond, a meal-packing charity, a business show), none of them in security or tech. Yes, paired with "DeRec". | **Passes.** She has known "many hands make light work" for sixty years. | **Passes.** Hands are already the image: on the cover both hosts reach into the orbit, and in the café image they place the gems by hand. | **Passes.** Three syllables that land like a title: "…and this is Many Hands." | **Passes.** It describes the helper model, where no single hand holds the secret, and promises nothing. | **Recommended.** |
 | 4 | **The DeRec Table** | Yes, unique. | Mostly. "Table" suggests the kitchen table, where families talk through money and wills, but "DeRec" is still a mystery word. | Passes: gold "DeRec", white "Table". | Fine, if a little flat. | Yes | **Runner-up.** |
@@ -357,7 +357,7 @@ Bruce always opens it with **"So where does it stop?"** Facundo always ends his 
 Here's what makes it sound like confidence rather than a disclaimer:
 
 1. **Placement.** It comes straight after the episode's most impressive moment, usually the end of Hands On, so the limit arrives attached to the claim it limits. It never runs in the last two minutes, which is where disclaimers go.
-2. **The builder says it.** Facundo wrote the library, and an engineer stating the limits of his own work is the most confident voice in the show.
+2. **The builder says it.** Facundo published the library's first Rust crates, and an engineer stating the limits of work he helps build is the most confident voice in the show.
 3. **Words about scope, not apology.**
    - Say: "Its job is…", "It doesn't…", "That's a different tool:", "That's still your job."
    - Never say: "unfortunately", "we can't guarantee", "please note", "of course, nothing is a hundred percent".
@@ -469,7 +469,7 @@ The mascot is **Tuck**, a grown sea otter, with **Pip**, a mug-sized porcelain c
 7. **Never speaks.** No voice, no words, no speech bubbles: music and sound effects only. A voice decides too much about the character, and a synthetic voice would sit badly on a trust show.
 8. **Never interrupts the conversation.** Nothing pops up during The Short Answer, The Table or Raised Hands. While the hosts are talking, the hosts are the show.
 
-**One rule for the mascot team:** the bumper's activity is never announced or previewed before the episode. The reveal belongs to the first five seconds, and it's the reason regulars watch the bumper instead of skipping it. The single exception is the 15-second launch trailer (storyboard §7), which spends four season-one reveals (01, 02, 04 and 07) on purpose, to show the promise before Episode 01. [HOST GATE]
+**One rule for the mascot team:** the bumper's activity is never announced or previewed before the episode. The reveal belongs to the first five seconds, and it's the reason regulars watch the bumper instead of skipping it. There is no exception. The storyboard's 15-second four-activity cut (storyboard §7) runs only from Wednesday 10 February 2027, as the head of TR03 (`production/CHANNEL-KIT.md` §1), after Episodes 01, 02, 04 and 07 have aired. The launch trailer, TR01, shows only The Float. [HOST GATE]
 
 ---
 
@@ -543,7 +543,7 @@ Everything the loop has built up pays off in one episode. That's what makes some
 12. Recording two episodes ahead, with one finished episode always in reserve (PLAYBOOK §9).
 13. The Christmas-week exception: LW007 as a banked standalone on 25 December, and Episode 04's clip moved to 1 January as LW008.
 14. The music by a commissioned human composer, with no AI music (R9). Any AI assistance on bar-one plates, disclosed (R9).
-15. The launch trailer spending four bumper reveals before Episode 01 (§7).
+15. Holding the 15-second four-activity cut until 10 February 2027 (TR03); TR01 shows The Float only (§7).
 
 ### [VERIFY]
 
@@ -552,6 +552,7 @@ Everything the loop has built up pays off in one episode. That's what makes some
 3. Facundo's wording for the Heard It Somewhere verdicts, the Percent Right example and the lost-phone answer.
 4. Which community channels Raised Hands draws from.
 5. The `lib-derec` version shown on screen at each recording.
+6. That a YouTube search for "DeRec Alliance" finds only the Alliance, before launch (§1).
 
 ---
 

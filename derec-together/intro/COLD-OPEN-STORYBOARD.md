@@ -131,7 +131,7 @@ The title page lives in the top 55% of the pocket shot, on the plate's own sky. 
 | Imprint, "DeRec Alliance" | Atkinson Hyperlegible Next 600, tracking +10 | 56 px (5.2% of H) | "DeRec" Gilt `#F2C96E`, "Alliance" Paper `#F7F3E6` | Baseline y 252 | f60–f71: fades up and rises 12 px on `settle` |
 | Title, "Many Hands" | Fraunces 600, opsz 144, SOFT 50, WONK 0, tracking −15 | 176 px (16.3% of H), about 876 px wide | Paper `#F7F3E6` | Baseline y 456 | f63–f74, the same move 3 frames later |
 | Rule | The light thread at rest: 3 px Gilt with a 1 px Filament core and the kit's set glow | 333 px wide (38% of the title's width) | Gilt `#F2C96E` / Filament `#FCEBB4` | Centred on y 528 | **It doesn't exist until the threads draw it**, meeting at f113. A node lights at f113 and fades by f119. |
-| Descriptor, "THE COMMUNITY PODCAST" | Atkinson Hyperlegible Next 500 capitals, tracking +220 | 32 px (3.0% of H) | Paper `#F7F3E6` | Baseline y 592 | f66–f77, 3 frames after the title |
+| Descriptor, "THE COMMUNITY PODCAST" | Atkinson Hyperlegible Next 600 capitals, tracking +220 | 32 px (3.0% of H) | Paper `#F7F3E6` | Baseline y 592 | f66–f77, 3 frames after the title |
 | The shield | **Plain mark without "PROTECTED BY"**, from the Alliance's master file only [HOST GATE] | 180 px tall | As supplied | Right edge x 1824, top y 72 | Present from f54, unanimated. The shield never moves. |
 
 - **Readability:** all type is fully set by f77 and readable for 42 frames (1.75s) before the cut. That's well past the ritual's requirement of "fully set by f101".
@@ -262,15 +262,15 @@ FORMAT §7 allows the mascot in Shorts only as a one-second stamp at the loop po
 
 | Bars | Frames | Picture | Music |
 |---|---|---|---|
-| 1 | f0–f59 | The Float's bar one (f0–f53) plus 6 frames of the leaf hat held | THEME's extended cue M07, bar 1 (the hook) |
-| 2 | f60–f119 | Stargazing's bar one (Episode 02) | M07 bar 2 |
-| 3 | f120–f179 | The bell choir with Pip (Episode 04) | M07 bar 3 |
-| 4 | f180–f239 | Café chess with Pip (Episode 07) | M07 bar 4 |
-| 5–6 | f240–f359 | The ritual master, f54–f119, re-timed so its f60 lands on bar 5's downbeat. Then the title page holds 54 frames with a line under the descriptor: **"Premieres Wednesday 11 November"** (Atkinson Next 600, 40 px, Paper). | M07 bars 5–6, ending on the button |
+| 1 | f0–f59 | The Float's bar one (f0–f53) plus 6 frames of the leaf hat held | THEME's trailer cue, M07 `ALT-15` (THEME §4), bar 1: the hook's bar one |
+| 2 | f60–f119 | Stargazing's bar one (Episode 02), f0–f53, plus its last frame held 6 frames | `ALT-15` bar 2: the hook's bar one again, vibes and guitar swapping |
+| 3 | f120–f179 | The bell choir with Pip (Episode 04), f0–f53, plus its last frame held 6 frames | `ALT-15` bar 3 |
+| 4 | f180–f239 | Café chess with Pip (Episode 07), f0–f53, at f180–f233. Then the ritual master's hush, f54–f59, at f234–f239 | `ALT-15` bar 4, with M01's hush on its last half-beat (f234) |
+| 5–6 | f240–f359 | The rest of the ritual master, f60–f119, at f240–f299, so its f60 lands on bar 5's downbeat. Then the title page holds to f359, with a line under the descriptor naming the next premiere date (Atkinson Next 600, 40 px, Paper; see below). | `ALT-15` bars 5–6: bar 5 is M01's bar two exactly (the clap on f240), ending on the button |
 
 - **Why it's built this way:** each activity gets exactly one bar, so the trailer is the cold open's promise shown four times, "different every time, the same every time", before the ritual pays it off once.
 - **When it runs:** from Wednesday 10 February 2027, as the head of trailer TR03 in `production/CHANNEL-KIT.md`. By then Episodes 01, 02, 04 and 07 have all aired, and FORMAT §7 never lets the cold open preview an activity. Launch uses the channel trailer TR01 instead. This cut's end line names the next premiere date, not 11 November [HOST GATE].
-- **Timing dependency:** M07's bar structure is specified in THEME §4. **[VERIFY]** the composer delivers M07 with a clean bar-5 downbeat for the ritual to land on.
+- **Timing dependency:** `ALT-15`'s bar structure is specified in THEME §4, under M07. **[VERIFY]** the composer delivers `ALT-15` with M01's bar two exactly in bar 5, so the clap lands on f240 for the ritual.
 - **Pip's episodes:** the trailer needs Episodes 04 and 07's bar-one animation, which arrives with the studio's second batch (`production/PROMPT-PACK.md`).
 
 ---

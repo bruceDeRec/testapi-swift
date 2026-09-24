@@ -101,3 +101,28 @@ These address the craft judge's objections:
 - **The ritual master is animated by hand.** Bar-one plates may be AI-assisted only if the hosts choose that **[HOST GATE]**, and any AI use is disclosed.
 - **Otter biology:** say only the corrected lines. "Sea otters sometimes hold paws while they float, though mostly they wrap themselves in kelp." "They keep a rock in a skin pocket under the forearm." Never "a favourite stone for life." **[VERIFY]** with a sea-otter biologist.
 - **Otter.ai collision:** keep blue off Tuck, and never show her with meeting or transcription imagery.
+
+---
+
+## Rulings after the review round
+
+*Three critics (consistency, a hostile creative director, honesty and facts) reviewed the whole package, and a fixer per file applied their findings. These rulings settle what the fixers escalated. They rank with R1–R9.*
+
+**R10. More fun, without breaking the ritual.** The hostile critic was right that the bumper spent too much of its runtime in specified stillness.
+- **Episode 01:** the leaf now lands flat *over Tuck's face* at f30 (the same frame and the same activity sound, A01). She peels it off over f35–f40, inspects it, and sets it on her crown at f45. It's a small comic beat, still dry.
+- **The threshold (every episode):** when the stones light at f90, Tuck gives one locked reaction, **quiet delight**, over f91–f94. Her whiskers lift, and her cheeks rise so her eyes smile. Her eyes never leave the lens, her paws don't move, and the carry-over is undisturbed. Then she holds. The payoff gets a face.
+- **Rejected:** deleting the melt (R3 locks it), and swapping Episodes 04 and 12 to move the lantern dance to Christmas week. The swap would put an expensive episode into the launch rush and the panda homage into the lowest-audience week of the year.
+
+**R11. The friends' paws rise from the bottom edge,** at x 700 (left) and x 1220 (right), as the character bible now specifies. They no longer come from the lower corners. The forearms are shorter, so they read as paws, not poles. "Both edges" becomes "both sides" wherever it appears.
+
+**R12. The release threads are drawn on ones, at near-constant speed.** That's 12 drawings, f102–f113, travelling about 79 px a frame along the path, with a 2-frame ease at each end, instead of the brand kit's `draw` curve. On `draw`, the tip peaked at about 263 px a frame. Effects cards stay on twos (R4). No frame numbers or coordinates change.
+
+**R13. Settled specs.**
+- **Descriptor:** Atkinson Hyperlegible Next **600** (the brand kit owns type).
+- **The 15-second trailer:** carries **no date line** (brand kit §3, forbidden treatment 9).
+- **The *Light Work* stamp and the 3.0-second cut:** rendered as a **native 1080×1920 vertical pass**, never cropped from the 16:9 master. The face sits near y 960, and the stones no lower than y 1380.
+- **Pocket-shot sky:** its seam moves down to **y 640, feathered over y 616–664**, so the descriptor's baseline (y 592) sits on clean sky.
+- **Bass:** sits out from the hush (f54) until the **button (f120)**, so the final chord lands with its root. There is no bass at f90.
+- **M07 cue name:** the trailer uses M07 `ALT-15`.
+
+**R14. One list for the hosts.** The README's section "What the hosts must decide, and by when" is the single short list of blocking decisions. Every other document's [HOST GATE] list is the detail behind it.

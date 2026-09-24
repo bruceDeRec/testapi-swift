@@ -47,7 +47,7 @@ Three ideas carry it:
 | **Tempo** | 96 BPM | "Unhurried, but never slow." Below about 85 BPM a cue reads as a ballad (sleepy); above about 110 it reads as hype. 96 is a nod of the head. At 24 fps, one beat is 0.625s, or exactly 15 frames, and two bars last exactly 5.00s. |
 | **Meter and feel** | 4/4. Straight eighth notes in the melody. Shaker in sixteenths, swung 56% | The straight melody stays crisp and classic, and the lightly swung shaker gives the relaxed lilt. |
 | **Form** | Two bars, then a final downbeat (the "button") at 5.00s, with a tail ringing to 6.50s | The button is the cut to the wide two-shot, the "landing" in FORMAT §5. |
-| **Harmonic rhythm** | One chord every two beats (1.25s) | Slow enough to feel calm, fast enough to feel like a journey in five seconds. |
+| **Harmonic rhythm** | Bar 1: one chord every two beats (1.25s). Bar 2: Gmaj7 and Gm6 one beat each (0.625s), then home from beat 3 (3.75s) for two beats, then the button at 5.00s. | Slow enough to feel calm, fast enough to feel like a journey in five seconds. Bar two quickens under the two plinks, so home lands exactly as the stones light. |
 
 ### The chord movement
 
@@ -55,13 +55,14 @@ Three ideas carry it:
 |---|---|---|---|---|
 | Bar 1, beats 1–2 | 0.00s–1.25s | **D(add9)**, I | F♯3 A3 E4 over D2 | Home, with an open ninth for sparkle. |
 | Bar 1, beats 3–4 | 1.25s–2.50s | **E/D**, II over a tonic pedal | G♯3 B3 E4 over D2 | The Lydian lift. The inner voices step up while the bass doesn't move, so the ground holds as the light rises. |
-| Bar 2, beats 1–2 | 2.50s–3.75s | **Gmaj7**, IV (the melody adds the 9th) | F♯3 B3 D4 over G2 | It opens out, and the inner voices step down. |
-| Bar 2, beats 3–4 | 3.75s–5.00s | **Gm6**, borrowed iv | E3 B♭3 D4 over G2 | A warm, golden-hour colour. The B♭ sighs down toward A. |
-| Bar 3, beat 1 | 5.00s | **D(add9)**, I | E3 A3 D4 F♯4 over D2 | Home. A plagal (iv–I) arrival, resolved without being pushed. |
+| Bar 2, beat 1 | 2.50s–3.13s | **Gmaj7**, IV (the melody adds the 9th) | F♯3 B3 D4, no bass | It opens out on the clap, and the inner voices step down. |
+| Bar 2, beat 2 | 3.13s–3.75s | **Gm6**, borrowed iv | E3 B♭3 D4, no bass | A warm, golden-hour colour. The B♭ sighs down toward A under the first plink. |
+| Bar 2, beats 3–4 | 3.75s–5.00s | **D(add9)**, I, bloomed (faded in over 0.15s) | E3 A3 D4 F♯4 over D2 (soft) | Home at the threshold, as the stones light. A plagal (iv–I) arrival, resolved without being pushed. |
+| Bar 3, beat 1 | 5.00s | **D(add9)**, I, struck (the button) | E3 A3 D4 F♯4 over D2, vibes F♯5 | The restatement, on the cut to the hosts. |
 
 **In Roman numerals:** I – II/I – IV – iv – I.
 
-**Voice leading:** in bar 1 the inner voices rise by whole steps (F♯→G♯, A→B). In bar 2 they fall by step (G♯→F♯→E, B→B♭→A, E→D). They lift, then exhale.
+**Voice leading:** in bar 1 the inner voices rise by whole steps (F♯→G♯, A→B). In bar 2 they fall by step on each beat, arriving home on beat 3 (G♯→F♯→E, B→B♭→A, E→D). They lift, then exhale.
 
 ### The hook
 
@@ -90,7 +91,7 @@ Some eighth notes fall between frames. The picture only ever hits beats, which a
 | **Hook, voice 2** | Nylon-string guitar, fingerpicked (no pick, no strumming) | "The steady hand": answers "*make light work*" and rolls the final chord | Human hands, heard clearly. A warm, rounded attack, with the warmth of the café and vineyard reference images. | −1 dB |
 | **Harmony** | Rhodes Mark I electric piano, light tremolo | Carries the chords | 1970s warmth that modern neo-soul made current again, so it bridges classic and modern. It sits below the hook's register. | −6 dB |
 | **Horizon** | Analog polysynth pad, Juno-60 style (two detuned saw waves, chorus on). Its low-pass filter opens from about 500 Hz to about 5 kHz between 0.00s and 3.75s, reaching fully open as the stones light. | The one openly modern colour: the sunrise | Warm futurism, never cold sci-fi. Felt more than heard. | −12 dB |
-| **Bass** | Upright bass, plucked | Holds the D pedal, moves to G, then comes home | Human, grounded and classic. On phones, its upper harmonics carry the root note even when the fundamental disappears. | −6 dB |
+| **Bass** | Upright bass, plucked | Holds the D pedal through bar 1, sits out f54–f89 (the hush and the ritual), and returns softly on D2 at f90 and on the button | Human, grounded and classic. On phones, its upper harmonics carry the root note even when the fundamental disappears. | −6 dB |
 | **Hands 1** | Finger snaps on beats 2 and 4 of bar 1 | Cool and relaxed, like a jazz club | Made by hands, not machines. | −10 dB |
 | **Hands 2** | Shaker, soft sixteenths, swung 56%, stopping at 2.25s (the hush) | Motion: the fun under the calm | When it stops, the ritual begins. | −18 dB |
 | **Hands 3** | One group hand clap by 6–12 real people, on "WORK" | The community, and the moment of delight | One clap, not a clap track. A clap track is the corporate-explainer cliché; a single clap is an event. | −4 dB |
@@ -136,7 +137,7 @@ The music is identical in every episode, down to the sample. What changes is **o
 
 ### The sketch files
 
-`music/sketch/MH_M01_Bumper_SKETCH.mid` has the bumper exactly as specified above. `music/sketch/MH_M02-M06_Family_SKETCH.mid` has the logo sting, chapter bump, outro tag, myth motif, verdicts and Shorts stamp, each marked. Open them in GarageBand or any music app to hear the notes and timing. They use General MIDI stand-in sounds, so they will sound like a cheap keyboard, and that's expected. **They're for internal listening only and never ship.** See the note on the hook's authorship in §7(c).
+`music/sketch/MH_M01_Bumper_SKETCH.mid` predates the storyboard reconciliation; the animatic's audio (`intro/animatic/src/timeline.js`) is the current reference. `music/sketch/MH_M02-M06_Family_SKETCH.mid` has the logo sting, chapter bump, outro tag, myth motif, verdicts and Shorts stamp, each marked. Its Shorts stamp is the old M03-based version, which §4's M06 replaces. Open them in GarageBand or any music app to hear the notes and timing. They use General MIDI stand-in sounds, so they will sound like a cheap keyboard, and that's expected. **They're for internal listening only and never ship.** See the note on the hook's authorship in §7(c).
 
 ### One alternate, because it's genuinely different
 
@@ -248,7 +249,9 @@ It ends on 1̂: home.
 
 ### M06 Light Work stamp, 1.00s
 
-**Where it's used:** under the one-second mascot still at the loop point of every Short (FORMAT §7). It uses M03's notes, with the A4 allowed to ring and a fade from 0.70s to 1.00s, reaching true silence on the Short's last frame so the loop back into the spoken question is clean. Dialogue must end before the stamp starts. Shorts are often cut at 30 fps, so time this cue in seconds, not frames.
+**Where it's used:** under the 1.0s end stamp (ritual frames f88–f111, storyboard §7) at the loop point of every Short (FORMAT §7).
+
+**Content:** S01's A5 ring on f88–f89 (0.00s–0.08s) into the bumper's home-chord bloom on f90 (0.08s): Rhodes E3 A3 D4 F♯4 plus the pad, faded in over 0.15s, with the crotale A6. It fades from 0.70s and reaches true silence at 1.00s, on the Short's last frame, so the loop back into the spoken question is clean. Dialogue must end before the stamp starts. Shorts are often cut at 30 fps, so time this cue in seconds, not frames.
 
 ### M07 Extended theme, 60.00s
 
@@ -260,7 +263,14 @@ It ends on 1̂: home.
 - Bars 13–20: a bridge on Bm7 – Gmaj7 – E/D – Gm6, with the vibes improvising on the hook's rhythm.
 - Bars 21–24: the hook once more, ending on Gm6 so it loops back to bar 1.
 
-Also deliver an `ALT-END` version that finishes on the button. Commission this cue now: it costs a fraction at commissioning time and a lot more later.
+Also deliver an `ALT-END` version that finishes on the button.
+
+Also deliver `ALT-15` (15.00s, 6 bars, `MH_M07_ExtendedTheme_15s00_vNN_ALT-15.wav`) for the storyboard's 15-second trailer (§7 there):
+- Bars 1–4: the hook's bar one four times, vibes and guitar swapping. Bar 4 ends with M01's hush on its last half-beat (9.75s).
+- Bar 5: M01's bar two exactly (the clap on its downbeat at 10.00s, Gmaj7, Gm6, then home on beat 3).
+- Bar 6: the button (12.50s), ringing out to 15.00s.
+
+Commission this cue now: it costs a fraction at commissioning time and a lot more later.
 
 ### Sound design signatures
 
@@ -388,7 +398,7 @@ It's the same mix with two gain settings, not two mixes. Measure to ITU-R BS.177
   - **GLINT**: crotale and swell
 
   Plus `ALT-TAILLONG` (a 3.0s natural decay) and `ALT-TAILSHORT` (the tail gone by 5.75s).
-- **M07 stems:** the same six groups, plus `ALT-END`.
+- **M07 stems:** the same six groups, plus `ALT-END` and `ALT-15`.
 - **S01–S03:** every layer separately (the recorded sound and the tonal ring) as well as the finished sound, so the editor can pan each share.
 - **MIDI files and the session archive for every cue,** so the theme can be re-orchestrated later without a new commission.
 - **A cue sheet for each episode** (the editor fills it in), for the composer's performing-rights reporting.
@@ -398,7 +408,7 @@ It's the same mix with two gain settings, not two mixes. Measure to ITU-R BS.177
 `MH_<cue>_<Name>_<length>_v<NN>_<element>.wav`
 
 - `MH` is the show code. If the hosts choose *The DeRec Table*, use `DT` from the very first delivery.
-- Write lengths like `5s00` (no dots). Versions have two digits. Element names: `MIX`, `STEM-HOOK`, `STEM-HARMONY`, `STEM-BASS`, `STEM-HANDS`, `STEM-CLAP`, `STEM-GLINT`, `ALT-TAILSHORT`, `ALT-TAILLONG`, `ALT-END`, `LAYER-<name>`.
+- Write lengths like `5s00` (no dots). Versions have two digits. Element names: `MIX`, `STEM-HOOK`, `STEM-HARMONY`, `STEM-BASS`, `STEM-HANDS`, `STEM-CLAP`, `STEM-GLINT`, `ALT-TAILSHORT`, `ALT-TAILLONG`, `ALT-END`, `ALT-15`, `LAYER-<name>`.
 - No spaces, and never "final" or "new" in a file name.
 
 ```
@@ -424,7 +434,7 @@ MH_E07_MASTER-POD_v02.wav
 | M05 | Myth-buster motif | 1.00s |
 | M05a / b / c | Verdicts: True / Not true / True, but… | 0.50s / 0.50s / 0.15s |
 | M06 | Light Work stamp | 1.00s |
-| M07 | Extended theme | 60.00s |
+| M07 | Extended theme | 60.00s (`ALT-15`: 15.00s) |
 | S01 | Share handed over | 0.45s |
 | S02 | Daily check-in | 1.20s at most |
 | S03 | Recovery completes | 2.00s at most after the last share |
@@ -465,7 +475,7 @@ MH_E07_MASTER-POD_v02.wav
 Shortlist three, and pay each $150 for a 5-second demo written against the brief below.
 
 **Timeline: four weeks.**
-- **Week 1:** three demo hooks as rough mock-ups.
+- **Week 1:** the chosen composer's two original hooks, as rough mock-ups.
 - **Week 2:** the hosts choose blind (using the §8 tests), then one round of revisions.
 - **Week 3:** the live sessions, the clap session and the sound design.
 - **Week 4:** mixing, stems and delivery.
@@ -483,25 +493,25 @@ Shortlist three, and pay each $150 for a 5-second demo written against the brief
 > **The spec: a starting point; beat it if you can keep every constraint.**
 > - D major, 96 BPM, 4/4.
 > - Two bars, then a final downbeat at exactly 5.00s (the picture cut), ringing to 6.50s.
-> - Chords I – II/I – IV – iv – I: D(add9) → E/D → Gmaj7 → Gm6 → D(add9). No dominant chord.
+> - Chords I – II/I – IV – iv – I: D(add9) → E/D (1.25s) → Gmaj7 (2.50s) → Gm6 (3.13s) → D(add9) bloomed at 3.75s, restated as the button at 5.00s. No dominant chord.
 > - A hook in the rhythm of "many hands make light work". The vibraphone asks, the nylon guitar answers, both land together, and it ends on 3̂.
 > - Also: Rhodes, a warm analog pad whose filter opens, upright bass, finger snaps, one group clap on "work" (we supply the people), and a crotale glint as three stones light at 3.75s.
 > - Sync points: 1.25s (the activity), 2.25s (the hush), 2.50s (the clap), 3.13s and 3.42s (two plinks), 3.75s (home), 5.00s (the cut).
 >
-> The full detail, including every cue's timing, is in the attached THEME-AND-SOUND document.
+> The full detail, including every cue's timing, is in the attached THEME-AND-SOUND document. Any melody notes it names are an internal placeholder that shows timing and how the family is built. Write your own.
 >
 > **Deliverables.**
 > - M01 bumper, with stems and two alternate tails.
 > - M02 logo sting (1.5s), M03 chapter bump (0.5s), M04 outro tag (2s).
 > - M05 myth-buster motif (1s) plus three verdict stamps.
 > - M06 Shorts stamp (1s).
-> - M07 60-second loopable extended theme, with an alternate ending.
+> - M07 60-second loopable extended theme, with an alternate ending, plus a 15-second, six-bar trailer version (`ALT-15`) whose bar 5 is the bumper's bar two.
 > - S01–S03 sound signatures: glass on marble; a knock and its replies; a warm "home" bloom.
 > - WAV files at 48 kHz / 24-bit, sample-accurate, named and levelled to the spec, plus MIDI and the session archive.
 >
 > **Never.** Ukulele, whistling, a glockenspiel lead, clap tracks, risers, whooshes, "braams", drum kit, brass fanfares, vocals, coins, locks, alarms, beeps, glitches.
 >
-> **Process.** A paid demo ($150): one 5-second hook. If you're chosen, in week 1 you deliver two original hooks written to the same constraints, plus the sketch hook in the spec performed as written. The hosts choose without knowing which is which. Weeks 2–4 cover revisions, live sessions (a real vibraphone, nylon guitar and upright bass), sound design, mixing and delivery.
+> **Process.** A paid demo ($150): one 5-second hook. If you're chosen, in week 1 you deliver two original hooks written to the same constraints. The hosts hear them unlabelled and choose blind. Weeks 2–4 cover revisions, live sessions (a real vibraphone, nylon guitar and upright bass), sound design, mixing and delivery.
 >
 > **Human-made warranty.** No generative AI may be used to compose, perform, generate or process any of the music or sounds. Normal tools are fine: your DAW, virtual instruments, tuning, editing and mixing plug-ins.
 >
@@ -510,6 +520,8 @@ Shortlist three, and pay each $150 for a 5-second demo written against the brief
 > **Credit.** Your name in every episode description and on the channel page.
 >
 > **Fee.** A fixed $____, including players and sound design: 50% on signing, 50% on delivery.
+
+**What to attach:** this document without §2's hook section (the hook table and the notes that follow it), and never the sketch MIDI files (§7(c), R9).
 
 **Before signing:** confirm which legal entity signs the contract. It should be the Alliance itself, never a member company acting in its name (non-negotiable 3). [VERIFY]
 
@@ -567,9 +579,9 @@ Cut the logo sting, chapter bump and outro tag from its stems.
 
 ```
 Instrumental only, no vocals. A six-second opening theme for a warm, optimistic conversation show about technology and trust. 96 BPM, 4/4, D major. Two bars, then one final chord on the downbeat of bar three that rings for about one and a half seconds and fades to silence.
-Harmony: bar one, D major add nine moving to an E major triad over a held D in the bass. Bar two, G major seven moving to G minor six. Bar three, D major add nine.
+Harmony: bar one, D major add nine moving to an E major triad over a held D in the bass. Bar two: G major seven for one beat, G minor six for one beat, then D major add nine, faded in softly, from beat three to the end of the bar. Bar three, beat one: D major add nine again, struck.
 Melody: a vibraphone with soft yarn mallets and a slow motor plays A, B, D (eighth, eighth, quarter). A fingerpicked nylon-string guitar answers B, G sharp (eighth, quarter). Both play one long A together through bar two. On the final chord the vibraphone plays a high F sharp.
-Also: Rhodes electric piano chords with light tremolo; a warm analog polysynth pad whose filter slowly opens; plucked upright bass; finger snaps on beats two and four of bar one; one big hand clap from a group of people on the first beat of bar two; a soft shaker that stops for the last beat; one soft antique-cymbal glint on beat two of bar two.
+Also: Rhodes electric piano chords with light tremolo; a warm analog polysynth pad whose filter slowly opens; plucked upright bass that holds D through bar one, rests from the last half-beat of bar one and returns softly on beat three of bar two; finger snaps on beats two and four of bar one; one big hand clap from a group of people on the first beat of bar two; a soft shaker that stops half a beat before bar two; one soft antique-cymbal glint on beat three of bar two, as the D major add nine swells in.
 Mood: relaxed and uplifted, sunlit, classy mid-century jazz with a touch of modern synth. Intimate and close, soft attacks, nothing harsh.
 Do not use: drum kit, ukulele, whistling, glockenspiel, brass, choir, risers, whooshes, electronic beeps, EDM.
 ```
@@ -591,7 +603,7 @@ Do not use: drum kit, ukulele, whistling, glockenspiel, brass, choir, risers, wh
 Two seconds of sound design, intimate and dry. Three small glass beads set down one after another on a marble table, a quarter of a second apart, each with the same tiny, faint, bell-like ring. A brief silence. Then a warm, soft D major chord on Rhodes electric piano and vibraphone swells in gently, with one pure, high antique-cymbal glint, and rings out calmly to silence. Calm and homely, like lights coming on in a kitchen at dusk. No whoosh, no riser, no cymbal crash, no drums, no brass, no electronic beeps, no metal coins.
 ```
 
-**A note on the hook in this document.** The hook in §2 was drafted by the AI assistant working on this package. It turns the spec into something concrete: it proves the constraints can be met, and it gives everyone something to hum. My recommendation is that the composer writes the final melody. In the demo round, the composer presents two original hooks written to the same constraints, plus this sketch played on real instruments, with none of them labelled, and the hosts pick blind. If they pick the sketch, the description credits it honestly: *"Theme concept developed with AI assistance; arranged and performed by [composer]."* [HOST GATE]
+**A note on the hook in this document.** The hook in §2 was drafted by the AI assistant working on this package, only to prove the constraints can be met. It is not a candidate. The composer writes the final melody from scratch. The §2 hook table and the sketch MIDI files are never sent to the composer or played in the demo round (R9). The family cues in §4 quote this hook only to show how the family is built; the composer builds them from their own hook.
 
 ---
 
@@ -614,7 +626,7 @@ Play the finished bumper, then run these seven tests. Any failure sends it back.
 ### [HOST GATE]
 
 1. **No AI-generated music ships anywhere; commission a human composer** (about $6,000; range $3,500–$9,000).
-2. **The blind choice of hook in the demo round**, including whether the AI-drafted sketch may win, and its credit line if it does.
+2. **The blind choice among the composer's own hooks in the demo round.**
 3. **Who claps on the theme** (the hosts, contributors, friends), and the description line crediting "the DeRec community".
 4. **"True, but…" always gets the dry stamp alone**, which is stricter than FORMAT.
 5. **The theme credit line** in every episode description and on the channel page.
