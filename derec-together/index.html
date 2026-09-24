@@ -102,7 +102,7 @@ th{font:600 12px/1.2 var(--text-face);letter-spacing:.1em;text-transform:upperca
 /* year */
 .year{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
 .act{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:14px 16px;display:grid;gap:6px}
-.act .d{display:flex;justify-content:space-between;gap:8px;font:400 12px/1.2 var(--mono);color:var(--spine)}
+.act .d{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;font:400 12px/1.3 var(--mono);color:var(--spine)}
 .act h3{margin:0;font:600 17px/1.25 var(--text-face)}
 .act p{margin:0;font-size:14px;line-height:1.45;color:var(--muted)}
 .tag{font:600 11px/1 var(--text-face);letter-spacing:.06em;text-transform:uppercase;padding:4px 7px;border-radius:5px;background:var(--chip);color:var(--text)}
@@ -166,7 +166,7 @@ th{font:600 12px/1.2 var(--text-face);letter-spacing:.1em;text-transform:upperca
 .gcol h3{margin:0 0 10px;font:600 20px/1.2 var(--display)}
 .gcol ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
 .gcol li{display:grid;grid-template-columns:18px 1fr;gap:10px;font-size:15px;line-height:1.45}
-.gcol li::before{content:"";width:14px;height:14px;border:2px solid var(--spine);border-radius:4px;margin-top:4px}
+.gcol li::before{content:"";width:8px;height:8px;background:var(--gold-on-ground);border-radius:50%;margin-top:9px}
 
 /* origin */
 .origin{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:16px;align-items:start}
@@ -196,7 +196,8 @@ footer p{max-width:90ch}
   .readout{grid-column:1 / -1}
   .hook .note{font-size:17px}
   .hook .syl{font-size:10px}
-  .bigplay{inset:auto auto 10px 10px;padding:9px 14px 9px 10px;font-size:14px}
+  .bigplay{inset:auto auto 10px 10px;padding:6px}
+  .bigplay #bigplay-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
   .ros span{display:none}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bigplay{transition:none}}
@@ -1156,7 +1157,7 @@ footer p{max-width:90ch}
 </script>
 <script>
 window.MHData = {
-  restFrame: 96,
+  restFrame: 50,
   beats: [
     { f0: 0, f1: 15, thumb: 8, title: 'Already afloat', what: 'Wide. An autumn cove, Tuck on her back, a maple leaf already spinning high at top right. One air taxi over the terraces.', music: 'Vibes A4, B4 · “Ma-ny”' },
     { f0: 15, f1: 30, thumb: 22, title: 'A leaf comes down', what: 'Cut closer on the hook’s top note. The leaf spirals down in three flat turns; her eyes follow it.', music: 'Vibes D5 · “HANDS” · the cut' },
@@ -1181,7 +1182,18 @@ window.MHData = {
     ['The pocket pat', 'The quiet daily check-in', 'In DeRec the helper does nothing. The owner’s device checks automatically.'],
   ],
   acts: [
-    { n: 1, date: '11 Nov 2026', season: 'Autumn', title: 'The float', action: 'On her back in a sunlit cove. A maple leaf lands on her chest and becomes a hat.', carry: 'the leaf on her head', pip: false },
+    { n: 1, date: '11 Nov 2026', season: 'Autumn', title: 'The float', action: 'On her back in a sunlit cove. A maple leaf lands on her chest and becomes a hat.', carry: 'the leaf on her crown', pip: false },
+    { n: 2, date: '25 Nov 2026', season: 'Late autumn', title: 'Stargazing', action: 'Eye to a brass telescope on a dusk terrace. A shooting star crosses, and she looks up to see it herself.', carry: 'an eyepiece ring round one eye', pip: false },
+    { n: 3, date: '9 Dec 2026', season: 'Early winter', title: 'Tray sledding', action: 'Belly-down on a tin tray, she slides, spins once and stops exactly at a snowman’s feet.', carry: 'snow dusting her crown', pip: false },
+    { n: 4, date: '23 Dec 2026', season: 'Holiday week', title: 'The bell choir', action: 'Two handbells in a lamplit glasshouse. Pip answers a hair late, and she forgives it with a nod.', carry: 'a fir sprig behind one ear', pip: true },
+    { n: 5, date: '6 Jan 2027', season: 'Winter', title: 'Baking', action: 'Oven mitts over her own mittens, a tray of star biscuits, and a puff of flour.', carry: 'flour on her nose', pip: false },
+    { n: 6, date: '20 Jan 2027', season: 'Deep winter', title: 'Ice skating', action: 'One long backward glide and a neat stop in a spray of ice.', carry: 'an oatmeal bobble hat', pip: false },
+    { n: 7, date: '3 Feb 2027', season: 'Winter', title: 'Café chess', action: 'She takes Pip’s pawn and tucks it in her scarf. Pip’s face-line goes flat.', carry: 'the captured pawn', pip: true },
+    { n: 8, date: '17 Feb 2027', season: 'Late winter', title: 'Pottery', action: 'A bowl rises under her mittens. Two pats on the rim.', carry: 'clay across her brow', pip: false },
+    { n: 9, date: '3 Mar 2027', season: 'Early spring', title: 'Kite flying', action: 'A gust lifts her off her flippers for one beat. She lands as if nothing happened.', carry: 'a daisy in her scarf', pip: false },
+    { n: 10, date: '17 Mar 2027', season: 'Spring', title: 'Repotting', action: 'Tuck and Pip set a sapling in a bigger pot. One new leaf unfurls.', carry: 'soil on one cheek', pip: true },
+    { n: 11, date: '31 Mar 2027', season: 'Spring', title: 'Painting', action: 'One brushstroke lays a whole sunset across the canvas.', carry: 'a dab of jade paint', pip: false },
+    { n: 12, date: '14 Apr 2027', season: 'Spring evening', title: 'The lantern dance', action: 'A two-step and a spin with Pip under paper lanterns: the homage to the dancing pandas that started all this.', carry: 'a lantern tassel', pip: true },
   ],
   ros: [
     { t: '0:00', len: 5, name: 'The Bumper', job: 'music and mascot, five seconds', color: '#F2C96E' },
@@ -1196,7 +1208,140 @@ window.MHData = {
     { t: '14:10', len: 30, name: 'Next Time', job: 'next question and the split sign-off', color: '#2F8F7D' },
     { t: '14:40', len: 20, name: 'End Card', job: 'a real outtake and Tuck’s reprise', color: '#A8843D' },
   ],
-  eps: [],
+  eps: [
+   {
+    "n": 1,
+    "date": "11 Nov 2026",
+    "title": "If your phone vanished tonight, what would you lose? Who could help you get it back?",
+    "question": "If your phone vanished tonight, what would you actually lose, and who could help you get it back?",
+    "pillar": "What if",
+    "feature": "Hands On (tabletop)",
+    "activity": "THE FLOAT",
+    "stop": "It gets your secret back. It doesn't undo a hack, reverse a payment you approved or stop a scam.",
+    "flag": "Veterans Day: no 11/11 jokes"
+   },
+   {
+    "n": 2,
+    "date": "25 Nov 2026",
+    "title": "Who should you trust to help you get back in?",
+    "question": "Who should you trust to help you get back in?",
+    "pillar": "Who you trust",
+    "feature": "Heard It Somewhere",
+    "activity": "Stargazing",
+    "stop": "It spreads the trust out. It doesn't make anyone trustworthy. Who you pick is still your job.",
+    "flag": "Thanksgiving eve: keep the date and lean in"
+   },
+   {
+    "n": 3,
+    "date": "9 Dec 2026",
+    "title": "If friends help you get back in, can they see your password?",
+    "question": "If friends help you get back in, can they see your password?",
+    "pillar": "How it works",
+    "feature": "Hands On (tabletop, 10-minute)",
+    "activity": "Tray sledding",
+    "stop": "Your helpers can't see your secret. That doesn't stop you giving it away to a fake page.",
+    "flag": ""
+   },
+   {
+    "n": 4,
+    "date": "23 Dec 2026",
+    "title": "What happens if you forget the one password that opens everything?",
+    "question": "What happens if you forget the one password that opens everything?",
+    "pillar": "What if",
+    "feature": "Heard It Somewhere",
+    "activity": "The bell choir (with Pip)",
+    "stop": "It gives back a secret you set up beforehand. It can't bring back one you never set up, or reset a company account.",
+    "flag": "Christmas week: keep the date; Pip's first appearance"
+   },
+   {
+    "n": 5,
+    "date": "6 Jan 2027",
+    "title": "A friend asked you to help them get back in someday. What are you agreeing to?",
+    "question": "Someone asked you to be their helper. What are you actually agreeing to?",
+    "pillar": "Who you trust",
+    "feature": "Hands On (tabletop; real software if ready)",
+    "activity": "Baking",
+    "stop": "You can't open their things or get anything back alone, and it doesn't stop someone pretending to be your friend.",
+    "flag": "First week after New Year"
+   },
+   {
+    "n": 6,
+    "date": "20 Jan 2027",
+    "title": "What can DeRec actually protect? (It isn't only for crypto)",
+    "question": "Is DeRec only for crypto, or what can you actually protect with it?",
+    "pillar": "How it works",
+    "feature": "Heard It Somewhere",
+    "activity": "Ice skating",
+    "stop": "It looks after a key. It doesn't back up the things the key opens.",
+    "flag": ""
+   },
+   {
+    "n": 7,
+    "date": "3 Feb 2027",
+    "title": "Phone and laptop gone on the same day. What still comes back?",
+    "question": "What if you lose your phone and your laptop on the same day?",
+    "pillar": "What if",
+    "feature": "Hands On (tabletop)",
+    "activity": "Café chess (with Pip)",
+    "stop": "It gets your secret back onto a new phone. It doesn't find the bag, lock the laptop or undo what someone did.",
+    "flag": ""
+   },
+   {
+    "n": 8,
+    "date": "17 Feb 2027",
+    "title": "Who's behind DeRec, and why trust something nobody owns?",
+    "question": "Who's behind DeRec, and why should you trust something nobody owns?",
+    "pillar": "Who you trust",
+    "feature": "Heard It Somewhere",
+    "activity": "Pottery",
+    "stop": "An open standard means anyone can read the rules. It doesn't mean every app is built well, and nobody here vouches for any app.",
+    "flag": ""
+   },
+   {
+    "n": 9,
+    "date": "3 Mar 2027",
+    "title": "What does getting it back actually look like? We timed a real one",
+    "question": "What does getting it back actually look like, step by step?",
+    "pillar": "How it works",
+    "feature": "Hands On (real software if ready; pays the IOU)",
+    "activity": "Kite flying",
+    "stop": "It brings your secret back when enough helpers answer. If too few can be reached, it can't, and nobody in the middle holds a copy.",
+    "flag": "Fallback title if the demo stays on the table"
+   },
+   {
+    "n": 10,
+    "date": "17 Mar 2027",
+    "title": "What if someone pretends to be you to get your stuff back?",
+    "question": "What if someone pretends to be you and asks your helpers for it?",
+    "pillar": "What if",
+    "feature": "Heard It Somewhere",
+    "activity": "Repotting (with Pip)",
+    "stop": "It can't tell a good fake from you. They can. If enough are fooled, it works for the faker too.",
+    "flag": "DST gap: 15:00 UTC, an hour earlier in Europe"
+   },
+   {
+    "n": 11,
+    "date": "31 Mar 2027",
+    "title": "How do you talk to your parents about their passwords?",
+    "question": "How do you talk to your parents about their passwords?",
+    "pillar": "Who you trust",
+    "feature": "Hands On (family rehearsal)",
+    "activity": "Painting",
+    "stop": "It doesn't stop a scam call to your mum, and doesn't reverse a payment she approved. Her bank's fraud line, same day.",
+    "flag": "Wednesday after Easter"
+   },
+   {
+    "n": 12,
+    "date": "14 Apr 2027",
+    "title": "Your hardest questions about getting back in, answered",
+    "question": "What do you still want to know about getting back in?",
+    "pillar": "How it works (clinic)",
+    "feature": "Both (20-minute clinic)",
+    "activity": "The lantern dance (with Pip)",
+    "stop": "It doesn't undo a hack, reverse a payment you approved, stop a scam, or look after your phone for you.",
+    "flag": "Season finale: IOU cleared, Jar counted, ingredient revealed"
+   }
+  ],
   hook: [
     { syl: 'Ma-', note: 'A4', deg: '5' }, { syl: 'ny', note: 'B4', deg: '6' }, { syl: 'hands', note: 'D5', deg: '1' }, { syl: 'rest', note: '·', deg: '–', rest: true },
     { syl: 'make', note: 'B4', deg: '6' }, { syl: 'light', note: 'G♯4', deg: '♯4' }, { syl: 'work', note: 'A4', deg: '5' }, { syl: 'button', note: 'F♯5', deg: '3' },
@@ -1211,14 +1356,48 @@ window.MHData = {
     { name: 'Brass', hex: '#A8843D', job: 'Gold printed on paper, 56 px and up' },
     { name: 'Glass', hex: '#7BE1DA', job: 'Machines and glass, never a thread' },
   ],
-  gates: { bruce: [], facundo: [], both: [] },
+  gates: {
+    bruce: [
+      'The name Many Hands, the Light Work tier and the split sign-off. Fallback: The DeRec Table.',
+      'Ask the Alliance for the plain shield master, without “PROTECTED BY”, and its rules for use in motion.',
+      'Commission a human composer, about $6,000. No AI-generated music ships.',
+      'Confirm the contributors call is still fortnightly on Mondays, so Episode 01 premieres Wednesday 11 November 2026.',
+      'The house pronunciation of “DeRec”: whatever Bruce says first on air.',
+      'The dish for the recipe demo, one you really make.',
+      'The pinned question and the consent wording for reading community answers on air.',
+    ],
+    facundo: [
+      'Check every technical line in the script and the season against lib-derec and the protocol spec, including how thresholds are described.',
+      'The Curve diagram, and the three limits said with it.',
+      'A genuine yes or no to the Jargon Jar, and to “Kundo” on air.',
+      'The first IOU: timing a real recovery in a later Hands On, once there is a build to show.',
+      'The role line “Engineer, lib-derec”.',
+    ],
+    both: [
+      'Tuck as the mascot, with Pip as her friend. No robot ever holds a stone.',
+      'The ritual is hand-animated. Any AI help on bar-one plates is disclosed on YouTube and in the description.',
+      'How your likenesses appear in key art: real photos composited, or generated.',
+      'One table or two rooms. Remote stand-ins for the table objects if you record apart.',
+      'The phone-in-the-pocket opening bit, and the pat-pat at the sign-off.',
+      'Who claps on the theme.',
+      'Nothing is sold, no plush or pins, until season one has aired and clearance is done.',
+    ],
+  },
   docs: [
-    { path: 'BRIEF.md', label: 'The brief', desc: 'what we are making and the rules' },
-    { path: 'DECISIONS.md', label: 'Creative rulings', desc: 'the calls that close the concept phase' },
+    { path: 'intro/COLD-OPEN-STORYBOARD.md', label: 'Cold-open storyboard', desc: 'the first introduction, frame by frame' },
+    { path: 'intro/animatic/many-hands-ep01-cold-open-animatic.mp4', label: 'The animatic (MP4)', desc: '6.5 s, with the theme sketch' },
+    { path: 'DECISIONS.md', label: 'Creative rulings', desc: 'the calls, and why' },
+    { path: 'BRIEF.md', label: 'The brief', desc: 'what we are making, and the rules' },
+    { path: 'mascot/CHARACTER-BIBLE.md', label: 'Character bible', desc: 'Tuck, Pip, the ritual, Tuck’s Year' },
     { path: 'mascot/CONCEPT-PANEL.md', label: 'The mascot panel', desc: 'four concepts, four judges' },
     { path: 'season/FORMAT.md', label: 'Series format', desc: 'name, ladder, run of show, segments' },
+    { path: 'season/SEASON-ONE.md', label: 'Season one', desc: 'twelve flagships and the Shorts' },
+    { path: 'scripts/EP01-SCRIPT.md', label: 'Episode 01 script', desc: 'the 15-minute premiere' },
     { path: 'brand/BRAND-KIT.md', label: 'Brand kit', desc: 'palette, type, lockups, motion' },
     { path: 'music/THEME-AND-SOUND.md', label: 'Theme and sound', desc: 'the theme, cues, delivery' },
+    { path: 'production/PLAYBOOK.md', label: 'Production playbook', desc: 'recording, edit, delivery, gates' },
+    { path: 'production/PROMPT-PACK.md', label: 'Prompt pack', desc: 'hand-made and AI-assisted routes' },
+    { path: 'production/CHANNEL-KIT.md', label: 'Channel kit', desc: 'trailer, thumbnails, moderation' },
   ],
 };
 
@@ -1301,7 +1480,7 @@ window.MHData = {
     card.setAttribute('aria-label', 'Jump the animatic to ' + bt.title + ', frame ' + bt.thumb);
     const cv = el('canvas'); cv.width = 480; cv.height = 270; beatCanvases.push([cv, bt.thumb]);
     const b = el('div', 'b');
-    b.append(el('div', 't mono', (bt.f0 / 24).toFixed(2) + '–' + (bt.f1 / 24).toFixed(2) + 's · f' + bt.f0 + '–' + bt.f1));
+    b.append(el('div', 't mono', (bt.f0 / 24).toFixed(2) + '–' + ((bt.f1 - 1) / 24).toFixed(2) + 's · f' + bt.f0 + '–' + (bt.f1 - 1)));
     b.append(el('h3', null, bt.title), el('p', null, bt.what), el('div', 'm', bt.music));
     card.append(cv, b); beats.append(card);
     card.addEventListener('click', () => { if (playing) stop(); draw(bt.thumb); $('player').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' }); });
@@ -1332,7 +1511,9 @@ window.MHData = {
   $('ros').setAttribute('aria-label', 'Run of show, ' + Math.round(total / 60) + ' minutes: ' + DATA.ros.map((r) => r.name).join(', '));
   DATA.eps.forEach((e) => {
     const d = el('article', 'ep'), n = el('div', 'n', String(e.n).padStart(2, '0')); n.append(el('small', null, e.date));
-    const mid = el('div'); mid.append(el('h3', null, e.title), el('p', null, e.question));
+    const mid = el('div'); mid.append(el('h3', null, e.title));
+    const norm = (t) => t.toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/\s+/g, ' ').trim();
+    if (norm(e.question) !== norm(e.title) && !norm(e.title).includes(norm(e.question))) mid.append(el('p', null, 'The question: ' + e.question));
     const side = el('div', 'side');
     [['Pillar', e.pillar], ['Feature', e.feature], ['Cold open', e.activity], ['Where it stops', e.stop]].forEach(([k, v]) => { if (!v) return; const p = el('div'); p.append(el('b', null, k + ': '), document.createTextNode(v)); side.append(p); });
     if (e.flag) { const p = el('div'); p.append(el('span', 'tag', e.flag)); side.append(p); }
