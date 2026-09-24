@@ -269,7 +269,7 @@ FORMAT §7 allows the mascot in Shorts only as a one-second stamp at the loop po
 | 5–6 | f240–f359 | The ritual master, f54–f119, re-timed so its f60 lands on bar 5's downbeat. Then the title page holds 54 frames with a line under the descriptor: **"Premieres Wednesday 11 November"** (Atkinson Next 600, 40 px, Paper). | M07 bars 5–6, ending on the button |
 
 - **Why it's built this way:** each activity gets exactly one bar, so the trailer is the cold open's promise shown four times, "different every time, the same every time", before the ritual pays it off once.
-- **When it runs:** from late November, once Episodes 04 and 07 are delivered. It can't be ready for the 11 November launch, so launch uses the channel trailer in `production/CHANNEL-KIT.md`, and this cut's end line changes to the next premiere date [HOST GATE].
+- **When it runs:** from Wednesday 10 February 2027, as the head of trailer TR03 in `production/CHANNEL-KIT.md`. By then Episodes 01, 02, 04 and 07 have all aired, and FORMAT §7 never lets the cold open preview an activity. Launch uses the channel trailer TR01 instead. This cut's end line names the next premiere date, not 11 November [HOST GATE].
 - **Timing dependency:** M07's bar structure is specified in THEME §4. **[VERIFY]** the composer delivers M07 with a clean bar-5 downbeat for the ritual to land on.
 - **Pip's episodes:** the trailer needs Episodes 04 and 07's bar-one animation, which arrives with the studio's second batch (`production/PROMPT-PACK.md`).
 
