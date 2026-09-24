@@ -49,7 +49,7 @@ In order:
    - One stone never glows. Two stones never glow.
    - The threshold must hold for **at least 12 frames** so a phone viewer can see it. The craft judge found 8 frames too few.
 6. **The release.** The amber light lifts off the three lit stones as two gold threads. The threads rise out of Tuck's world and meet in the middle of the title page, which is the brand kit's title-card move. Tuck never touches a thread after it forms. This is the only bridge between the mascot and the light thread, and it resolves the brand kit's rule that the mascot never touches the thread.
-7. **The tuck.** The paws withdraw the way they came. Tuck tucks her stone away: *pat-pat*. One slow, content blink, then the scene melts to paper.
+7. **The tuck.** The paws withdraw the way they came. Tuck tucks her stone away: *pat-pat*. One slow, content blink, then the scene melts away, leaving the title page on the sky. *Amended by the storyboard: the title page sits in the sky above Tuck for the whole ritual, and the melt ends on the brand kit's title card, not on paper. See `intro/COLD-OPEN-STORYBOARD.md` §3.*
 
 **Non-disturbance rule.** Each episode's carry-over detail survives the whole ritual untouched. That might be a maple leaf on her head, a baton behind her ear, or flour on her nose. The ritual is so routine it disturbs nothing, and that's what keeps it funny on the 60th viewing.
 

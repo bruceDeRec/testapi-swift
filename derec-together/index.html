@@ -420,15 +420,15 @@ footer p{max-width:90ch}
     src.connect(filt); filt.connect(out); src.start(t);
   };
   Engine.prototype.guitar = function (f, t, vel) { this.pluck(f, t, vel, 0.22, 2.6, 3000, 0.9965); };
-  Engine.prototype.bass = function (f, t, vel) {
+  Engine.prototype.bass = function (f, t, vel, dur) {
     const ac = this.ac, out = this.bus(0.55 * (vel || 1), 0, 0.08);
     const o = ac.createOscillator(), o2 = ac.createOscillator(), e = ac.createGain(), lp = ac.createBiquadFilter();
     o.type = 'triangle'; o.frequency.value = f; o2.type = 'sine'; o2.frequency.value = f * 2;
     const g2 = ac.createGain(); g2.gain.value = 0.35;
     lp.type = 'lowpass'; lp.frequency.value = 900;
     o.connect(e); o2.connect(g2); g2.connect(e); e.connect(lp); lp.connect(out);
-    this.env(e.gain, t, 0.008, 0.9, 1.4);
-    o.start(t); o2.start(t); o.stop(t + 1.6); o2.stop(t + 1.6);
+    const d = dur || 1.4; this.env(e.gain, t, 0.008, 0.9, d);
+    o.start(t); o2.start(t); o.stop(t + d + 0.2); o2.stop(t + d + 0.2);
   };
 
   // Rhodes: sine tine with a fast bell partial, stereo tremolo
@@ -574,22 +574,23 @@ footer p{max-width:90ch}
   function ell(ctx, x, y, rx, ry, rot) { ctx.beginPath(); ctx.ellipse(x, y, rx, ry, rot || 0, 0, Math.PI * 2); }
 
   // ---------- props ----------
-  function stone(ctx, x, y, s, glow, rot) {
+  function stone(ctx, x, y, s, glow, rot, shape) {
+    const SH = { egg: [34, 24], sphere: [30, 28], lozenge: [38, 20] }[shape || 'egg'];
     ctx.save(); ctx.translate(x, y); ctx.rotate(rot == null ? -0.18 : rot); ctx.scale(s, s);
     if (glow > 0) {
       const g = ctx.createRadialGradient(0, 0, 4, 0, 0, 90);
       g.addColorStop(0, `rgba(255,214,138,${0.85 * glow})`); g.addColorStop(0.35, `rgba(242,162,58,${0.45 * glow})`); g.addColorStop(1, 'rgba(242,162,58,0)');
       ctx.fillStyle = g; ell(ctx, 0, 0, 90, 90); ctx.fill();
     }
-    ell(ctx, 0, 0, 34, 24);
-    const base = ctx.createLinearGradient(0, -24, 0, 24);
+    ell(ctx, 0, 0, SH[0], SH[1]);
+    const base = ctx.createLinearGradient(0, -SH[1], 0, SH[1]);
     if (glow > 0) {
       base.addColorStop(0, mix(C.stoneHi, '#FFE3A6', glow)); base.addColorStop(1, mix(C.stoneDark, '#E39A35', glow));
     } else { base.addColorStop(0, C.stoneHi); base.addColorStop(0.55, C.stone); base.addColorStop(1, C.stoneDark); }
     ctx.fillStyle = base; ctx.fill(); outline(ctx, 2.4 / s);
     // the chip (Tuck's stone only uses rot default; friends' stones pass rot)
-    ctx.fillStyle = glow > 0 ? `rgba(160,90,20,${0.5})` : C.stoneDark;
-    ctx.beginPath(); ctx.moveTo(28, -12); ctx.lineTo(33, -6); ctx.lineTo(25, -7); ctx.closePath(); ctx.fill();
+    if (!shape || shape === 'egg') { ctx.fillStyle = glow > 0 ? 'rgba(160,90,20,0.5)' : C.stoneDark;
+    ctx.beginPath(); ctx.moveTo(28, -12); ctx.lineTo(33, -6); ctx.lineTo(25, -7); ctx.closePath(); ctx.fill(); }
     // speckles
     ctx.fillStyle = glow > 0 ? 'rgba(255,245,220,0.5)' : 'rgba(230,232,228,0.55)';
     [[-14, -6], [-4, 8], [9, -10], [16, 6], [-20, 6], [2, -2]].forEach(([a, b]) => { ell(ctx, a, b, 1.6, 1.3); ctx.fill(); });
@@ -663,13 +664,19 @@ footer p{max-width:90ch}
     ctx.restore();
   }
   // a friend's paw arriving from off-frame with a stone; faces are never shown
-  function friendPaw(ctx, fromX, fromY, x, y, fill, hi, glow, grizzle, scale) {
+  function friendPaw(ctx, fromX, fromY, x, y, fill, hi, glow, grizzle, scale, shape, cuff) {
     // (x, y) is where the friend's STONE sits; the paw cradles it from below
     const k = scale || 1, a = Math.atan2(y - fromY, x - fromX);
     const px = x - Math.cos(a) * 34 * k, py = y - Math.sin(a) * 34 * k + 10 * k;
     forearm(ctx, fromX, fromY, px - Math.cos(a) * 18 * k, py - Math.sin(a) * 18 * k, 112 * k, 66 * k, fill, grizzle);
+    if (cuff) { // a narrow waxed-canvas work cuff in Ink with one Jade stitch: helpers can be businesses
+      const cx = px - Math.cos(a) * 58 * k, cy = py - Math.sin(a) * 58 * k, nx = -Math.sin(a), ny = Math.cos(a), w = 74 * k;
+      ctx.save(); ctx.lineCap = 'butt'; ctx.strokeStyle = C.ink; ctx.lineWidth = 22 * k;
+      ctx.beginPath(); ctx.moveTo(cx + nx * w / 2, cy + ny * w / 2); ctx.lineTo(cx - nx * w / 2, cy - ny * w / 2); ctx.stroke();
+      ctx.strokeStyle = C.jade; ctx.lineWidth = 2.2; ctx.setLineDash([6, 5]);
+      ctx.beginPath(); ctx.moveTo(cx + nx * w / 2 + Math.cos(a) * 4, cy + ny * w / 2 + Math.sin(a) * 4); ctx.lineTo(cx - nx * w / 2 + Math.cos(a) * 4, cy - ny * w / 2 + Math.sin(a) * 4); ctx.stroke(); ctx.restore(); }
     mitten(ctx, px, py, 36 * k, a, fill, hi);
-    stone(ctx, x, y, 1.1 * k, glow, a * 0.2 + 0.3);
+    stone(ctx, x, y, 1.1 * k, glow, a * 0.2 + 0.3, shape || 'sphere');
     ctx.save(); ctx.translate(x - Math.cos(a) * 8 * k, y + 20 * k); ell(ctx, 0, 0, 17 * k, 10 * k, 0.2); ctx.fillStyle = fill; ctx.fill(); outline(ctx, 2.4); ctx.restore();
   }
 
@@ -703,9 +710,10 @@ footer p{max-width:90ch}
     ell(ctx, 0, 0, 114, 98); ctx.fillStyle = C.fur; ctx.fill(); outline(ctx);
     ell(ctx, 0, 16, 92, 80); ctx.fillStyle = C.cream; ctx.fill();
     // eyes (button eyes, gold catchlight), blink squashes
-    const bl = 1 - (st.blink || 0);
+    const bl = 1 - (st.blink || 0), tx = st.turn || 0;
+    ctx.save(); ctx.translate(tx, 0);
     [-42, 42].forEach(ex => {
-      ctx.save(); ctx.translate(ex, -4); ctx.scale(1, Math.max(0.08, bl));
+      ctx.save(); ctx.translate(ex * (1 - Math.abs(tx) / 90), -4); ctx.scale(1, Math.max(0.08, bl));
       ell(ctx, 0, 0, 10.5, 11.5); ctx.fillStyle = C.eye; ctx.fill();
       if (bl > 0.4) { ctx.fillStyle = C.gilt; ell(ctx, 3.5, -4, 3, 3); ctx.fill(); }
       ctx.restore();
@@ -718,6 +726,7 @@ footer p{max-width:90ch}
     ctx.beginPath(); ctx.moveTo(-19, 20); ctx.quadraticCurveTo(0, 14, 19, 20); ctx.quadraticCurveTo(12, 36, 0, 38); ctx.quadraticCurveTo(-12, 36, -19, 20); ctx.closePath();
     ctx.fillStyle = C.eye; ctx.fill(); ctx.fillStyle = 'rgba(255,255,255,0.25)'; ell(ctx, -6, 22, 5, 2.5); ctx.fill();
     ctx.strokeStyle = C.eye; ctx.lineWidth = 2.6; ctx.beginPath(); ctx.moveTo(0, 38); ctx.lineTo(0, 50); ctx.moveTo(-12, 58); ctx.quadraticCurveTo(0, 64, 12, 58); ctx.stroke();
+    ctx.restore();
     // whiskers, seven a side
     for (let i = 0; i < 7; i++) {
       const a = -0.35 + i * 0.12;
@@ -946,144 +955,219 @@ footer p{max-width:90ch}
     ctx.restore();
   }
 
-  root.MHDraw = { C, E, seg, lerp, clamp, mix, stone, mapleLeaf, airTaxi, friendPaw, tuckFront, tuckFloat, cove, ripplesAround, waterOver, bokeh, thread, node, titlePage, ell, pip };
+
+  function pocketPlate(ctx, f, plateAlpha) {
+    const g = ctx.createLinearGradient(0, 0, 0, 1080);
+    g.addColorStop(0, C.zenith); g.addColorStop(0.52, C.zenith); g.addColorStop(0.8, C.sky); g.addColorStop(1, C.horizon);
+    ctx.fillStyle = g; ctx.fillRect(0, 0, 1920, 1080);
+    if (plateAlpha <= 0) return;
+    ctx.save(); ctx.globalAlpha = plateAlpha;
+    const pg = ctx.createLinearGradient(0, 560, 0, 1080);
+    pg.addColorStop(0, 'rgba(120,170,176,0)'); pg.addColorStop(0.18, 'rgba(104,160,160,0.85)'); pg.addColorStop(0.55, '#5E9C98'); pg.addColorStop(1, '#3F7F80');
+    ctx.fillStyle = pg; ctx.fillRect(0, 560, 1920, 520);
+    const dots = [[240, 760, 150, '252,235,180'], [560, 690, 70, '255,255,255'], [1500, 720, 160, '242,201,110'], [1740, 930, 110, '123,225,218'], [330, 980, 140, '63,169,179'], [1340, 990, 120, '217,138,43'], [1180, 650, 60, '255,255,255'], [120, 880, 80, '227,163,58']];
+    dots.forEach(([x, y, r, c], i) => { const dx = Math.sin(f * 0.03 + i) * 6; const rg = ctx.createRadialGradient(x + dx, y, r * 0.2, x + dx, y, r); rg.addColorStop(0, `rgba(${c},0.32)`); rg.addColorStop(0.8, `rgba(${c},0.2)`); rg.addColorStop(1, `rgba(${c},0)`); ctx.fillStyle = rg; ell(ctx, x + dx, y, r, r); ctx.fill(); });
+    ctx.restore();
+  }
+  // the title page type, at the brand kit's positions (Sky colourway); the rule is drawn separately by the threads
+  function titleType(ctx, f, t0, opts, alpha) {
+    const k = (d) => E.settle(clamp((f - t0 - d) / 12, 0, 1)), A = alpha == null ? 1 : alpha;
+    ctx.save(); ctx.textBaseline = 'alphabetic';
+    let a = k(0); ctx.globalAlpha = a * A; ctx.font = `600 56px ${opts.text}`; ctx.textAlign = 'left';
+    const w1 = ctx.measureText('DeRec ').width, w2 = ctx.measureText('Alliance').width, x0 = 960 - (w1 + w2) / 2, y1 = 252 + (1 - a) * 12;
+    ctx.fillStyle = C.gilt; ctx.fillText('DeRec', x0, y1); ctx.fillStyle = C.paper; ctx.fillText('Alliance', x0 + w1, y1);
+    a = k(3); ctx.globalAlpha = a * A; ctx.textAlign = 'center'; ctx.fillStyle = C.paper; ctx.font = `600 176px ${opts.display}`;
+    ctx.fillText('Many Hands', 960, 456 + (1 - a) * 12);
+    a = k(6); ctx.globalAlpha = a * A; ctx.font = `600 32px ${opts.text}`;
+    if (ctx.letterSpacing !== undefined) ctx.letterSpacing = '7px';
+    ctx.fillText('THE COMMUNITY PODCAST', 963, 592 + (1 - a) * 12);
+    if (ctx.letterSpacing !== undefined) ctx.letterSpacing = '0px';
+    ctx.restore();
+  }
+  function shieldMark(ctx, alpha, opts) {
+    ctx.save(); ctx.globalAlpha = alpha; ctx.translate(1824 - 77, 72 + 90);
+    ctx.beginPath(); ctx.moveTo(-72, -86); ctx.lineTo(72, -86); ctx.quadraticCurveTo(78, 28, 0, 92); ctx.quadraticCurveTo(-78, 28, -72, -86); ctx.closePath();
+    ctx.fillStyle = '#10151A'; ctx.fill(); ctx.lineWidth = 6; ctx.strokeStyle = C.gilt; ctx.stroke();
+    ctx.fillStyle = 'rgba(242,201,110,0.85)'; ctx.font = `600 17px ${opts.text}`; ctx.textAlign = 'center'; ctx.fillText('SHIELD', 0, -8); ctx.fillText('MASTER', 0, 14);
+    ctx.restore();
+  }
+  // a thread drawn along a polyline, 0..1 of its length
+  function threadPath(ctx, pts, prog) {
+    if (prog <= 0) return;
+    const seg = []; let L = 0;
+    for (let i = 1; i < pts.length; i++) { const d = Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]); seg.push(d); L += d; }
+    let rem = L * clamp(prog, 0, 1);
+    const path = () => { ctx.beginPath(); ctx.moveTo(pts[0][0], pts[0][1]); let r = rem;
+      for (let i = 1; i < pts.length && r > 0; i++) { const t = Math.min(1, r / seg[i - 1]); ctx.lineTo(lerp(pts[i - 1][0], pts[i][0], t), lerp(pts[i - 1][1], pts[i][1], t)); r -= seg[i - 1]; } };
+    ctx.save(); ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+    ctx.shadowColor = 'rgba(242,201,110,0.9)'; ctx.shadowBlur = 14; ctx.strokeStyle = C.gilt; ctx.lineWidth = 4; path(); ctx.stroke();
+    ctx.shadowBlur = 0; ctx.strokeStyle = C.filament; ctx.lineWidth = 1.4; path(); ctx.stroke(); ctx.restore();
+  }
+  // smooth a control polygon into a dense polyline (Catmull-Rom)
+  function smooth(pts, n) {
+    const out = [];
+    for (let i = 0; i < pts.length - 1; i++) {
+      const p0 = pts[Math.max(0, i - 1)], p1 = pts[i], p2 = pts[i + 1], p3 = pts[Math.min(pts.length - 1, i + 2)];
+      for (let j = 0; j < n; j++) { const t = j / n, t2 = t * t, t3 = t2 * t;
+        out.push([0.5 * (2 * p1[0] + (-p0[0] + p2[0]) * t + (2 * p0[0] - 5 * p1[0] + 4 * p2[0] - p3[0]) * t2 + (-p0[0] + 3 * p1[0] - 3 * p2[0] + p3[0]) * t3),
+                  0.5 * (2 * p1[1] + (-p0[1] + p2[1]) * t + (2 * p0[1] - 5 * p1[1] + 4 * p2[1] - p3[1]) * t2 + (-p0[1] + 3 * p1[1] - 3 * p2[1] + p3[1]) * t3)]); }
+    }
+    out.push(pts[pts.length - 1]); return out;
+  }
+
+  root.MHDraw = { C, E, seg, lerp, clamp, mix, stone, mapleLeaf, airTaxi, friendPaw, tuckFront, tuckFloat, cove, ripplesAround, waterOver, bokeh, thread, node, titlePage, ell, pip, pocketPlate, titleType, shieldMark, threadPath, smooth };
 })(typeof window !== 'undefined' ? window : globalThis);
 
 </script>
 <script>
-/* Many Hands — Episode 01 cold open, "The Float". Frame-accurate at 24 fps; 120 frames = 5.00 s.
-   Every beat reads from K (keyframes), so the storyboard's hit-point table maps onto it one to one. */
+/* Many Hands — Episode 01 cold open, "The Float". Frame-accurate to intro/COLD-OPEN-STORYBOARD.md.
+   24 fps; 120 frames = 5.00 s; bar one f0–f59, bar two f60–f119; the locked ritual master is f54–f119. */
 (function (root) {
   const FPS = 24, END = 120, TAIL = 36;
-  const K = {
-    leafIn: 0, leafLand: 45, popOnHead: 60,              // bar one: the activity, hit on f60 ("WORK" + clap)
-    hushStart: 60, pocketIn: 66,                          // match into the pocket shot
-    pat: 69, stoneUp: [70, 78],                           // pat once; stone up to the lens
-    paw1: [76, 84], plink1: 84, paw2: [82, 90], plink2: 90, // two friends arrive; identical share sounds
-    breath: [90, 93], bloom: 93, glowHold: [93, 108],     // held breath, then all three light (15 frames)
-    release: [99, 111], tilt: [101, 113],                 // threads lift off the stones; camera rises to the sky
-    title: 104, button: 120,                               // title page settles; the rule is drawn by the threads
-  };
   const HITS = [
-    [0, 'Downbeat. Already mid-float'], [15, '"HANDS": the leaf turns'], [45, '"LIGHT": the leaf lands'],
-    [60, '"WORK": clap. The leaf becomes a hat'], [69, 'Pat'], [84, 'Plink: a friend’s stone'], [90, 'Plink: another'],
-    [93, 'Home chord: all three light'], [104, 'Title page'], [120, 'Button: cut to the hosts'],
+    [0, 'Downbeat: already afloat'], [15, '“HANDS”: cut to the medium shot'], [30, 'The leaf lands. The one activity sound.'],
+    [45, '“LIGHT”: the leaf becomes a hat'], [54, 'The hush: cut into the locked ritual'], [60, '“WORK”: the clap, the pat, the title settles'],
+    [68, 'One stone, alone. Nothing glows.'], [75, 'Plink: Gran’s stone. Still dark.'], [82, 'Plink: the Harbourmaster’s stone. Still dark.'],
+    [90, 'Home: all three light at once'], [102, 'The release: two threads rise'], [113, 'The threads meet on the rule'], [120, 'The button: cut to the hosts'],
   ];
+
+  // Tuck's stone and the friends' stones meet just under her chin (storyboard §2, beat 7)
+  const TUCK = { x: 960, y: 772, s: 1.2 };
+  const STONE_REST = [0, 105];                         // local, held at the lens
+  const THREAD_L = [[848, 896], [700, 866], [604, 772], [578, 644], [596, 556], [672, 530], [794, 528], [960, 528]];
+  const THREAD_R = THREAD_L.map(([x, y]) => [1920 - x, y]);
 
   function render(ctx, f, fonts) {
     const D = root.MHDraw, s = D.seg, E = D.E, lerp = D.lerp;
     ctx.save(); ctx.clearRect(0, 0, 1920, 1080);
-    const tiltT = s(f, K.tilt[0], K.tilt[1], E.leaf);
-    if (f < K.pocketIn) {
-      // ---- bar one: the float ----
-      const push = s(f, K.hushStart, K.pocketIn, E.tuck); // slow push that becomes the match
-      ctx.save(); ctx.translate(960, 700); ctx.scale(1 + push * 0.5, 1 + push * 0.5); ctx.translate(-960 + push * 120, -700 + push * 60);
+
+    if (f < 54) {
+      // ---------------- bar one: the float (shot 1 wide f0–14, shot 2 medium f15–53) ----------------
+      const medium = f >= 15;
+      ctx.save();
+      if (medium) { ctx.translate(960, 640); ctx.scale(1.85, 1.85); ctx.translate(-960, -690); }
       D.cove(ctx, f);
-      D.airTaxi(ctx, lerp(1080, 1560, f / 66), 150 - f * 0.3, 1.5, f);
-      const bob = Math.sin(f / 7) * 5, fl = Math.sin(f / 5);
-      D.ripplesAround(ctx, 960, 700 + bob, 1.3, f);
-      const onHead = f >= K.popOnHead, lift = s(f, K.leafLand + 3, K.popOnHead, E.settle);
-      const blink = (f > 30 && f < 34) ? Math.sin((f - 30) / 4 * Math.PI) : 0;
-      D.tuckFloat(ctx, { x: 960, y: 700, s: 1.3, bob: bob, flipper: fl, pawLift: onHead ? 0 : lift, leafInPaws: f >= K.leafLand && !onHead, leafOnHead: onHead, blink: blink });
-      D.waterOver(ctx, 960, 700 + bob, 1.3);
-      if (f < K.leafLand) {
-        // the leaf spins down along a lazy S toward her chest
-        const t = f / K.leafLand, x = lerp(1180, 900, t) + Math.sin(t * 7) * 60, y = lerp(-60, 610, E.breath(t));
-        D.mapleLeaf(ctx, x, y + bob * t, 1.05, t * 9);
+      D.airTaxi(ctx, lerp(1080, 1600, f / 54), 150 - f * 0.25, 1.5, f);
+      const bob = Math.sin(f / 7) * 4;
+      const kick = (f >= 47 && f < 51) ? Math.sin((f - 47) / 4 * Math.PI) : (f >= 52 && f < 56) ? Math.sin((f - 52) / 4 * Math.PI) : 0;
+      const scull = Math.sin(f / 7.5 * Math.PI) * (f < 30 ? 1 : 0.3);
+      D.ripplesAround(ctx, 960, 690 + bob, 1.2, f);
+      const lift = f < 35 ? 0 : s(f, 35, 44, E.settle), onHead = f >= 45;
+      const surprise = (f >= 30 && f < 35) ? 1 : 0;
+      D.tuckFloat(ctx, { x: 960, y: 690, s: 1.2, bob: bob, flipper: scull + kick * 1.4, pawLift: onHead ? 0 : lift * 0.8,
+        leafInPaws: f >= 30 && !onHead, leafOnHead: onHead, blink: surprise ? -0.25 : 0 });
+      D.waterOver(ctx, 960, 690 + bob, 1.2);
+      if (f < 30) {
+        // the leaf: high top right at f0, three flat turns, lands on her chest at f30
+        const t = f / 30, x = lerp(1330, 885, E.breath(t)) + Math.sin(t * Math.PI * 3) * 70 * (1 - t), y = lerp(70, 612, E.breath(t));
+        D.mapleLeaf(ctx, x, y + bob * t, 0.95, 0.4 + t * 6.3);
       }
       ctx.restore();
-      // the match: warm light closes in over the last frames of bar one
-      const m = s(f, K.hushStart + 2, K.pocketIn, null); if (m > 0) { ctx.fillStyle = `rgba(247,243,230,${m * 0.9})`; ctx.fillRect(0, 0, 1920, 1080); }
     } else {
-      // ---- bar two: the ritual (locked master) ----
-      const lift = tiltT * 1080;
-      ctx.save(); ctx.translate(0, lift);
-      D.bokeh(ctx, f, 0.55);
-      const inT = s(f, K.pocketIn, K.pocketIn + 6, E.settle);
-      const glow = f >= K.bloom ? Math.min(1, (f - K.bloom) / 3) : 0;
-      const up = s(f, K.stoneUp[0], K.stoneUp[1], E.settle);
-      const patT = f >= K.pat && f < K.pat + 4 ? Math.sin((f - K.pat) / 4 * Math.PI) : 0;
-      const blink = (f >= 112 && f < 118) ? Math.sin((f - 112) / 6 * Math.PI) : 0;
-      const stoneOut = f >= K.stoneUp[0];
-      const pawR = stoneOut ? [lerp(160, 70, up), lerp(250, 132, up)] : [lerp(92, 150, patT), lerp(230, 262, patT)];
-      const pawL = stoneOut ? [lerp(-40, -70, up), lerp(250, 132, up)] : [-40, 250];
-      D.tuckFront(ctx, { x: 960, y: 500 + (1 - inT) * 30, s: 1.5, leaf: true, pawL: pawL, pawR: pawR,
-        stone: stoneOut ? [lerp(168, 0, up), lerp(272, 124, up)] : null, stoneOut: stoneOut, glow: glow, blink: blink });
-      // friends: paws rise in from the lower edges; never a face, never touching each other
-      const p1 = s(f, K.paw1[0], K.paw1[1], E.settle), p2 = s(f, K.paw2[0], K.paw2[1], E.settle);
-      const out = s(f, 106, 114, E.tuck);
-      if (p1 > 0) D.friendPaw(ctx, 470, 1160 + out * 400, lerp(640, 838, p1), lerp(1240, 712, p1) + out * 400, D.C.gran, 'rgba(255,255,255,0.18)', glow, true, 1.15);
-      if (p2 > 0) D.friendPaw(ctx, 1450, 1160 + out * 400, lerp(1280, 1082, p2), lerp(1240, 712, p2) + out * 400, D.C.choc, 'rgba(255,255,255,0.1)', glow, false, 1.15);
+      // ---------------- bar two: the locked ritual master, f54–f119 ----------------
+      const melt = s(f, 114, 119, E.leaf);               // plate first...
+      const tuckAlpha = 1 - s(f, 116, 119, E.leaf);     // ...Tuck last
+      D.pocketPlate(ctx, f, 0.6 * (1 - melt) + 0.4 * (1 - melt));
+      const glow = f >= 90 ? Math.min(1, (f - 90 + 1) / 3) * (1 - s(f, 102, 105, null)) : 0;
+
+      // Tuck's action
+      const turn = f < 58 ? -18 * (1 - s(f, 54, 57, E.settle)) : 0;
+      const patT = (f >= 60 && f < 63) ? Math.sin((f - 59) / 3 * Math.PI) : 0;
+      const draw = s(f, 61, 65, E.settle), raise = s(f, 65, 67, E.settle);
+      const down = s(f, 103, 106, E.tuck);
+      const pat2 = (f >= 107 && f < 110) ? Math.sin((f - 106) / 3 * Math.PI) : (f >= 112 && f < 115) ? Math.sin((f - 111) / 3 * Math.PI) : 0;
+      let pawL = [-40, 250], pawR = [40, 250], stone = null;
+      if (f >= 60 && f < 61) { pawR = [150, 262]; }
+      else if (f >= 61 && f < 106) {
+        const out = [lerp(170, -40, draw), lerp(270, 240, draw)];
+        const held = [lerp(out[0], STONE_REST[0], raise), lerp(out[1], STONE_REST[1], raise)];
+        const st = [lerp(held[0], 168, down), lerp(held[1], 272, down)];
+        stone = st; pawL = [st[0] - 62, st[1] + 10]; pawR = [st[0] + 62, st[1] + 10];
+        if (f < 65) { pawL = [-40, 250]; pawR = [st[0] + 30, st[1] + 16]; }
+      } else if (f >= 106) { pawR = [lerp(92, 150, pat2), lerp(230, 262, pat2)]; }
+      else if (patT > 0) { pawR = [lerp(92, 150, patT), lerp(230, 262, patT)]; }
+      const blink = f >= 112 ? (f <= 114 ? (f - 111) / 3 : f <= 116 ? 1 : Math.max(0, 1 - (f - 116) / 3)) : 0;
+
+      // the friends: palms up, offering; from frame left low and frame right low; never touching each other
+      const aIn = s(f, 68, 75, E.settle), bIn = s(f, 74, 82, E.settle), away = s(f, 102, 109, E.tuck);
+      const gran = [lerp(560, 874, aIn), lerp(1200, 906, aIn) + away * 380];
+      const harb = [lerp(1360, 1046, bIn), lerp(1200, 906, bIn) + away * 380];
+
+      ctx.save(); ctx.globalAlpha = tuckAlpha;
+      D.tuckFront(ctx, { x: TUCK.x, y: TUCK.y, s: TUCK.s, leaf: true, turn: turn, pawL: pawL, pawR: pawR, stone: stone, stoneOut: stone != null && down < 1, glow: glow, blink: blink });
+      if (f >= 68 && away < 1) D.friendPaw(ctx, 300, 1180 + away * 380, gran[0], gran[1], '#5A3D2B', 'rgba(255,255,255,0.16)', glow, true, 1.0, 'sphere', false);
+      if (f >= 74 && away < 1) D.friendPaw(ctx, 1620, 1180 + away * 380, harb[0], harb[1], '#6B5646', 'rgba(255,255,255,0.12)', glow, false, 1.0, 'lozenge', true);
       ctx.restore();
-      // the release: two threads lift off the lit stones and rise into the sky, where they become the rule
-      if (f >= K.release[0]) {
-        const r = s(f, K.release[0], K.title + 8, E.draw);
-        const ry = 870 - 1080 + lift; // rule height on the title page, moving with the camera
-        const a = [[838, 712 + lift], [800, 400 + lift], [700, ry + 120], [854, 875]];
-        const b = [[1082, 712 + lift], [1120, 400 + lift], [1220, ry + 120], [1066, 875]];
-        if (f < K.title + 8) { D.thread(ctx, a, r); D.thread(ctx, b, r); }
-      }
-      if (f >= K.title - 4) {
-        ctx.save(); ctx.translate(0, lift - 1080);
-        ctx.globalAlpha = s(f, K.title - 4, K.title + 2, null);
-        D.titlePage(ctx, K.title, f, fonts);
-        ctx.restore();
-      } else if (tiltT > 0) {
-        ctx.save(); ctx.translate(0, lift - 1080); const g = ctx.createLinearGradient(0, 0, 0, 1080); g.addColorStop(0, D.C.zenith); g.addColorStop(0.62, D.C.sky); g.addColorStop(1, D.C.horizon); ctx.fillStyle = g; ctx.fillRect(0, 0, 1920, 1080); ctx.restore();
+
+      // the title page: shield present from f54; type settles on the clap, f60–f77
+      D.shieldMark(ctx, 1, fonts);
+      D.titleType(ctx, f, 60, fonts, 1);
+      // the release: two threads from the lit stones to the rule, meeting in the middle at f113; then the rule rests
+      if (f >= 102) {
+        const p = s(f, 102, 113, E.draw);
+        const L = D.smooth(THREAD_L, 10), R = D.smooth(THREAD_R, 10);
+        if (f < 114) { D.threadPath(ctx, L, p); D.threadPath(ctx, R, p); }
+        else { const fade = 1 - s(f, 114, 118, null); ctx.save(); ctx.globalAlpha = fade; D.threadPath(ctx, L.slice(0, L.length - 12), 1); D.threadPath(ctx, R.slice(0, R.length - 12), 1); ctx.restore();
+               D.thread(ctx, [[794, 528], [1126, 528]], 1); }
+        const n = f - 113; D.node(ctx, 960, 528, n < 0 ? 0 : n < 3 ? (n + 1) / 3 : Math.max(0, 1 - (n - 3) / 3));
       }
     }
-    // after the button: the cut to the hosts (animatic slate)
+
     if (f >= END) {
       ctx.fillStyle = '#123E32'; ctx.fillRect(0, 0, 1920, 1080);
-      ctx.fillStyle = '#F7F3E6'; ctx.textAlign = 'center'; ctx.font = `600 64px ${fonts.display}`;
-      ctx.fillText('Cut to: the wide two-shot', 960, 520);
-      ctx.font = `400 34px ${fonts.text}`; ctx.fillStyle = '#A9C6B9'; ctx.fillText('Bruce and Facundo, mid-smile, on the button chord', 960, 590);
+      ctx.fillStyle = '#F7F3E6'; ctx.textAlign = 'center'; ctx.font = `600 72px ${fonts.display}`;
+      ctx.fillText('Cut to the hosts', 960, 510);
+      ctx.font = `400 36px ${fonts.text}`; ctx.fillStyle = '#A9C6B9';
+      ctx.fillText('The wide two-shot. Bruce and Facundo, mid-smile, on the button chord.', 960, 580);
     }
     ctx.restore();
   }
 
+  // the storyboard's hit-point table (§4), as sound
   function schedule(eng, t0, opt) {
-    const sfx = !opt || opt.sfx !== false;
-    const N = root.MHAudio.N, b = 0.625, at = (fr) => t0 + fr / FPS;
-    // bar one: hook, chords, bass, snaps, shaker
-    eng.vibes(N.A4, at(0), 0.4); eng.vibes(N.B4, at(7.5), 0.4); eng.vibes(N.D5, at(15), 0.9);
+    const sfx = !opt || opt.sfx !== false, N = root.MHAudio.N, at = (fr) => t0 + fr / FPS;
+    // bar one
+    eng.vibes(N.A4, at(0), 0.45); eng.vibes(N.B4, at(7.5), 0.45); eng.vibes(N.D5, at(15), 1.0);
+    eng.rhodes([N.Fs3, N.A3, N.E4], at(0), 1.2);
+    eng.rhodes([N.Gs3, N.B3, N.E4], at(30), 1.25);           // E/D rings through the hush to f60
+    eng.bass(N.D2, at(0), 1, 1.2); eng.bass(N.D2, at(30), 0.8, 0.9); // bass stops for the hush at f54
     eng.guitar(N.B4, at(37.5), 0.8); eng.guitar(N.Gs4, at(45), 0.9);
-    eng.vibes(N.A4, at(60), 2.6, 0.9); eng.guitar(N.A4, at(60), 0.9);
-    eng.rhodes([N.Fs3, N.A3, N.E4], at(0), 1.2); eng.rhodes([N.Gs3, N.B3, N.E4], at(30), 1.2);
-    eng.rhodes([N.Fs3, N.B3, N.D4], at(60), 1.2, 0.9); eng.rhodes([N.E3, N.Bb3, N.D4], at(90), 1.1, 0.8);
-    eng.pad([N.D3, N.A3, N.Fs4], at(0), 4.9, 500, 5000, 3.13);
-    eng.bass(N.D2, at(0)); eng.bass(N.D2, at(30), 0.8); eng.bass(N.G2, at(60)); eng.bass(N.G2, at(90), 0.6);
     eng.snap(at(15)); eng.snap(at(45));
-    eng.shaker(at(0), at(105));
-    eng.clap(at(60)); if (sfx) { eng.leaf(at(45)); eng.leaf(at(60)); eng.lap(at(8), 0.8); eng.lap(at(38), 0.6); }
-    // bar two: the ritual's own sounds, sitting on the theme
-    if (sfx) {
-    eng.pat(at(K.pat)); eng.setDown(at(K.plink1), -0.35); eng.setDown(at(K.plink2), 0.35);
-    eng.crotale(at(K.bloom), 0.7, true);
-    eng.rhodes([N.E3, N.A3, N.D4, N.Fs4], at(K.bloom), 0.9, 0.55, 0.15);
-    eng.pat(at(113)); eng.pat(at(116));
-    }
-    // the button: home
-    eng.vibes(N.Fs5, at(120), 1.8, 0.9); [N.D3, N.A3, N.D4, N.Fs4].forEach((n, i) => eng.guitar(n, at(120) + i * 0.02, 0.8));
-    eng.rhodes([N.E3, N.A3, N.D4, N.Fs4], at(120), 1.3, 1.0); eng.bass(N.D2, at(120));
+    eng.shaker(at(0), at(54));
+    eng.pad([N.D3, N.A3, N.Fs4], at(0), 5.0, 500, 5000, 3.75);
+    if (sfx) { eng.leaf(at(30)); eng.lap(at(47), 0.7); eng.lap(at(52), 0.6); }
+    // bar two
+    eng.vibes(N.A4, at(60), 2.2, 0.9); eng.guitar(N.A4, at(60), 0.9);
+    eng.rhodes([N.Fs3, N.B3, N.D4], at(60), 0.62, 0.9);      // Gmaj7, no bass
+    eng.clap(at(60));
+    eng.rhodes([N.E3, N.Bb3, N.D4], at(75), 0.62, 0.85);     // Gm6, the borrowed iv
+    eng.rhodes([N.E3, N.A3, N.D4, N.Fs4], at(90), 1.25, 1.0, 0.15); // home, bloomed
+    eng.crotale(at(90), 0.8, true); eng.bass(N.D2, at(90), 0.5, 1.2);
+    if (sfx) { eng.pat(at(60)); eng.setDown(at(75), -0.35); eng.setDown(at(82), 0.35); eng.pat(at(107)); eng.pat(at(112)); }
+    // the button
+    eng.vibes(N.Fs5, at(120), 1.8, 0.9);
+    [N.D3, N.A3, N.D4, N.Fs4].forEach((n, i) => eng.guitar(n, at(120) + i * 0.02, 0.8));
+    eng.rhodes([N.E3, N.A3, N.D4, N.Fs4], at(120), 1.3, 1.0); eng.bass(N.D2, at(120), 1, 1.4);
   }
 
-  root.MHTimeline = { FPS, END, TAIL, K, HITS, render, schedule };
+  root.MHTimeline = { FPS, END, TAIL, HITS, render, schedule };
 })(typeof window !== 'undefined' ? window : globalThis);
 
 </script>
 <script>
 window.MHData = {
-  restFrame: 100,
+  restFrame: 96,
   beats: [
-    { f0: 0, f1: 15, thumb: 8, title: 'Already floating', what: 'Hard in on the downbeat. Tuck drifts on her back in a sunlit autumn cove, flippers up.', music: 'A4 B4 D5 on vibes: "Ma-ny HANDS"' },
-    { f0: 15, f1: 45, thumb: 36, title: 'A leaf comes down', what: 'A maple leaf spins down on a lazy S and lands on her chest.', music: 'Guitar answers, B4 then G♯4: "make LIGHT"' },
-    { f0: 45, f1: 60, thumb: 56, title: 'A new hat', what: 'She lifts the leaf in both paws and sets it on her head.', music: 'Clap on "WORK", frame 60' },
-    { f0: 60, f1: 70, thumb: 68, title: 'The pocket pat', what: 'Into the pocket shot. One pat on the pocket under her left forearm.', music: 'The hush, then a felted pat', locked: true },
-    { f0: 70, f1: 84, thumb: 80, title: 'Her plain stone', what: 'She holds her stone up to you. Grey and matte. Nothing glows.', music: 'Plink: a friend’s stone touches', locked: true },
-    { f0: 84, f1: 93, thumb: 90, title: 'Two more friends', what: 'Two paws bring their own plain stones from below. No faces, never touching each other.', music: 'Plink, the same note. A held breath.', locked: true },
-    { f0: 93, f1: 104, thumb: 100, title: 'Enough hands', what: 'At the third stone, all three light amber at once. One never glows. Two never glow.', music: 'The home chord, faded in', locked: true },
-    { f0: 104, f1: 120, thumb: 118, title: 'The title page', what: 'Two threads rise off the stones into the sky and meet in the middle as the rule under Many Hands.', music: 'The breath, then the button at 5.00s', locked: true },
+    { f0: 0, f1: 15, thumb: 8, title: 'Already afloat', what: 'Wide. An autumn cove, Tuck on her back, a maple leaf already spinning high at top right. One air taxi over the terraces.', music: 'Vibes A4, B4 · “Ma-ny”' },
+    { f0: 15, f1: 30, thumb: 22, title: 'A leaf comes down', what: 'Cut closer on the hook’s top note. The leaf spirals down in three flat turns; her eyes follow it.', music: 'Vibes D5 · “HANDS” · the cut' },
+    { f0: 30, f1: 45, thumb: 40, title: 'It lands; she inspects it', what: 'It lands flat on her chest. A flash of surprise, then she holds it up in both paws, head tilted.', music: 'The one activity sound: a dry leaf on fur' },
+    { f0: 45, f1: 54, thumb: 50, title: 'A new hat', what: 'She sets it on her crown. Two lazy flipper kicks, then her eyes drift to frame left.', music: 'Guitar G♯4 · “LIGHT”' },
+    { f0: 54, f1: 60, thumb: 57, title: 'The hush', what: 'Cut into the locked pocket shot: sky above, Tuck below. She turns her face to you and holds still.', music: 'Snaps, shaker and bass stop', locked: true },
+    { f0: 60, f1: 75, thumb: 71, title: 'Pat · title · one stone', what: 'One pat on the pocket under her left forearm. “Many Hands” settles into the sky. She holds up one plain stone. It stays dark.', music: 'Clap on “WORK”', locked: true },
+    { f0: 75, f1: 90, thumb: 86, title: 'Two friends, still dark', what: 'Gran’s paw from the left, the Harbourmaster’s from the right, palms up. The stones touch. Nothing glows.', music: 'Plink · plink · a held breath', locked: true },
+    { f0: 90, f1: 102, thumb: 96, title: 'Home: all three light', what: 'At the third stone, all three light amber at once. One never glows. Two never glow.', music: 'The home chord blooms · crotale glint', locked: true },
+    { f0: 102, f1: 114, thumb: 109, title: 'The release', what: 'The light lifts off as two gold threads. They loop wide around her and draw the rule under the title, meeting in the middle.', music: 'The chord rings · pat', locked: true },
+    { f0: 112, f1: 120, thumb: 115, title: 'Pat-pat, a blink, the melt', what: 'The second pat, one slow content blink, and Tuck melts into the sky. The last frame is the title card.', music: 'Pat · the chord rings to the cut', locked: true },
   ],
   tuck: {
     statement: 'The friend who holds on to something for you and never asks what it is.',

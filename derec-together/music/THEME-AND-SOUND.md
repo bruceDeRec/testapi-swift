@@ -4,6 +4,8 @@
 
 ---
 
+*Timings in this document were reconciled with `intro/COLD-OPEN-STORYBOARD.md`, which owns every frame number (DECISIONS R5).*
+
 ## The sound on one page
 
 - **The theme is five seconds long, and it plays the show's proverb without words.** Its rhythm is "*Ma-ny hands make light work*". A vibraphone plays the first half and a nylon-string guitar answers with the second. They land together on one note, and a group of real people claps once.
@@ -23,7 +25,7 @@
 
 It should feel like stepping out onto a sunny terrace with a friend.
 
-It starts mid-motion. A bright, glassy vibraphone plays three rising notes, as if reaching for something, the way Bruce and Facundo reach toward the orbit of light on the cover. A warm nylon-string guitar answers. On the unheard word "work", both instruments land on the same note while a group of real people claps once. A single bronze glint catches the light as the show's lockup appears, and the harmony settles warmly underneath. On the fifth second, a last chord rings out as we cut to the two hosts, already mid-smile.
+It starts mid-motion. A bright, glassy vibraphone plays three rising notes, as if reaching for something, the way Bruce and Facundo reach toward the orbit of light on the cover. A warm nylon-string guitar answers. On the unheard word "work", both instruments land on the same note while a group of real people claps once. The harmony warms, two identical soft plinks sound, and as three stones light up together the home chord blooms with a single bronze glint. On the fifth second, a last chord rings out as we cut to the two hosts, already mid-smile.
 
 Three ideas carry it:
 
@@ -76,7 +78,7 @@ On one line: `| A4 B4 D5 (rest) B4 G♯4 | A4 ——————— | F♯5 (rin
 
 **The shape.** Three notes reach up (5̂–6̂–1̂). The line falls to the one surprising note, ♯4̂. Over E/D that note is the chord's third, so it sounds bright rather than wrong. It then rises by a half step into the long 5̂, and at the very end it leaps up a sixth to 3̂ over the home chord. Every memorable hook has one surprise, and here the G♯ is it. It also does the "slightly futuristic" work on its own.
 
-The long A4 in bar 2 is approached from both sides: the G♯ lifts into it from below, and the B♭ in the Gm6 sighs toward it from above. The melody holds still while the lockup appears, and the chords shift warmly beneath that one held note. The eye has plenty to do at that moment, so the ear isn't asked for more.
+The long A4 in bar 2 is approached from both sides: the G♯ lifts into it from below, and the B♭ in the Gm6 sighs toward it from above. The melody holds still through the whole ritual, and the chords shift warmly beneath that one held note until home arrives. The eye has plenty to do at that moment, so the ear isn't asked for more.
 
 Some eighth notes fall between frames. The picture only ever hits beats, which are always whole frames.
 
@@ -87,40 +89,44 @@ Some eighth notes fall between frames. The picture only ever hits beats, which a
 | **Hook, voice 1** | Vibraphone, soft yarn mallets, motor on slow (about 3–4 Hz) | "The spark": asks "*Ma-ny hands*" | Classic mid-century jazz colour, which is where the classiness comes from. Its metal bars echo the glass and light of the cover's world. Its attack carries on a phone speaker at low volume, so the tune reads without being loud. The slow motor adds a shimmer that relaxes rather than excites. | 0 dB |
 | **Hook, voice 2** | Nylon-string guitar, fingerpicked (no pick, no strumming) | "The steady hand": answers "*make light work*" and rolls the final chord | Human hands, heard clearly. A warm, rounded attack, with the warmth of the café and vineyard reference images. | −1 dB |
 | **Harmony** | Rhodes Mark I electric piano, light tremolo | Carries the chords | 1970s warmth that modern neo-soul made current again, so it bridges classic and modern. It sits below the hook's register. | −6 dB |
-| **Horizon** | Analog polysynth pad, Juno-60 style (two detuned saw waves, chorus on). Its low-pass filter opens from about 500 Hz to about 5 kHz between 0.00s and 3.13s. | The one openly modern colour: the sunrise | Warm futurism, never cold sci-fi. Felt more than heard. | −12 dB |
+| **Horizon** | Analog polysynth pad, Juno-60 style (two detuned saw waves, chorus on). Its low-pass filter opens from about 500 Hz to about 5 kHz between 0.00s and 3.75s, reaching fully open as the stones light. | The one openly modern colour: the sunrise | Warm futurism, never cold sci-fi. Felt more than heard. | −12 dB |
 | **Bass** | Upright bass, plucked | Holds the D pedal, moves to G, then comes home | Human, grounded and classic. On phones, its upper harmonics carry the root note even when the fundamental disappears. | −6 dB |
 | **Hands 1** | Finger snaps on beats 2 and 4 of bar 1 | Cool and relaxed, like a jazz club | Made by hands, not machines. | −10 dB |
-| **Hands 2** | Shaker, soft sixteenths, swung 56%, stopping at 4.38s | Motion: the fun under the calm | When it stops, it creates the breath before the button. | −18 dB |
+| **Hands 2** | Shaker, soft sixteenths, swung 56%, stopping at 2.25s (the hush) | Motion: the fun under the calm | When it stops, the ritual begins. | −18 dB |
 | **Hands 3** | One group hand clap by 6–12 real people, on "WORK" | The community, and the moment of delight | One clap, not a clap track. A clap track is the corporate-explainer cliché; a single clap is an event. | −4 dB |
-| **Glint** | Crotale (a small tuned antique cymbal) on A6, struck softly, preceded by a 0.31s reversed crotale swell | The lockup catching the light | Pure bronze, orchestral: the gold of the lockup. The reversed swell is the one modern production touch. | −8 dB |
+| **Glint** | Crotale (a small tuned antique cymbal) on A6, struck softly, preceded by a 0.31s reversed crotale swell | The three stones catching the light | Pure bronze, orchestral: the gold of the lit stones. The reversed swell is the one modern production touch. | −8 dB |
 
 No drum kit. No voice of any kind.
 
 ### Beat by beat
 
-| Time | Frame | Bar.beat | Music | Picture it should hit (for the storyboard team) |
+*Timings reconciled with `intro/COLD-OPEN-STORYBOARD.md` (§4), which owns them. The storyboard puts the activity in bar one and the locked ritual in bar two, per DECISIONS R3.*
+
+| Time | Frame | Bar.beat | Music | Picture it hits (from the storyboard) |
 |---|---|---|---|---|
-| **0.00s** | 0 | 1.1 | Everything enters on the first sample: vibes A4, Rhodes D(add9), bass D2, the pad (filter closed), the shaker. No pre-roll, no swell. | The first frame is already mid-motion. No title card, no black. |
+| **0.00s** | 0 | 1.1 | Everything enters on the first sample: vibes A4, Rhodes D(add9), bass D2, the pad (filter closed, opening), the shaker. No pre-roll, no swell. | The first frame is already mid-float. No title card, no black. |
 | 0.31s | 7.5 | 1.1& | Vibes B4. | |
-| **0.63s** | 15 | 1.2 | Vibes D5 ("HANDS"); snap. | Anticipation: the mascot winds up. |
-| 1.25s | 30 | 1.3 | E/D; the bass re-plucks D2; the melody rests. | A small secondary action. |
+| **0.63s** | 15 | 1.2 | Vibes D5 ("HANDS"); snap. | **Cut** to the medium shot. |
+| **1.25s** | 30 | 1.3 | E/D; the bass re-plucks D2; the melody rests. **This episode's activity sound.** | The activity's one delightful action (Ep01: the leaf lands on her chest). |
 | 1.56s | 37.5 | 1.3& | Guitar B4. | |
-| **1.88s** | 45 | 1.4 | Guitar G♯4 ("LIGHT"); snap. | The mascot commits to the action. |
-| **2.50s** | 60 | 2.1 | Gmaj7, bass G2. Vibes and guitar play A4 together ("WORK") and hold it. **Group clap.** **This episode's activity sound.** | **The hit.** The delightful action lands. |
-| 2.81s–3.13s | 67.5–75 | 2.1&–2.2 | Reversed crotale swell. | |
-| **3.13s** | 75 | 2.2 | Crotale A6. The pad's filter is fully open. | **The lockup appears**: *Many Hands* with the "DeRec Alliance" imprint. The mascot may stay in frame. |
-| 3.75s | 90 | 2.3 | Gm6; the bass re-plucks G2 softly. | The light warms, and the gold catches it. |
-| 4.38s | 105 | 2.4 | The breath: the shaker stops and nothing new sounds. | Hold. No motion. |
+| **1.88s** | 45 | 1.4 | Guitar G♯4 ("LIGHT"); snap. | The carry-over detail is on screen by now (Ep01: the leaf becomes a hat). |
+| **2.25s** | 54 | 1.4& | **The hush:** the snaps, the shaker and the bass stop. The pad and the E/D harmony ring on. | **Cut** into the locked ritual master: the pocket shot. |
+| **2.50s** | 60 | 2.1 | Gmaj7 (no bass). Vibes and guitar play A4 together ("WORK") and hold it. **Group clap.** | **The pocket pat.** The title page settles into the sky over f60–f77. |
+| **3.13s** | 75 | 2.2 | **Gm6**, the borrowed iv (B♭ sighs toward A). | **Plink** (S01): the first friend's stone touches. |
+| 3.42s | 82 | 2.2& | – | **Plink**, identical: the second friend's stone touches. |
+| 3.46s–3.71s | 83–89 | – | Nothing new: the held breath. | Three stones touching, still dull. |
+| **3.75s** | 90 | 2.3 | **Home: D(add9)** (Rhodes E3 A3 D4 F♯4 + pad), faded in over 0.15s rather than struck. The pad's filter reaches fully open. Bass D2, soft. **Crotale A6** glint (with its 0.31s reversed swell from 3.44s). | **All three stones light at once.** |
+| 4.25s–4.96s | 102–119 | 2.3&–2.4& | The home chord rings. Nothing new. | The threads rise and draw the rule, meeting at f113. Pat-pat on f107 and f112. The blink. |
 | **5.00s** | 120 | 3.1 | **Button**: D(add9), bass D2, vibes F♯5, and the guitar rolls a D chord (D3 A3 D4 F♯4, 20 ms between strings). | **Cut** to the wide two-shot. |
 | 5.00s–6.50s | 120–156 | – | Natural decay, reaching −60 dBFS by 6.50s. | The hosts are mid-smile; Bruce turns to camera. |
 
-The mascot gets 0.00s–3.13s (75 frames) for its activity, with the hit on frame 60. The lockup gets 45 frames before the cut, which is enough to read two words and an imprint. If the storyboard needs a different split, the picture moves; the music doesn't.
+**Why the harmony moved.** R3 made bar two a ritual that ends in recovery. The borrowed iv now sits under the first plink, and the home chord arrives exactly as the stones light. Gm6 to D(add9) is a plagal "amen" cadence, iv to I, so the moment of recovery is the music coming home. That is S03's rule ("the whole home chord at once") performed by the theme itself. The button at 5.00s restates home, struck, with the vibes' leap to F♯5 saved for it.
 
 ### The one sound that changes every episode
 
 The music is identical in every episode, down to the sample. What changes is **one sound effect for the mascot's activity**: a kayak paddle's splash (the lake image), a bicycle bell (the vineyard image), the click of a telescope's focus knob (the observatory image), a cork popping.
 
-- **It lands on a beat:** ideally at 2.50s (frame 60), with the clap, or on another beat between 0.63s and 2.50s.
+- **It lands on a beat in bar one:** frame 15, 30 or 45 (0.63s, 1.25s or 1.88s). Frame 30 is the default. Bar two belongs to the ritual, and the clap on frame 60 lands with the pocket pat.
 - **It lasts 0.50s at most** and sits at least 6 dB under the hook.
 - **Anything with pitch is tuned to D major pentatonic** (D E F♯ A B), so it never clashes.
 - **It's a real recording or library sound effect, never generated.** It's never a voice, a word, money, a lock or an alarm (see "What the show never sounds like", §4).
@@ -479,8 +485,8 @@ Shortlist three, and pay each $150 for a 5-second demo written against the brief
 > - Two bars, then a final downbeat at exactly 5.00s (the picture cut), ringing to 6.50s.
 > - Chords I – II/I – IV – iv – I: D(add9) → E/D → Gmaj7 → Gm6 → D(add9). No dominant chord.
 > - A hook in the rhythm of "many hands make light work". The vibraphone asks, the nylon guitar answers, both land together, and it ends on 3̂.
-> - Also: Rhodes, a warm analog pad whose filter opens, upright bass, finger snaps, one group clap on "work" (we supply the people), and a crotale glint on the lockup at 3.13s.
-> - Sync points: 2.50s (the hit), 3.13s (the lockup), 5.00s (the cut).
+> - Also: Rhodes, a warm analog pad whose filter opens, upright bass, finger snaps, one group clap on "work" (we supply the people), and a crotale glint as three stones light at 3.75s.
+> - Sync points: 1.25s (the activity), 2.25s (the hush), 2.50s (the clap), 3.13s and 3.42s (two plinks), 3.75s (home), 5.00s (the cut).
 >
 > The full detail, including every cue's timing, is in the attached THEME-AND-SOUND document.
 >

@@ -1,0 +1,37 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="fonts/local.css"><style>body{margin:0;background:#F7F3E6}canvas{display:block}</style></head><body>
+<canvas id="b" width="2040" height="1420"></canvas>
+<script src="audio.js"></script><script src="draw.js"></script><script src="timeline.js"></script>
+<script>
+const FONTS = { display: "'Fraunces', Georgia, serif", text: "'Atkinson Hyperlegible Next', system-ui, sans-serif" };
+const BEATS = [
+  [8, '1', 'f0–14', 'Already afloat', 'Wide. Downbeat, mid-motion.'],
+  [22, '2', 'f15–29', 'A leaf comes down', 'Cut on “HANDS”.'],
+  [40, '3', 'f30–44', 'It lands; she inspects it', 'The one activity sound, f30.'],
+  [50, '4', 'f45–53', 'A new hat', 'On “LIGHT”. Two lazy kicks.'],
+  [57, '5', 'f54–59', 'The hush', 'Cut into the locked ritual.'],
+  [71, '6', 'f60–74', 'Pat · title · one stone', 'Clap on “WORK”. It stays dark.'],
+  [86, '7', 'f75–89', 'Two friends, still dark', 'Plink, plink, a held breath.'],
+  [96, '8', 'f90–101', 'Home: all three light', 'The home chord blooms.'],
+  [109, '9', 'f102–113', 'The release', 'Threads draw the rule.'],
+  [115, '10', 'f112–119', 'Pat-pat, a blink, the melt', 'The page is complete.'],
+  [119, '11', 'f119', 'The title card', 'Last frame before the cut.'],
+  [130, '12', 'f120', 'The button', 'Hard cut to the hosts.'],
+];
+const off = document.createElement('canvas'); off.width = 1920; off.height = 1080; const o = off.getContext('2d');
+window.drawBoard = () => {
+  const c = document.getElementById('b').getContext('2d');
+  c.fillStyle = '#F7F3E6'; c.fillRect(0, 0, 2040, 1420);
+  c.fillStyle = '#123E32'; c.font = `600 44px ${FONTS.display}`; c.fillText('Many Hands · Episode 01 cold open, “The Float”', 40, 70);
+  c.fillStyle = '#1B7466'; c.font = `600 20px ${FONTS.text}`; c.fillText('ANIMATIC FRAMES · 24 FPS · 120 FRAMES = 5.00 s · TIMING SKETCH, NOT FINAL ART', 40, 108);
+  BEATS.forEach(([f, n, fr, t, sub], i) => {
+    const col = i % 4, row = Math.floor(i / 4), x = 40 + col * 495, y = 140 + row * 420, w = 475, h = 267;
+    MHTimeline.render(o, f, FONTS); c.drawImage(off, x, y, w, h);
+    c.strokeStyle = 'rgba(18,62,50,0.2)'; c.lineWidth = 2; c.strokeRect(x, y, w, h);
+    c.fillStyle = '#A8843D'; c.font = `600 40px ${FONTS.display}`; c.fillText(n, x, y + h + 52);
+    c.fillStyle = '#1B7466'; c.font = `400 20px ${FONTS.text}`; c.fillText(fr + (i >= 4 && i < 10 ? '  ·  locked' : ''), x + 58, y + h + 34);
+    c.fillStyle = '#123E32'; c.font = `600 26px ${FONTS.text}`; c.fillText(t, x + 58, y + h + 66);
+    c.fillStyle = '#44645A'; c.font = `400 21px ${FONTS.text}`; c.fillText(sub, x + 58, y + h + 96);
+  });
+  return document.getElementById('b').toDataURL('image/png');
+};
+</script></body></html>
