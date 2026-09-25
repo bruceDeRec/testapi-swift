@@ -180,7 +180,7 @@ These are storyboard §3's values. The storyboard owns them, and the studio buil
 **Also delivered with the master** (additions to the bible's list, needed for QC, comp and the archive):
 - `MH_RIT_MasterS1_v01_MATTE-STONES-ALL`: one matte covering all three stones, f61–f109. The stone QC script (§C2) reads it.
 - **Reference stills** as PNG at f54, f60, f75, f82, f90, f101, f113 and f119, with the Episode 01 comp, for QC comparisons.
-- **The *Light Work* vertical stamp pass:** the ritual master's f88–f111 (24 frames), rendered once as a native 1080×1920 pass through its own vertical camera, never cropped from the 16:9 master (R13, storyboard §7). Tuck's face sits near y 960 and the stones no lower than y 1380. The vertical camera is exported with the locators, so the carry-over can ride along.
+- **The vertical ritual pass:** the ritual master's f54–f119 (66 frames, containing the *Light Work* stamp's f88–f111), rendered once as a native 1080×1920 pass through its own vertical camera, never cropped from the 16:9 master (R13, storyboard §7). Tuck's face sits near y 960 and the stones no lower than y 1380. The vertical camera is exported with the locators, so the carry-over can ride along.
 - **The locked title page**, built once in the compositor (§C1): `MH_RIT_TitlePage_v01_DAY` and `_DUSK`, each as an RGBA pass and an Add pass.
 - **The skies:** `MH_BR_SkyDay_v01.png` and `MH_BR_SkyDusk_v01.png`, made by the script in §C3.
 - **The ritual-plate LUT:** `MH_BR_RitPlate-Warm300K_v01.cube`, a chromatic adaptation that renders a plate as if lit 300 K warmer, made once so both comp routes warm every plate identically.
@@ -197,7 +197,8 @@ The swap system (storyboard §5): bar one (f0–f53) changes every episode; the 
 | **Bar one** `MH_E01_BarOne_v01_BEAUTY.0000.exr` … `.0053` | **54 frames exactly.** f53 is a hard cut: no tail handle. UHD, multi-layer EXR as in §A8. |
 | **Head handles** `MH_E01_BarOne_v01_HEAD.0000.exr` … `.0011` | 12 frames before f0, for the editor. `.0011` is the frame before f0. |
 | **The plate** `MH_E01_PLATE_v01.psd` | Layered 2.5D matte painting (sky, far, middle, near, water or floor, and the "tomorrow" detail on its own layer so it can move). At least 5760×3240, so the medium shot can reframe it. |
-| **The carry-over layer** `MH_E01_CARRYOVER_v01_RGBA.0054.exr` … `.0119`, plus `MH_E01_CARRYOVER_v01.mov` | Rendered through the master camera, lit by the master's lights, on its one anchor. ProRes 4444 with alpha for the mov. |
+| **The carry-over layer** `MH_E01_CARRYOVER_v01_RGBA.0054.exr` … `.0119`, plus `MH_E01_CARRYOVER_v01.mov` | Rendered through the master camera, lit by the master's lights, on its one anchor. ProRes 4444 with alpha for the mov. Also rendered through the vertical ritual pass's camera (`..._VERT_...`), for the stamp and the 3.0-second cut. |
+| **The vertical head** `MH_E01_BarOne_v01_VERT.0048.exr` … `.0053` | 6 frames of bar one (f48–f53) as a native 1080×1920 pass, so the 3.0-second cut (storyboard §7) opens on the hat without cropping. Only needed for episodes that get a 3.0-second teaser. |
 | **The bumper** `MH_E01_BUMPER_v01.mov` | ProRes 422 HQ, 3840×2160, 120 frames, flagged 23.976 (playbook §4), Rec.709, no audio |
 | **A review copy** `MH_E01_REVIEW-BUMPER_v01.mp4` | H.264 with M01 laid in at sample 0, for the hosts' phones |
 | **The reprise** `MH_E01_REPRISE_v01.mov` | ProRes 4444 with alpha, sized for the end card's reprise area (x 1368–1824, y 522–1008) |
@@ -292,7 +293,7 @@ Signed: lead animator ______ date ______ · editor-producer ______ date ______
 | Rendering every pass, mattes and locators | 4–6 |
 | The comp templates, the locked title page, the skies, QC | 4–6 |
 | Episode 01: bar one, plate, carry-over, reprise | 7–10 |
-| The segment-tab engraving and the Light Work vertical stamp pass (f88–f111, native 1080×1920, rendered once) | 1–2 |
+| The segment-tab engraving and the vertical ritual pass (f54–f119, native 1080×1920, rendered once; holds the Light Work stamp) | 1.5–2.5 |
 | Direction, production and two rounds of revisions (about 15%) | 11–16 |
 | **Total** | **81–113 days: about $24,000–73,000. Plan on $46,000.** |
 

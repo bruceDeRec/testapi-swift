@@ -131,7 +131,7 @@ The music is identical in every episode, down to the sample. What changes is **o
 - **It lasts 0.50s at most** and sits at least 6 dB under the hook.
 - **Anything with pitch is tuned to D major pentatonic** (D E F♯ A B), so it never clashes.
 - **It's a real recording or library sound effect, never generated.** It's never a voice, a word, money, a lock or an alarm (see "What the show never sounds like", §4).
-- **The End Card reprise gets its twin:** the resolved version of the same sound (the fish lands, the cork pours), placed in a gap in the outtake's talk or laughter, or left out.
+- **The End Card reprise gets its twin:** the resolved version of the same sound (the leaf's soft slide over her eyes in Episode 01, the tray set down with one biscuit missing in Episode 05), placed in a gap in the outtake's talk or laughter, or left out.
 
 **Why:** FORMAT keeps the activity secret until the bumper. Regulars will listen for this one sound. The ritual stays intact and the surprise gets a sound of its own.
 
@@ -557,7 +557,9 @@ Shortlist three, and pay each $150 for a 5-second demo written against the brief
 
 Cut the logo sting, chapter bump and outro tag from its stems.
 
-### (c) AI generation
+### (c) AI generation [HOST GATE]
+
+R9 rules that no AI-generated music ships. This route is documented only so the hosts can see what they're declining. Using it at all would need both hosts to overturn R9.
 
 **The tools as of September 2026** [VERIFY the terms at the time of any use]:
 

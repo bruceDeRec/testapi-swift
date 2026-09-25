@@ -27,7 +27,7 @@
    - The playbook's studio schedule delivers only E01 by 28 October and E02 by 4 November. Episodes 04 and 07's bar ones can't exist by 4 November without pulling the whole studio schedule forward.
 
    The storyboard's frames don't change, and its §7 now sets the same date. **[HOST GATE]**
-2. **The Light Work stamp needs a native vertical render.** The stamp is the storyboard's 24 frames of the ritual master, f88–f111 (§7 there). The storyboard's crop (a full-height 9:16 window of the pocket shot) puts the stones at about 82% of frame height. That is inside the band the Shorts app covers with the title and channel name; the brand kit's safe area ends at 75%. §7 below gives the fix.
+2. **The Light Work stamp is a native vertical render** (R13, storyboard §7): the ritual master's f88–f111, with Tuck's face near y 960 and the stones no lower than y 1380, clear of the Shorts overlay. §7 below gives the render spec.
 3. **Thumbnail line length is measured.** I set the brand kit's thumbnail instance (Fraunces opsz 144, wght 720, SOFT 100, WONK 0, −20 tracking) and measured it. The page's text measure is 408 px, and at 112 px wide words overflow at about 8 characters. The brand kit's own example, "the lake?", measures 414 px. §4 replaces the character count with a width test.
 4. **The pinned comment merges three sources:** Episode 01's question, word for word, from the script; the playbook's consent wording; and the playbook's scam line.
 5. **Episode 01's Raised Hands never comes from the trailer's comments** (the script agrees): the trailer publishes on 4 November, after the 20 October recording. The trailer's thread feeds the clinic and the Light Work bank instead.
@@ -556,7 +556,7 @@ Light Work runs every Friday at 11:00 ET, at 30–60 seconds, vertical, with bur
 | **Frames** | The ritual master, **f88–f111**: 24 frames, which is 1.00s at 24 fps and 1.001s on the 23.976 fps Short. The storyboard owns these numbers. |
 | **What you see** | Three dull stones touching (f88–f89); all three light at f90; Tuck's quiet delight over f91–f94 (R10); the glow holds; the threads start to rise (f102–f111). The episode's carry-over rides along, on its anchor. |
 | **The render** | **A native 1080 × 1920 pass of those 24 frames,** from the locked animation, rendered once in the initial build, **textless** (no title page), with the carry-over anchor exported for vertical. The framing: Tuck's face centred near y 960 (50%); the stones no lower than y 1380 (72%), clear of the Shorts overlay; the house sky filling the top. Per-episode work stays one carry-over comp, as R4 requires. **[VERIFY]** the one-time cost with the studio (my estimate: about one animator-day plus render). **[VERIFY]** the framing against the Shorts app's overlay before it's locked (brand kit's [VERIFY] 3). |
-| **Why not the storyboard's crop** | A full-height 9:16 window of the pocket shot puts Tuck's face at about 65–70% of frame height and the stones near 82%, under the Shorts title and channel name. The storyboard's own note that her face sits "in the upper third" can't be true of that crop. From the 4K master the crop would at least be a downscale (1216 × 2160 to 1080 × 1920), but it doesn't move the stones. |
+| **Why a native pass, not a crop** | A full-height 9:16 crop of the pocket shot would put the stones near 82% of frame height, under the Shorts title and channel name. R13 therefore rules out any crop. |
 | **Wordmark** | *Light Work*, Fraunces 600 (the `MH Display Card` instance), 104 px, −10 tracking, Paper, centred on x 540, baseline y 400 (measured at 469 px wide). A still, present for all 24 frames, on the render's Zenith sky (6.67:1). No rule under it: the stones' own threads are rising in the same second. |
 | **Sound** | M06: S01's A5 ring into the home-chord bloom, 1.00s, silent on the last frame, so the loop back into the spoken question is clean (THEME §4, storyboard §7). Dialogue ends at least 0.5s before it. |
 | **Never** | The title page, the shield, Pip, or a limit line in the words just before it. |
@@ -580,7 +580,7 @@ Light Work runs every Friday at 11:00 ET, at 30–60 seconds, vertical, with bur
 | 43.50s–44.50s | The stamp | Episode 01's stamp, with the maple leaf riding along | M06 |
 
 - **Related video:** Episode 01. **Pinned comment:** as in §6. **Gate:** both hosts within 24 hours, and Facundo checks that the limit line is in (PLAYBOOK §8).
-- It departs from SEASON-ONE's "8:09–8:49" in two ways, both flagged. It starts at 8:17, so that the question is spoken in the first second, as the Episode 01 script asks. And it adds the "Still your job" close, under the rule above.
+- SEASON-ONE's LW001 row and the Episode 01 script's loop section match this cut: the ~8:17 start, the key line, the "Still your job" close, 0.5 s of room tone, then the stamp.
 
 ### Upload settings for every Short
 

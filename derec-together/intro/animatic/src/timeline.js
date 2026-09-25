@@ -35,7 +35,7 @@
         leafOnFace: onFace, leafInPaws: f >= 36 && !onHead, leafOnHead: onHead, blink: (f >= 36 && f < 40) ? Math.sin((f - 36) / 4 * Math.PI) : 0 });
       D.waterOver(ctx, 960, 690 + bob, 1.2);
       if (f < 30) {
-        // the leaf: high top right at f0, three flat turns, lands on her chest at f30
+        // the leaf: high top right at f0, three flat turns, lands flat over her face at f30 (R10)
         const t = f / 30, x = lerp(1330, 756, E.breath(t)) + Math.sin(t * Math.PI * 3) * 70 * (1 - t), y = lerp(70, 606, E.breath(t));
         D.mapleLeaf(ctx, x, y + bob * t, 0.95, 0.4 + t * 6.3);
       }
@@ -66,7 +66,7 @@
       const blink = f >= 112 ? (f <= 114 ? (f - 111) / 3 : f <= 116 ? 1 : Math.max(0, 1 - (f - 116) / 3)) : 0;
       const delight = f < 91 ? 0 : Math.min(1, (f - 90) / 4);
 
-      // the friends: palms up, offering; from frame left low and frame right low; never touching each other
+      // the friends: palms up, offering; rising from the bottom edge at x 700 (left) and x 1220 (right) (R11); never touching each other
       const aIn = s(f, 68, 75, E.settle), bIn = s(f, 74, 82, E.settle), away = s(f, 102, 109, E.tuck);
       const gran = [lerp(760, 874, aIn), lerp(1260, 922, aIn) + away * 380];
       const harb = [lerp(1160, 1046, bIn), lerp(1260, 922, bIn) + away * 380];

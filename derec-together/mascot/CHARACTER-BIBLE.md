@@ -347,7 +347,7 @@ Everything below is rendered in the initial build, so nothing in the ritual is e
 | **Anchor locators** for the carry-over layer (exported 3D nulls, per frame) | Crown, forehead, left ear, right ear, brow, left cheek, right cheek, nose, scarf knot |
 | The New Stones head (f48–f53) | One |
 | The threads | Drawn once in 2D, on ones (12 drawings, f102–f113, R12), as a separate layer |
-| The *Light Work* stamp: ritual frames f88–f111 as a native 1080×1920 textless pass (storyboard §7, R13). Face near y 960, stones no lower than y 1380. | One |
+| The vertical ritual pass: ritual frames f54–f119 (66 frames) as a native 1080×1920 textless pass (storyboard §7, R13). It holds the *Light Work* stamp (f88–f111) and the 3.0-second cut's ritual. Face near y 960, stones no lower than y 1380. | One |
 
 ---
 

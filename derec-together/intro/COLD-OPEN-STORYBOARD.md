@@ -255,7 +255,7 @@ FORMAT §7 allows the mascot in Shorts only as a one-second stamp at the loop po
 | | |
 |---|---|
 | **Source** | The bumper's own f48–f119, exactly 72 frames. It opens on the hat already on her head, runs the hush, the pat and the stones to the threshold, and ends on the finished title page. |
-| **Framing** | The same native vertical pass as the stamp, extended to f48–f119, never a crop (R13). The title page is re-set for vertical in the top third, from the same type sizes scaled to 1080 px wide, so it is never a squeezed crop of the horizontal title. The shield moves to top centre above the imprint. |
+| **Framing** | f54–f119 from the native vertical ritual pass (R13), with f48–f53 from a 6-frame vertical pass of that episode's bar one, rendered per episode and never a crop (`production/PROMPT-PACK.md` §A6). The title page is re-set for vertical in the top third, from the same type sizes scaled to 1080 px wide, so it is never a squeezed crop of the horizontal title. The shield moves to top centre above the imprint. |
 | **Sound** | The theme from f48 (the tail of "LIGHT" into "WORK"), ending on the f120 button, tail trimmed to 0.25s. |
 | **Not used as** | The cold open of any flagship. It's a teaser, not the ritual. |
 

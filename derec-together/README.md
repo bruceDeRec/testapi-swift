@@ -4,7 +4,7 @@
 
 The flagship runs 12–18 minutes and premieres every other Wednesday. A weekly *Light Work* Short goes out every Friday. Every episode opens with the same five-second cold open: Tuck the sea otter is off doing something different each time, and every time it ends with the same small ritual. It's three plain stones that mean nothing alone, and they light up together when enough friends bring theirs.
 
-> *Bruce:* "Many hands…"  *Facundo:* "…make light work."
+> *Bruce:* "Many hands—"  *Facundo:* "—light work."
 
 ## Start here
 
