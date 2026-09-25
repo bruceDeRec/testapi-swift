@@ -63,7 +63,7 @@ These address the craft judge's objections:
 - **The ritual master is animated by hand once, rendered once, and locked.**
   - The carry-over detail is a separate tracked layer composited on top, so nothing is re-rendered per episode.
   - Only the defocused background plate behind the ritual changes.
-- **Per episode, the new work is** about 2.5 seconds of activity animation, one plate, one carry-over layer, and one activity sound effect.
+- **Per episode, the new work is** about 2.25 seconds (54 frames, f0–f53; storyboard §5) of activity animation, one plate, one carry-over layer, and one activity sound effect.
 - **Every plate carries exactly one "tomorrow" detail:** an air taxi, an autonomous shuttle, a crystalline skyline, or a café robot. That guarantees the touch of modernity.
 - **Tuck's Year.** Each episode's activity matches the month it airs, so the regulars' season matches hers.
 

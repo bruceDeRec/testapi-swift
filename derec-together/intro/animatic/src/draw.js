@@ -175,6 +175,10 @@
       if (bl > 0.4) { ctx.fillStyle = C.gilt; ell(ctx, 3.5, -4, 3, 3); ctx.fill(); }
       ctx.restore();
       if (bl < 0.4) { ctx.strokeStyle = C.eye; ctx.lineWidth = 3.5; ctx.beginPath(); ctx.moveTo(ex - 11, -3); ctx.quadraticCurveTo(ex, 3, ex + 11, -3); ctx.stroke(); }
+      else if (st.delight > 0) { // cheeks rise: a cream lower lid pushes up under each eye, so the eyes smile
+        const dl = st.delight, ex2 = ex * (1 - Math.abs(tx) / 90);
+        ctx.fillStyle = C.cream; ctx.beginPath(); ctx.ellipse(ex2, -4 + 13 - dl * 7, 14, 9, 0, Math.PI, 0, true); ctx.fill();
+      }
     });
     // whisker pads, nose, mouth
     ell(ctx, -20, 46, 24, 17); ctx.fillStyle = C.whisker; ctx.fill();
@@ -182,14 +186,14 @@
     ctx.fillStyle = 'rgba(18,62,50,0.28)'; [[-30, 44], [-22, 50], [-14, 42], [30, 44], [22, 50], [14, 42]].forEach(([a, b]) => { ell(ctx, a, b, 1.6, 1.6); ctx.fill(); });
     ctx.beginPath(); ctx.moveTo(-19, 20); ctx.quadraticCurveTo(0, 14, 19, 20); ctx.quadraticCurveTo(12, 36, 0, 38); ctx.quadraticCurveTo(-12, 36, -19, 20); ctx.closePath();
     ctx.fillStyle = C.eye; ctx.fill(); ctx.fillStyle = 'rgba(255,255,255,0.25)'; ell(ctx, -6, 22, 5, 2.5); ctx.fill();
-    ctx.strokeStyle = C.eye; ctx.lineWidth = 2.6; ctx.beginPath(); ctx.moveTo(0, 38); ctx.lineTo(0, 50); ctx.moveTo(-12, 58); ctx.quadraticCurveTo(0, 64, 12, 58); ctx.stroke();
+    const sm = st.delight || 0; ctx.strokeStyle = C.eye; ctx.lineWidth = 2.6; ctx.beginPath(); ctx.moveTo(0, 38); ctx.lineTo(0, 50); ctx.moveTo(-12 - sm * 4, 57 - sm * 2); ctx.quadraticCurveTo(0, 64 + sm * 3, 12 + sm * 4, 57 - sm * 2); ctx.stroke();
     ctx.restore();
     // whiskers, seven a side
     for (let i = 0; i < 7; i++) {
       const a = -0.35 + i * 0.12;
       [-1, 1].forEach(side => {
         ctx.strokeStyle = 'rgba(18,62,50,0.35)'; ctx.lineWidth = 3.2;
-        const x0 = side * 30, y0 = 44 + (i - 3) * 2.5, x1 = side * (150 + i * 3), y1 = y0 + Math.sin(a) * 60 + 8;
+        const x0 = side * 30, y0 = 44 + (i - 3) * 2.5, x1 = side * (150 + i * 3), y1 = y0 + Math.sin(a) * 60 + 8 - (st.delight || 0) * 14;
         ctx.beginPath(); ctx.moveTo(x0, y0); ctx.quadraticCurveTo(side * 95, y0 + (i - 3) * 3, x1, y1); ctx.stroke();
         ctx.strokeStyle = C.whisker; ctx.lineWidth = 1.8; ctx.stroke();
       });
@@ -248,6 +252,7 @@
     ctx.beginPath(); ctx.moveTo(-22, 14); ctx.quadraticCurveTo(-9, 9, 4, 14); ctx.quadraticCurveTo(-2, 25, -9, 26); ctx.quadraticCurveTo(-16, 25, -22, 14); ctx.fillStyle = C.eye; ctx.fill();
     for (let i = 0; i < 5; i++) { ctx.strokeStyle = C.whisker; ctx.lineWidth = 1.4; ctx.beginPath(); ctx.moveTo(-30, 30 + i * 2); ctx.quadraticCurveTo(-70, 26 + i * 4, -104, 22 + i * 7); ctx.stroke(); ctx.beginPath(); ctx.moveTo(14, 30 + i * 2); ctx.quadraticCurveTo(48, 26 + i * 4, 76, 20 + i * 7); ctx.stroke(); }
     if (st.leafOnHead) mapleLeaf(ctx, 6, -64, 0.78, 0.3);
+    if (st.leafOnFace) mapleLeaf(ctx, -8, 12, 1.25, 0.15);
     ctx.restore();
     // paws on the chest (they lift the leaf)
     const lift = st.pawLift || 0;
@@ -419,9 +424,9 @@
     ctx.fillStyle = g; ctx.fillRect(0, 0, 1920, 1080);
     if (plateAlpha <= 0) return;
     ctx.save(); ctx.globalAlpha = plateAlpha;
-    const pg = ctx.createLinearGradient(0, 560, 0, 1080);
-    pg.addColorStop(0, 'rgba(120,170,176,0)'); pg.addColorStop(0.18, 'rgba(104,160,160,0.85)'); pg.addColorStop(0.55, '#5E9C98'); pg.addColorStop(1, '#3F7F80');
-    ctx.fillStyle = pg; ctx.fillRect(0, 560, 1920, 520);
+    const pg = ctx.createLinearGradient(0, 616, 0, 1080);
+    pg.addColorStop(0, 'rgba(120,170,176,0)'); pg.addColorStop(0.103, 'rgba(104,160,160,0.9)'); pg.addColorStop(0.5, '#5E9C98'); pg.addColorStop(1, '#3F7F80');
+    ctx.fillStyle = pg; ctx.fillRect(0, 616, 1920, 464);
     const dots = [[240, 760, 150, '252,235,180'], [560, 690, 70, '255,255,255'], [1500, 720, 160, '242,201,110'], [1740, 930, 110, '123,225,218'], [330, 980, 140, '63,169,179'], [1340, 990, 120, '217,138,43'], [1180, 650, 60, '255,255,255'], [120, 880, 80, '227,163,58']];
     dots.forEach(([x, y, r, c], i) => { const dx = Math.sin(f * 0.03 + i) * 6; const rg = ctx.createRadialGradient(x + dx, y, r * 0.2, x + dx, y, r); rg.addColorStop(0, `rgba(${c},0.32)`); rg.addColorStop(0.8, `rgba(${c},0.2)`); rg.addColorStop(1, `rgba(${c},0)`); ctx.fillStyle = rg; ell(ctx, x + dx, y, r, r); ctx.fill(); });
     ctx.restore();
@@ -435,7 +440,7 @@
     ctx.fillStyle = C.gilt; ctx.fillText('DeRec', x0, y1); ctx.fillStyle = C.paper; ctx.fillText('Alliance', x0 + w1, y1);
     a = k(3); ctx.globalAlpha = a * A; ctx.textAlign = 'center'; ctx.fillStyle = C.paper; ctx.font = `600 176px ${opts.display}`;
     ctx.fillText('Many Hands', 960, 456 + (1 - a) * 12);
-    a = k(6); ctx.globalAlpha = a * A; ctx.font = `500 32px ${opts.text}`;
+    a = k(6); ctx.globalAlpha = a * A; ctx.font = `600 32px ${opts.text}`;
     if (ctx.letterSpacing !== undefined) ctx.letterSpacing = '7px';
     ctx.fillText('THE COMMUNITY PODCAST', 963, 592 + (1 - a) * 12);
     if (ctx.letterSpacing !== undefined) ctx.letterSpacing = '0px';

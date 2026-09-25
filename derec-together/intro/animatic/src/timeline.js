@@ -30,14 +30,13 @@
       const kick = (f >= 47 && f < 51) ? Math.sin((f - 47) / 4 * Math.PI) : (f >= 52 && f < 56) ? Math.sin((f - 52) / 4 * Math.PI) : 0;
       const scull = Math.sin(f / 7.5 * Math.PI) * (f < 30 ? 1 : 0.3);
       D.ripplesAround(ctx, 960, 690 + bob, 1.2, f);
-      const lift = f < 35 ? 0 : s(f, 35, 44, E.settle), onHead = f >= 45;
-      const surprise = (f >= 30 && f < 35) ? 1 : 0;
-      D.tuckFloat(ctx, { x: 960, y: 690, s: 1.2, bob: bob, flipper: scull + kick * 1.4, pawLift: onHead ? 0 : lift * 0.8,
-        leafInPaws: f >= 30 && !onHead, leafOnHead: onHead, blink: surprise ? -0.25 : 0 });
+      const onFace = f >= 30 && f < 36, peel = s(f, 35, 40, E.settle), onHead = f >= 45;
+      D.tuckFloat(ctx, { x: 960, y: 690, s: 1.2, bob: bob, flipper: (f >= 30 && f < 36) ? 0 : scull + kick * 1.4, pawLift: onHead ? 0 : peel * 0.8,
+        leafOnFace: onFace, leafInPaws: f >= 36 && !onHead, leafOnHead: onHead, blink: (f >= 36 && f < 40) ? Math.sin((f - 36) / 4 * Math.PI) : 0 });
       D.waterOver(ctx, 960, 690 + bob, 1.2);
       if (f < 30) {
         // the leaf: high top right at f0, three flat turns, lands on her chest at f30
-        const t = f / 30, x = lerp(1330, 885, E.breath(t)) + Math.sin(t * Math.PI * 3) * 70 * (1 - t), y = lerp(70, 612, E.breath(t));
+        const t = f / 30, x = lerp(1330, 756, E.breath(t)) + Math.sin(t * Math.PI * 3) * 70 * (1 - t), y = lerp(70, 606, E.breath(t));
         D.mapleLeaf(ctx, x, y + bob * t, 0.95, 0.4 + t * 6.3);
       }
       ctx.restore();
@@ -65,16 +64,17 @@
       } else if (f >= 106) { pawR = [lerp(92, 150, pat2), lerp(230, 262, pat2)]; }
       else if (patT > 0) { pawR = [lerp(92, 150, patT), lerp(230, 262, patT)]; }
       const blink = f >= 112 ? (f <= 114 ? (f - 111) / 3 : f <= 116 ? 1 : Math.max(0, 1 - (f - 116) / 3)) : 0;
+      const delight = f < 91 ? 0 : Math.min(1, (f - 90) / 4);
 
       // the friends: palms up, offering; from frame left low and frame right low; never touching each other
       const aIn = s(f, 68, 75, E.settle), bIn = s(f, 74, 82, E.settle), away = s(f, 102, 109, E.tuck);
-      const gran = [lerp(560, 874, aIn), lerp(1200, 922, aIn) + away * 380];
-      const harb = [lerp(1360, 1046, bIn), lerp(1200, 922, bIn) + away * 380];
+      const gran = [lerp(760, 874, aIn), lerp(1260, 922, aIn) + away * 380];
+      const harb = [lerp(1160, 1046, bIn), lerp(1260, 922, bIn) + away * 380];
 
       ctx.save(); ctx.globalAlpha = tuckAlpha;
-      D.tuckFront(ctx, { x: TUCK.x, y: TUCK.y, s: TUCK.s, leaf: true, turn: turn, pawL: pawL, pawR: pawR, stone: stone, stoneOut: stone != null && down < 1, glow: glow, blink: blink });
-      if (f >= 68 && away < 1) D.friendPaw(ctx, 300, 1180 + away * 380, gran[0], gran[1], '#5A3D2B', 'rgba(255,255,255,0.16)', glow, true, 1.0, 'sphere', false);
-      if (f >= 74 && away < 1) D.friendPaw(ctx, 1620, 1180 + away * 380, harb[0], harb[1], '#6B5646', 'rgba(255,255,255,0.12)', glow, false, 1.0, 'lozenge', true);
+      D.tuckFront(ctx, { x: TUCK.x, y: TUCK.y, s: TUCK.s, leaf: true, turn: turn, pawL: pawL, pawR: pawR, stone: stone, stoneOut: stone != null && down < 1, glow: glow, blink: blink, delight: delight });
+      if (f >= 68 && away < 1) D.friendPaw(ctx, 700, 1200 + away * 380, gran[0], gran[1], '#5A3D2B', 'rgba(255,255,255,0.16)', glow, true, 1.0, 'sphere', false);
+      if (f >= 74 && away < 1) D.friendPaw(ctx, 1220, 1200 + away * 380, harb[0], harb[1], '#6B5646', 'rgba(255,255,255,0.12)', glow, false, 1.0, 'lozenge', true);
       ctx.restore();
 
       // the title page: shield present from f54; type settles on the clap, f60–f77
@@ -82,7 +82,8 @@
       D.titleType(ctx, f, 60, fonts, 1);
       // the release: two threads from the lit stones to the rule, meeting in the middle at f113; then the rule rests
       if (f >= 102) {
-        const p = s(f, 102, 113, E.draw);
+        const r = 2 / 11, u = s(f, 102, 113, null);
+        const p = u < r ? 0.5 * u * u / (r * (1 - r)) : u < 1 - r ? (u - r / 2) / (1 - r) : 1 - 0.5 * (1 - u) * (1 - u) / (r * (1 - r));
         const L = D.smooth(THREAD_L, 10), R = D.smooth(THREAD_R, 10);
         if (f < 114) { D.threadPath(ctx, L, p); D.threadPath(ctx, R, p); }
         else { const fade = 1 - s(f, 114, 118, null); ctx.save(); ctx.globalAlpha = fade; D.threadPath(ctx, L.slice(0, L.length - 12), 1); D.threadPath(ctx, R.slice(0, R.length - 12), 1); ctx.restore();
@@ -120,7 +121,7 @@
     eng.clap(at(60));
     eng.rhodes([N.E3, N.Bb3, N.D4], at(75), 0.62, 0.85);     // Gm6, the borrowed iv
     eng.rhodes([N.E3, N.A3, N.D4, N.Fs4], at(90), 1.25, 1.0, 0.15); // home, bloomed
-    eng.crotale(at(90), 0.8, true); eng.bass(N.D2, at(90), 0.5, 1.2);
+    eng.crotale(at(90), 0.8, true);                            // no bass until the button (R13)
     if (sfx) { eng.pat(at(60)); eng.setDown(at(75), -0.35); eng.setDown(at(82), 0.35); eng.pat(at(107)); eng.pat(at(112)); }
     // the button
     eng.vibes(N.Fs5, at(120), 1.8, 0.9);

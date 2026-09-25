@@ -1,6 +1,6 @@
 # Tuck and Pip: character bible
 
-*The binding reference for everyone who draws, models, animates, lights, scores, edits or merchandises the characters of* Many Hands*. It implements DECISIONS R1, R3, R4, R7 and R9. Where this bible and DECISIONS disagree, DECISIONS wins. For any frame number, `intro/COLD-OPEN-STORYBOARD.md` wins. For colour tokens, `brand/BRAND-KIT.md` wins. **[HOST GATE]** marks something that needs Bruce's or Facundo's sign-off. **[VERIFY]** marks a fact to check before anyone relies on it. Both are listed at the end.*
+*The binding reference for everyone who draws, models, animates, lights, scores, edits or merchandises the characters of* Many Hands*. It implements DECISIONS R1, R3, R4, R7, R9 and R10–R13. Where this bible and DECISIONS disagree, DECISIONS wins. For any frame number, `intro/COLD-OPEN-STORYBOARD.md` wins. For colour tokens, `brand/BRAND-KIT.md` wins. **[HOST GATE]** marks something that needs Bruce's or Facundo's sign-off. **[VERIFY]** marks a fact to check before anyone relies on it. Both are listed at the end.*
 
 *Frames are counted from f0 = 0.00s, as in `music/THEME-AND-SOUND.md`, at 24 fps. One beat at 96 BPM is 15 frames, so the beats fall on f0, f15, f30, f45 (bar one) and f60, f75, f90, f105 (bar two). The cut to the hosts is f120 = 5.00s. The concept panel counted from f1; ignore its frame numbers.*
 
@@ -150,7 +150,7 @@ These are the character's only colours. Tokens named in brackets come from the b
 
 - **Stylised 3D, with the character animated on ones** at 24 fps.
 - **Effects** (splash, snow, steam, flour, leaves, ripples) are **2D cards animated on twos**, never simulated (R4).
-- **The threads** are hand-drawn 2D on twos. Their shape may wobble by 1 px or less between drawings. Their brightness never changes: no flicker, per the brand kit. They are visibly a different medium, so the magic never reads as biology.
+- **The threads** are hand-drawn 2D **on ones** (R12): 12 drawings, f102–f113, travelling at near-constant speed (about 79 px a frame along the path) with a 2-frame ease at each end, not the brand kit's `draw` curve. Their shape may wobble by 1 px or less between drawings. Their brightness never changes: no flicker, per the brand kit. They are visibly a different medium, so the magic never reads as biology.
 - **The NPR contour line: the "printed book" line.**
   - Ink `#123E32` at 50% opacity.
   - 2 px on the shadow side and 1 px on the light side, at 1080p.
@@ -193,7 +193,7 @@ These are the character's only colours. Tokens named in brackets come from the b
 
 ### What makes her read at 48 px
 
-Four shapes: **a cream disc** (the face), **two dark dots and a nose**, **a jade band beneath**, and **a grey oval at the chin** (the stone). The avatar and icon versions drop the contour line, sit on an Ink `#123E32` circle, and are tested in greyscale at 48 px and 24 px before sign-off. Everything in the ritual is composed inside the centre 9:16 area, so the same master crops for Shorts.
+Four shapes: **a cream disc** (the face), **two dark dots and a nose**, **a jade band beneath**, and **a grey oval at the chin** (the stone). The avatar and icon versions drop the contour line, sit on an Ink `#123E32` circle, and are tested in greyscale at 48 px and 24 px before sign-off. Everything in the ritual is composed inside the centre 9:16 area. Shorts never crop the 16:9 master: the *Light Work* stamp is its own native 1080×1920 pass, rendered once (R13).
 
 ---
 
@@ -206,8 +206,8 @@ Her mouth never opens. Every expression is built from six controls: **lids** (pe
 | 1 | **Home: content** | Lids 15%. Whiskers relaxed, 0°. The mouth line turns up very slightly at the corners. | Her default. The first frame of the ritual. Any hold. |
 | 2 | **Absorbed focus** | Lids 30%. Brow mounds pinch in 0.03H. Whiskers forward 15°. Head down 5°. Hind-flipper toes curl. | The moment of doing the thing: the brushstroke, the chess move, the potter's wheel. |
 | 3 | **Curious** | Lids 0%. Head tilts 12°. Whiskers forward 20°. Brow mounds lift 0.02H. | Inspecting something: the maple leaf in Episode 01. |
-| 4 | **Mild surprise** (never startled) | Lids 0% for 4 frames. Whiskers flare forward 25°. Head draws back 0.05H. Recovers in 6 frames. | A gust, a splash, a leaf landing on her chest. Never fear. |
-| 5 | **Quiet delight** | Cheek mounds lift, closing the lids 10% from below. Whiskers rise 20° and fan. One flap of a hind flipper. | When it goes right. At most twice per activity. |
+| 4 | **Mild surprise** (never startled) | Lids 0% for 4 frames. Whiskers flare forward 25°. Head draws back 0.05H. Recovers in 6 frames. | A gust, a splash, the maple leaf landing over her face in Episode 01. Never fear. |
+| 5 | **Quiet delight** | Cheek mounds lift, closing the lids 10% from below. Whiskers rise 20° and fan. One flap of a hind flipper. | When it goes right. At most twice per activity. **Also once in every ritual, in a locked form (R10):** over f91–f94, as the stones light, the whiskers lift and the cheeks rise so her eyes smile. No flipper flap, no head move, paws still, eyes on the lens. Then she holds. |
 | 6 | **Not quite** | One brow mound lowers 0.02H. A mouth corner flattens. A short nose puff moves the whiskers. Then the grooming tell: she smooths her right cheek with her right paw. | A small setback, recovered with dignity. |
 | 7 | **Pride** | Chin up 5°. Lids 20%. Whiskers back and up 10°. A cheek smooth as a flourish. | After the button of an activity. Also carries her **one dry glance to the lens**, when she takes it: eyes to the lens without turning the head, held 8 frames. At most once per bumper, in bar one only. |
 | 8 | **The content blink** | A slow blink over 8 frames: close 3, hold 2, open 3. Whiskers ease back. The mouth line softens. | **The ritual only.** It closes every episode, so it is never used anywhere else. |
@@ -253,7 +253,7 @@ A quick smooth of the right cheek with the right paw, over 8 frames. It means bo
 - Dives underwater. Her world is the surface.
 - Lunges toward the lens, or moves toward the camera faster than 0.1H a frame.
 - Falls in a way that would hurt.
-- Moves while the threshold holds (f90–f101). Nothing moves then but the glow settling.
+- Moves while the threshold holds (f90–f101), with one exception: the locked quiet-delight reaction over f91–f94 (expression 5), whiskers and cheeks only. Otherwise nothing moves then but the glow settling.
 
 ---
 
@@ -287,7 +287,7 @@ A quick smooth of the right cheek with the right paw, over 8 frames. It means bo
 - **One locked-off shot: the pocket shot.** Chest-up, with the lens at her eye height. She faces the lens. No camera move: the ritual is still, and the only motion is Tuck, the paws, the light and the threads. A still camera also keeps the carry-over tracking trivial.
 - **Framed at mid-chest,** so it works whether she was afloat or on land in bar one. Nothing in the frame says which.
 - **She sits in the lower 45% of the frame** (y 594–1008 at 1080p), below the title page, as the brand kit's title card reserves. Her crown sits at y 670 and her head centre at y 788 (storyboard §3). The stones meet at about y 912, centred on x 960, inside the 9:16 safe area.
-- **The plate** behind her is a defocused derivative of that episode's bar-one plate, warmed 300 K. Every ritual plate must accept the master's warm key: night episodes use a lamplit or lantern-lit plate, never a cold moonlit one.
+- **The plate** behind her is a defocused derivative of that episode's bar-one plate, warmed 300 K. Its sky seam sits at **y 640, feathered over y 616–664**, so the descriptor's baseline (y 592) sits on clean sky (R13). Every ritual plate must accept the master's warm key: night episodes use a lamplit or lantern-lit plate, never a cold moonlit one.
 - **The two friends' paws enter from two fixed points on the bottom edge, at x 700 (left) and x 1220 (right), rising about 170 px to the stones.** A forearm plus paw of 0.8H (about 190 px) spans that with the friends' bodies out of frame below; from the side edges, about 850 px from the stones, no otter paw could reach. Both entry points sit inside the centre 9:16 area (x 656–1264). Not the top right, where the concept panel put one: the title page and the shield live in the top of the frame, and a paw there would cross them.
 
 ### The breakdown
@@ -305,7 +305,7 @@ The master runs **f54–f119 (2.25s–5.00s, 66 frames).** R3 puts the hush befo
 | **f82** | 3.42s | Still | Paw B's stone touches the right side of Tuck's stone. | ***Plink*** (the "and" of beat 2). Identical to the first. |
 | **f83–f89** | 3.46s–3.71s | Utterly still | Three stones touching, still dull. Nothing moves. | **The held breath.** No new sound for 7 frames. |
 | **f90** | 3.75s | Eyes stay on the lens. The glow lights her chin and cheeks warmly from below (rendered in the master). | **5. The threshold.** All three stones light amber **at once**: Filament core, Amber body, Gilt halo. No stone lights before another. | **The home chord** (beat 3), bloomed rather than struck, as in THEME's S03 |
-| **f90–f101** | 3.75s–4.21s | Holds. Does not move. | **The threshold holds for 12 frames (0.50s),** R3's floor for a phone viewer. The glow settles; nothing pulses. | The chord rings |
+| **f90–f101** | 3.75s–4.21s | **Quiet delight, locked** (expression 5, R10). Over f91–f94 her whiskers lift and her cheeks rise so her eyes smile. Her eyes never leave the lens, her paws do not move, and the carry-over is undisturbed. Then she holds, f95–f101. | **The threshold holds for 12 frames (0.50s),** R3's floor for a phone viewer. The glow settles; nothing pulses. | The chord rings |
 | **f102–f113** | 4.25s–4.71s | Her paws stay low, at the pocket. She never touches a thread. | **6. The release.** The amber light lifts off the three stones as **two gold threads.** Each thread's tail clears the stones by f103. The threads part left and right around her head, never crossing her face or coming within 10% of its height, and rise out of her world into the title page. They arrive at the two ends of the title page's rule and draw inward, **meeting in its middle at f113**, where a single node lights (lights at f113, full by f115, fades over f116–f119). The title page sits on the house sky, a lit ground, so the threads stay lit Gilt all the way (brand kit §4). | The chord rings on. The threads are silent: no whoosh. |
 | **f102–f109** | 4.25s–4.54s | | **7. The tuck.** The paws withdraw the way they came, along the same paths. Their stones fade to slate as the light leaves them (f102–f105). | |
 | **f103–f106** | 4.29s–4.42s | She carries her stone down (it is dull again now) and tucks it under her left forearm. The pocket bump returns. | | |
@@ -346,7 +346,8 @@ Everything below is rendered in the initial build, so nothing in the ritual is e
 | Holdout mattes | Tuck's paws, the stone, the forelimbs |
 | **Anchor locators** for the carry-over layer (exported 3D nulls, per frame) | Crown, forehead, left ear, right ear, brow, left cheek, right cheek, nose, scarf knot |
 | The New Stones head (f48–f53) | One |
-| The threads | Drawn once in 2D, on twos, as a separate layer |
+| The threads | Drawn once in 2D, on ones (12 drawings, f102–f113, R12), as a separate layer |
+| The *Light Work* stamp: ritual frames f88–f111 as a native 1080×1920 textless pass (storyboard §7, R13). Face near y 960, stones no lower than y 1380. | One |
 
 ---
 
@@ -574,7 +575,7 @@ Across the 24: 7 cheap, 12 medium, 5 expensive.
 
 | # | Air date | Season | Activity (the one-second read) | Action (ending on the double beat) | Carry-over | Tomorrow detail | Cast | Cost |
 |---|---|---|---|---|---|---|---|---|
-| **01** | **Wed 11 Nov 2026** | Autumn | **THE FLOAT.** A sunlit autumn cove, calm painted water, Tuck on her back. | She floats on her back, paddling lazily with her hind flippers. A red maple leaf spins down and lands on her chest. She lifts it in both paws, inspects it (curious), and sets it on her head like a hat. Two lazy flipper kicks. | **The maple leaf on her head** (`#C8502A`, veins `#8E3A20`), proud of the crown | A small air taxi gliding across the far sky above the white terraces | Solo | Medium |
+| **01** | **Wed 11 Nov 2026** | Autumn | **THE FLOAT.** A sunlit autumn cove, calm painted water, Tuck on her back. | She floats on her back, paddling lazily with her hind flippers. A red maple leaf spins down and lands flat over her face on f30, a small comic beat. She peels it off over f35–f40, inspects it (curious), and sets it on her crown like a hat on f45. Two lazy flipper kicks. | **The maple leaf on her head** (`#C8502A`, veins `#8E3A20`), proud of the crown | A small air taxi gliding across the far sky above the white terraces | Solo | Medium |
 | 02 | Wed 25 Nov 2026 | Late autumn | **Stargazing.** A brass telescope on a dusk terrace, a crescent moon (reference 01). | Eye to the eyepiece. A shooting star crosses the sky. She lifts her head to see it with her own eyes, whiskers rising. Two taps of a hind flipper on the boards. | A faint ring around her left eye from the eyepiece | The crystalline skyline lit across the bay | Solo | Cheap |
 | 03 | Wed 9 Dec 2026 | Early winter | **Tray sledding.** A round tin tray and a spray of snow. | Belly-down on the tray, she slides down a snowy terrace lawn, spins once, and stops exactly at a snowman's feet. The tray rocks twice and settles. | A dusting of snow on her crown | An autonomous shuttle crossing a bridge below the slope | Solo | Medium |
 | 04 | Wed 23 Dec 2026 | Holiday week | **The bell choir.** Handbells in a lamplit glasshouse. | Tuck rings two handbells, one after the other. Pip answers with one small bell, a hair late. She forgives it with a tiny nod, and Pip's face-line goes "^". | A sprig of fir behind her right ear | The crystalline skyline through the glass at dusk | **With Pip** | Medium |
@@ -612,7 +613,7 @@ The paws that join each episode, the end-card reprise (the activity resolved, pe
 
 | # | Paws (left / right) | End-card reprise | Activity sound, and its beat |
 |---|---|---|---|
-| 01 | Gran / Harbourmaster | Dozing afloat, the maple leaf slid down over her eyes like a sun hat. One flipper paddles once every four seconds. | The dry leaf landing on her chest fur (f30) |
+| 01 | Gran / Harbourmaster | Dozing afloat, the maple leaf slid down over her eyes like a sun hat. One flipper paddles once every four seconds. | The dry leaf landing on her face (f30) |
 | 02 | Kip / Sandy | Lying on the terrace boards, eyes on the sky. One more star crosses. | The telescope's focus knob clicks (f30) |
 | 03 | Sandy / Gran | The tin tray is now the snowman's hat. | The tray's scrape to a stop (f45) |
 | 04 | Harbourmaster / Kip | Pip rings its bell again, exactly on time. Tuck nods. | The handbells, D5 and F♯5, and Pip's B5 a hair late (f15–f30) |
@@ -678,7 +679,7 @@ Both are [VERIFY] with Facundo against the spec and `lib-derec` before Episode 1
 |---|---|---|---|
 | 1 | **Avatar and emoji set** (free) | Tuck in the pocket-shot stack (cream face, dark eyes and nose, jade band, grey stone at the chin) on an Ink `#123E32` circle with a 2 px Gilt outline. No contour line. Tested in greyscale at 48 px and 24 px. Plus a four-piece emoji set: home float, pat-pat, the maple-leaf hat, and Pip "^". **The DeRec Alliance channel keeps its own avatar:** Tuck is the show's character, not the Alliance's logo. [HOST GATE] | Always made; it is needed for community posts |
 | 2 | **End-card reprise** (in every episode) | Per Tuck's Year. The resolved activity, no stones, no threads. | Always made |
-| 3 | **Segment-tab engraving and Light Work stamp** | The engraving: Tuck in the home float pose as a one-colour Brass line engraving, 60 px tall, never animated (brand kit §6). The stamp: one still of the tuck (paw on pocket, stone already away) for the one-second loop point of every Short. Tuck only, never Pip. | Always made |
+| 3 | **Segment-tab engraving and Light Work stamp** | The engraving: Tuck in the home float pose as a one-colour Brass line engraving, 60 px tall, never animated (brand kit §6). The stamp: ritual frames f88–f111 as a native 1080×1920 textless pass, rendered once (storyboard §7, R13). Tuck only, never Pip. | Always made |
 | 4 | **Stickers** | Die-cut vinyl, 75 mm. Three designs: Tuck floating home, Tuck in the maple-leaf hat, Tuck and Pip side by side under lanterns. Given away at Alliance events and conferences first. | Event giveaways run out, or viewers ask |
 | 5 | **Enamel pin** | Hard enamel, 25 mm, **black-nickel** keylines. The metal line reads as the Ink contour, and it keeps gold off objects. First pin: *Tuck with the maple leaf.* Then, only if the first sells through, a season set of twelve, one per carry-over item. Recommended thank-you: every asker whose question is read in Raised Hands is offered a pin. That needs a way to collect postal addresses privately. [HOST GATE] | The first pin sells through or is fully given away |
 | 6 | **The plush: the concept's best object** | 30 cm, in the floating home pose, felted-look fabric in the character palette, embroidered button eyes (no hard eyes), closed embroidered mouth. **A real pocket** under the left forearm: a skin-fold slip pocket with an elastic lip. **A grey stone inside it:** a slate-grey felted-wool pebble 55 mm long, matte, with the chip cut as a notch in its outline. Felt, not real stone, because a real stone is heavy, breakable and a hazard in a child's toy. It is sized well above the small-parts limit [VERIFY with the test lab]. Hang-tag copy says what it is and promises nothing: no "keeps your secrets safe". [HOST GATE on the copy] | A pre-order threshold agreed with the hosts is met |
