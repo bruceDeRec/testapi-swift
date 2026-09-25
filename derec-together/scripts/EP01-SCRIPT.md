@@ -84,7 +84,7 @@ The budgets are ceilings. If the episode comes in short because the answers were
 | **END** | The end card | BRAND-KIT §6 |
 | **M01** · **M03** · **M04** | Bumper · chapter bump · outro tag | THEME §6 |
 | **S01** · **S03** | A share handed over · recovery completes. Graphics only: real props keep their real sound. | THEME §4 |
-| **A01** | Episode 01's activity sound: the dry leaf landing on Tuck's chest fur | CHARACTER-BIBLE |
+| **A01** | Episode 01's activity sound: the dry leaf landing on Tuck's face | CHARACTER-BIBLE |
 | **STILL** | Room tone only. No music and no designed sound. | THEME §5 |
 
 **Three standing rules for this episode**
@@ -93,7 +93,7 @@ The budgets are ceilings. If the episode comes in short because the answers were
 2. **No B-roll.** A cutaway to generic footage says "produced content". The only inserts are the Curve and the cards.
 3. **No music under talk.** Every cue plays in the clear (THEME §5).
 
-**On the table.** The format assumes one shared table **[HOST GATE]**.
+**On the table.** Episode 01 records in person only (PLAYBOOK §9).
 - Bruce's own phone, face down. Its screen is never seen.
 - Bruce's question card, with his three questions for The Table.
 - The IOU card, propped centre, blank under its printed heading. Its first entry is written on air.
@@ -109,8 +109,8 @@ Bar two is the locked ritual (R3). Its frames, hit points and title page belong 
 
 | Time | Picture | Margin |
 |---|---|---|
-| **0.00s–2.25s**<br>f0–f53, new | The first frame is already mid-float. A sunlit autumn cove, calm painted water, the white terraces soft on the far shore. Tuck floats on her back, paddling lazily with her hind flippers. A red maple leaf spins down and lands on her chest. She lifts it in both paws, inspects it with her head tilted, and sets it on her head like a hat. Two lazy flipper kicks: the double beat that pat-pat pays off. Her eyeline ends frame left. A small air taxi glides across the far sky above the terraces. | **M01** from its first sample. **A01** on f30 (1.25s): the dry leaf landing on her chest fur. A real recording, unpitched, 0.50s at most. The leaf and the ripples are 2D cards on twos (R4). The leaf is on her head by f45. Keep blue off Tuck herself (R9). The cove stays as lush as the references (R4). |
-| **2.25s–5.00s**<br>f54–f119, locked | The hush. The pocket pat. Her stone. Gran's paw from frame left and the Harbourmaster's from frame right: *plink… plink…*, the held breath, the home chord on f90, three stones lit amber for 12 frames (f90–f101). The release: two gold threads rise and draw the rule under the title, meeting at f113. Pat-pat, one slow blink, the melt. **The maple leaf rides the crown anchor through all of it and never moves.** | The locked master and its `RIT` stem. The carry-over layer is the leaf, `#C8502A` with veins `#8E3A20`. The plate behind her is the cove, defocused and warmed 300 K. |
+| **0.00s–2.25s**<br>f0–f53, new | The first frame is already mid-float. A sunlit autumn cove, calm painted water, the white terraces soft on the far shore. Tuck floats on her back, paddling lazily with her hind flippers. A red maple leaf spins down and lands flat over her face on f30, a small comic beat. She peels it off in both paws over f35–f40, inspects it with her head tilted, and sets it on her crown like a hat on f45. Two lazy flipper kicks: the double beat that pat-pat pays off. Her eyeline ends frame left. A small air taxi glides across the far sky above the terraces. | **M01** from its first sample. **A01** on f30 (1.25s): the dry leaf landing on her face. A real recording, unpitched, 0.50s at most. The leaf and the ripples are 2D cards on twos (R4). The leaf is on her crown by f45 (R10). Keep blue off Tuck herself (R9). The cove stays as lush as the references (R4). |
+| **2.25s–5.00s**<br>f54–f119, locked | The hush. The pocket pat. Her stone. Gran's paw from frame left and the Harbourmaster's from frame right: *plink… plink…*, the held breath, the home chord on f90, three stones lit amber for 12 frames (f90–f101). Over f91–f94 Tuck gives her one locked reaction, quiet delight: her whiskers lift and her cheeks rise so her eyes smile. Her eyes stay on the lens, her paws don't move, and then she holds. The release: two gold threads rise and draw the rule under the title, meeting at f113. Pat-pat, one slow blink, the melt. **The maple leaf rides the crown anchor through all of it and never moves.** | The locked master and its `RIT` stem. The quiet delight is in the master (R10, CHARACTER-BIBLE expression 5), so it costs nothing per episode. The carry-over layer is the leaf, `#C8502A` with veins `#8E3A20`. The plate behind her is the cove, defocused and warmed 300 K. |
 | **Title page**<br>2.50s–3.25s, f60–f77 | It settles into the sky above Tuck from the clap on f60 and is fully set by f77: DeRec Alliance · *Many Hands* · the rule the two threads draw (it doesn't exist until they meet at f113) · THE COMMUNITY PODCAST. The plain shield top right from f54, from the Alliance master only. | BRAND-KIT §3, §5–6. Storyboard §3. The shield **[HOST GATE]** (R9). |
 | **5.00s**<br>f120 | Hard cut to the hosts. | The **M01** button. Its tail has gone by 6.50s. |
 
@@ -249,7 +249,7 @@ Three questions from Bruce's card: one about people, one about helpers, one abou
 ## 6. Where It Stops (10:10–10:55)
 
 It follows the recipe coming back, the episode's most impressive moment, so the limit arrives attached to the claim it limits. It sounds confident because of how it's built:
-- **The builder says it.** Facundo wrote the library. An engineer stating the limits of his own work is the most confident voice on the show.
+- **The builder says it.** Facundo published the first `lib-derec` crates. An engineer stating the limits of his own work is the most confident voice on the show.
 - **Scope, not apology.** "It gets…", "It doesn't…". Never "unfortunately", never "we can't guarantee".
 - **Every limit ends with what handles it:** a passcode, the bank's fraud line, hanging up and calling back. General habits only, never a product.
 - **The room goes still.** The two-shot holds. No music, no Tuck, no cutaways, no B-roll. The band wears the same paper as every other slip.
@@ -356,7 +356,7 @@ Bruce's own words are the whole point. If the audience's stand-in can say it, Gr
 - **The Premiere chat.** Bruce answers there and carries the best replies into Episode 03's recording on 17 November.
 - **Episode 03, recorded Tuesday 17 November.** Its Raised Hands reads one answer, and its opening "person" comes from the same thread (FORMAT §8). Not Episode 02: it records on 27 October, before this episode airs.
 - **LW002, Friday 20 November.** Answers one reply in under a minute, credits the asker by first name, and teases Episode 02.
-- **Light Work, Friday 13 November.** The best 45–60 seconds of this episode (FORMAT §3): the objection and the Curve, 8:09 to 8:49, ending on the Where It Stops key line (10:14–10:21). A Light Work clip that shows what DeRec can do must carry its limit. It opens on Bruce's objection ("Two out of three is most of the way there", in whatever words he used), with *Two out of three: most of the way?* on screen in the first second.
+- **LW001, Friday 13 November.** About 45 seconds of this episode (FORMAT §3 allows 45–60; CHANNEL-KIT §7's worked cut runs 44.50 s): the objection and the Curve, ~8:17 to 8:49, then the Where It Stops key line (10:14–10:21), then the "So the front door's still my job" / "Still your job" close (10:50–10:53), 0.5 s of room tone, then the stamp (CHANNEL-KIT §7). A Light Work clip that shows what DeRec can do must carry its limit, and the limit is never the last thing said before the stamp. It opens on Bruce's objection ("Two out of three is most of the way there", in whatever words he used), with *Two out of three: most of the way?* on screen in the first second.
 
 **What carries over to Episode 02**
 - **The IOU card:** "How long does getting it back take? We'll time a real one." It gets paid off when a real-software Hands On can time a recovery. Until then it stays on the card, in shot.
@@ -415,23 +415,24 @@ After that come the chapters, the asker's first name, the theme credit, the invi
 | # | Where | Decision |
 |---|---|---|
 | 1 | Title | The 100-character short form of the question. |
-| 2 | Set | Recording at one shared table (FORMAT sign-off 11). |
-| 3 | 0:00 | The plain shield on the title page, from the Alliance master only (R9). |
-| 4 | 0:00 | Any AI assistance in the bar-one plate, with disclosure (R9). No AI music: every cue here comes from the human commission (R9). |
-| 5 | 0:05 | The landing bit, with Facundo pocketing Bruce's phone. Its screen is never seen. |
-| 6 | 0:17 | The show name, and the role lines on the name captions. |
-| 7 | 0:22 | That everything Bruce names in "the person" is true of his own phone. |
-| 8 | 0:40 | "Kundo" on air, from Bruce only. |
-| 9 | 0:40, 7:13 | The recipe dish, Bruce's own cookbook, and the card at page 47. |
-| 10 | 1:54 | The house pronunciation of "DeRec", set the first time Bruce says it. |
-| 11 | 6:45 | The first IOU, which commits Facundo to timing a real recovery. |
-| 12 | 7:10 | No real-software Hands On until Facundo has a build he's happy to show. |
-| 13 | 9:03 | The Jargon Jar, which needs Facundo's genuine yes. |
-| 14 | 10:55 | The Raised Hands pick, from real questions only. |
-| 15 | 14:15 | The consent wording, on air and in the pinned comment. |
-| 16 | 14:34 | The split sign-off, and the pat-pat pocket echo on "—light work." |
-| 17 | Description | The invitation to suggest Tuck's next activity (FORMAT sign-off 9). |
+| 2 | 0:00 | The plain shield on the title page, from the Alliance master only (R9). |
+| 3 | 0:00 | Any AI assistance in the bar-one plate, with disclosure (R9). No AI music: every cue here comes from the human commission (R9). |
+| 4 | 0:05 | The landing bit, with Facundo pocketing Bruce's phone. Its screen is never seen. |
+| 5 | 0:17 | The show name, and the role lines on the name captions. |
+| 6 | 0:22 | That everything Bruce names in "the person" is true of his own phone. |
+| 7 | 0:40 | "Kundo" on air, from Bruce only. |
+| 8 | 0:40, 7:13 | The recipe dish, Bruce's own cookbook, and the card at page 47. |
+| 9 | 1:54 | The house pronunciation of "DeRec", set the first time Bruce says it. |
+| 10 | 6:45 | The first IOU, which commits Facundo to timing a real recovery. |
+| 11 | 7:10 | No real-software Hands On until Facundo has a build he's happy to show. |
+| 12 | 9:03 | The Jargon Jar, which needs Facundo's genuine yes. |
+| 13 | 10:55 | The Raised Hands pick, from real questions only. |
+| 14 | 14:15 | The consent wording, on air and in the pinned comment. |
+| 15 | 14:34 | The split sign-off, and the pat-pat pocket echo on "—light work." |
+| 16 | Description | The invitation to suggest Tuck's next activity (FORMAT sign-off 9). |
 
 *Changed 24 Sep 2026, per `season/SEASON-ONE.md` and the storyboard: Episode 02's title set at 14:12 and its host gate removed; Episode 02 records 27 October, not 3 November; the loop feeds Episode 03 (recorded 17 November) and LW002, not Episode 02; the bumper table marks the lock at f54 and anchors the title page (f60–f77), the home chord (f90), the rule (f113) and the button (f120).*
 
 *Changed 24 Sep 2026, after review: only seven episode lines and the show's ritual words stay fixed, and everything else is a run sheet (PLAYBOOK §3); the question slip leaves by 0:16.7, clear of Bruce's name slip; 9:31 says the ruler is set to two; Raised Hands no longer draws on the trailer or a community post, which go public after recording; new [VERIFY]s at 4:20, 4:50, 9:31 and 11:28.*
+
+*Changed 25 Sep 2026, per R10: the maple leaf lands flat over Tuck's face at f30 (A01 is now the leaf on her face), she peels it off over f35–f40 and it's on her crown by f45; bar two carries the locked quiet-delight reaction over f91–f94. Also: Episode 01 records in person only (PLAYBOOK §9), so the shared-table host gate is gone; LW001 follows CHANNEL-KIT §7 (starts ~8:17, adds the "Still your job" close and room tone before the stamp); Where It Stops credits Facundo with publishing the first `lib-derec` crates.*

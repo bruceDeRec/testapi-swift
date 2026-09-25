@@ -21,16 +21,16 @@
 
 ### Where this kit departs from the other documents
 
-1. **The launch trailer shows only The Float.** The storyboard's 15-second cut was written as a pre-launch piece ("Premieres Wednesday 11 November"). Three facts rule that out:
+1. **The launch trailer shows only The Float.** The storyboard's 15-second cut runs only from 10 Feb 2027, as TR03's head (storyboard §7). Three facts keep it out of launch:
    - FORMAT §7 says an activity is never previewed before its episode.
    - Pip's first appearance is 23 December, and that appearance is his reveal (§2).
    - The playbook's studio schedule delivers only E01 by 28 October and E02 by 4 November. Episodes 04 and 07's bar ones can't exist by 4 November without pulling the whole studio schedule forward.
 
-   The storyboard's frames don't change, only its publish date. **[HOST GATE]**
+   The storyboard's frames don't change, and its §7 now sets the same date. **[HOST GATE]**
 2. **The Light Work stamp needs a native vertical render.** The stamp is the storyboard's 24 frames of the ritual master, f88–f111 (§7 there). The storyboard's crop (a full-height 9:16 window of the pocket shot) puts the stones at about 82% of frame height. That is inside the band the Shorts app covers with the title and channel name; the brand kit's safe area ends at 75%. §7 below gives the fix.
 3. **Thumbnail line length is measured.** I set the brand kit's thumbnail instance (Fraunces opsz 144, wght 720, SOFT 100, WONK 0, −20 tracking) and measured it. The page's text measure is 408 px, and at 112 px wide words overflow at about 8 characters. The brand kit's own example, "the lake?", measures 414 px. §4 replaces the character count with a width test.
 4. **The pinned comment merges three sources:** Episode 01's question, word for word, from the script; the playbook's consent wording; and the playbook's scam line.
-5. **Episode 01's Raised Hands can't come from the trailer's comments,** as the Episode 01 script suggests. The trailer publishes on 4 November, and E01 records on 20 October. The trailer's thread feeds the clinic and the Light Work bank instead.
+5. **Episode 01's Raised Hands never comes from the trailer's comments** (the script agrees): the trailer publishes on 4 November, after the 20 October recording. The trailer's thread feeds the clinic and the Light Work bank instead.
 6. **Moderation costs about 2 more editor hours a fortnight** than the playbook's §9 budget. The playbook's blocked-words list is kept and extended (§10).
 
 ---
@@ -52,7 +52,7 @@ YouTube shows the channel trailer to people who haven't subscribed, usually mute
 
 | # | Time | Source | Picture | Sound | Text on screen | Its job |
 |---|---|---|---|---|---|---|
-| **1** | **0.00s–5.00s** | `MH_E01_BUMPER_v01.mov`, unchanged | The Float: the leaf becomes a hat, then the ritual (one stone, two, all three light), the threads draw the rule, pat-pat, the blink, and the title card at f119 | **M01** from sample 0, unchanged, with A01 on f30 | None. The title page is in the picture. | The ritual, whole. A stranger sees the show's signature before anyone speaks. |
+| **1** | **0.00s–5.00s** | `MH_E01_BUMPER_v01.mov`, unchanged | The Float: the leaf lands flat over her face at f30, and she peels it off and sets it on her crown as a hat; then the ritual (one stone, two, all three light, and her quiet delight), the threads draw the rule, pat-pat, the blink, and the title card at f119 | **M01** from sample 0, unchanged, with A01 on f30 | None. The title page is in the picture. | The ritual, whole. A stranger sees the show's signature before anyone speaks. |
 | **2** | **5.00s–7.00s** | E01 0:05–0:07, camera A | **Hard cut on the button.** Facundo finishes sliding Bruce's phone into his own chest pocket, deadpan. Bruce laughs. | The M01 button rings under the landing and is gone by 6.50s. Then room tone. | None | The bumper hands over to two friends in a real moment, exactly as it does in every episode. |
 | **3** | **7.00s–16.00s** | E01 0:07–0:16, camera A | Bruce turns to camera. | **Bruce:** "He's just pocketed my phone. If your phone vanished tonight, what would you actually lose, and who could help you get it back?" | Bruce's name slip (brand kit §6), 7.50s–11.50s: "Bruce Longley / Community lead, DeRec Alliance" **[HOST GATE]**. Built from the textless project, so the E01 question slip isn't there. | **Bruce's line.** The question is the show. The aside stays in because it explains the pocketed phone, and it's his one speaking turn. |
 | **4** | **16.00s–21.00s** | E01 1:00–1:05, camera C | Facundo's single. | **Facundo:** "Mostly your way back in, and people you'd chosen beforehand could help you get it back." | Facundo's name slip, mirrored on the right, 16.25s–20.25s: "Facundo La Rocca / Engineer, lib-derec" **[HOST GATE]** | **Facundo's line.** A plain answer in one sentence: proof that the show answers what it asks. |
@@ -99,13 +99,13 @@ File: `MH_TR02_PodcastTrailer_31s00_v01_MASTER-POD.wav`, at −16 LUFS (THEME §
 - **Beat 1 becomes the storyboard's 15-second structure**, bars 1–6 (§7 there):
   - The Float, Stargazing, the bell choir and café chess each get one bar;
   - then the ritual master, with its f60 on bar 5's downbeat;
-  - then the title page, **without** the "Premieres" line;
-  - ending on the button at 15.00s.
-- Every later beat moves 10 seconds later, unchanged. The total is 57.50s.
+  - then the title page, with no added line (R13);
+  - the button at 12.50s (trailer f300), ringing out to 15.00s.
+- **Music:** M07 `ALT-15` (THEME §4), whose bars 1–4 are the hook's bar one and whose bar 5 is M01's bar two.
+- Every later beat moves 10 seconds later, unchanged, except that beat 2 now opens on room tone: `ALT-15`'s button has already rung out by 15.00s. The total is 57.50s.
 - By 10 February, Episodes 01, 02, 04 and 07 have all aired. So the trailer previews no activity, and Pip has been seen and signed off.
 - It publishes two days after day 90, and the day-90 review checks that it went up.
 - File: `MH_TR03_ChannelTrailer_57s50_v01_MASTER.mp4`.
-- **[VERIFY]** the M07 bar the storyboard names for its bar 1. The storyboard calls it "the hook", but THEME §4 puts bars 1–4 as harmony only and the hook at bars 5–12. The editor cuts on whichever bars carry the hook in the composer's delivery.
 
 ---
 
@@ -141,7 +141,7 @@ File: `MH_TR02_PodcastTrailer_31s00_v01_MASTER-POD.wav`, at −16 LUFS (THEME §
 | Imprint "DeRec Alliance" | Atkinson Next 600, 41 px, +10 (measures 288 px wide) | "DeRec" Gilt, "Alliance" Paper | Cap top y 548 |
 | Title "Many Hands" | Fraunces 600, opsz 144, SOFT 50, WONK 0, 128 px, −15 (637 px wide) | Paper | Baseline y 726 |
 | Rule | A lit thread, 4 px Gilt with a 1 px Filament core and the kit's glow, 242 px wide (38% of the title) | Gilt | Centred on y 778 |
-| Descriptor "THE COMMUNITY PODCAST" | Atkinson Next 500 caps, 23 px, +220 (398 px wide) | Paper | Baseline y 824 |
+| Descriptor "THE COMMUNITY PODCAST" | Atkinson Next 600 caps (R13), 23 px, +220 (about 404 px wide) | Paper | Baseline y 824 |
 | Promise | *One real question. Two friends. Plain answers about getting back what matters, limits included.* Atkinson Next 500, 30 px, sentence case (1290 px wide) | Paper, 6.67:1 on Zenith | Centred, baseline y 890 |
 
 - **Clear space:** 0.5X, as the brand kit allows for the square cover. A banner is as tight as a cover, and a full 1X doesn't fit in 423 px.
@@ -194,7 +194,7 @@ We will never message you privately or ask for a password, phrase or key. Anyone
 How we make this: real hosts, real conversation. No AI faces or voices. Human-made music and animation. Captions drafted by software, corrected by a person. Any AI in a video is labelled.
 ```
 
-- **[VERIFY]** "designed" as the verb, and "20+" as the current count (SEASON-ONE #16, #17).
+- **[VERIFY]** "designed" as the verb, "20+" as the current count, and "none of them owns it" against the Alliance's own wording for how it's governed (SEASON-ONE #16, #17, #18).
 - **[HOST GATE]** the whole text, including the short forms of the neutrality and AI lines in §11.
 
 **Links, in this order:**
@@ -399,7 +399,7 @@ Listen as a podcast: [Apple Podcasts link] · [Spotify link] · YouTube Music
 #DeRec
 ```
 
-- **One hashtag, `#DeRec`.** YouTube shows the first hashtags above the title, and clicking one opens a feed of every video using it. "DeRec" is the unique word the Alliance owns (FORMAT §1), so that feed is the Alliance's own. `#ManyHands` would send viewers to strangers.
+- **One hashtag, `#DeRec`.** YouTube shows the first hashtags above the title, and clicking one opens a feed of every video using it. "DeRec" is a rare word, but not the Alliance's alone: the OECD's DEReC database and a Swiss dental app, derec®, share it (FORMAT §1). The feed should still be mostly the Alliance's own videos **[VERIFY]** by opening it before launch. `#ManyHands` would send viewers to strangers.
 - **The Tuck invitation** is a **[HOST GATE]** (FORMAT sign-off 9). It goes in the description only, never in the talk (the Episode 01 script).
 - **Links** are allowed only to the Alliance's own pages and the podcast apps. Never to a member, an app or a product, including in Episode 08, where the member-list link goes to the Alliance's own page (SEASON-ONE).
 
@@ -436,7 +436,7 @@ Our question for you: If your phone vanished tonight, who's the first person you
 
 What should Tuck do next? Suggest an activity below. If we use it, we'll credit you here.
 
-Accessibility: the opening shows a sea otter floating in an autumn cove, who puts a maple leaf on her head like a hat. She holds up a plain grey stone. Two friends' paws bring their own stones, and when the third touches, all three light up. Their light rises to underline the words Many Hands.
+Accessibility: the opening shows a sea otter floating in an autumn cove. A maple leaf lands on her face, and she peels it off and puts it on her head like a hat. She holds up a plain grey stone. Two friends' paws bring their own stones, and when the third touches, all three light up. Their light rises to underline the words Many Hands.
 
 Listen as a podcast: [Apple Podcasts link] · [Spotify link] · YouTube Music
 
@@ -554,7 +554,7 @@ Light Work runs every Friday at 11:00 ET, at 30–60 seconds, vertical, with bur
 | | |
 |---|---|
 | **Frames** | The ritual master, **f88–f111**: 24 frames, which is 1.00s at 24 fps and 1.001s on the 23.976 fps Short. The storyboard owns these numbers. |
-| **What you see** | Three dull stones touching (f88–f89); all three light at f90; the glow holds; the threads start to rise (f102–f111). The episode's carry-over rides along, on its anchor. |
+| **What you see** | Three dull stones touching (f88–f89); all three light at f90; Tuck's quiet delight over f91–f94 (R10); the glow holds; the threads start to rise (f102–f111). The episode's carry-over rides along, on its anchor. |
 | **The render** | **A native 1080 × 1920 pass of those 24 frames,** from the locked animation, rendered once in the initial build, **textless** (no title page), with the carry-over anchor exported for vertical. The framing: Tuck's face centred near y 960 (50%); the stones no lower than y 1380 (72%), clear of the Shorts overlay; the house sky filling the top. Per-episode work stays one carry-over comp, as R4 requires. **[VERIFY]** the one-time cost with the studio (my estimate: about one animator-day plus render). **[VERIFY]** the framing against the Shorts app's overlay before it's locked (brand kit's [VERIFY] 3). |
 | **Why not the storyboard's crop** | A full-height 9:16 window of the pocket shot puts Tuck's face at about 65–70% of frame height and the stones near 82%, under the Shorts title and channel name. The storyboard's own note that her face sits "in the upper third" can't be true of that crop. From the 4K master the crop would at least be a downscale (1216 × 2160 to 1080 × 1920), but it doesn't move the stones. |
 | **Wordmark** | *Light Work*, Fraunces 600 (the `MH Display Card` instance), 104 px, −10 tracking, Paper, centred on x 540, baseline y 400 (measured at 469 px wide). A still, present for all 24 frames, on the render's Zenith sky (6.67:1). No rule under it: the stones' own threads are rising in the same second. |
@@ -862,7 +862,7 @@ Both appear in three lengths:
 **Full** **[HOST GATE]**
 > *Many Hands* is an education show made by the DeRec Alliance. DeRec is an open protocol, designed by Dr. Leemon Baird and built in the open by more than twenty organisations. No single organisation owns it, and DeRec isn't any one company. On this show we explain; we don't sell. We don't rank, recommend or speak for any Alliance member, app, wallet, company or coin, and nobody pays to be mentioned. We don't give investment advice or talk about prices. When you ask which one to use, we'll say "We don't pick winners here", then tell you what to look for. And we'll always tell you where recovery stops.
 
-**[VERIFY]** "designed" and "more than twenty" (SEASON-ONE #16, #17).
+**[VERIFY]** "designed", "more than twenty", and "No single organisation owns it" against the Alliance's own governance wording (SEASON-ONE #16, #17, #18).
 
 **Short** (in the About text): *An education show. DeRec is an open protocol designed by Dr. Leemon Baird and built in the open by 20+ organisations; none of them owns it. We don't rank, recommend or speak for any member, app, wallet or coin, and we don't give investment advice.*
 
@@ -924,8 +924,8 @@ If any of those changes, the line changes the same day, with a pinned note sayin
 12. The Alliance's social accounts (X, LinkedIn), website access, and a role email for the podcast feed.
 13. Buzzsprout's plan price, transcript and chapter support, and encoding spec; Apple's and Spotify's current review times; that the playlist designation alone puts the show on YouTube Music; the podcast playlist's order in YouTube Music.
 14. That the contributors call is open to the public before linking it.
-15. "Designed" and "20+" / "more than twenty" (SEASON-ONE #16, #17).
+15. "Designed" and "20+" / "more than twenty" (SEASON-ONE #16, #17), and "none of them owns it" / "No single organisation owns it" against the Alliance's own governance wording (#18).
 16. The fraud-reporting links, and the bank-fraud-line advice (SEASON-ONE #26).
 17. The native vertical stamp render: its cost with the studio, and its framing against the Shorts overlay.
-18. Which M07 bar carries the hook for TR03.
-19. That frequency isn't a long-form ranking factor (FORMAT §3).
+18. That frequency isn't a long-form ranking factor (FORMAT §3).
+19. What the `#DeRec` hashtag feed shows before launch, since the OECD's DEReC and the derec® dental app share the word (FORMAT §1).

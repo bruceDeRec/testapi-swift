@@ -140,7 +140,7 @@ Each episode gets checked against three words in the promise: ***one*** question
 
 The Short is the "light work": small, quick and easy. Said together, the two tier names make the proverb. [HOST GATE]
 
-**Light Work has three rules of its own.** The question is on screen and spoken in the first second. Tuck appears only as the one-second stamp at the loop point (§7). And a clip that shows off what DeRec can do must include its limit line, or it doesn't run.
+**Light Work has three rules of its own.** The question is on screen and spoken in the first second. Tuck appears only as the one-second stamp at the loop point (§7). And a clip that shows off what DeRec can do must include its limit line, or it doesn't run. The limit line is never the last thing said before the stamp.
 
 **A season is 12 flagships, or 24 weeks.** Between seasons, the contributors call carries on and so does Light Work, cut from the back catalogue, so the channel never goes quiet.
 
@@ -187,7 +187,7 @@ Why it's arranged this way:
 
 | Time | Segment | Length | Its job | How it fails |
 |---|---|---|---|---|
-| **0:00–0:05** | **The Bumper** | 5.00s | Music and Tuck. No hosts, no words. Tells regulars the show is starting, and puts everyone in a good mood before anyone speaks. It is two bars of the theme at 96 BPM, 120 frames (R5). **Bar one** (0.00s–2.50s) is Tuck's activity, new every episode. **Bar two** (2.50s–5.00s) is the locked ritual (R3); its hush starts six frames early, at 2.25s. The title page settles into the sky above Tuck on bar two's downbeat and stays there through the ritual. The stones' light draws its rule. The last frame is the brand kit's title card, imprint at the top. Hard cut to the hosts on the button at 5.00s. Every frame is in `intro/COLD-OPEN-STORYBOARD.md`. | **It grows.** Someone adds a voiceover, a separate title card, an "Episode 7" slate or a thank-you to a partner. If it isn't five seconds, it isn't the ritual. |
+| **0:00–0:05** | **The Bumper** | 5.00s | Music and Tuck. No hosts, no words. Tells regulars the show is starting, and puts everyone in a good mood before anyone speaks. It is two bars of the theme at 96 BPM, 120 frames (R5). **Bar one** (0.00s–2.50s) is Tuck's activity, new every episode. **Bar two** (2.50s–5.00s) is the locked ritual (R3); its hush starts six frames early, at 2.25s. When the three stones light at 3.75s (f90), Tuck gives her one locked reaction, quiet delight, then holds (R10). The title page settles into the sky above Tuck on bar two's downbeat and stays there through the ritual. The stones' light draws its rule. The last frame is the brand kit's title card, imprint at the top. Hard cut to the hosts on the button at 5.00s. Every frame is in `intro/COLD-OPEN-STORYBOARD.md`. | **It grows.** Someone adds a voiceover, a separate title card, an "Episode 7" slate or a thank-you to a partner. If it isn't five seconds, it isn't the ritual. |
 | **0:05–1:00** | **The Question** | 0:55 | Bruce asks the episode's question in the title's own words, introduces the hosts, grounds the question in a real person, and promises what you'll leave with. Full detail in §5. | **Warm-up chatter:** "How was your week?", or "Before we start, hit subscribe." The viewer clicked on a question, and if they have to wait for it, they leave. |
 | **1:00–2:30** | **The Short Answer** | 1:30 | Facundo answers the question first, in one plain sentence of 20 words or fewer. Then he builds up the picture, often with tokens on the table. Anyone who leaves at 2:30 still got the answer. | A history lesson, "Great question", or an opening like "So, basically, Shamir's Secret Sharing…". Answer first, explain second. |
 | **2:30–7:10** | **The Table** | 4:40 | The heart of the show. Bruce works through three follow-up questions on his card, as a curious friend would. This is where the banter lives. The answers are unscripted. | **It turns into a lecture.** Rule: neither host talks for more than 90 seconds before the other comes in, and Bruce's job is to interrupt with the question a normal person would ask. It also fails when it drifts into project insider talk (workstreams, crate versions, member business). |
@@ -201,7 +201,7 @@ Why it's arranged this way:
 
 **Total: 15:00.**
 
-**Chapters.** The description lists a chapter for every segment. Each title is the segment name plus plain-language content, for example "7:10 Hands On: splitting Bruce's recipe into five pieces". YouTube requires the first chapter at 0:00, at least three chapters, and at least 10 seconds per chapter. The Bumper and The Question share the 0:00 chapter to clear that last rule.
+**Chapters.** The description lists a chapter for every segment. Each title is the segment name plus plain-language content, for example "7:10 Hands On: getting Bruce's recipe back with a ruler". YouTube requires the first chapter at 0:00, at least three chapters, and at least 10 seconds per chapter. The Bumper and The Question share the 0:00 chapter to clear that last rule.
 
 **Segment tabs.** Each segment opens with a two-second tab in the show's typeface, set at the top of the frame like a book's running head, clear of the caption band (brand kit), and Bruce says the segment's name aloud, both as ritual and so audio listeners know where they are. Every tab except Where It Stops gets a musical sting of a second or less, taken from the theme. Where It Stops gets silence. Inside an episode there are no full-screen chapter cards, because they feel like ad breaks.
 
@@ -289,7 +289,7 @@ This is illustrative: a lost-phone episode, with "Maria" as a stand-in asker. It
 > **FACUNDO:** I'm Facundo—
 > **BRUCE:** —and this is Many Hands.
 > **BRUCE:** This one's from Maria, under our last episode. Her mum keeps every password on her phone and nowhere else. So Maria's asking: if that phone goes, what's actually gone?
-> **BRUCE:** By the end you'll know what comes back, what doesn't, and one small thing Maria's mum can do tonight. And Kundo is going to split my chili recipe into five pieces on this table, which I'm told is perfectly safe.
+> **BRUCE:** By the end you'll know what comes back, what doesn't, and one small thing Maria's mum can do tonight. And Kundo is going to split my chili recipe on this table. I'm assured it's reversible.
 > **BRUCE:** So. Can she get it back?
 > **FACUNDO:** Her secrets can, if she set it up beforehand. They come back from the helpers she chose. The phone itself doesn't. So let's pull those two apart. *[VERIFY the wording with Facundo.]*
 
@@ -298,7 +298,7 @@ This is illustrative: a lost-phone episode, with "Maria" as a stand-in asker. It
 - **No small talk.** Banter is welcome from The Table onwards.
 - **No request to subscribe.**
 - **No thanks to sponsors, partners or member organisations.**
-- **No mascot.** The only graphics are the episode title as a lower third (0:08–0:12) and name captions (0:17–0:22). The name captions run in the first three episodes only, because after that regulars know the hosts.
+- **No mascot.** The only graphics are the episode title as a lower third (from 0:08, held for the brand kit's minimum of 24 frames plus 10 a word, and gone before the name slips at 0:17) and name captions (0:17–0:22). The name captions run in the first three episodes only, because after that regulars know the hosts.
 - **Stay on the two-shot throughout.** Single shots begin in The Short Answer.
 - **Pace:** conversational, around 150 words a minute. Warm, not YouTuber-loud.
 
@@ -328,7 +328,7 @@ Facundo shows it working, either with his hands on the table or with software on
 2. **Two kinds of demo, labelled on screen and never mixed up:**
    - A **tabletop model** uses physical tokens on the table: amber glass, echoing the café image. It's a metaphor, and Facundo says what it gets wrong. When the maths needs a picture, it's **the Curve** (R6): an ink line on paper that wobbles through every shape while it has fewer points than the threshold, and snaps to one shape at the threshold. Facundo states its limits with it: the secret is one number, not the whole curve; real shares live in modular arithmetic, so there's no smooth line to look at; the smooth curve is the classroom picture. The gold light thread never appears in teaching.
    - **Real software** means the `lib-derec` library or an app built on it, with the version shown on screen. Today that's "v0.0.1-alpha.3" [VERIFY at recording].
-3. **Say what you see.** Every action is narrated so podcast listeners can follow: "I'm handing out five pieces. Bruce, take one."
+3. **Say what you see.** Every action is narrated so podcast listeners can follow: "I'm handing out four shares. Bruce, take one."
 4. **End with two sentences:** what the demo just showed, and what it didn't prove. A successful rehearsal shows the steps work with harmless data. It doesn't prove that your own setup is right.
 5. **If it fails live, keep it in.** Facundo explains what happened. On a trust show, a failure handled calmly is worth more than a perfect take.
 6. **3:30 at most.** No sped-up screen recordings. If something takes a while, cut it and say that you cut it.
@@ -459,7 +459,7 @@ The mascot is **Tuck**, a grown sea otter, with **Pip**, a mug-sized porcelain c
 
    A smiling character beside "this won't reverse a scam" trivialises the sentence and looks like a friendly face selling the limit away. A sad one is worse. The rule is mechanical so the editor never has to judge it: **whenever anyone is saying that recovery doesn't, can't or won't do something, the mascot is off screen.**
 2. **Never takes a part in explaining the protocol.** It doesn't play a helper, a share or the secret, and it doesn't "guard" anything or carry tokens in a diagram. A cute character doing the protocol's work turns a metaphor into a claim, and it teaches the wrong idea: in DeRec, helpers are people and organisations you choose.
-   - **The one exception is the ritual in bar two** (R3): Tuck's stone, two friends' stones, and all three lighting at once. It is wordless and never labelled. The hosts mention it once, in Episode 01, where Bruce says R7's line: *"Tuck's a cartoon. Your helpers are real people you choose."*
+   - **The one exception is the ritual in bar two** (R3): Tuck's stone, two friends' stones, and all three lighting at once. It is wordless and never labelled. The three stones meet at the lens because the viewer is the owner: real shares go back only to the owner's new phone, and helpers never meet or pool them. The hosts mention it once, in Episode 01, where Bruce says R7's line: *"Tuck's a cartoon. Your helpers are real people you choose."*
    - **No spec word (owner, helper, share, secret) is ever a name or an on-screen label** (R7). Tuck is Tuck, and Pip is Pip.
    - The client's "DeRec helper" idea is answered by Pip, who is Tuck's friend and never anyone's helper. Pip never holds a stone, because a robot holding one would teach "an AI keeps my keys" (R1).
 3. **Never inside a Hands On demo or a screen recording.** There it would look like part of the software.

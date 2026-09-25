@@ -611,7 +611,7 @@ DECISIONS R3 and the storyboard (§2 beat 9, §3) sanction exactly one meeting b
 | Threads leave | 12 | 0.50 | Breath |
 | Tally ticks up (end card) | 6 | 0.25 | Settle |
 | Title-page type settles (imprint, title, descriptor) | 18 (f60–f77) | 0.75 | Settle, 3-frame stagger. See below. |
-| The release draws the rule | 12 (f102–f113) | 0.50 | Draw. See §4. |
+| The release draws the rule | 12 (f102–f113) | 0.50 | Near-constant speed on ones, with a 2-frame ease at each end, not `draw` (R12). See §4. |
 
 **Minimum hold for any text:** 24 frames, plus 10 frames per word (about 2.4 words a second). Everything on screen is also said aloud (FORMAT §3), so holds usually follow the speech. This number is the floor.
 
@@ -621,11 +621,11 @@ The title page is never a separate card and never a cut. It lives in the top 55%
 
 | Frames | Time | What happens | Curve |
 |---|---|---|---|
-| f54 | `2.25s` | Hard cut into the pocket shot. The house sky is already painted above y 594, with the shield in its corner. No type yet. | – |
+| f54 | `2.25s` | Hard cut into the pocket shot. The house sky is already painted above y 640 (feathered over y 616–664, R13), with the shield in its corner. No type yet. | – |
 | f60–f71 | `2.50s–2.96s` | On the downbeat of bar two, with the clap and the pocket pat, the imprint fades up and rises 12 px. | Settle |
 | f63–f74 | `2.63s–3.08s` | The title makes the same move, 3 frames later. | Settle |
 | f66–f77 | `2.75s–3.21s` | The descriptor makes the same move, 3 frames after the title. All type is set by f77 and reads for 42 frames (1.75 s) before the cut. | Settle |
-| f102–f113 | `4.25s–4.71s` | **The release** (§4). Two threads lift off the three lit stones, loop wide around Tuck and draw the rule from both ends. They meet at x 960 on f113. | Draw |
+| f102–f113 | `4.25s–4.71s` | **The release** (§4). Two threads lift off the three lit stones, loop wide around Tuck and draw the rule from both ends. They meet at x 960 on f113. | Near-constant, on ones (R12) |
 | f113–f119 | `4.71s–4.96s` | A single node lights where they meet, full by f115, and fades over f116–f119, leaving a clean rule. | Settle, then Breath |
 | f114–f119 | `4.75s–4.96s` | **The melt.** The cove plate goes first and Tuck last, and the threads' loop arms fade with them. It ends on this kit's own title card on sky (§6): imprint, title, lit rule, descriptor and shield. | Breath |
 | f120 | `5.00s` | Hard cut to the two-shot on the button (FORMAT §5). | – |
@@ -684,7 +684,7 @@ The type positions are in §2, the lockup rules in §3 and the animation in §5.
 
 | Part | Spec |
 |---|---|
-| Day sky (default) | A vertical gradient: Zenith `#1B5699` from 0% to **52% of H**, easing (cosine) into Sky `#4185CB` at 80%, then Horizon `#CFE6F6` at 100%. Add 1.5% monochrome dither. In the ritual it's painted onto the pocket-shot plate above y 594, and it isn't warmed with the rest of the plate, so Paper keeps 6.67:1 and Gilt 4.71:1. |
+| Day sky (default) | A vertical gradient: Zenith `#1B5699` from 0% to **52% of H**, easing (cosine) into Sky `#4185CB` at 80%, then Horizon `#CFE6F6` at 100%. Add 1.5% monochrome dither. In the ritual it's painted onto the pocket-shot plate above y 640, feathered over y 616–664 (R13), so the descriptor's baseline (y 592) sits on clean sky. It isn't warmed with the rest of the plate, so Paper keeps 6.67:1 and Gilt 4.71:1. |
 | Dusk sky (night bumpers only) | Night Sky `#1D3D73` from 0% to 52%, easing into Zenith `#1B5699` at 100%: the last light on the horizon. Lamplight colourway: Paper 9.62:1, Gilt 6.79:1 and the Lichen descriptor 5.83:1 at their positions. |
 | The world's own sky | Never replaces the house sky. The camera never tilts and nothing dissolves in: the house sky is on the pocket-shot plate from the f54 cut. Every bar-one plate paints its upper sky deep, in the Zenith family (Night Sky for night episodes), so the cut doesn't jump in brightness (storyboard §5). |
 | Lockup | Centred, occupying y 215–592 (§2) |
@@ -1056,5 +1056,6 @@ Edited in the build phase to agree with `DECISIONS.md`, `intro/COLD-OPEN-STORYBO
 4. **Clear space (§3).** On the title page Tuck works to the storyboard's clearance (below y 606), not 1 X.
 5. **The shield (§3, §6).** Plain mark only (R9). With no plain master the position stays empty, and the "PROTECTED BY" fallback is gone.
 6. **The Curve (§6).** Added as ink-on-paper teaching furniture with its honest-limits caption (R6), built on the Episode 01 script's Curve page. The Hands On label steps off while it's up.
-7. **The Light Work stamp (§6).** Now the storyboard's 24-frame crop of the ritual (f88–f111), not a still.
+7. **The Light Work stamp (§6).** Now the storyboard's 24 frames of the ritual (f88–f111), not a still.
 8. **Smaller agreements.** Tuck gestures with both paws on the One Small Thing card. The tab engraving is Tuck, never Pip. Key art's "10–15% below the references" grade doesn't apply to the bumper's plates (R4).
+9. **After the review round (R12, R13).** The release threads run on ones at near-constant speed, not on `draw` (§4, §5). The Light Work stamp is a native 1080×1920 vertical pass, never a crop, with its own wordmark variant (§3, §4, §6). The pocket-shot sky seam moves to y 640, feathered over y 616–664 (§5, §6). The episode question slip holds to the §5 floor and leaves by 0:16.7 (§6). The LW001 clip reference follows CHANNEL-KIT §7 (§6).

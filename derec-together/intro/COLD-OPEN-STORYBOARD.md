@@ -189,7 +189,8 @@ The hook, the key, the tempo, the instrumentation and the delivery specs are unc
 **Locked forever (the ritual master): f54–f119, 66 frames.**
 - Animated by hand once and rendered once.
 - The only per-episode changes are the defocused plate behind Tuck and one carry-over layer on an exported anchor (bible, "The carry-over layer").
-- The friends' paws are pre-rendered for every friend on both sides. Choosing an episode's pair is a comp decision, never a render.
+- The friends' paws are pre-rendered for every friend on both sides.
+- **Cheek carry-overs ride the quiet-delight lift.** Items on a cheek anchor (Episode 10's soil, Episode 11's paint) rise with the f91–f94 cheek lift through the per-frame locators. That's correct, and QC checks it. Choosing an episode's pair is a comp decision, never a render.
 
 **Changes every episode (bar one): f0–f53, 54 frames.**
 
@@ -244,7 +245,7 @@ FORMAT §7 allows the mascot in Shorts only as a one-second stamp at the loop po
 | | |
 |---|---|
 | **Source** | The ritual master, f88–f111 (24 frames), as a **native 1080×1920 vertical pass**, rendered once in the initial build (R13, CHANNEL-KIT §7). It is never cropped from the 16:9 master, because a crop would put the stones under the Shorts overlay. |
-| **What you see** | Three dull stones touching (f88–f89), all three light (f90), the glow holds, and the threads start to rise (f102–f111). Tuck's face sits near y 960, the stones no lower than y 1380, and the carry-over rides along. |
+| **What you see** | Three dull stones touching (f88–f89), all three light (f90), the glow holds, and the threads start to rise (f102–f111). Tuck's face sits near y 960, the stones no lower than y 1380. The carry-over rides along: each episode's carry-over layer is rendered through the vertical pass's camera as well, on the same exported anchors. |
 | **The title page** | Not shown. The *Light Work* wordmark sits in the top safe zone instead, as a still. |
 | **Sound** | THEME's M06 stamp (1.00s): the plink's A5 ring into the home chord's bloom, cut to end on a downbeat so the Short loops cleanly. |
 | **Why these frames** | They're the one second that carries the whole idea, and they read with the sound off. |

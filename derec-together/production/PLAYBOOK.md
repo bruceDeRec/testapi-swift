@@ -15,7 +15,7 @@
 - **Backups:** every sound and picture exists twice the moment it is recorded. No card is formatted until its contents are verified by checksum on two drives and uploaded to the cloud.
 - **Edit:** one hired editor-producer, in **Adobe Premiere Pro**, with the brand kit's locked look `MH_Daylight_709_v1`. Captions are drafted by software and corrected line by line by a person. The show never publishes auto-captions alone.
 - **Gates:** Facundo signs the facts twice, once before recording and once on the cut. Each host signs his own likeness. Bruce signs the AI log. Both sign the final cut.
-- **Schedule:** record every call-week Tuesday, lock 13 days later, premiere 8 days after that. There is always one finished episode in the can. [HOST GATE]
+- **Schedule:** record every call-week Tuesday, lock 13 days later, premiere 9 days after that (R+22). There is always one finished episode in the can. [HOST GATE]
 - **Hours:** about 33 editor hours, 11 for Bruce and 8.5–11.5 for Facundo per flagship once the show is running. The first episode takes the editor about 60.
 - **AI** drafts transcripts and captions, helps assemble rough cuts and helps explore the look. It never touches the hosts' faces or voices, the ritual master or the music, and it never supplies a fact.
 
@@ -378,7 +378,7 @@ One editor, not a team. On a two-host show the edit is where the warmth is kept 
 
 ### Step by step
 
-Milestones count from R, the recording Tuesday. Each episode gets two calm weeks of edit, and then sits locked for eight days before its Premiere.
+Milestones count from R, the recording Tuesday. Each episode gets two calm weeks of edit, and then sits locked until its Premiere nine days later (R+13 to R+22).
 
 | Step | Day | Owner | What happens | Output |
 |---|---|---|---|---|
@@ -550,9 +550,9 @@ MH_<unit>_<Name>[_<more>]_v<NN>[_<ELEMENT>][.<frame>].<ext>
 | `LW014` | Light Work Short 014, numbered in publishing order | `MH_LW014_MASTER-SHORT_v01.mp4` |
 | `M01`–`M07`, `M05a`–`c` | Music cues (THEME) | `MH_M01_Bumper_5s00_v03_MIX.wav` |
 | `S01`–`S03` | Sound signatures (THEME) | `MH_S01_Handoff_0s45_v01_LAYER-GLASS.wav` |
-| `A07` | The activity sound for episode 07 (THEME) | `MH_A07_ActivityKayak_0s40_v01_MIX.wav` |
+| `A07` | The activity sound for episode 07 (THEME) | `MH_A07_ActivityKnight_0s30_v01_MIX.wav` |
 | `RIT` | The locked ritual master (character bible) | `MH_RIT_MasterS1_v01_BEAUTY.0054.exr` |
-| `TR01` | Trailers | `MH_TR01_ChannelTrailer_60s00_v01_MASTER.mp4` |
+| `TR01` | Trailers | `MH_TR01_ChannelTrailer_47s50_v01_MASTER.mp4` |
 | `BR` | Brand and templates | `MH_BR_Tech-VLog-to-709_v01.cube` |
 | `CH` | Channel-wide records | `MH_CH_ConsentLog_v01.xlsx` |
 
@@ -817,9 +817,9 @@ Five gates, each with one owner, a deadline and a written record in `MH_E07_GATE
 
 **Light Work gets a light gate.** Both hosts approve each Short within 24 hours. Facundo checks any Short that makes a technical claim, and checks that its limit line is in.
 
-**Missed gates.** No gate is ever skipped or signed on someone's behalf. If a gate isn't passed by its deadline, the lock moves. If the lock misses Monday 17:00, the episode waits in the can and the buffer episode doesn't move up (Tuck's activities follow the calendar). If the buffer is ever empty and a lock is missed, the Premiere moves by a week, and Light Work carries the channel.
+**Missed gates.** No gate is ever skipped or signed on someone's behalf. If a gate isn't passed by its deadline, the lock moves. If the lock misses Monday 17:00, the episode waits in the can and the buffer episode doesn't move up (Tuck's activities follow the calendar). If the buffer is ever empty and a lock is missed, the Premiere moves two weeks, to the next Wednesday of the grid, and Light Work carries the channel from the bank (SEASON-ONE, "The contingency for a missed fortnight").
 
-**Gate 1 is the one that protects the show.** The brief says don't invent technical claims, and Facundo wrote the library. A claim he hasn't checked against the spec doesn't go on air, however obvious it sounds, including anything in this package marked [VERIFY].
+**Gate 1 is the one that protects the show.** The brief says don't invent technical claims, and Facundo published the first `lib-derec` crates. A claim he hasn't checked against the spec doesn't go on air, however obvious it sounds, including anything in this package marked [VERIFY].
 
 ---
 
@@ -849,7 +849,7 @@ Today is Thursday 24 September 2026. Episode 01 premieres Wednesday 11 November 
 
 | Date | Milestone | What must be true |
 |---|---|---|
-| **Wed 30 Sep** | Kit ordered, editor hired, accounts open | Tier 1 kit ordered. Adobe, Riverside, Dropbox, B2 and OffShoot set up. Folder tree built. Composer signed (THEME's four weeks). Releases with counsel. The room, the on-set assistant and the A-camera rental booked for Tue 6, 20 and 27 Oct (E00, E01 and E02, all in person). |
+| **Wed 30 Sep** | Kit ordered, editor hired, accounts open | Tier 1 kit ordered. Adobe, Riverside, Dropbox, B2 and OffShoot set up. Folder tree built. Composer signed (THEME's 26-day window, delivery Mon 26 Oct). Releases with counsel. The room, the on-set assistant and the A-camera rental booked for Tue 6, 20 and 27 Oct (E00, E01 and E02, all in person). |
 | **Sat 3 Oct** | Setup day | The editor, on a video call, sets up each host's room from the setup card. First camera, sound and Riverside test. |
 | **Tue 6 Oct** | **E00, dress rehearsal** | A full run of show on a real question, recorded in person, in the setup E01 will use. Never published. Every file named, every gate run for real. |
 | **Fri 16 Oct** | E00 proven | The colorist has built the look. The MOGRTs are delivered. One three-minute stretch (The Question and The Short Answer) finished through grade, mix and corrected captions, uploaded privately and checked on three screens. The rest of E00 cut to a rough cut, to time the pipeline. |
@@ -858,7 +858,7 @@ Today is Thursday 24 September 2026. Episode 01 premieres Wednesday 11 November 
 | **Tue 27 Oct** | **E02 recorded, in person** | Off the call grid, once, so two episodes are finished by launch. Heard It Somewhere (even). |
 | **Wed 28 Oct** | Studio delivery | The ritual master and E01's bumper and reprise. E02's by Wed 4 Nov. |
 | **Mon 2 Nov** | **E01 locked** | All five gates |
-| **Wed 4 Nov** | E01 uploaded, Premiere scheduled | Watch page and countdown live. Channel trailer (M07, from E00 and E01 footage) published. |
+| **Wed 4 Nov** | E01 uploaded, Premiere scheduled | Watch page and countdown live. The channel trailer, TR01 (CHANNEL-KIT §1), published. It's built from M01, M07 and M02 over E01 footage, with E00 only as a fallback for wordless shots. |
 | **Mon 9 Nov** | **E02 locked** | Two finished episodes, as FORMAT and R8 require |
 | **Wed 11 Nov** | **E01 premieres, 11:00 ET** | Bruce in the chat |
 | **Fri 13 Nov** | First Light Work | The best minute of E01 |

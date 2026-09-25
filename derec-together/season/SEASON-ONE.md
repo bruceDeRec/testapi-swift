@@ -111,7 +111,7 @@ Each block gives the question, promise, beats on FORMAT's run of show, the featu
 **The question:** *If your phone vanished tonight, what would you actually lose, and who could help you get it back?*
 **The promise:** "By the end you'll know what comes back, what doesn't, and one thing to do tonight. And Kundo's splitting my chili recipe on this table."
 **Length:** 15:00. **Feature:** Hands On, tabletop model.
-**Cold open:** **THE FLOAT.** Tuck on her back in a sunlit autumn cove. A red maple leaf lands on her chest, and she wears it as a hat. Carry-over: the maple leaf. Tomorrow detail: a small air taxi. Solo, medium.
+**Cold open:** **THE FLOAT.** Tuck on her back in a sunlit autumn cove. A red maple leaf lands flat over her face (f30). She peels it off, inspects it, and sets it on her crown as a hat (f45). Carry-over: the maple leaf. Tomorrow detail: a small air taxi. Solo, medium.
 
 **Outline.** Fully written in `scripts/EP01-SCRIPT.md`.
 1. **The Question (0:05–1:00).** Facundo has pocketed Bruce's phone. Bruce asks the question word for word.
@@ -124,7 +124,7 @@ Each block gives the question, promise, beats on FORMAT's run of show, the featu
 
 **Where It Stops:** "It gets your secret back. It doesn't undo a hack, reverse a payment you approved or stop a scam… It gets your secret back, and that's where it stops." Bruce: "So the front door's still my job." Facundo: "Still your job."
 **One Small Thing:** Give your email a way back in that isn't your phone.
-**Pinned question it seeds:** "If your phone vanished tonight, who's the first person you'd want helping you get back in? Don't tell us who. Tell us why." → **Episode 03's Raised Hands** and **LW002**. (Not Episode 02: that one is recorded before 01 airs. See the edits list.)
+**Pinned question it seeds:** "If your phone vanished tonight, who's the first person you'd want helping you get back in? Don't tell us who. Tell us why." → **Episode 03's Raised Hands** and **LW002**. (Not Episode 02: that one is recorded before 01 airs.)
 **Jar watch:** "secret", "share", "threshold", "modular arithmetic" (the scripted first token, at 9:03).
 
 ---
@@ -203,7 +203,7 @@ Each block gives the question, promise, beats on FORMAT's run of show, the featu
 **One Small Thing:** Open the "forgot password" page for your most important account and read what it would ask you for. Don't press send.
 **Pinned question it seeds:** "Apart from money, what's the one digital thing you'd hate to lose? A photo, a voice message, a recipe? Tell us what, not where." → **LW010** (15 Jan) and the clinic's backlog. The holiday gives this thread three weeks to fill.
 **Jar watch:** "password manager", "encrypted", "wallet key".
-**Flags:** Christmas week. Keep the date. Pip's shield-echo outline needs the Alliance's sign-off before the studio animates this bar one, not just before 23 Dec (see the edits list). **[HOST GATE]**
+**Flags:** Christmas week. Keep the date. Pip's shield-echo outline needs the Alliance's sign-off by Friday 30 October 2026, before the studio starts batch 2, which animates this bar one (bible Part two, PROMPT-PACK §A6). **[HOST GATE]**
 
 ---
 
@@ -293,15 +293,15 @@ Each block gives the question, promise, beats on FORMAT's run of show, the featu
 **Outline**
 1. **The Question (0:05–1:00).** The person comes from Episode 06's thread: what someone wants to know before trusting a company. Bruce asks the question.
 2. **The Short Answer (1:00–2:30).** "Dr. Leemon Baird designed it, twenty-plus organisations build it in the open, and none of them owns it." **[VERIFY: "designed" as the verb, and "twenty-plus" as current]**
-3. **The Table (2:30–7:10).** *Who invented it?* Dr. Leemon Baird, by name. Neither host is ever called its inventor. *Who's in the Alliance, and who runs it?* An open standard from many organisations, with nobody in charge. **No member is named on air.** The description links to the Alliance's own member list. **[HOST GATE]** **[VERIFY: that the list exists, and the Alliance's own governance wording]** *How does it get built?* A written spec, a reference library in Rust, other languages generated from it (brief §5). Facundo, in one line, on the crates he published. Everything else is Jargon Jar territory. The contributors call has met every two weeks since 21 October 2024. **[VERIFY: the count, whether it's open to the public, and how to join]**
+3. **The Table (2:30–7:10).** *Who invented it?* Dr. Leemon Baird, by name. Neither host is ever called its inventor. *Who's in the Alliance, and who runs it?* An open protocol from many organisations, with nobody in charge. **No member is named on air.** The description links to the Alliance's own member list. **[HOST GATE]** **[VERIFY: that the list exists, and the Alliance's own governance wording]** *How does it get built?* A written spec, a reference library in Rust, other languages generated from it (brief §5). Facundo, in one line, on the crates he published. Everything else is Jargon Jar territory. The contributors call has met every two weeks since 21 October 2024. **[VERIFY: the count, whether it's open to the public, and how to join]**
 4. **Heard It Somewhere (7:10–10:10).** Two myths:
-   - *"DeRec belongs to one of the companies building it."* **Not true.** It's an open standard from an alliance, with nobody in charge. No member is named. **[VERIFY the Alliance's wording]**
+   - *"DeRec belongs to one of the companies building it."* **Not true.** It's an open protocol from an alliance, with nobody in charge. No member is named. **[VERIFY the Alliance's wording]**
    - *"If the code is public, anyone can see my secret."* **Not true.** Anyone can read how the lock works. Your secret and your shares aren't in the code. **[VERIFY Facundo's wording]**
 5. **Where It Stops (10:10–10:55).** Straight after the public-code verdict.
 6. **Raised Hands (10:55–13:10).** From Episode 06's thread. If someone asks "which company should I trust?", Bruce says "We don't pick winners here," and they answer what to look for.
 7. **Say It Back, One Small Thing, Next Time (13:10–14:40).** Bruce: "One person designed it, lots of organisations build it, and nobody owns it."
 
-**Where It Stops:** "An open standard means anyone can read the rules. It doesn't mean every app that follows them is built well, and nobody here vouches for any app. Checking who made yours is still your job, and that's where it stops."
+**Where It Stops:** "An open protocol means anyone can read the rules. It doesn't mean every app that follows them is built well, and nobody here vouches for any app. Checking who made yours is still your job, and that's where it stops."
 **One Small Thing:** Find out who makes the app that holds your most important thing. Look for the developer's name on its store page.
 **Pinned question it seeds:** "Has a call or message ever pretended to be someone you know? How did you spot it? No names." → **Episode 10's Raised Hands** and **LW016**.
 **Jar watch:** "open source", "spec", "crate", "Rust", "reference implementation". This is Facundo's most dangerous episode for the Jar.
@@ -412,7 +412,7 @@ Each block gives the question, promise, beats on FORMAT's run of show, the featu
 
 ## Light Work: all twenty-four
 
-Every Friday at 11:00 ET, 30–60 seconds, vertical, with burned-in captions. The question is on screen and spoken in the first second. Tuck appears only as the one-second stamp at the loop point. **Any clip that shows what DeRec can do carries its limit line, or it doesn't run** (FORMAT §3). Each Short links to the newest flagship.
+Every Friday at 11:00 ET, 30–60 seconds, vertical, with burned-in captions. The question is on screen and spoken in the first second. Tuck appears only as the one-second stamp at the loop point. **Any clip that shows what DeRec can do carries its limit line, or it doesn't run** (FORMAT §3). **The limit line is never the last thing said before the stamp:** a close (the hosts' exchange or a tease) and 0.5s of room tone come between them (CHANNEL-KIT §7). Each Short links to the newest flagship.
 
 - **Show-week Fridays** carry the best 45–60 seconds of that Wednesday's episode.
 - **Call-week Fridays** answer one real question from a pinned thread in under a minute, credit the asker by first name, and tease the next flagship. Those titles are working titles. The real question and the asker's words set the final ones.
@@ -423,11 +423,11 @@ Every Friday at 11:00 ET, 30–60 seconds, vertical, with burned-in captions. Th
 | 002 | 20 Nov | Answer | Who would you call first if your phone vanished? You told us why | 01's thread. Teases 02. |
 | 003 | 27 Nov | Clip, 02 | Could your helpers team up and take it? | The "True, but…" verdict, with its "but" |
 | 004 | 4 Dec | Answer | The password you'd be most stuck without, and why | 02's thread. Teases 03. |
-| 005 | 11 Dec | Clip, 03 | Can the friends who help you get back in see your password? | The roll call, ending on the fake-page limit |
+| 005 | 11 Dec | Clip, 03 | Can the friends who help you get back in see your password? | The roll call, then the fake-page limit, then the close: the hosts' "Still your job" exchange after the key line, 0.5s of room tone, then the stamp (CHANNEL-KIT §7). If the take has no exchange, close on a tease of Episode 04 instead. |
 | 006 | 18 Dec | Answer | Someone trusted you with their spare key. Now what? | 03's thread. Teases 04. Recorded 15 Dec. |
 | 007 | **25 Dec** | **Banked standalone** | New phone today? Check this before you wipe the old one | Recorded 15 Dec. A general habit: check your photos and your email work on the new phone first. No DeRec claim, so no limit line needed. Scheduled in advance. |
-| 008 | **1 Jan** | **Clip, 04** (moved from 25 Dec) | Forgot the password that opens everything? | 04's Short Answer and its limit. Scheduled in advance. |
-| 009 | 8 Jan | Clip, 05 | A friend wants your help getting back in one day. What's involved? | The helper's chair, ending on "calling back is still your job" |
+| 008 | **1 Jan** | **Clip, 04** (moved from 25 Dec) | Forgot the password that opens everything? | 04's Short Answer and its limit, then the close: the tease "Wednesday on Many Hands: A friend asked you to help them get back in someday. What are you agreeing to?", recorded by Bruce at the 15 Dec session. Then 0.5s of room tone and the stamp (CHANNEL-KIT §7). Scheduled in advance. |
+| 009 | 8 Jan | Clip, 05 | A friend wants your help getting back in one day. What's involved? | The helper's chair, then its "calling back is still your job" limit, then the close |
 | 010 | 15 Jan | Answer | Not money: the digital thing you'd hate to lose most | **04's thread** (the holiday kink). Teases 06. |
 | 011 | 22 Jan | Clip, 06 | Does DeRec back up your photos? | The "Not true" verdict and the backup limit |
 | 012 | 29 Jan | Answer | What would you ask before trusting an app with your way back in? | 06's thread. Teases 07. |
@@ -439,7 +439,7 @@ Every Friday at 11:00 ET, 30–60 seconds, vertical, with burned-in captions. Th
 | 018 | 12 Mar | Answer | How did your "passwords talk" with a parent start? | 09's thread. Teases 10. |
 | 019 | 19 Mar | Clip, 10 | Could a fake of your voice fool your friends? | The "True, but…" verdict, with its limit |
 | 020 | 26 Mar | Answer | The question you still haven't heard answered | 10's thread. Teases 11. Good Friday, scheduled in advance. |
-| 021 | 2 Apr | Clip, 11 | Can recovery stop a scam call to your mum? | The Where It Stops answer itself: no, and what does |
+| 021 | 2 Apr | Clip, 11 | Can recovery stop a scam call to your mum? | The Where It Stops answer itself: no, and what does. Then the close: the hosts' exchange after the key line (Bruce's one line of reaction, Facundo's reply), 0.5s of room tone, then the stamp (CHANNEL-KIT §7). If the take has no exchange, close on a tease of the clinic instead. |
 | 022 | 9 Apr | Answer | Ever had to take a spare key back from someone? | 11's thread. Teases the clinic. |
 | 023 | 16 Apr | Clip, 12 | Who lost the Jargon Jar? Season one's final count | The count and the coffee. Not the secret ingredient, which stays in the flagship. |
 | 024 | 23 Apr | Answer | What should season two answer first? You told us | 12's thread. Teases season two's Episode 13 on 28 Apr. |
@@ -457,7 +457,7 @@ Every Friday at 11:00 ET, 30–60 seconds, vertical, with burned-in captions. Th
 3. **How to choose helpers, and how to be one.** Pick people who'd spot a fake and won't share your bad day. Tell each one only about themselves. As a helper, hand your share back only when it's really them (02, 05, 07, 10).
 4. **How to have the conversation.** With a parent, with a child, at the family table (02, 11).
 5. **Exactly where it stops.** Each of the four limits is learned in the situation where it matters: a hack (01), a scam (03, 10), a payment you approved (11), and looking after your own devices (06, 07). Each one comes with what does handle it. The clinic says all four together, once.
-6. **Who's behind it.** An open standard designed by Dr. Leemon Baird and built in the open by an alliance of organisations, none of which owns it (08).
+6. **Who's behind it.** An open protocol designed by Dr. Leemon Baird and built in the open by an alliance of organisations, none of which owns it (08).
 
 **The shape.** Episodes 01–04 (Nov–Dec) draw the picture. Episodes 05–08 (Jan–Feb) test it against people and bad days. Episodes 09–12 (Mar–Apr) prove it on camera and hand it to the audience. The loop pays off along the way: the IOU from 01 is paid in 09 or the clinic, Percent Right grows up into Say It Back, the Jar is counted, and the recipe's secret ingredient is finally revealed.
 
@@ -507,15 +507,7 @@ This covers a gate that fails, a fact Facundo can't confirm, or both hosts out.
 
 ## Edits other documents need
 
-**Tuck's Year (`mascot/CHARACTER-BIBLE.md`): no date moves.** One recommended edit:
-- Pip's shield-echo sign-off currently reads "before Pip's first appearance on 23 December 2026". Episode 04 locks on 14 December, so the studio animates its bar one in early December. The edit: **"The Alliance signs off before the studio starts Episode 04's bar one, and no later than Friday 20 November 2026."** **[HOST GATE]**
-
-**The Episode 01 script (`scripts/EP01-SCRIPT.md`):**
-- **Recording:** it says Episode 02 records Tuesday 3 November. The playbook records it on **Tuesday 27 October**, which is what lets the show launch with two finished episodes (R8). Use 27 October.
-- **"Where the answers go":** it says Episode 02's Raised Hands reads an answer to 01's pinned question, and that Bruce carries replies "into the 3 November recording". Episode 02 is recorded before 01 airs. **The answers feed Episode 03, recorded 17 November,** and LW002 on 20 November.
-- **Next Time (14:12):** the title is now set: *Who should you trust to help you get back in?*
-
-**FORMAT (`season/FORMAT.md`):** add the holiday exception to Light Work. In Christmas week, LW007 is a banked standalone and LW008 is Episode 04's clip.
+The edits this slate asked of the bible, the Episode 01 script and FORMAT have been applied across the package.
 
 ---
 
@@ -582,6 +574,8 @@ Facundo checks every protocol claim against the DeRec specification and `lib-der
 
 ## Every [HOST GATE] in the slate
 
+The blocking decisions, with dates, are in the README's "What the hosts must decide, and by when" (R14). This list is the detail behind them.
+
 1. The twelve working titles, including 09's "We timed a real one" (only if the demo ran).
 2. Keeping Episode 02 on Thanksgiving eve and Episode 04 in Christmas week, and Bruce's optional Thanksgiving line.
 3. LW007 as a Christmas Day standalone, and LW008 moved to New Year's Day.
@@ -593,7 +587,7 @@ Facundo checks every protocol claim against the DeRec specification and `lib-der
 9. The pinned-question wording for every episode (the consent line, FORMAT §6).
 10. The clinic: the coffee bet on camera, and revealing the secret ingredient of the dish Bruce really makes.
 11. Season two's first question in the finale's Next Time.
-12. Pip's shield-echo sign-off by 20 November 2026.
+12. Pip's shield-echo sign-off by Friday 30 October 2026, before the studio starts batch 2 (bible Part two, PROMPT-PACK §A6).
 13. Which three to make first (01, 03, 11), and airing 11 second if only three are made.
 
 ---

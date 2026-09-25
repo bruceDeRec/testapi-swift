@@ -57,7 +57,7 @@ Three ideas carry it:
 | Bar 1, beats 3–4 | 1.25s–2.50s | **E/D**, II over a tonic pedal | G♯3 B3 E4 over D2 | The Lydian lift. The inner voices step up while the bass doesn't move, so the ground holds as the light rises. |
 | Bar 2, beat 1 | 2.50s–3.13s | **Gmaj7**, IV (the melody adds the 9th) | F♯3 B3 D4, no bass | It opens out on the clap, and the inner voices step down. |
 | Bar 2, beat 2 | 3.13s–3.75s | **Gm6**, borrowed iv | E3 B♭3 D4, no bass | A warm, golden-hour colour. The B♭ sighs down toward A under the first plink. |
-| Bar 2, beats 3–4 | 3.75s–5.00s | **D(add9)**, I, bloomed (faded in over 0.15s) | E3 A3 D4 F♯4 over D2 (soft) | Home at the threshold, as the stones light. A plagal (iv–I) arrival, resolved without being pushed. |
+| Bar 2, beats 3–4 | 3.75s–5.00s | **D(add9)**, I, bloomed (faded in over 0.15s) | E3 A3 D4 F♯4, no bass | Home at the threshold, as the stones light. A plagal (iv–I) arrival, resolved without being pushed. |
 | Bar 3, beat 1 | 5.00s | **D(add9)**, I, struck (the button) | E3 A3 D4 F♯4 over D2, vibes F♯5 | The restatement, on the cut to the hosts. |
 
 **In Roman numerals:** I – II/I – IV – iv – I.
@@ -91,7 +91,7 @@ Some eighth notes fall between frames. The picture only ever hits beats, which a
 | **Hook, voice 2** | Nylon-string guitar, fingerpicked (no pick, no strumming) | "The steady hand": answers "*make light work*" and rolls the final chord | Human hands, heard clearly. A warm, rounded attack, with the warmth of the café and vineyard reference images. | −1 dB |
 | **Harmony** | Rhodes Mark I electric piano, light tremolo | Carries the chords | 1970s warmth that modern neo-soul made current again, so it bridges classic and modern. It sits below the hook's register. | −6 dB |
 | **Horizon** | Analog polysynth pad, Juno-60 style (two detuned saw waves, chorus on). Its low-pass filter opens from about 500 Hz to about 5 kHz between 0.00s and 3.75s, reaching fully open as the stones light. | The one openly modern colour: the sunrise | Warm futurism, never cold sci-fi. Felt more than heard. | −12 dB |
-| **Bass** | Upright bass, plucked | Holds the D pedal through bar 1, sits out f54–f89 (the hush and the ritual), and returns softly on D2 at f90 and on the button | Human, grounded and classic. On phones, its upper harmonics carry the root note even when the fundamental disappears. | −6 dB |
+| **Bass** | Upright bass, plucked | Holds the D pedal through bar 1, sits out from f54 (the hush) through the whole ritual, and returns on D2 only on the button at f120, so the final chord lands with its root (R13) | Human, grounded and classic. On phones, its upper harmonics carry the root note even when the fundamental disappears. | −6 dB |
 | **Hands 1** | Finger snaps on beats 2 and 4 of bar 1 | Cool and relaxed, like a jazz club | Made by hands, not machines. | −10 dB |
 | **Hands 2** | Shaker, soft sixteenths, swung 56%, stopping at 2.25s (the hush) | Motion: the fun under the calm | When it stops, the ritual begins. | −18 dB |
 | **Hands 3** | One group hand clap by 6–12 real people, on "WORK" | The community, and the moment of delight | One clap, not a clap track. A clap track is the corporate-explainer cliché; a single clap is an event. | −4 dB |
@@ -108,7 +108,7 @@ No drum kit. No voice of any kind.
 | **0.00s** | 0 | 1.1 | Everything enters on the first sample: vibes A4, Rhodes D(add9), bass D2, the pad (filter closed, opening), the shaker. No pre-roll, no swell. | The first frame is already mid-float. No title card, no black. |
 | 0.31s | 7.5 | 1.1& | Vibes B4. | |
 | **0.63s** | 15 | 1.2 | Vibes D5 ("HANDS"); snap. | **Cut** to the medium shot. |
-| **1.25s** | 30 | 1.3 | E/D; the bass re-plucks D2; the melody rests. **This episode's activity sound.** | The activity's one delightful action (Ep01: the leaf lands on her chest). |
+| **1.25s** | 30 | 1.3 | E/D; the bass re-plucks D2; the melody rests. **This episode's activity sound.** | The activity's one delightful action (Ep01: A01, the dry leaf landing flat over her face). |
 | 1.56s | 37.5 | 1.3& | Guitar B4. | |
 | **1.88s** | 45 | 1.4 | Guitar G♯4 ("LIGHT"); snap. | The carry-over detail is on screen by now (Ep01: the leaf becomes a hat). |
 | **2.25s** | 54 | 1.4& | **The hush:** the snaps, the shaker and the bass stop. The pad and the E/D harmony ring on. | **Cut** into the locked ritual master: the pocket shot. |
@@ -116,7 +116,7 @@ No drum kit. No voice of any kind.
 | **3.13s** | 75 | 2.2 | **Gm6**, the borrowed iv (B♭ sighs toward A). | **Plink** (S01): the first friend's stone touches. |
 | 3.42s | 82 | 2.2& | – | **Plink**, identical: the second friend's stone touches. |
 | 3.46s–3.71s | 83–89 | – | Nothing new: the held breath. | Three stones touching, still dull. |
-| **3.75s** | 90 | 2.3 | **Home: D(add9)** (Rhodes E3 A3 D4 F♯4 + pad), faded in over 0.15s rather than struck. The pad's filter reaches fully open. Bass D2, soft. **Crotale A6** glint (with its 0.31s reversed swell from 3.44s). | **All three stones light at once.** |
+| **3.75s** | 90 | 2.3 | **Home: D(add9)** (Rhodes E3 A3 D4 F♯4 + pad), faded in over 0.15s rather than struck. The pad's filter reaches fully open. Still no bass. **Crotale A6** glint (with its 0.31s reversed swell from 3.44s). | **All three stones light at once.** |
 | 4.25s–4.96s | 102–119 | 2.3&–2.4& | The home chord rings. Nothing new. | The threads rise and draw the rule, meeting at f113. Pat-pat on f107 and f112. The blink. |
 | **5.00s** | 120 | 3.1 | **Button**: D(add9), bass D2, vibes F♯5, and the guitar rolls a D chord (D3 A3 D4 F♯4, 20 ms between strings). | **Cut** to the wide two-shot. |
 | 5.00s–6.50s | 120–156 | – | Natural decay, reaching −60 dBFS by 6.50s. | The hosts are mid-smile; Bruce turns to camera. |
@@ -137,7 +137,7 @@ The music is identical in every episode, down to the sample. What changes is **o
 
 ### The sketch files
 
-`music/sketch/MH_M01_Bumper_SKETCH.mid` predates the storyboard reconciliation; the animatic's audio (`intro/animatic/src/timeline.js`) is the current reference. `music/sketch/MH_M02-M06_Family_SKETCH.mid` has the logo sting, chapter bump, outro tag, myth motif, verdicts and Shorts stamp, each marked. Its Shorts stamp is the old M03-based version, which §4's M06 replaces. Open them in GarageBand or any music app to hear the notes and timing. They use General MIDI stand-in sounds, so they will sound like a cheap keyboard, and that's expected. **They're for internal listening only and never ship.** See the note on the hook's authorship in §7(c).
+`music/sketch/MH_M01_Bumper_SKETCH.mid` has the bumper exactly as specified above and in the storyboard's hit-point table. It was regenerated from the animatic's audio (`intro/animatic/src/timeline.js`): Gm6 at f75, home bloomed at f90 with the crotale, and the bass out from the hush until the button. `music/sketch/MH_M02-M06_Family_SKETCH.mid` has the logo sting, chapter bump, outro tag, myth motif, verdicts and the *Light Work* stamp (M06 as specified in §4), each marked. Open them in GarageBand or any music app to hear the notes and timing. They use General MIDI stand-in sounds, so they will sound like a cheap keyboard, and that's expected. **They're for internal listening only and never ship.** See the note on the hook's authorship in §7(c).
 
 ### One alternate, because it's genuinely different
 
@@ -418,7 +418,7 @@ MH_M01_Bumper_5s00_v03_ALT-TAILSHORT.wav
 MH_M03_ChapterBump_0s50_v02_MIX.wav
 MH_M05b_VerdictNotTrue_0s50_v01_MIX.wav
 MH_S01_Handoff_0s45_v01_LAYER-GLASS.wav
-MH_A07_ActivityKayak_0s40_v01_MIX.wav
+MH_A07_ActivityKnight_0s30_v01_MIX.wav
 MH_E07_MASTER-YT_v02.wav
 MH_E07_MASTER-POD_v02.wav
 ```
@@ -474,11 +474,11 @@ MH_E07_MASTER-POD_v02.wav
 
 Shortlist three, and pay each $150 for a 5-second demo written against the brief below.
 
-**Timeline: four weeks.**
+**Timeline: 26 days, from signing on Wed 30 Sep to delivery on Mon 26 Oct (PLAYBOOK §9).**
 - **Week 1:** the chosen composer's two original hooks, as rough mock-ups.
 - **Week 2:** the hosts choose blind (using the §8 tests), then one round of revisions.
 - **Week 3:** the live sessions, the clap session and the sound design.
-- **Week 4:** mixing, stems and delivery.
+- **Week 4 (Wed 21-Mon 26 Oct):** mixing, stems and delivery.
 
 **The one-page brief to send (it can go as it is):**
 
@@ -581,7 +581,7 @@ Cut the logo sting, chapter bump and outro tag from its stems.
 Instrumental only, no vocals. A six-second opening theme for a warm, optimistic conversation show about technology and trust. 96 BPM, 4/4, D major. Two bars, then one final chord on the downbeat of bar three that rings for about one and a half seconds and fades to silence.
 Harmony: bar one, D major add nine moving to an E major triad over a held D in the bass. Bar two: G major seven for one beat, G minor six for one beat, then D major add nine, faded in softly, from beat three to the end of the bar. Bar three, beat one: D major add nine again, struck.
 Melody: a vibraphone with soft yarn mallets and a slow motor plays A, B, D (eighth, eighth, quarter). A fingerpicked nylon-string guitar answers B, G sharp (eighth, quarter). Both play one long A together through bar two. On the final chord the vibraphone plays a high F sharp.
-Also: Rhodes electric piano chords with light tremolo; a warm analog polysynth pad whose filter slowly opens; plucked upright bass that holds D through bar one, rests from the last half-beat of bar one and returns softly on beat three of bar two; finger snaps on beats two and four of bar one; one big hand clap from a group of people on the first beat of bar two; a soft shaker that stops half a beat before bar two; one soft antique-cymbal glint on beat three of bar two, as the D major add nine swells in.
+Also: Rhodes electric piano chords with light tremolo; a warm analog polysynth pad whose filter slowly opens; plucked upright bass that holds D through bar one, rests from the last half-beat of bar one and returns only on the final chord; finger snaps on beats two and four of bar one; one big hand clap from a group of people on the first beat of bar two; a soft shaker that stops half a beat before bar two; one soft antique-cymbal glint on beat three of bar two, as the D major add nine swells in.
 Mood: relaxed and uplifted, sunlit, classy mid-century jazz with a touch of modern synth. Intimate and close, soft attacks, nothing harsh.
 Do not use: drum kit, ukulele, whistling, glockenspiel, brass, choir, risers, whooshes, electronic beeps, EDM.
 ```
