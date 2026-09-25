@@ -22,11 +22,10 @@
 
 ### Where this pack departs, and why
 
-1. **Masters render at 3840×2160, not the storyboard's 1920×1080 (§5).** The playbook uploads UHD, and the 9:16 cuts crop a 608 px-wide window from the master. From a 1080p master that window is upscaled 1.8×; from UHD it's 1,216 px wide and downscaled. The ritual is rendered once and used for years, so it should be rendered at the larger size. Stylised renders are cheap, so the cost is small. All positions stay written at 1080 and double at UHD.
-2. **The descriptor is Atkinson Hyperlegible Next 500, not the storyboard's 600.** The storyboard says its title page uses "the brand kit's §2 values", and §2 sets the descriptor at 500. The 600 is a slip, and the brand kit owns type.
-3. **The threads' curved legs fade over f114–f119, with the melt.** The storyboard ends on "a clean rule" but doesn't say when the legs go. Animatic frame 11 shows the rule alone. The legs fade on the brand kit's `breath` curve with the melt; only the rule stays.
-4. **Two carry-overs need a fix before they're animated.** Episode 02's eyepiece ring sits next to the bible's forbidden eye zone, and Episode 06's bobble hat can't clear y 606 as written (§A6).
-5. **The 15-second trailer (storyboard §7) runs from Wednesday 10 February 2027 as the head of TR03 (CHANNEL-KIT §1), with no date line** [HOST GATE]. By then Episodes 01, 02, 04 and 07 have all aired, so it previews no activity (FORMAT §7).
+1. **Masters render at 3840×2160, not the storyboard's 1920×1080 (§5).** The playbook uploads UHD. The ritual is rendered once and used for years, so it should be rendered at the larger size. Stylised renders are cheap, so the cost is small. All positions stay written at 1080 and double at UHD. (The 9:16 *Light Work* stamp and 3.0-second cut don't crop the master at any size: they come from their own native 1080×1920 pass, R13.)
+2. **The threads' curved legs fade over f114–f119, with the melt.** The storyboard ends on "a clean rule" but doesn't say when the legs go. Animatic frame 11 shows the rule alone. The legs fade on the brand kit's `breath` curve with the melt; only the rule stays.
+3. **Two carry-overs need a fix before they're animated.** Episode 02's eyepiece ring sits next to the bible's forbidden eye zone, and Episode 06's bobble hat can't clear y 606 as written (§A6).
+4. **The 15-second trailer (storyboard §7) runs from Wednesday 10 February 2027 as the head of TR03 (CHANNEL-KIT §1), with no date line** [HOST GATE]. By then Episodes 01, 02, 04 and 07 have all aired, so it previews no activity (FORMAT §7).
 
 ---
 
@@ -36,7 +35,7 @@
 |---|---|---|---|
 | Tuck, Pip, the friends' paws, the stones: design, model sheets, models, rigs | **Always** | **Never** | Character masters must be human-authored to be protectable, and the bible bans AI in any character master (R9, bible Part four). |
 | The ritual master, f54–f119, and the New Stones head, f48–f53 | **Always** | **Never** | It's the show's promise that the ritual is identical every time. Generated frames drift. |
-| The threads | **Always** (2D, on twos) | **Never** | A generated thread invites light running along it, which reads as data moving (brand kit §4). |
+| The threads | **Always** (2D, on ones) | **Never** | A generated thread invites light running along it, which reads as data moving (brand kit §4). |
 | The carry-over layer | **Always** | **Never** | It's rendered through the master camera on the exported anchors. Anything else slips. |
 | The title page and the shield | **Always**, in the compositor | **Never** | See §C1. |
 | Bar-one character animation (Tuck, Pip, props, 2D effects cards) | **Always** | Previs only, never shipped | A generated otter can't hold the model across 24 episodes, and can't hit f15, f30 and f45 to the frame. |
@@ -60,7 +59,7 @@
 
 **The pipeline: Blender, frozen for the season.** Use the current Blender LTS release at kickoff [VERIFY which 5.x release is LTS] and install no major update until season two. Three reasons:
 1. **The Alliance can open its own masters forever.** Blender is free and open source. A character archive that needs a paid licence to open is a hostage.
-2. **One file holds the 3D and the 2D.** Grease Pencil draws the threads and the effects cards (splash, snow, flour, leaves, ripples) on twos in the same scene as the 3D characters, under the same camera (R4).
+2. **One file holds the 3D and the 2D.** Grease Pencil draws the threads (on ones, R12) and the effects cards (splash, snow, flour, leaves, ripples, on twos, R4) in the same scene as the 3D characters, under the same camera.
 3. **It is the free fallback anyway** (§C3), so the studio's files and the fallback are the same files.
 
 A studio whose pipeline is Maya may bid, but it delivers Blender-native masters or USD caches plus a Blender rebuild of the rig at its own cost. Say so in the quote.
@@ -138,13 +137,17 @@ Drawn by the studio's character designer, by hand, from the bible's construction
 | Glow | Face-line and hover glow intensity | The only two things on Pip that glow. |
 | Cycles | Idle bob: 2% of height over 60 frames | It slows when Pip concentrates and stops when Pip sits. |
 
-**Friends' paws:** one rig for all five. A 3-joint forearm and the mitten, palm up, with the stone parented to the pads. A scale control (Gran 1.1, Kip 0.9, others 1.0), a cuff toggle for the Harbourmaster, a texture-set switch. The entry and exit animation is authored once per edge and reused, so choosing a friend is a texture swap, never an animation job.
+**Friends' paws:** one rig for all five. A short 3-joint forearm and the mitten, palm up, with the stone parented to the pads; the forearm stays short so it reads as a paw, not a pole (R11). A scale control (Gran 1.1, Kip 0.9, others 1.0), a cuff toggle for the Harbourmaster, a texture-set switch. Each paw rises from a fixed point on the bottom edge: x 700 for the left side, x 1220 for the right (R11, bible "Staging"). The entry and exit animation is authored once per side and reused, so choosing a friend is a texture swap, never an animation job.
 
-**The threads** are Grease Pencil drawings on twos, in the master scene. Their shape may wobble by 1 px or less between drawings (2 px at UHD). Their brightness never changes.
+**The threads** are Grease Pencil drawings on ones, in the master scene: 12 drawings over f102–f113 (R12). Each tip travels at a near-constant speed of about 79 px a frame along storyboard §3's path (158 px at UHD), with a 2-frame ease at each end, not the brand kit's `draw` curve. Their shape may wobble by 1 px or less between drawings (2 px at UHD). Their brightness never changes.
 
 ## A4. The pocket-shot framing
 
-Per storyboard §3, which owns it: Tuck's crown sits at y 670 (y 1340 UHD) and her head centre at y 788 (y 1576 UHD). A crown item may rise at most 64 px, to y 606. The Episode 01 leaf tops out at y 618 and passes. The stones meet at about y 912 (left stone rim x 848, y 912), and the threads follow storyboard §3's path unchanged.
+These are storyboard §3's values. The storyboard owns them, and the studio builds to them as written:
+- **Tuck's crown** sits at y 670 (y 1340 UHD), and her **head centre** at y 788 (y 1576 UHD).
+- **A crown item** may rise at most 64 px, to y 606 (y 1212 UHD). The Episode 01 leaf tops out at y 618 and passes.
+- **The stones meet** at about y 912 (y 1824 UHD; left stone rim x 848, y 912). The threads follow storyboard §3's path unchanged.
+- **The sky seam** sits at y 640 (y 1280 UHD), feathered over y 616–664 (y 1232–1328 UHD), so the descriptor's baseline at y 592 sits on clean sky (R13). Above the seam is the house sky (day or dusk); below it, the ritual plate (§C3, layer 3).
 
 ## A5. The locked ritual master: what is rendered, once
 
@@ -159,7 +162,7 @@ Per storyboard §3, which owns it: Tuck's crown sits at y 670 (y 1340 UHD) and h
 | Holdout mattes | Tuck's paws, the stone, the forelimbs |
 | **Anchor locators** for the carry-over layer (exported 3D nulls, per frame) | Crown, forehead, left ear, right ear, brow, left cheek, right cheek, nose, scarf knot |
 | The New Stones head (f48–f53) | One |
-| The threads | Drawn once in 2D, on twos, as a separate layer |
+| The threads | Drawn once in 2D, on ones (12 drawings, f102–f113), as a separate layer |
 
 **How each pass is delivered.** Frame numbers in file names are the f-numbers, four digits (`.0054` is f54), per the playbook's naming pattern.
 
@@ -172,7 +175,7 @@ Per storyboard §3, which owns it: Tuck's crown sits at y 670 (y 1340 UHD) and h
 | Holdout mattes | `MH_RIT_MasterS1_v01_MATTE-PAWS`, `MATTE-STONE`, `MATTE-FORELIMBS` | f54–f119 | Single-channel EXR |
 | Anchor locators | `MH_RIT_MasterS1_v01_LOCATORS.abc`, `.fbx` and `.csv` | f48–f119 | The nine empties plus the master camera. The CSV gives each anchor's screen x, y (UHD), rotation and scale per frame, for 2D tools. |
 | New Stones head | `MH_RIT_MasterS2_v01_NEWSTONES-HEAD.0048.exr` … `.0053` | f48–f53 | Includes the old stone and its drop |
-| The threads | `MH_RIT_MasterS1_v01_THREADS.0102.exr` … `.0119` | f102–f119 | RGBA line only: the 6 px Gilt stroke with its 2 px Filament core (UHD). **No glow in the render:** the glow is built in comp to the brand kit's exact values (§C3). The curved legs fade over f114–f119 on `breath`; the rule stays. |
+| The threads | `MH_RIT_MasterS1_v01_THREADS.0102.exr` … `.0119` | f102–f119 | Drawn on ones over f102–f113, then held. RGBA line only: the 6 px Gilt stroke with its 2 px Filament core (UHD). **No glow in the render:** the glow is built in comp to the brand kit's exact values (§C3). The curved legs fade over f114–f119 on `breath`; the rule stays. |
 
 **Also delivered with the master** (additions to the bible's list, needed for QC, comp and the archive):
 - `MH_RIT_MasterS1_v01_MATTE-STONES-ALL`: one matte covering all three stones, f61–f109. The stone QC script (§C2) reads it.
@@ -642,7 +645,7 @@ The **ritual plate** is never generated. It's made in comp from the finished bar
 |---|---|---|---|---|---|
 | Imprint "DeRec Alliance" | Atkinson Hyperlegible Next 600, tracking +10 | 112 px | "DeRec" Gilt `#F2C96E`, "Alliance" Paper `#F7F3E6` | Baseline y 504, centred on x 1920 | f60–f71: fades up and rises 24 px on `settle` |
 | Title "Many Hands" | Fraunces, the brand kit's "MH Display Title" instance (opsz 144, wght 600, SOFT 50, WONK 0), tracking −15 | 352 px | Paper | Baseline y 912 | f63–f74, the same move |
-| Descriptor "THE COMMUNITY PODCAST" | Atkinson Hyperlegible Next **500** capitals, tracking +220 | 64 px | Paper (day), Lichen `#A9C6B9` (dusk) | Baseline y 1184 | f66–f77, the same move |
+| Descriptor "THE COMMUNITY PODCAST" | Atkinson Hyperlegible Next 600 capitals, tracking +220 | 64 px | Paper (day), Lichen `#A9C6B9` (dusk) | Baseline y 1184 | f66–f77, the same move |
 | Rule | The threads' horizontal runs: a 6 px Gilt stroke with a 2 px Filament core | 666 px wide, x 1587–2253 | Gilt, lit | Centred on y 1056 | Drawn by the threads, meeting at f113 |
 | Node | A 24 px Gilt disc with a 10 px Filament core and a 72 px halo at 35% | – | – | x 1920, y 1056 | Lights at f113, fades f116–f119 |
 | Thread glow | Inner Gaussian 16 px, Gilt at 60%; outer Gaussian 56 px, Gilt at 22%; both Add | – | – | On the threads' line layer | Follows the line |
@@ -828,7 +831,7 @@ Use the After Effects release installed with Premiere for E00 (the 2026 release,
 |---|---|---|---|
 | 1 | Bar one: `MH_E01_BarOne_v01_BEAUTY` | f0–f53 | As rendered. Hard out on f53. |
 | 2 | The sky: `MH_BR_SkyDay_v01.png` (or `SkyDusk` for Episodes 02, 04 and 12) | f54–f119 | Full frame, Normal |
-| 3 | The ritual plate, built from `MH_E01_PLATE_v01.psd` | f54–f119 | Flatten the plate. Apply **Camera Lens Blur** (start at a 60 px radius, hexagonal iris, and match the season's first approved ritual plate). Then **Apply Color LUT** `MH_BR_RitPlate-Warm300K_v01.cube`. Then **Exposure −0.74 stop** (60% in linear light). Mask it to below y 1188 with a 48 px feather. **Opacity** 100% to 0% over f114–f117 on `breath`. |
+| 3 | The ritual plate, built from `MH_E01_PLATE_v01.psd` | f54–f119 | Flatten the plate. Apply **Camera Lens Blur** (start at a 60 px radius, hexagonal iris, and match the season's first approved ritual plate). Then **Apply Color LUT** `MH_BR_RitPlate-Warm300K_v01.cube`. Then **Exposure −0.74 stop** (60% in linear light). Mask it to below y 1280 with a 96 px feather, so the seam blends over y 1232–1328 (y 640, feathered over y 616–664, at 1080; R13). **Opacity** 100% to 0% over f114–f117 on `breath`. |
 | 4 | Tuck, her stone, the glow and the paws | f54–f119 | The studio's locked precomp, `RIT_S1_Core`, which stacks Tuck's beauty, her stone, the glow interaction (Add) and the holdout-matted paws in the order the master scene rendered them. Inside it, a switchboard of the eight paw layers: turn on **one left and one right** (Episode 01: `PAW-GRAN-L` and `PAW-HARBOUR-R`). **Opacity** 100% to 0% over f116–f119 on `breath`. |
 | 5 | The carry-over: `MH_E01_CARRYOVER_v01_RGBA` | f54–f119 | Normal. The same opacity keys as layer 4, so it leaves with her. |
 | 6 | Title page glows: `MH_RIT_TitlePage_v01_DAY` Add pass | f54–f119 | **Add** blend |
@@ -851,7 +854,7 @@ As the playbook sets out (§4): the bumper at 0:00 on V1; `MH_M01_Bumper_5s00_v<
 |---|---|
 | Bar one | `MediaIn` on the timeline, f0–f53 |
 | Sky | `Loader` for the sky PNG |
-| Ritual plate | `Loader` for the flattened plate → `Defocus` (lens mode) → `FileLUT` with the warm LUT → `BrightnessContrast` with Gain 0.6 on linearized data (a `Gamut` node to linear before, back to Rec.709 after) → a `Rectangle` mask with a 48 px soft edge below y 1188 → `Merge` over the sky |
+| Ritual plate | `Loader` for the flattened plate → `Defocus` (lens mode) → `FileLUT` with the warm LUT → `BrightnessContrast` with Gain 0.6 on linearized data (a `Gamut` node to linear before, back to Rec.709 after) → a `Rectangle` mask below y 1280 with a 96 px soft edge (y 1232–1328) → `Merge` over the sky |
 | Tuck, stone, glow, paws | `Loader` nodes for each pass, merged in the studio's order; the glow merge set to Apply Mode **Add** |
 | Carry-over | `Loader` → `Merge` Normal |
 | Title page | The Add pass merged with Apply Mode **Add**, then the RGBA pass merged Normal |
@@ -930,9 +933,8 @@ YouTube doesn't require the label for clearly unrealistic content such as animat
 ## Open questions
 
 1. **Episode 02's eyepiece ring and Episode 06's hat (§A6).** Confirm the fixes, or pick the swaps, before batch 1 and batch 3 are laid out.
-2. **The descriptor weight.** Confirm Atkinson Next 500, the brand kit's value, in the storyboard's title-page table.
-3. **The studio's budget and region.** The difference between a $300 and a $650 day rate is about $30,000 in season one.
-4. **Whether Route B is used at all,** and if so, only for look development or also for plates.
+2. **The studio's budget and region.** The difference between a $300 and a $650 day rate is about $30,000 in season one.
+3. **Whether Route B is used at all,** and if so, only for look development or also for plates.
 
 ## Sign-off list
 

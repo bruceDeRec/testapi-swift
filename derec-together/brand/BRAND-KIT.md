@@ -380,7 +380,8 @@ Proportions, where **T** is the title's size:
 |---|---|---|---|
 | **Title page** (primary) | Imprint, title, rule, descriptor; shield in the frame's top-right corner | Centred | Title card, podcast cover, channel banner, key art |
 | **Colophon** | Imprint and title, with the rule above the imprint. No descriptor, no shield. | Flush left | End card |
-| **Title only** | "Many Hands" and the rule | Either | Merchandise, small web uses, Light Work end frame |
+| **Title only** | "Many Hands" and the rule | Either | Merchandise, small web uses |
+| **Light Work wordmark** | *Light Work* alone, T2 Fraunces 600, 104 px, −10, Paper. No rule (the stones' own threads are rising in the same second), no imprint, no descriptor, no shield. | Centred on x 540, baseline y 400 | The Light Work end frame: a still over the native vertical stamp, in its top safe zone (§6, storyboard §7, CHANNEL-KIT §7) |
 
 **The square cover (podcast art at 3000×3000; S = the side):**
 - the title is 11.5% of S, centred on a vertical axis at 45% of S, which is the middle of the space left of the shield;
@@ -525,14 +526,14 @@ DECISIONS R3 and the storyboard (§2 beat 9, §3) sanction exactly one meeting b
 - **Right thread:** the mirror image about x 960: from about x 1072, y 912, through x 1316, y 788, x 1342, y 660 and x 1324, y 572, to the rule's right end at x 1126, y 528.
 - **Clearance:** neither thread comes closer to Tuck's face than 10% of its height, and neither crosses the descriptor.
 - **State:** lit Gilt all the way. The defocused plate and the Zenith sky are both lit grounds, so the threads never print into Brass here.
-- **Medium:** hand-drawn 2D on ones: 12 drawings, one per frame, f102–f113. On twos the tip would jump up to about 470 px between drawings at its peak and read as a pop, not a hand drawing a line. Effects cards stay on twos (R4); only the threads go on ones. The shape may wobble by 1 px or less between drawings, and the brightness never changes.
+- **Medium:** hand-drawn 2D on ones: 12 drawings, one per frame, f102–f113, at near-constant speed rather than on `draw` (R12; see the table below). On twos the tip would jump about 190 px between drawings and read as a pop, not a hand drawing a line. Effects cards stay on twos (R4); only the threads go on ones. The shape may wobble by 1 px or less between drawings, and the brightness never changes.
 
 **Where the release departs from the rules above, and why:**
 
 | Rule elsewhere | In the release | Why |
 |---|---|---|
-| Each thread draws over 18 frames, 5 frames after the one before | Both draw together over f102–f113 (12 frames) on `draw`, as mirror images | The music is the clock (R5) and the ritual is 66 frames forever. Two lines setting off from opposite sides at once is the point of the move. |
-| A tip travels 48 px a frame at most | The path is about 870 px measured along the drawn curve, so the tip averages about 79 px a frame over the 11 steps from f102 to f113 and peaks near 260 px a frame around f105 | The storyboard fixes the frames and never lengthens the ritual (§9). The slow start of `draw` (about 10 px, then 39 px, in the first two frames) shows the light leaving the stones before it travels, and the threads are silent. The limit stays in force everywhere else. |
+| Each thread draws over 18 frames on `draw`, 5 frames after the one before | Both draw together over f102–f113 (12 frames), on ones at near-constant speed, as mirror images (R12) | The music is the clock (R5) and the ritual is 66 frames forever. Two lines setting off from opposite sides at once is the point of the move. |
+| A tip travels 48 px a frame at most | The path is about 873 px measured along the drawn curve. The tip travels it at near-constant speed, about 79 px a frame on average over the 11 steps from f102 to f113, with a 2-frame ease at each end: about 24 px, then 73 px, out of the stones, about 97 px a frame through the middle, and 73 px, then 24 px, into the rule. | The storyboard fixes the frames and never lengthens the ritual (§9), so the speed can't come down to 48 px. An even speed is the next best thing: it reads as one steady hand drawing the line. On `draw` the tip peaked at about 263 px a frame (R12), a flick rather than a drawn line. The short eases show the light leaving the stones and settling on the rule, and the threads are silent. The 48 px limit still holds everywhere else. |
 | A gentle arc that sags 4–10% | The routed loop above | It has to clear her face and the descriptor, and a sagging arc can't do both. |
 | A node lights over 6 frames, then breathes | One node at x 960, y 528. It lights at f113, is full by f115 and fades over f116–f119. It never breathes. | It has seven frames to live before the cut. |
 | All threads leave together over 12 frames | The two loop arms fade with the melt over f114–f119. The rule stays, at rest, to the cut. | The last frame has to be the clean title card (§5). |
@@ -550,7 +551,7 @@ DECISIONS R3 and the storyboard (§2 beat 9, §3) sanction exactly one meeting b
 
 - Key art and the podcast cover (orbit or constellation).
 - The bumper's ritual: the release (f102–f119), and the rest rule it leaves on the title card, which is the bumper's final frame.
-- The Light Work end stamp, a crop of the ritual in which the threads have only begun to rise (storyboard §7).
+- The Light Work end stamp, a native vertical pass of the ritual in which the threads have only begun to rise (R13, storyboard §7).
 - The edge of the Leaf as it crosses footage.
 - Thumbnails (printed, then lit).
 - The end card (the colophon's printed rule).
@@ -703,13 +704,14 @@ The type positions are in §2, the lockup rules in §3 and the animation in §5.
 | Role lines | "Community lead, DeRec Alliance" and "Engineer, lib-derec" [HOST GATE on both]. Never "inventor" or "co-inventor" (the protocol was invented by Dr. Leemon Baird). |
 | Timing | Bruce's slip arrives on "I'm Bruce—" and Facundo's on "I'm Facundo—", about 1 s later. Both leave together at `0:22`. In: 12 frames, Settle. Out: 8 frames, Tuck. |
 
-**Episode question** (`0:08–0:12`)
+**Episode question** (from `0:08`, out by `0:16.7`; held at least 24 frames + 10 per word, §5)
 
 | Part | Spec |
 |---|---|
 | Slip | Outer edge x 96, bottom y 840. One line: 156 px tall (top y 684). Two lines: 222 px (top y 618). Maximum width 1200 px. |
 | Kicker | "MANY HANDS 07". S2 Atkinson 600 caps, 32 px, +160, Jade, baseline at the slip's top + 52 |
 | Question | The title's exact words. T4 Fraunces Italic 500, 56 px, Ink. First baseline at the kicker + 72, then every 66 px. At most 2 lines within 1104 px. |
+| Timing | In from `0:08` over 12 frames (Settle), the question 4 frames behind the kicker. It holds for the §5 floor, counted from when it's set (a 16-word question holds 184 frames), then goes out over 8 frames (Tuck) by `0:16.7`. It must be gone before `0:17`, when Bruce's name caption arrives in the same place. This replaces FORMAT §5's `0:08–0:12`, which is too short for the floor (`scripts/EP01-SCRIPT.md`, 0:07). |
 
 **Hands On label** (on screen for the whole demo, FORMAT §6, except while the Curve page is up; its kicker does the labelling there)
 
@@ -777,7 +779,7 @@ This is the show's one picture for teaching the threshold (DECISIONS R6). It tak
 | Sound | S01 as each dot lands, identical every time and panned to the dot. S03 in the hold after the settle (THEME §4). Both sit in gaps in the talk, never under a word. |
 | Never | Gold, amber, Glass, a glow or a Filament core. The light thread, a node, or straight lines joining the dots. Tuck, Pip or a stone. Laid over the tabletop tokens or a screen recording. A tick, a cross or a colour change at the settle. Any frame of Where It Stops. |
 
-**Why the caption lives on the page.** R6 has Facundo state these limits on camera, and he does. The caption makes the page carry them as well, so a screenshot or a clip never travels without them. Episode 01's Light Work clip (8:09–8:49) includes the Curve but ends before he speaks the limits. The kicker carries the third limit, "the smooth curve is the classroom picture". In a vertical Short the page is re-set for 9:16 with the caption kept, never cropped from the horizontal page.
+**Why the caption lives on the page.** R6 has Facundo state these limits on camera, and he does. The caption makes the page carry them as well, so a screenshot or a clip never travels without them. Episode 01's Light Work clip (~8:17–8:49, then the limit line and the "Still your job" close, 0.5 s of room tone, then the stamp; CHANNEL-KIT §7) includes the Curve but leaves it before Facundo speaks the Curve's limits at 8:49. Its limit line is the Where It Stops key line, not these. The kicker carries the third limit, "the smooth curve is the classroom picture". In a vertical Short the page is re-set for 9:16 with the caption kept, never cropped from the horizontal page.
 
 ### Where It Stops band (the "what this doesn't do" card)
 
@@ -844,7 +846,7 @@ The formula: **the two hosts, and the question on a page.** FORMAT §7 says the 
   - sizes stay on the kit's scale, measured against the Short's 1080 px width;
   - the first-second question is T3 Fraunces Italic, 72 px, on a Paper slip at the top of the safe area;
   - burned-in captions are Atkinson Next 700 at 56 px (the T4 size), Ink on Paper slips (6 px radius, 16/24 px padding), at most 2 lines of 22 characters, with baselines at y 1280–1440;
-  - the mascot appears only as the one-second end stamp at the loop point: 24 frames of the ritual master, f88–f111, cropped to 9:16 around x 960 (storyboard §7). The stamp shows no title page; the Light Work wordmark sits in the top safe zone as a still.
+  - the mascot appears only as the one-second end stamp at the loop point: 24 frames of the ritual master, f88–f111, as a native 1080×1920 vertical pass rendered once, never cropped from the 16:9 master (R13, storyboard §7, CHANNEL-KIT §7). Tuck's face sits near y 960 and the stones no lower than y 1380, clear of the overlay. The stamp shows no title page; the Light Work wordmark (§3) sits in the top safe zone as a still.
 
 ---
 

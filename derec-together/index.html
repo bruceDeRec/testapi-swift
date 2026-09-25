@@ -719,6 +719,10 @@ footer p{max-width:90ch}
       if (bl > 0.4) { ctx.fillStyle = C.gilt; ell(ctx, 3.5, -4, 3, 3); ctx.fill(); }
       ctx.restore();
       if (bl < 0.4) { ctx.strokeStyle = C.eye; ctx.lineWidth = 3.5; ctx.beginPath(); ctx.moveTo(ex - 11, -3); ctx.quadraticCurveTo(ex, 3, ex + 11, -3); ctx.stroke(); }
+      else if (st.delight > 0) { // cheeks rise: a cream lower lid pushes up under each eye, so the eyes smile
+        const dl = st.delight, ex2 = ex * (1 - Math.abs(tx) / 90);
+        ctx.fillStyle = C.cream; ctx.beginPath(); ctx.ellipse(ex2, -4 + 13 - dl * 7, 14, 9, 0, Math.PI, 0, true); ctx.fill();
+      }
     });
     // whisker pads, nose, mouth
     ell(ctx, -20, 46, 24, 17); ctx.fillStyle = C.whisker; ctx.fill();
@@ -726,14 +730,14 @@ footer p{max-width:90ch}
     ctx.fillStyle = 'rgba(18,62,50,0.28)'; [[-30, 44], [-22, 50], [-14, 42], [30, 44], [22, 50], [14, 42]].forEach(([a, b]) => { ell(ctx, a, b, 1.6, 1.6); ctx.fill(); });
     ctx.beginPath(); ctx.moveTo(-19, 20); ctx.quadraticCurveTo(0, 14, 19, 20); ctx.quadraticCurveTo(12, 36, 0, 38); ctx.quadraticCurveTo(-12, 36, -19, 20); ctx.closePath();
     ctx.fillStyle = C.eye; ctx.fill(); ctx.fillStyle = 'rgba(255,255,255,0.25)'; ell(ctx, -6, 22, 5, 2.5); ctx.fill();
-    ctx.strokeStyle = C.eye; ctx.lineWidth = 2.6; ctx.beginPath(); ctx.moveTo(0, 38); ctx.lineTo(0, 50); ctx.moveTo(-12, 58); ctx.quadraticCurveTo(0, 64, 12, 58); ctx.stroke();
+    const sm = st.delight || 0; ctx.strokeStyle = C.eye; ctx.lineWidth = 2.6; ctx.beginPath(); ctx.moveTo(0, 38); ctx.lineTo(0, 50); ctx.moveTo(-12 - sm * 4, 57 - sm * 2); ctx.quadraticCurveTo(0, 64 + sm * 3, 12 + sm * 4, 57 - sm * 2); ctx.stroke();
     ctx.restore();
     // whiskers, seven a side
     for (let i = 0; i < 7; i++) {
       const a = -0.35 + i * 0.12;
       [-1, 1].forEach(side => {
         ctx.strokeStyle = 'rgba(18,62,50,0.35)'; ctx.lineWidth = 3.2;
-        const x0 = side * 30, y0 = 44 + (i - 3) * 2.5, x1 = side * (150 + i * 3), y1 = y0 + Math.sin(a) * 60 + 8;
+        const x0 = side * 30, y0 = 44 + (i - 3) * 2.5, x1 = side * (150 + i * 3), y1 = y0 + Math.sin(a) * 60 + 8 - (st.delight || 0) * 14;
         ctx.beginPath(); ctx.moveTo(x0, y0); ctx.quadraticCurveTo(side * 95, y0 + (i - 3) * 3, x1, y1); ctx.stroke();
         ctx.strokeStyle = C.whisker; ctx.lineWidth = 1.8; ctx.stroke();
       });
@@ -792,6 +796,7 @@ footer p{max-width:90ch}
     ctx.beginPath(); ctx.moveTo(-22, 14); ctx.quadraticCurveTo(-9, 9, 4, 14); ctx.quadraticCurveTo(-2, 25, -9, 26); ctx.quadraticCurveTo(-16, 25, -22, 14); ctx.fillStyle = C.eye; ctx.fill();
     for (let i = 0; i < 5; i++) { ctx.strokeStyle = C.whisker; ctx.lineWidth = 1.4; ctx.beginPath(); ctx.moveTo(-30, 30 + i * 2); ctx.quadraticCurveTo(-70, 26 + i * 4, -104, 22 + i * 7); ctx.stroke(); ctx.beginPath(); ctx.moveTo(14, 30 + i * 2); ctx.quadraticCurveTo(48, 26 + i * 4, 76, 20 + i * 7); ctx.stroke(); }
     if (st.leafOnHead) mapleLeaf(ctx, 6, -64, 0.78, 0.3);
+    if (st.leafOnFace) mapleLeaf(ctx, -8, 12, 1.25, 0.15);
     ctx.restore();
     // paws on the chest (they lift the leaf)
     const lift = st.pawLift || 0;
@@ -963,9 +968,9 @@ footer p{max-width:90ch}
     ctx.fillStyle = g; ctx.fillRect(0, 0, 1920, 1080);
     if (plateAlpha <= 0) return;
     ctx.save(); ctx.globalAlpha = plateAlpha;
-    const pg = ctx.createLinearGradient(0, 560, 0, 1080);
-    pg.addColorStop(0, 'rgba(120,170,176,0)'); pg.addColorStop(0.18, 'rgba(104,160,160,0.85)'); pg.addColorStop(0.55, '#5E9C98'); pg.addColorStop(1, '#3F7F80');
-    ctx.fillStyle = pg; ctx.fillRect(0, 560, 1920, 520);
+    const pg = ctx.createLinearGradient(0, 616, 0, 1080);
+    pg.addColorStop(0, 'rgba(120,170,176,0)'); pg.addColorStop(0.103, 'rgba(104,160,160,0.9)'); pg.addColorStop(0.5, '#5E9C98'); pg.addColorStop(1, '#3F7F80');
+    ctx.fillStyle = pg; ctx.fillRect(0, 616, 1920, 464);
     const dots = [[240, 760, 150, '252,235,180'], [560, 690, 70, '255,255,255'], [1500, 720, 160, '242,201,110'], [1740, 930, 110, '123,225,218'], [330, 980, 140, '63,169,179'], [1340, 990, 120, '217,138,43'], [1180, 650, 60, '255,255,255'], [120, 880, 80, '227,163,58']];
     dots.forEach(([x, y, r, c], i) => { const dx = Math.sin(f * 0.03 + i) * 6; const rg = ctx.createRadialGradient(x + dx, y, r * 0.2, x + dx, y, r); rg.addColorStop(0, `rgba(${c},0.32)`); rg.addColorStop(0.8, `rgba(${c},0.2)`); rg.addColorStop(1, `rgba(${c},0)`); ctx.fillStyle = rg; ell(ctx, x + dx, y, r, r); ctx.fill(); });
     ctx.restore();
@@ -979,7 +984,7 @@ footer p{max-width:90ch}
     ctx.fillStyle = C.gilt; ctx.fillText('DeRec', x0, y1); ctx.fillStyle = C.paper; ctx.fillText('Alliance', x0 + w1, y1);
     a = k(3); ctx.globalAlpha = a * A; ctx.textAlign = 'center'; ctx.fillStyle = C.paper; ctx.font = `600 176px ${opts.display}`;
     ctx.fillText('Many Hands', 960, 456 + (1 - a) * 12);
-    a = k(6); ctx.globalAlpha = a * A; ctx.font = `500 32px ${opts.text}`;
+    a = k(6); ctx.globalAlpha = a * A; ctx.font = `600 32px ${opts.text}`;
     if (ctx.letterSpacing !== undefined) ctx.letterSpacing = '7px';
     ctx.fillText('THE COMMUNITY PODCAST', 963, 592 + (1 - a) * 12);
     if (ctx.letterSpacing !== undefined) ctx.letterSpacing = '0px';
@@ -1053,14 +1058,13 @@ footer p{max-width:90ch}
       const kick = (f >= 47 && f < 51) ? Math.sin((f - 47) / 4 * Math.PI) : (f >= 52 && f < 56) ? Math.sin((f - 52) / 4 * Math.PI) : 0;
       const scull = Math.sin(f / 7.5 * Math.PI) * (f < 30 ? 1 : 0.3);
       D.ripplesAround(ctx, 960, 690 + bob, 1.2, f);
-      const lift = f < 35 ? 0 : s(f, 35, 44, E.settle), onHead = f >= 45;
-      const surprise = (f >= 30 && f < 35) ? 1 : 0;
-      D.tuckFloat(ctx, { x: 960, y: 690, s: 1.2, bob: bob, flipper: scull + kick * 1.4, pawLift: onHead ? 0 : lift * 0.8,
-        leafInPaws: f >= 30 && !onHead, leafOnHead: onHead, blink: surprise ? -0.25 : 0 });
+      const onFace = f >= 30 && f < 36, peel = s(f, 35, 40, E.settle), onHead = f >= 45;
+      D.tuckFloat(ctx, { x: 960, y: 690, s: 1.2, bob: bob, flipper: (f >= 30 && f < 36) ? 0 : scull + kick * 1.4, pawLift: onHead ? 0 : peel * 0.8,
+        leafOnFace: onFace, leafInPaws: f >= 36 && !onHead, leafOnHead: onHead, blink: (f >= 36 && f < 40) ? Math.sin((f - 36) / 4 * Math.PI) : 0 });
       D.waterOver(ctx, 960, 690 + bob, 1.2);
       if (f < 30) {
         // the leaf: high top right at f0, three flat turns, lands on her chest at f30
-        const t = f / 30, x = lerp(1330, 885, E.breath(t)) + Math.sin(t * Math.PI * 3) * 70 * (1 - t), y = lerp(70, 612, E.breath(t));
+        const t = f / 30, x = lerp(1330, 756, E.breath(t)) + Math.sin(t * Math.PI * 3) * 70 * (1 - t), y = lerp(70, 606, E.breath(t));
         D.mapleLeaf(ctx, x, y + bob * t, 0.95, 0.4 + t * 6.3);
       }
       ctx.restore();
@@ -1088,16 +1092,17 @@ footer p{max-width:90ch}
       } else if (f >= 106) { pawR = [lerp(92, 150, pat2), lerp(230, 262, pat2)]; }
       else if (patT > 0) { pawR = [lerp(92, 150, patT), lerp(230, 262, patT)]; }
       const blink = f >= 112 ? (f <= 114 ? (f - 111) / 3 : f <= 116 ? 1 : Math.max(0, 1 - (f - 116) / 3)) : 0;
+      const delight = f < 91 ? 0 : Math.min(1, (f - 90) / 4);
 
       // the friends: palms up, offering; from frame left low and frame right low; never touching each other
       const aIn = s(f, 68, 75, E.settle), bIn = s(f, 74, 82, E.settle), away = s(f, 102, 109, E.tuck);
-      const gran = [lerp(560, 874, aIn), lerp(1200, 922, aIn) + away * 380];
-      const harb = [lerp(1360, 1046, bIn), lerp(1200, 922, bIn) + away * 380];
+      const gran = [lerp(760, 874, aIn), lerp(1260, 922, aIn) + away * 380];
+      const harb = [lerp(1160, 1046, bIn), lerp(1260, 922, bIn) + away * 380];
 
       ctx.save(); ctx.globalAlpha = tuckAlpha;
-      D.tuckFront(ctx, { x: TUCK.x, y: TUCK.y, s: TUCK.s, leaf: true, turn: turn, pawL: pawL, pawR: pawR, stone: stone, stoneOut: stone != null && down < 1, glow: glow, blink: blink });
-      if (f >= 68 && away < 1) D.friendPaw(ctx, 300, 1180 + away * 380, gran[0], gran[1], '#5A3D2B', 'rgba(255,255,255,0.16)', glow, true, 1.0, 'sphere', false);
-      if (f >= 74 && away < 1) D.friendPaw(ctx, 1620, 1180 + away * 380, harb[0], harb[1], '#6B5646', 'rgba(255,255,255,0.12)', glow, false, 1.0, 'lozenge', true);
+      D.tuckFront(ctx, { x: TUCK.x, y: TUCK.y, s: TUCK.s, leaf: true, turn: turn, pawL: pawL, pawR: pawR, stone: stone, stoneOut: stone != null && down < 1, glow: glow, blink: blink, delight: delight });
+      if (f >= 68 && away < 1) D.friendPaw(ctx, 700, 1200 + away * 380, gran[0], gran[1], '#5A3D2B', 'rgba(255,255,255,0.16)', glow, true, 1.0, 'sphere', false);
+      if (f >= 74 && away < 1) D.friendPaw(ctx, 1220, 1200 + away * 380, harb[0], harb[1], '#6B5646', 'rgba(255,255,255,0.12)', glow, false, 1.0, 'lozenge', true);
       ctx.restore();
 
       // the title page: shield present from f54; type settles on the clap, f60–f77
@@ -1105,7 +1110,8 @@ footer p{max-width:90ch}
       D.titleType(ctx, f, 60, fonts, 1);
       // the release: two threads from the lit stones to the rule, meeting in the middle at f113; then the rule rests
       if (f >= 102) {
-        const p = s(f, 102, 113, E.draw);
+        const r = 2 / 11, u = s(f, 102, 113, null);
+        const p = u < r ? 0.5 * u * u / (r * (1 - r)) : u < 1 - r ? (u - r / 2) / (1 - r) : 1 - 0.5 * (1 - u) * (1 - u) / (r * (1 - r));
         const L = D.smooth(THREAD_L, 10), R = D.smooth(THREAD_R, 10);
         if (f < 114) { D.threadPath(ctx, L, p); D.threadPath(ctx, R, p); }
         else { const fade = 1 - s(f, 114, 118, null); ctx.save(); ctx.globalAlpha = fade; D.threadPath(ctx, L.slice(0, L.length - 12), 1); D.threadPath(ctx, R.slice(0, R.length - 12), 1); ctx.restore();
@@ -1143,7 +1149,7 @@ footer p{max-width:90ch}
     eng.clap(at(60));
     eng.rhodes([N.E3, N.Bb3, N.D4], at(75), 0.62, 0.85);     // Gm6, the borrowed iv
     eng.rhodes([N.E3, N.A3, N.D4, N.Fs4], at(90), 1.25, 1.0, 0.15); // home, bloomed
-    eng.crotale(at(90), 0.8, true); eng.bass(N.D2, at(90), 0.5, 1.2);
+    eng.crotale(at(90), 0.8, true);                            // no bass until the button (R13)
     if (sfx) { eng.pat(at(60)); eng.setDown(at(75), -0.35); eng.setDown(at(82), 0.35); eng.pat(at(107)); eng.pat(at(112)); }
     // the button
     eng.vibes(N.Fs5, at(120), 1.8, 0.9);
@@ -1161,28 +1167,29 @@ window.MHData = {
   beats: [
     { f0: 0, f1: 15, thumb: 8, title: 'Already afloat', what: 'Wide. An autumn cove, Tuck on her back, a maple leaf already spinning high at top right. One air taxi over the terraces.', music: 'Vibes A4, B4 · “Ma-ny”' },
     { f0: 15, f1: 30, thumb: 22, title: 'A leaf comes down', what: 'Cut closer on the hook’s top note. The leaf spirals down in three flat turns; her eyes follow it.', music: 'Vibes D5 · “HANDS” · the cut' },
-    { f0: 30, f1: 45, thumb: 40, title: 'It lands; she inspects it', what: 'It lands flat on her chest. A flash of surprise, then she holds it up in both paws, head tilted.', music: 'The one activity sound: a dry leaf on fur' },
+    { f0: 30, f1: 45, thumb: 32, title: 'Splat. Then a close look.', what: 'The leaf lands flat over her face. She peels it off, blinking, and holds it up in both paws, head tilted.', music: 'The one activity sound: a dry leaf on her face' },
     { f0: 45, f1: 54, thumb: 50, title: 'A new hat', what: 'She sets it on her crown. Two lazy flipper kicks, then her eyes drift to frame left.', music: 'Guitar G♯4 · “LIGHT”' },
     { f0: 54, f1: 60, thumb: 57, title: 'The hush', what: 'Cut into the locked pocket shot: sky above, Tuck below. She turns her face to you and holds still.', music: 'Snaps, shaker and bass stop', locked: true },
     { f0: 60, f1: 75, thumb: 71, title: 'Pat · title · one stone', what: 'One pat on the pocket under her left forearm. “Many Hands” settles into the sky. She holds up one plain stone. It stays dark.', music: 'Clap on “WORK”', locked: true },
-    { f0: 75, f1: 90, thumb: 86, title: 'Two friends, still dark', what: 'Gran’s paw from the left, the Harbourmaster’s from the right, palms up. The stones touch. Nothing glows.', music: 'Plink · plink · a held breath', locked: true },
-    { f0: 90, f1: 102, thumb: 96, title: 'Home: all three light', what: 'At the third stone, all three light amber at once. One never glows. Two never glow.', music: 'The home chord blooms · crotale glint', locked: true },
+    { f0: 75, f1: 90, thumb: 86, title: 'Two friends, still dark', what: 'Gran’s paw and the Harbourmaster’s rise from the bottom edge, palms up. The stones touch. Nothing glows.', music: 'Plink · plink · a held breath', locked: true },
+    { f0: 90, f1: 102, thumb: 97, title: 'Home: all three light', what: 'At the third stone, all three light amber at once. Tuck’s whiskers lift and her eyes smile: quiet delight. One never glows. Two never glow.', music: 'The home chord blooms · crotale glint', locked: true },
     { f0: 102, f1: 114, thumb: 109, title: 'The release', what: 'The light lifts off as two gold threads. They loop wide around her and draw the rule under the title, meeting in the middle.', music: 'The chord rings · pat', locked: true },
     { f0: 112, f1: 120, thumb: 115, title: 'Pat-pat, a blink, the melt', what: 'The second pat, one slow content blink, and Tuck melts into the sky. The last frame is the title card.', music: 'Pat · the chord rings to the cut', locked: true },
   ],
   tuck: {
-    statement: 'The friend who holds on to something for you and never asks what it is.',
-    adjectives: ['Unflappable', 'Competent', 'Quietly delighted', 'Discreet', 'Game for anything'],
+    statement: 'A grown sea otter who spends her day off doing one thing beautifully, and who keeps one small, plain stone for you without ever asking what it is for.',
+    adjectives: ['Unflappable', 'Competent', 'Quietly delighted', 'Discreet', 'Grown-up'],
   },
   mapping: [
     ['One plain grey stone, never glowing on its own', 'A share: alone it reveals nothing', 'A real share is a number, not an object, and not a piece of the secret'],
     ['Two stones touching, still dark', 'Fewer than the threshold learn nothing, even together', 'The picture always shows three. Real thresholds vary.'],
-    ['The third stone: all three light at once', 'Enough helpers restore the secret, whole', 'Recovery also has a human step: helpers confirm it is really you'],
+    ['The third stone: all three light at once', 'Enough helpers restore the secret, whole', 'Recovery may also have a human step: helpers checking it is really you [VERIFY: the confirmation step]'],
+    ['Three stones meet in front of the lens', 'Enough shares come back together', 'Real shares go back only to the owner’s new phone. Helpers never meet or pool them. The stones meet at the lens because the viewer is the owner.'],
     ['Paws from different edges, no faces', 'Helpers don’t know who the others are, or how many', 'Real helpers are people and organizations you choose'],
-    ['The pocket pat', 'The quiet daily check-in', 'In DeRec the helper does nothing. The owner’s device checks automatically.'],
+    ['The pocket pat', 'The quiet daily check-in', 'In DeRec the owner’s device checks in with each helper’s device every day [VERIFY: whether the helper has to do anything]'],
   ],
   acts: [
-    { n: 1, date: '11 Nov 2026', season: 'Autumn', title: 'The float', action: 'On her back in a sunlit cove. A maple leaf lands on her chest and becomes a hat.', carry: 'the leaf on her crown', pip: false },
+    { n: 1, date: '11 Nov 2026', season: 'Autumn', title: 'The float', action: 'On her back in a sunlit cove. A maple leaf lands flat on her face, and she peels it off and wears it as a hat.', carry: 'the leaf on her crown', pip: false },
     { n: 2, date: '25 Nov 2026', season: 'Late autumn', title: 'Stargazing', action: 'Eye to a brass telescope on a dusk terrace. A shooting star crosses, and she looks up to see it herself.', carry: 'an eyepiece ring round one eye', pip: false },
     { n: 3, date: '9 Dec 2026', season: 'Early winter', title: 'Tray sledding', action: 'Belly-down on a tin tray, she slides, spins once and stops exactly at a snowman’s feet.', carry: 'snow dusting her crown', pip: false },
     { n: 4, date: '23 Dec 2026', season: 'Holiday week', title: 'The bell choir', action: 'Two handbells in a lamplit glasshouse. Pip answers a hair late, and she forgives it with a nod.', carry: 'a fir sprig behind one ear', pip: true },
@@ -1200,12 +1207,12 @@ window.MHData = {
     { t: '0:05', len: 55, name: 'The Question', job: 'Bruce asks it in the title’s words', color: '#4185CB' },
     { t: '1:00', len: 90, name: 'The Short Answer', job: 'Facundo answers first, then builds the picture', color: '#1B5699' },
     { t: '2:30', len: 280, name: 'The Table', job: 'three follow-ups; the banter lives here', color: '#1B7466' },
-    { t: '7:10', len: 180, name: 'Feature', job: 'Hands On or Heard It Somewhere, alternating', color: '#2F8F7D' },
+    { t: '7:10', len: 180, name: 'Feature', job: 'Hands On or Heard It Somewhere, alternating', color: '#1B5699' },
     { t: '10:10', len: 45, name: 'Where It Stops', job: 'the limit, stated with confidence, no music', color: '#123E32' },
     { t: '10:55', len: 135, name: 'Raised Hands', job: 'one real community question', color: '#4185CB' },
     { t: '13:10', len: 30, name: 'Say It Back', job: 'Bruce sums up; Facundo scores it', color: '#1B5699' },
     { t: '13:40', len: 30, name: 'One Small Thing', job: 'free, under ten minutes, no product', color: '#1B7466' },
-    { t: '14:10', len: 30, name: 'Next Time', job: 'next question and the split sign-off', color: '#2F8F7D' },
+    { t: '14:10', len: 30, name: 'Next Time', job: 'next question and the split sign-off', color: '#1B5699' },
     { t: '14:40', len: 20, name: 'End Card', job: 'a real outtake and Tuck’s reprise', color: '#A8843D' },
   ],
   eps: [
@@ -1250,7 +1257,7 @@ window.MHData = {
     "pillar": "What if",
     "feature": "Heard It Somewhere",
     "activity": "The bell choir (with Pip)",
-    "stop": "It gives back a secret you set up beforehand. It can't bring back one you never set up, or reset a company account.",
+    "stop": "It gives back a secret you set up beforehand. It can't bring back one you never set up, or reset a company account. [VERIFY]",
     "flag": "Christmas week: keep the date; Pip's first appearance"
    },
    {
@@ -1305,7 +1312,7 @@ window.MHData = {
     "pillar": "How it works",
     "feature": "Hands On (real software if ready; pays the IOU)",
     "activity": "Kite flying",
-    "stop": "It brings your secret back when enough helpers answer. If too few can be reached, it can't, and nobody in the middle holds a copy.",
+    "stop": "It brings your secret back when enough helpers answer. If too few can be reached, it can't, and nobody in the middle holds a copy. [VERIFY]",
     "flag": "Fallback title if the demo stays on the table"
    },
    {
